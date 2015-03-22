@@ -9,7 +9,7 @@ var connect           = require('connect')
     stylus            = require('stylus')
 
     app         = connect()
-    port        = '14946'
+    port        = '8082'
     files       = __dirname + '/static'
     views       = __dirname + '/views/'
     fcOptions   = {
