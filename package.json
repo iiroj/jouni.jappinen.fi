@@ -1,0 +1,28 @@
+{
+  "name": "jouni",
+  "version": "0.0.1",
+  "author": {
+    "name": "Jouni Jäppinen",
+    "email": "jouni@jappinen.fi"
+  },
+  "contributors": {
+    "name": "Iiro Jäppinen",
+    "email": "iiro@jappinen.fi"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "connect": "*",
+    "connect-route": "*",
+    "jade": "*",
+    "filecache": "*",
+    "nodemailer": "*",
+    "nodemailer-sendmail-transport": "*",
+    "serve-static": "*"
+  },
+  "devDependencies": {
+    "nib": "*",
+    "stylus": "*"
+  }
+}
