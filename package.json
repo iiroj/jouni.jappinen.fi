@@ -17,8 +17,6 @@
     "connect-route": "*",
     "jade": "*",
     "filecache": "*",
-    "nodemailer": "*",
-    "nodemailer-sendmail-transport": "*",
     "serve-static": "*"
   },
   "devDependencies": {
