@@ -16,7 +16,6 @@
     "connect": "*",
     "connect-route": "*",
     "jade": "*",
-    "filecache": "*",
     "serve-static": "*"
   },
   "devDependencies": {

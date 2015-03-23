@@ -1,6 +1,6 @@
 var connect           = require('connect')
     route             = require('connect-route')
-    filecache         = require('filecache')
+    serveStatic       = require('serve-static')
     jade              = require('jade')
     nib               = require('nib')
     stylus            = require('stylus')
@@ -9,15 +9,8 @@ var connect           = require('connect')
     port        = '8082'
     files       = __dirname + '/static'
     views       = __dirname + '/views/'
-    fcOptions   = {
-                    watchDirectoryChange: true,
-                    gzip: true,
-                    deflate: true
-                  }
-                  
-// Use compression
-app.use(filecache(files, fcOptions, function(err, cache) {
-}).httpHandler())
+
+app.use(serveStatic(files))
 
 // Set up Stylus
 function compile(str, path) {
