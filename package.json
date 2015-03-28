@@ -1,25 +1,22 @@
 {
-  "name": "jouni",
-  "version": "0.0.1",
+  "name": "jouni.jappinen.fi",
+  "version": "0.1.0",
   "author": {
-    "name": "Jouni Jäppinen",
-    "email": "jouni@jappinen.fi"
-  },
-  "contributors": {
     "name": "Iiro Jäppinen",
     "email": "iiro@jappinen.fi"
   },
-  "scripts": {
-    "start": "node app.js"
-  },
-  "dependencies": {
-    "connect": "*",
-    "connect-route": "*",
-    "jade": "*",
-    "serve-static": "*"
-  },
+  "description": "",
+  "readme": "",
+  "license": "",
   "devDependencies": {
-    "nib": "*",
-    "stylus": "*"
+    "del": "*",
+    "gulp": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-cache": "*",
+    "gulp-concat": "*",
+    "gulp-minify-css": "*",
+    "gulp-rename": "*",
+    "gulp-stylus": "*",
+    "nib": "*"
   }
 }

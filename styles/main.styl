@@ -1,0 +1,360 @@
+@import "nib"
+global-reset()
+
+unit = 8px
+backColor = white
+frontColor = black
+transitionStyle = 0.2s ease-out
+mobileWidth = 60*unit
+dualPaneWidth = 200*unit
+
+@font-face
+  font-family 'Noto Serif'
+  font-style normal
+  font-weight 400
+  src local('Noto Serif'), local('NotoSerif'), url(//fonts.gstatic.com/s/notoserif/v4/eCpfeMZI7q4jLksXVRWPQ8DdSZkkecOE1hvV7ZHvhyU.ttf) format('truetype')
+@font-face
+  font-family: 'Noto Serif'
+  font-style: italic
+  font-weight: 400
+  src local('Noto Serif Italic'), local('NotoSerif-Italic'), url(//fonts.gstatic.com/s/notoserif/v4/HQXBIwLHsOJCNEQeX9kNz5S3E-kSBmtLoNJPDtbj2Pk.ttf) format('truetype')
+
+
+html
+	height 100%
+	margin 0
+	padding 0
+
+a
+	color inherit
+
+h1
+	font-size 3*unit
+	line-height 3*unit
+
+body#error
+	background white
+	color lighten(black, 90)
+	height 100%
+
+	h1
+		font-size 4*unit
+		position relative
+		text-align center
+		top 50%
+		transform translateY(-50%)
+
+body
+	color alpha(frontColor, 0.8)
+	font-family "Noto Serif", sans-serif
+	font-size 2*unit
+	font-smoothing antialiased
+	font-weight 400
+	line-height 3*unit
+
+//Index page
+body.index
+	header.splash
+		background url(/files/sokerikko.jpg)
+		background-position 25% center
+		background-repeat no-repeat
+		background-size cover
+		color backColor
+		height 100vh
+		overflow-y hidden
+		position relative
+		z-index -1
+
+		div
+			left 2*unit
+			position fixed
+			top 50%
+			transform translateY(-50%)
+
+			h2
+				color alpha(backColor, 0.4)
+
+	main
+		position relative
+
+		section.about
+			font-size 3*unit
+			line-height 4*unit
+			margin 8*unit auto
+			max-width 80*unit
+			padding 0 2*unit
+
+			p + p
+				margin-top unit
+
+		ul.projects
+			clearfix()
+			padding 1*unit
+
+			li
+				box-sizing border-box
+				float left
+				height 25vh
+				padding 1*unit
+				width 100%
+
+				&.large
+					height 50vh
+
+				a
+					display block
+					height 100%
+					text-decoration none
+
+					&:hover article
+						transform scale(0.95)
+						transform-origin 50% 50%
+
+					article
+						background-color alpha(frontColor, 0.05)
+						background-position center
+						background-size cover
+						box-sizing border-box
+						color backColor !important
+						height 100%
+						position relative
+						transition transform transitionStyle
+
+						div
+							left 50%
+							position absolute
+							top 50%
+							transform translate(-50%,-50%)
+							width 90%
+
+		ul.articles
+			clearfix()
+			padding 1*unit
+
+			li
+				box-sizing border-box
+				float left
+				padding 1*unit
+				width 50%
+
+				a
+					display block
+					height 100%
+					text-decoration none
+
+					&:hover article
+						transform scale(0.95)
+						transform-origin 50% 50%
+
+					article
+						box-sizing border-box
+						height 100%
+						padding 2*unit
+						position relative
+						transition transform transitionStyle
+
+						div.cover
+							background-color alpha(frontColor, 0.05)
+							background-position center
+							background-size cover
+							height 0
+							margin 0 auto 2*unit auto
+							padding-bottom 106.67%
+							width 75%
+
+						h1
+							font-size inherit
+							text-align center
+		footer
+			nav.links
+				ul
+					li
+						a
+							border-bottom 1px solid rgba(0, 0, 0, 0.1)
+							display block
+							padding 2*unit 0
+							text-align center
+							text-decoration none
+
+							&:hover
+								background-color rgba(0, 0, 0, 0.05)
+
+		@media (min-width dualPaneWidth*0.5)
+			ul.projects
+				li
+					width 50%
+			ul.articles
+				li
+					width 20%
+
+	@media (min-width dualPaneWidth)
+		header.splash
+			position fixed
+			top 0
+			width 50%
+		main
+			margin-left 50%
+			width 50%
+
+	#pajanhamarasta
+		background-image url(/files/pajanhamarasta.jpg)
+
+		div
+			bottom 2*unit
+			left auto
+			right 2*unit
+			text-align right
+			top auto
+			transform none
+
+			h1
+				color frontColor
+			h2
+				color alpha(frontColor, 0.4)
+	#rautakymi
+		background-image url(/files/rautakymi.jpg)
+	#lovart
+		background-image url(/files/lovart.jpg)
+	#rautakymi, #lovart
+		text-align center
+		text-shadow 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.4)
+	#rautakuona .cover
+		background-image url(/files/rautakuona.jpg)
+	#tammijarvi .cover
+		background-image url(/files/tammijarvi.jpg)
+	#straka .cover
+		background-image url(/files/straka.jpg)
+	#anttijappinen .cover
+		background-image url(/files/anttijappinen.jpg)
+	#ikuisetseprat .cover
+		background-image url(/files/ikuisetseprat.jpg)
+
+		div
+			position relative
+			top 50%
+			transform translateY(-50%)
+
+			h1
+				color backColor
+			h2
+				color alpha(backColor, 0.8)
+
+// Resume page
+body.cv
+
+	article#cv
+		background-color backColor
+		box-shadow 0 0 0 1px rgba(0, 0, 0, 0.1), 0 10px 40px rgba(0, 0, 0, 0.1)
+		box-sizing border-box
+		color frontColor
+		font-size 1.75*unit
+		line-height 2.5*unit
+		margin 0 auto
+		max-width 210mm
+		padding 2*unit
+		text-align left !important
+
+		header
+			margin-bottom 40px
+
+			h1
+				margin-bottom 10px
+		header p, aside
+			color lighten(frontColor, 60)
+			font-style italic
+			line-height 2*unit
+		section
+			page-break-inside: avoid;
+			+ section
+				margin-top 2*unit
+			h2
+				font-size inherit
+				font-weight bold
+				margin-bottom 2*unit
+			ul
+				li
+					clearfix()
+				li
+					+ li
+						margin-top: 10px
+					time
+						color lighten(frontColor, 60)
+						float left
+						font-style italic
+						width 25%
+					h3, aside
+						margin-left 30%
+
+			&:last-child h2
+				float none !important
+				margin-bottom 2*unit !important
+
+	@media (min-width: mobileWidth)
+		padding 4*unit 0
+
+		article#cv
+			min-height 297mm
+			padding 8*unit 10*unit
+
+			header
+				margin-bottom 5*unit
+			section
+				h2
+					float left
+					margin-bottom 0
+				ul
+					margin-left 20%
+			@media print
+				box-shadow none
+				min-height 0
+
+	@media print
+		background none
+
+		label[for="nav-checkbox"], #nav-checkbox, #nav
+			display none
+		#content
+			margin 0
+			padding 0
+
+body.pajanhamarasta
+	background-color rgb(26, 25, 25)
+	color white
+
+	article#pajanhamarasta
+		div.image
+			background url(/files/pajanhamarasta-cover.jpg)
+			background-position 50% 50%
+			background-size cover
+			height 25vh
+		header
+			background-color rgb(61, 19, 15)
+			padding 4*unit
+			text-align center
+		section
+			background-color rgb(61, 19, 15)
+			padding-bottom 2*unit
+			p
+				margin 0 auto 2*unit auto
+				max-width 100*unit
+				padding 0 2*unit
+
+		> a
+			color rgb(161, 42, 38)
+			display block
+			font-size 3*unit
+			margin-bottom unit
+			padding 4*unit
+			text-align center
+			text-decoration none
+
+			&:hover
+				background-color rgba(0, 0, 0, 0.1)
+
+		footer
+			margin 0 auto
+			max-width 100*unit
+			text-align center
+
+			p
+				margin-bottom unit
