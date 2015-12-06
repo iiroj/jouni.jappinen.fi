@@ -1,0 +1,57 @@
+html, body, div, span, h1, h2, h3, p, a, address, img, i, ul, li, article, aside, figure, footer, header, nav, section, {
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font-size: 100%;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: inherit;
+  vertical-align: baseline
+}
+
+article, aside, figure, footer, header, nav, section {display: block}
+body {line-height: 1}
+ol, ul {list-style: none}
+a {cursor: pointer}
+
+$unit: 8px;
+$backColor: white;
+$frontColor: black;
+$transitionStyle: 0.2s ease-out;
+$mobileWidth: 60*$unit;
+$dualPaneWidth: 200*$unit;
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Noto Serif'), local('NotoSerif'), url(NotoSerif.ttf) format('truetype')
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Noto Serif Italic'), local('NotoSerif-Italic'), url(NotoSerif-Italic.ttf) format('truetype')
+}
+
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0
+}
+
+a { color: inherit }
+
+h1 {
+	font-size: 3*$unit;
+	line-height: 3*$unit
+}
+
+body {
+	font-family: "Noto Serif", sans-serif;
+	font-size: 2*$unit;
+	font-smoothing: antialiased;
+	font-weight: 400;
+	line-height: 3*$unit
+}

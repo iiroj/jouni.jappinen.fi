@@ -9,14 +9,13 @@
   "readme": "",
   "license": "",
   "devDependencies": {
-    "del": "*",
     "gulp": "*",
     "gulp-autoprefixer": "*",
-    "gulp-cache": "*",
+    "gulp-base64": "*",
     "gulp-concat": "*",
     "gulp-minify-css": "*",
     "gulp-rename": "*",
-    "gulp-stylus": "*",
-    "nib": "*"
+    "gulp-sass": "*",
+    "gulp-shell": "*"
   }
 }

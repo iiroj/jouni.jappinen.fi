@@ -1,32 +1,37 @@
-// Load plugins
-var gulp = require('gulp'),
-    stylus = require('gulp-stylus'),
-    nib = require('nib'),
+var gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
-    minifycss = require('gulp-minify-css'),
-    rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
-    cache = require('gulp-cache'),
-    del = require('del');
+    minifycss    = require('gulp-minify-css'),
+    base64       = require('gulp-base64'),
+    rename       = require('gulp-rename'),
+    concat       = require('gulp-concat'),
+    shell        = require('gulp-shell')
 
-// Styles
 gulp.task('styles', function() {
-  return gulp.src('styles/main.styl')
-    .pipe(stylus({ use: nib(),  import: ['nib']}))
-    .pipe(concat('main.css'))
-    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
-    .pipe(gulp.dest('public'))
-    .pipe(rename({ suffix: '.min' }))
+  return gulp.src('_styles/*.scss')
+    .pipe(sass())
+    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 9', 'opera 12.1', 'ios 6', 'android 4'))
     .pipe(minifycss())
+    .pipe(gulp.dest('_static'))
+})
+
+gulp.task('static', ['styles'], function() {
+  gulp.src(['_static/*'])
     .pipe(gulp.dest('public'))
-});
+  gulp.src(['_media/*'])
+    .pipe(gulp.dest('public'))
+})
 
-// Default task
-gulp.task('default', ['clean'], function() {
-    gulp.start('styles');
-});
+gulp.task('devd', shell.task('devd -ol public/ \ /cv=http://devd.io:8000/cv.html \ /pajanhamarasta=http://devd.io:8000/pajanhamarasta.html'))
 
-// Watch
 gulp.task('watch', function() {
-  gulp.watch('styles/**/*.styl', ['styles']);
-});
+  gulp.watch('_static/*', ['static'])
+  gulp.watch('_styles/*.scss', ['static'])
+  gulp.watch('_components/*.html', ['components'])
+})
+
+gulp.task('default', function() {
+  gulp.start('static')
+  gulp.start('watch')
+  gulp.start('devd')
+})
