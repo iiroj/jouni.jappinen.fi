@@ -26,13 +26,13 @@ $dualPaneWidth: 200*$unit;
   font-family: 'Noto Serif';
   font-style: normal;
   font-weight: 400;
-  src: local('Noto Serif'), local('NotoSerif'), url(NotoSerif.ttf) format('truetype')
+  src: local('Noto Serif'), local('NotoSerif'), url(/NotoSerif.ttf) format('truetype')
 }
 @font-face {
   font-family: 'Noto Serif';
   font-style: italic;
   font-weight: 400;
-  src: local('Noto Serif Italic'), local('NotoSerif-Italic'), url(NotoSerif-Italic.ttf) format('truetype')
+  src: local('Noto Serif Italic'), local('NotoSerif-Italic'), url(/NotoSerif-Italic.ttf) format('truetype')
 }
 
 html {
