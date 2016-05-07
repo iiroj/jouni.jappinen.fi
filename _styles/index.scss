@@ -25,8 +25,6 @@ main {
   position: relative;
 
   section.about {
-    font-size: 3*$unit;
-    line-height: 4*$unit;
     margin: 8*$unit auto;
     max-width: 80*$unit;
     padding: 0 2*$unit;
@@ -35,16 +33,15 @@ main {
   }
 
   ul.projects {
+    display: flex;
+    flex-wrap: wrap;
     padding: 1*$unit;
 
     li {
       box-sizing: border-box;
-      float: left;
-      height: 25vh;
+      height: 40vh;
       padding: 1*$unit;
       width: 100%;
-
-      &.large { height: 50vh }
 
       a {
         display: block;
@@ -69,6 +66,7 @@ main {
           div {
             left: 50%;
             position: absolute;
+            text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.4);
             top: 50%;
             transform: translate(-50%,-50%);
             width: 90%
@@ -81,7 +79,7 @@ main {
   ul.articles {
     overflow-x: hidden;
     padding: 1*$unit;
-    width: 100vw;
+    width: 100%;
 
     li {
       box-sizing: border-box;
@@ -156,40 +154,15 @@ main {
   }
 }
 
-#pajanhamarasta {
-  background-image: url(/pajanhamarasta.jpg);
-
-  div {
-    bottom: 2*$unit;
-    left: auto;
-    right: 2*$unit;
-    text-align: right;
-    top: auto;
-    transform: none;
-
-    h1 { color: $frontColor }
-    h2 { color: opacify($frontColor, 0.4) }
-  }
-}
+#pajanhamarasta { background-image: url(/pajanhamarasta.jpg) }
 #rautakymi { background-image: url(/rautakymi.jpg) }
-#lovart { background-image: url(/lovart.jpg) }
-#rautakymi, #lovart {
-  text-align: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.4)
+#ikuisetseprat {
+  background-image: url(/ikuisetseprat.jpg);
+  background-position: top center;
 }
+#lovart { background-image: url(/lovart.jpg) }
 #rautakuona .cover { background-image: url(/rautakuona.jpg) }
 #tammijarvi .cover { background-image: url(/tammijarvi.jpg) }
 #straka .cover { background-image: url(/straka.jpg) }
 #anttijappinen .cover { background-image: url(/anttijappinen.jpg) }
-#ikuisetseprat .cover {
-  background-image: url(/ikuisetseprat.jpg);
-
-  div{
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-
-    h1 { color: $backColor }
-    h2 { color: opacify($backColor, 0.8) }
-  }
-}
+#ikuisetseprat-article .cover { background-image: url(/ikuisetseprat-article.jpg) }

@@ -9,13 +9,12 @@
   "readme": "",
   "license": "",
   "devDependencies": {
-    "gulp": "*",
-    "gulp-autoprefixer": "*",
-    "gulp-base64": "*",
-    "gulp-concat": "*",
-    "gulp-minify-css": "*",
-    "gulp-rename": "*",
-    "gulp-sass": "*",
-    "gulp-shell": "*"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-concat": "2.6.0",
+    "gulp-clean-css": "2.0.7",
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "2.3.1",
+    "gulp-webserver": "^0.9.1"
   }
 }
