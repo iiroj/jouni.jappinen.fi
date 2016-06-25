@@ -1,20 +1,25 @@
 {
   "name": "jouni.jappinen.fi",
   "version": "0.1.0",
-  "author": {
-    "name": "Iiro Jäppinen",
-    "email": "iiro@jappinen.fi"
+  "private": true,
+  "scripts": {
+    "build": "npm run build-scss && npm run build-html",
+    "build-css": "postcss -u autoprefixer --autoprefixer.browsers 'last 2 version' -u cssnano -o dist/style.css",
+    "build-scss": "node-sass src/scss/index.scss | npm run build-css",
+    "server": "live-server dist/ --quiet",
+    "start": "npm run watch & npm run server",
+    "watch": "npm run watch-assets & npm run watch-scss & npm run watch-html",
+    "watch-assets": "onchange 'src/static/{*.ico,*.jpg,*.png,*.pdf}' -i -- cp src/static/{*.ico,*.jpg,*.png,*.pdf} dist/",
+    "watch-scss": "onchange 'src/scss/*.scss' -i -- npm run build-scss",
+    "watch-html": "onchange 'src/*.html' -i -- cp src/*.html dist/"
   },
-  "description": "",
-  "readme": "",
-  "license": "",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "3.1.0",
-    "gulp-concat": "2.6.0",
-    "gulp-clean-css": "2.0.7",
-    "gulp-rename": "1.2.2",
-    "gulp-sass": "2.3.1",
-    "gulp-webserver": "^0.9.1"
+    "autoprefixer": "^6.3.6",
+    "cssnano": "^3.7.1",
+    "inline-source-cli": "^1.1.1",
+    "live-server": "^1.0.0",
+    "node-sass": "^3.8.0",
+    "onchange": "^2.5.0",
+    "postcss-cli": "^2.5.2"
   }
 }

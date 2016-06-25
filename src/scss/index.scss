@@ -1,0 +1,57 @@
+@import "reset.scss";
+
+$unit: 8px;
+$backColor: white;
+$frontColor: black;
+$transitionStyle: 0.2s ease-out;
+$mobileWidth: 60*$unit;
+$dualPaneWidth: 200*$unit;
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Noto Serif'),
+    local('NotoSerif'),
+    url(https://fonts.gstatic.com/s/notoserif/v4/eCpfeMZI7q4jLksXVRWPQwzyDMXhdD8sAj6OAJTFsBI.woff2) format('woff2'),
+    url(https://fonts.gstatic.com/s/notoserif/v4/eCpfeMZI7q4jLksXVRWPQ73hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 400;
+  src:
+    local('Noto Serif Italic'),
+    local('NotoSerif-Italic'),
+    url(https://fonts.gstatic.com/s/notoserif/v4/HQXBIwLHsOJCNEQeX9kNzxampu5_7CjHW5spxoeN3Vs.woff2) format('woff2'),
+    url(https://fonts.gstatic.com/s/notoserif/v4/HQXBIwLHsOJCNEQeX9kNz6RDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0
+}
+
+a { color: inherit }
+
+h1 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+body {
+	font-family: "Noto Serif", sans-serif;
+	font-size: 2*$unit;
+	font-smoothing: antialiased;
+	font-weight: 400;
+	line-height: 3*$unit
+}
+
+@import "home.scss";
+@import "cv.scss";
+@import "ikuisetseprat.scss";
+@import "pajanhamarasta.scss";
