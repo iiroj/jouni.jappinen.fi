@@ -1,3 +1,6 @@
+@import "reset.scss";
+@import "default.scss";
+
 body.cv {
   article {
     background-color: $backColor;
@@ -42,7 +45,6 @@ body.cv {
           h3, aside { margin-left: 30% }
         }
       }
-
       &:last-child h2 {
         float: none !important;
         margin-bottom: 2*$unit !important
@@ -50,15 +52,12 @@ body.cv {
     }
   }
 }
-
 @media (min-width: $mobileWidth) {
   body.cv {
     padding: 4*$unit 0;
-
     article#cv {
       min-height: 297mm;
       padding: 8*$unit 10*$unit;
-
       header { margin-bottom: 5*$unit }
       section {
         h2 {
@@ -74,11 +73,9 @@ body.cv {
     }
   }
 }
-
 @media print {
   body.cv {
     background: none;
-
     #content {
       margin: 0;
       padding: 0

@@ -13,4 +13,7 @@ html, body, div, span, h1, h2, h3, p, a, address, img, i, ul, li, article, aside
 article, aside, figure, footer, header, nav, section {display: block}
 body {line-height: 1}
 ol, ul {list-style: none}
-a {cursor: pointer}
+a {
+  color: inherit;
+  cursor: pointer;
+}

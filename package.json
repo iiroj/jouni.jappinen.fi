@@ -3,15 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "npm run build-scss && npm run build-html",
-    "build-css": "postcss -u autoprefixer --autoprefixer.browsers 'last 2 version' -u cssnano -o dist/style.css",
-    "build-html": "cp src/*.html dist/",
-    "build-scss": "node-sass src/scss/index.scss | npm run build-css",
+    "build": "npm run build-scss && npm run build-css && npm run build-html",
+    "build-css": "postcss -u autoprefixer --autoprefixer.browsers 'last 2 version' -u cssnano src/static/*.css -r",
+    "build-html": "cp src/*.html dist/ && for i in dist/*.html;do inline-source --root ./src/static $i $i;done",
+    "build-scss": "node-sass src/scss/ -o src/static",
     "server": "live-server dist/ --quiet",
     "start": "npm run watch & npm run server",
     "watch": "npm run watch-assets & npm run watch-scss & npm run watch-html",
     "watch-assets": "onchange 'src/static/{*.ico,*.jpg,*.png,*.pdf}' -i -- cp src/static/{*.ico,*.jpg,*.png,*.pdf} dist/",
-    "watch-scss": "onchange 'src/scss/*.scss' -i -- npm run build-scss",
+    "watch-scss": "onchange 'src/scss/*.scss' -i -- npm run build-scss && npm run build-css",
     "watch-html": "onchange 'src/*.html' -i -- npm run build-html"
   },
   "devDependencies": {
