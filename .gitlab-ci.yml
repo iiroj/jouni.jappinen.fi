@@ -1,0 +1,15 @@
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+    - rm -fr /var/www/jouni.jappinen.fi/*
+    - cp build/* /var/www/jouni.jappinen.fi/
+  cache:
+    paths:
+      - node_modules
+    key: "$CI_BUILD_REF"
+    untracked: true
