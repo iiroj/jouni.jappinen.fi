@@ -7,12 +7,12 @@
     "build:assets": "mkdir -p build/ && cp src/static/*.png build/ & cp src/static/*.jpg build/ & cp src/static/*.ico build/ & cp src/static/*.pdf build/",
     "build:css": "mkdir -p build/ && postcss -u autoprefixer --autoprefixer.browsers 'last 2 version' -u css-mqpacker -u cssnano src/static/*.css -r",
     "build:html": "mkdir -p build/ && cp src/*.html build/ && for i in build/*.html;do inline-source --root ./src/static $i $i;done",
-    "build:scss": "node-sass src/scss/ -o src/static",
+    "build:scss": "node-sass src/scss/ -o src/static && npm run build:css",
     "server": "live-server build/ --quiet",
     "start": "npm run watch & npm run server",
-    "watch": "npm run watch-assets & npm run watch:scss & npm run watch:html",
+    "watch": "npm run watch:assets & npm run watch:scss & npm run watch:html",
     "watch:assets": "onchange 'src/static/*.ico' 'src/static/*.jpg' 'src/static/*.png' 'src/static/*.pdf' -i -- npm run build:assets",
-    "watch:scss": "onchange 'src/scss/*.scss' -i -- npm run build:scss && npm run build:css",
+    "watch:scss": "onchange 'src/scss/*.scss' -i -- npm run build:scss",
     "watch:html": "onchange 'src/*.html' -i -- npm run build:html"
   },
   "devDependencies": {

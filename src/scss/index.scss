@@ -78,15 +78,17 @@ body.index {
     }
 
     ul.articles {
-      overflow-x: hidden;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
       padding: 1*$unit;
       width: 100%;
 
       li {
         box-sizing: border-box;
-        float: left;
         padding: 1*$unit;
-        width: 50%;
+        width: 26*$unit;
 
         a {
           display: block;
@@ -134,7 +136,6 @@ body.index {
     #tammijarvi .cover { background-image: url(/tammijarvi.jpg) }
     #straka .cover { background-image: url(/straka.jpg) }
     #anttijappinen .cover { background-image: url(/anttijappinen.jpg) }
-    #ikuisetseprat-article .cover { background-image: url(/ikuisetseprat-article.jpg) }
 
     footer {
       nav.links {
@@ -152,7 +153,6 @@ body.index {
 
     @media (min-width: $dualPaneWidth*0.5) {
       ul.projects li{ width: 50% }
-      ul.articles li { width: 20% }
     }
   }
 
