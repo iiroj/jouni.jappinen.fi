@@ -1,15 +1,26 @@
 stages:
+  - install
+  - build
   - deploy
+
+cache:
+  key: "$CI_PROJECT_NAME"
+  paths:
+    - node_modules
+    - public
+
+install:
+  stage: install
+  script:
+    - yarn install
+
+build:
+  stage: build
+  script:
+    - yarn run build
 
 deploy:
   stage: deploy
   script:
-    - yarn install
-    - yarn run build
     - rm -fr /var/www/jouni.jappinen.fi/*
     - cp build/* /var/www/jouni.jappinen.fi/
-  cache:
-    paths:
-      - node_modules
-    key: "$CI_BUILD_REF"
-    untracked: true
