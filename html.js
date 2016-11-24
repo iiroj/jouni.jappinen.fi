@@ -22,6 +22,10 @@ function HTML (props) {
         />
         <link rel='icon' sizes='180x180' href='/icon.png' />
         <link rel='apple-touch-icon' href='/icon.png' />
+        <link
+          href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400i'
+          rel='stylesheet prefetch'
+        />
         {head.title.toComponent()}
         {head.meta.toComponent()}
         {head.script.toComponent()}
