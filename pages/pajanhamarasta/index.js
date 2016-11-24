@@ -21,7 +21,7 @@ function Pajanhamarasta () {
           <p>Yhteisön arvomaailman ja normien halveksiminen tuli esille mitä moninaisimimpien tempausten muodossa. Elämää väritti ennen vanhaan taikausko, noituus ja magia ja sepillä oli niiden harjoittamisessa oma tärkeä roolinsa, ensisijaisesti pajaelinkeinon edistäjänä, joka lienee vanhaa perua rautakaudelta. Taikuuden harjoittaminen pajassa pönkitti sepän asemaa kyläyhteisössä ja samalla se ylläpiti ammoisista ajoista asti periytynyttä sankarimyyttiä.</p>
           <p>Sepät eivät paljastaneet salaisuuksiaan muille ja se sai ihmiset äärimmäisen uteliaiksi. Kun kyläläiset eivät ymmärtäneet sepän käyttämien prosessien kulkua ja kun seppä tuntui alati keskustelevan ahjon, alasimen tai palkeiden kanssa, alkoivat ihmiset uskoa, että sepällä täytyi olla luontaisia kykyjä hallita yliluonnollisia voimia.</p>
         </section>
-        <a href='/pajanhamarasta-arvostelu.jpg' rel='prefetch'>Lue kirja-arvostelu</a>
+        <a href='arvostelu.jpg' rel='prefetch'>Lue kirja-arvostelu</a>
         <a href='https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501' rel='external crossorigin prefetch'>Osta Adlibris-verkkokirjakaupasta</a>
         <footer>
           <p>Jouni Jäppinen</p>
