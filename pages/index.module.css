@@ -1,0 +1,223 @@
+.header {
+  background: url(/sokerikko.jpg);
+  background-position: 25% center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+  z-index: -1;
+}
+
+@media (min-width: 100rem) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 50%
+  }
+}
+
+.headingContainer {
+  left: 1rem;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.heading {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.subheading {
+  color: opacify($backColor, 0.4)
+}
+
+.caption {
+  bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 75%;
+  font-style: italic;
+  margin-left: 0.5rem;
+  position: absolute;
+  right: 0.5rem;
+  text-align: right;
+}
+
+.main {
+  position: relative;
+}
+
+@media (min-width: 100rem) {
+  .main {
+    margin-left: 50%;
+    width: 50%
+  }
+}
+
+.about {
+  margin: 4rem auto;
+  max-width: 40rem;
+  padding: 0 1rem;
+}
+
+.about p + p {
+  margin-top: 0.5rem;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1*$unit;
+}
+
+.projects li {
+  box-sizing: border-box;
+  height: 40vh;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+@media (min-width: 50rem) {
+  .projects li {
+    width: 50%;
+  }
+}
+
+.projects li a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.project {
+  background-color: rgba(0, 0, 0, 0.05);
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  color: rgb(255, 255, 255) !important;
+  height: 100%;
+  position: relative;
+  transition: transform 0.2s ease-out;
+}
+
+.projects li a:hover .project {
+  transform: scale(0.95);
+  transform-origin: 50% 50%;
+}
+
+.project > div {
+  left: 50%;
+  position: absolute;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.4);
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 90%;
+}
+
+.projects li a .project > div h1 {
+  font-size: 1.5rem;
+}
+
+.projectPajanhamarasta {
+  composes: project;
+  background-image: url('/pajanhamarasta.jpg');
+}
+
+.projectIkuisetseprat {
+  composes: project;
+  background-image: url(/ikuisetseprat.jpg);
+  background-position: center;
+}
+
+.projectRautakymi {
+  composes: project;
+  background-image: url('/rautakymi.jpg');
+}
+
+.projectLovart {
+  composes: project;
+  background-image: url(/lovart.jpg);
+}
+
+.articles {
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem;
+  width: 100%;
+}
+
+.articles li {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 13rem;
+}
+
+.articles li a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.articles li a .article {
+  box-sizing: border-box;
+  height: 100%;
+  padding: 1rem;
+  position: relative;
+  transition: transform 0.2s ease-out;
+}
+
+.articles li a:hover .article {
+  transform: scale(0.95);
+  transform-origin: 50% 50%
+}
+
+.article .cover {
+  background-color: rgba(255, 255, 2555, 0.05);
+  background-position: center;
+  background-size: cover;
+  height: 0;
+  margin: 0 auto 1rem auto;
+  padding-bottom: 106.67%;
+  width: 75%;
+}
+
+.article h1 {
+  font-size: inherit;
+  text-align: center;
+}
+
+.coverRautakuona {
+  composes: cover;
+  background-image: url('/rautakuona.jpg');
+}
+
+.coverTammijarvi {
+  composes: cover;
+  background-image: url('/tammijarvi.jpg');
+}
+
+.coverStraka {
+  composes: cover;
+  background-image: url('/straka.jpg');
+}
+
+.coverAnttijappinen {
+  composes: cover;
+  background-image: url('/anttijappinen.jpg');
+}
+
+.links ul li a {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 1rem 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+.links ul li a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
