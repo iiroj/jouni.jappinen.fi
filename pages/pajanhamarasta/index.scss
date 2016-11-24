@@ -1,11 +1,10 @@
-@import "reset.scss";
-@import "default.scss";
+@import "../_variables.scss";
 
-body.pajanhamarasta {
+.pajanhamarastaPage {
   background-color: rgb(26, 25, 25);
   color: white;
 
-  article {
+  main {
     div.image {
       background: url(/pajanhamarasta-cover.jpg);
       background-position: 50% 50%;

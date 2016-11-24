@@ -1,10 +1,9 @@
-@import "reset.scss";
-@import "default.scss";
+@import "../_variables.scss";
 
-body.ikuisetseprat {
+.ikuisetsepratPage {
   background-color: rgb(219, 219, 219);
 
-  article {
+  main {
 
     div.image {
       background: url(/ikuisetseprat-cover.jpg);
@@ -43,4 +42,7 @@ body.ikuisetseprat {
       padding: 2*$unit 0 6*$unit 0;
       text-align: center;
 
-      p { margin-bottom: unit; }}}}
+      p { margin-bottom: unit; }
+    }
+  }
+}

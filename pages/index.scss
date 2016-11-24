@@ -1,7 +1,6 @@
-@import "reset.scss";
-@import "default.scss";
+@import './_variables.scss';
 
-body.index {
+.indexPage {
   header.splash {
   		background: url(/sokerikko.jpg);
   		background-position: 25% center;
