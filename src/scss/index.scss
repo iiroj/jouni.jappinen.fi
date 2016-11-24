@@ -21,6 +21,17 @@ body.index {
 
   			h2 { color: opacify($backColor, 0.4) }
       }
+
+      aside {
+        bottom: 1*$unit;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 75%;
+        font-style: italic;
+        margin-left: 1*$unit;
+        position: absolute;
+        right: 1*$unit;
+        text-align: right;
+      }
   }
   main {
     position: relative;
