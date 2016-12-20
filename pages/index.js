@@ -88,7 +88,7 @@ function Index () {
         </ul>
         <ul className={styles.articles}>
           <li>
-            <a to='/rautakuona.pdf'>
+            <a href='/rautakuona.pdf'>
               <article className={styles.article}>
                 <div className={styles.coverRautakuona} />
                 <h1>Kymijokisuiston rautakuona</h1>
