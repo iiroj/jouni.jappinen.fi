@@ -16,7 +16,7 @@
     "test": "npm run lint",
     "build": "gatsby build",
     "predeploy": "npm run build",
-    "deploy": "./bin/deploy.sh"
+    "deploy": "./utils/deploy.sh"
   },
   "dependencies": {
     "babel-eslint": "*",
