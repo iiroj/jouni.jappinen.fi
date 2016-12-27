@@ -30,7 +30,7 @@ function HTML (props) {
         <link
           rel='preload stylesheet'
           href='https://fonts.googleapis.com/css?family=Noto+Serif:400,400i'
-          as='stylesheet'
+          as='style'
         />
         {head.title.toComponent()}
         {head.meta.toComponent()}
