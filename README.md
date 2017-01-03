@@ -1,4 +1,4 @@
-# @jouni.jappinen.fi/site
+# jouni.jappinen.fi
 
 A static site made with [Gatsby](https://github.com/gatsbyjs/gatsby).
 
