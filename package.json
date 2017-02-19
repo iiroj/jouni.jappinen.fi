@@ -1,6 +1,6 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Static site made with Gatsby",
   "bugs": "https://github.com/iiroj/jouni.jappinen.fi/issues",
   "licence": "UNLICENCED",
@@ -15,10 +15,15 @@
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "npm run lint",
     "build": "gatsby build",
-    "predeploy": "npm run build",
-    "deploy": "./utils/deploy.sh"
+    "deploy": "aws s3 sync ./public/ s3://jouni.jappinen.fi --delete --sse AES256"
   },
   "dependencies": {
+    "gatsby": "*",
+    "react-dom": "*",
+    "react-helmet": "*",
+    "react": "*"
+  },
+  "devDependencies": {
     "babel-eslint": "*",
     "babel-plugin-add-module-exports": "*",
     "babel-plugin-transform-class-properties": "*",
@@ -33,32 +38,7 @@
     "eslint-plugin-react": "*",
     "eslint-plugin-standard": "*",
     "eslint": "*",
-    "gatsby": "*",
-    "react-dom": "*",
-    "react-helmet": "*",
-    "react": "*",
     "toml-js": "*"
   },
-  "private": true,
-  "babel": {
-    "presets": [
-      "react",
-      "es2015",
-      "stage-0"
-    ],
-    "plugins": [
-      "transform-class-properties",
-      "add-module-exports"
-    ]
-  },
-  "eslintConfig": {
-    "parser": "babel-eslint",
-    "extends": [
-      "standard",
-      "standard-react"
-    ],
-    "globals": {
-      "__PREFIX_LINKS__": true
-    }
-  }
+  "private": true
 }

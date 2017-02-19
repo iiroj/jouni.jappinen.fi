@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "add-module-exports",
+    "transform-class-properties"
+  ],
+  "presets": [
+    "react",
+    "es2015",
+    "stage-0"
+  ]
+}
