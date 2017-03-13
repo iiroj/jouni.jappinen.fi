@@ -1,10 +1,12 @@
 {
   "extends": [
     "standard",
-    "standard-react"
+    "react"
   ],
-  "globals": {
-    "__PREFIX_LINKS__": true
-  },
+  "plugins": [
+    "standard",
+    "promise",
+    "react"
+  ],
   "parser": "babel-eslint"
 }
