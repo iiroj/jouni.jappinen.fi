@@ -15,7 +15,8 @@
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "npm run lint",
     "build": "gatsby build",
-    "deploy": "aws s3 sync ./public/ s3://jouni.jappinen.fi --delete --sse AES256"
+    "deploy": "aws s3 sync ./public/ s3://jouni.jappinen.fi --delete --sse AES256",
+    "publish": "npm run build && npm run deploy"
   },
   "dependencies": {
     "gatsby": "*",
