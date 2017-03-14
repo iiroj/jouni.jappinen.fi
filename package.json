@@ -19,25 +19,25 @@
     "publish": "npm run build && npm run deploy"
   },
   "dependencies": {
-    "react": "15.4.2",
-    "react-dom": "15.4.2"
+    "react": "*",
+    "react-dom": "*"
   },
   "devDependencies": {
-    "babel-eslint": "7.1.1",
-    "babel-plugin-add-module-exports": "0.2.1",
-    "babel-plugin-transform-class-properties": "6.23.0",
-    "babel-preset-es2015": "6.22.0",
-    "babel-preset-react": "6.23.0",
-    "babel-preset-stage-0": "6.22.0",
-    "eslint": "^3.17.0",
-    "eslint-config-react": "^1.1.7",
-    "eslint-config-standard": "^7.0.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "6.10.0",
-    "eslint-plugin-standard": "^2.1.1",
-    "gatsby": "^0.12.38",
-    "react-helmet": "4.0.0",
-    "reset.css": "2.0.2"
+    "babel-eslint": "*",
+    "babel-plugin-add-module-exports": "*",
+    "babel-plugin-transform-class-properties": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "babel-preset-stage-0": "*",
+    "eslint": "*",
+    "eslint-config-react": "*",
+    "eslint-config-standard": "*",
+    "eslint-plugin-promise": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-standard": "*",
+    "gatsby": "*",
+    "react-helmet": "*",
+    "reset.css": "*"
   },
   "private": true
 }
