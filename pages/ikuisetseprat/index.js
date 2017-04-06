@@ -20,7 +20,8 @@ export default function Ikuisetseprat () {
                     <p>Tytärsaaren nuorisoseura aloitti 1920–luvun lopulla esiintymismatkat Viroon, jotka huipentuivat vuosina 1935–1939 kahteentoista suureen heimojuhlaan Tytärsaaressa sekä Purtse-Jõesuun, Lüganusen, Pikkaristin, Sämin ja Varudin kylissä Virumaalla. Suurimpiin juhliin osallistui Sämisillan kievarissa yli tuhat virolaista vierasta. Tytärsaaren nuorisoseuran huvitoimikunta esitti tuolloin virolaisille useita näytelmiä, kansantanssia ja runonlausuntaa.</p>
                     <p>Vilkas kanssakäyminen johti 1920- ja 1930-luvulla lukuisiin seurustelusuhteisiin, kirjeenvaihtoystävyyteen ja lopulta neljään avioliittoon, tytärsaarelaisten kalastajien ja laivurien löytäessä Virumaalta morsiamen. Seprojen ystävyyssuhteet katkesivat äkillisesti 11.10.1939, jolloin Tytärsaari evakuoitiin muutaman tunnin kuluessa. Tuona päivänä Virossa oli useita tytärsaarelaisia aluksineen, joille evakuointikäsky vietiin moottoriveneellä ja jolloin ystävyyssuhteet katkesivat.</p>
                 </section>
-                <a className={styles.link} href="http://www.kymensanomat.fi/Online/2016/06/21/Kirja%3A%20Yst%C3%A4vyytt%C3%A4%20%20yli%20merien/2016320953078/4" rel="external crossorigin prefetch">Lue kirja-arvostelu</a>
+                <a className={styles.link} href="http://www.kymensanomat.fi/Online/2016/06/21/Kirja%3A%20Yst%C3%A4vyytt%C3%A4%20%20yli%20merien/2016320953078/4" rel="external crossorigin prefetch">Lue kirja-arvostelu (I)</a>
+                <a className={styles.link} href="/ikuisetseprat/arvostelu2.pdf">Lue kirja-arvostelu (II)</a>
                 <a className={styles.link} href="http://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310" rel="external crossorigin prefetch">Osta Adlibris-verkkokirjakaupasta</a>
                 <footer className={styles.footer}>
                     <p>Jouni Jäppinen</p>
