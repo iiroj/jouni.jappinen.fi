@@ -1,9 +1,5 @@
+.cache
+.DS_store
 node_modules
 public
 sketch
-
-.DS_Store
-npm-debug.log*
-*.log
-
-.gatsby-context.js

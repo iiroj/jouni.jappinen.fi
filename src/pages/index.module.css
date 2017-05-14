@@ -1,5 +1,5 @@
 .header {
-  background: url(/sokerikko.jpg);
+  background: url(./sokerikko.jpg);
   background-position: 25% center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -122,23 +122,23 @@
 
 .projectPajanhamarasta {
   composes: project;
-  background-image: url('/pajanhamarasta.jpg');
+  background-image: url('./pajanhamarasta.jpg');
 }
 
 .projectIkuisetseprat {
   composes: project;
-  background-image: url(/ikuisetseprat.jpg);
+  background-image: url('./ikuisetseprat.jpg');
   background-position: center;
 }
 
 .projectRautakymi {
   composes: project;
-  background-image: url('/rautakymi.jpg');
+  background-image: url('./rautakymi.jpg');
 }
 
 .projectLovart {
   composes: project;
-  background-image: url(/lovart.jpg);
+  background-image: url('./lovart.jpg');
 }
 
 .articles {
@@ -192,22 +192,22 @@
 
 .coverRautakuona {
   composes: cover;
-  background-image: url('/rautakuona.jpg');
+  background-image: url('./rautakuona.jpg');
 }
 
 .coverTammijarvi {
   composes: cover;
-  background-image: url('/tammijarvi.jpg');
+  background-image: url('./tammijarvi.jpg');
 }
 
 .coverStraka {
   composes: cover;
-  background-image: url('/straka.jpg');
+  background-image: url('./straka.jpg');
 }
 
 .coverAnttijappinen {
   composes: cover;
-  background-image: url('/anttijappinen.jpg');
+  background-image: url('./anttijappinen.jpg');
 }
 
 .links ul li a {

@@ -1,17 +1,22 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { Link } from 'react-router'
-import { config } from 'config'
+import Link from 'gatsby-link'
 import styles from './index.module.css'
+
+import { default as anttijappinenPDF } from 'files/anttijappinen.pdf'
+import { default as kirjoituksiaPDF } from 'files/kirjoituksia.pdf'
+import { default as rautakuonaPDF } from 'files/rautakuona.pdf'
+import { default as stråkaPDF } from 'files/stråka.pdf'
+import { default as tammijärviPDF } from 'files/tammijärvi.pdf'
 
 export default function Index () {
     const microdata = {
         '@context': 'http://schema.org',
         '@type': 'Person',
-        'name': config.authorName,
+        'name': 'Jouni Jäppinen',
         'jobTitle': 'taiteilija',
-        'url': config.siteUrl,
-        'email': config.authorEmail,
+        'url': 'https://jouni.jappinen.fi',
+        'email': 'jouni@jappinen.fi',
         'nationality': 'Finland',
         'address': {
             '@type': 'PostalAddress',
@@ -24,15 +29,15 @@ export default function Index () {
     return (
         <div>
             <Helmet
-                title={config.authorName}
+                title="Jouni Jäppinen"
                 script={[
                     { type: "application/ld+json", innerHTML: `${JSON.stringify(microdata)}` }
                 ]}
                 />
             <header className={styles.header}>
                 <div className={styles.headingContainer}>
-                    <h1 className={styles.heading}>{config.authorName}</h1>
-                    <h2 className={styles.subheading}>{config.authorJobTitle}</h2>
+                    <h1 className={styles.heading}>Jouni Jäppinen</h1>
+                    <h2 className={styles.subheading}>Taiteilija ja kultaseppä</h2>
                 </div>
                 <aside className={styles.caption}>
                     <p>Image: Sugar cup, cast iron, sterling silver. Finnish Design 8 exhibition at Helsinki Design Museum 1991</p>
@@ -88,7 +93,7 @@ export default function Index () {
                 </ul>
                 <ul className={styles.articles}>
                     <li>
-                        <a href="/rautakuona.pdf">
+                        <a href={rautakuonaPDF}>
                             <article className={styles.article}>
                                 <div className={styles.coverRautakuona} />
                                 <h1>Kymijokisuiston rautakuona</h1>
@@ -96,7 +101,7 @@ export default function Index () {
                         </a>
                     </li>
                     <li>
-                        <a href="/tammijarvi.pdf">
+                        <a href={tammijärviPDF}>
                             <article className={styles.article}>
                                 <div className={styles.coverTammijarvi} />
                                 <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
@@ -104,7 +109,7 @@ export default function Index () {
                         </a>
                     </li>
                     <li>
-                        <a href="/straka.pdf">
+                        <a href={stråkaPDF}>
                             <article className={styles.article}>
                                 <div className={styles.coverStraka} />
                                 <h1>Stråka Järnframställning</h1>
@@ -112,7 +117,7 @@ export default function Index () {
                         </a>
                     </li>
                     <li>
-                        <a href="/anttijappinen.pdf">
+                        <a href={anttijappinenPDF}>
                             <article className={styles.article}>
                                 <div className={styles.coverAnttijappinen} />
                                 <h1>Sotamies Antti Jäppinen</h1>
@@ -124,7 +129,7 @@ export default function Index () {
                     <nav className={styles.links}>
                         <ul>
                             <li>
-                                <a href="/kirjoituksia.pdf" rel="prefetch">Kirjoituksia</a>
+                                <a href={kirjoituksiaPDF} rel="prefetch">Kirjoituksia</a>
                             </li>
                             <li>
                                 <a href="mailto:Jouni Jäppinen <jouni@jappinen.fi>">Ota yhteyttä</a>

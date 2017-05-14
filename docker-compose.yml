@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  gatsby:
+    image: node:7.10
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/app
+      - node_modules:/app/node_modules
+    working_dir: /app
+    command: sh -c "npm install -s && npm start"
+    ports:
+      - 127.0.0.1:8000:8000
+
+volumes:
+  node_modules:
