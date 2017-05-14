@@ -1,16 +1,12 @@
-.PHONY: build
-
 current_dir := $(shell pwd)
 image := $(shell cat docker-compose.yml | grep 'image:' | awk '{print $$2}')
 modules := jounijappinenfi_node_modules_make
 
-clean:
-	@ echo "Cleaning Docker Volumes…"
-	@ docker volume ls | grep ${modules} || exit 0 && docker volume rm ${modules}
-	@ echo "Cleaning Gatsby cache…"
-	@ rm -fr ${current_dir}/.cache
-	@ echo "Cleaning previous build…"
-	@ rm -fr ${current_dir}/public
+.DEFAULT_GOAL := default
+.PHONY: default
+default: build
+
+default: build
 
 build:
 	@ echo "Creating Docker Volumes if necessary…"
@@ -26,3 +22,12 @@ build:
 deploy:
 	@ echo "Running deploy.sh…"
 	@ ${current_dir}/deploy.sh
+
+clean:
+	@ echo "Cleaning Docker Volumes…"
+	@ docker volume ls | grep ${modules} || exit 0 && docker volume rm ${modules}
+	@ echo "Cleaning Gatsby cache…"
+	@ rm -fr ${current_dir}/.cache
+	@ echo "Cleaning previous build…"
+	@ rm -fr ${current_dir}/public
+	
