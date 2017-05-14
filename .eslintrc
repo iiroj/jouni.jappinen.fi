@@ -1,13 +1,9 @@
 {
-    plugins: [
-        "standard",
-        "react"
-    ],
-    parserOptions: {
-        ecmaVersion: 6,
-          sourceType: "module",
-          ecmaFeatures: {
-              jsx: true
-          }
-    }
+  "extends": ["standard", "standard-react"],
+  "rules": {
+    "react/prop-types": [0]
+  },
+  "globals": {
+    "graphql": true
+  }
 }
