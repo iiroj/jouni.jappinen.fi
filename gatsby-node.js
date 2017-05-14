@@ -1,18 +1,16 @@
-const path = require("path")
 const fs = require(`fs-extra`)
 
 exports.modifyWebpackConfig = ({config}) => {
   config.merge({
     resolve: {
       root: `${__dirname}/src`,
-      extensions: ['', '.js', '.jsx', '.json', '.css', '.module.css'],
+      extensions: ['', '.js', '.jsx', '.json', '.css', '.module.css']
     }
   })
   config.loader('pdf', {
     test: /\.pdf$/,
-    loaders: ['file'],
+    loaders: ['file']
   })
-  return
 }
 
 exports.postBuild = () => {
