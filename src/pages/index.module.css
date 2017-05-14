@@ -69,7 +69,7 @@
 .projects {
   display: flex;
   flex-wrap: wrap;
-  padding: 1*$unit;
+  padding: 0.5rem;
 }
 
 .projects li {
@@ -146,7 +146,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 1rem;
   width: 100%;
 }
 
