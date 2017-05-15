@@ -30,6 +30,7 @@
     "gatsby-source-filesystem": "1.0.0-alpha14",
     "gatsby-transformer-remark": "1.0.0-alpha14",
     "gatsby-transformer-sharp": "1.0.0-alpha14",
+    "preact": "8.1.0",
     "react-helmet": "5.0.3",
     "reset.css": "2.0.2"
   },
