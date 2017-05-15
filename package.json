@@ -13,7 +13,7 @@
     "prestart": "rm -fr ./.cache",
     "start": "gatsby develop",
     "lint": "eslint --ext .js --ignore-pattern public .",
-    "prebuild": "rm -fr ./.cache",
+    "prebuild": "rm -fr ./.cache ./public",
     "build": "gatsby build"
   },
   "dependencies": {
