@@ -1,5 +1,3 @@
-const fs = require(`fs-extra`)
-
 exports.modifyWebpackConfig = ({config}) => {
   config.merge({
     resolve: {
@@ -11,9 +9,4 @@ exports.modifyWebpackConfig = ({config}) => {
     test: /\.pdf$/,
     loaders: ['file']
   })
-}
-
-exports.postBuild = () => {
-  fs.copySync('./src/pages/favicon.ico', './public/favicon.ico')
-  fs.copySync('./src/pages/icon.png', './public/icon.png')
 }

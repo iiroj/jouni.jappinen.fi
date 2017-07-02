@@ -33,7 +33,7 @@ export default function Index () {
         script={[
           { type: 'application/ld+json', innerHTML: `${JSON.stringify(microdata)}` }
         ]}
-        />
+      />
       <header className={styles.header}>
         <div className={styles.headingContainer}>
           <h1 className={styles.heading}>Jouni Jäppinen</h1>
