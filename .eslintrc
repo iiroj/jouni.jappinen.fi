@@ -1,7 +1,15 @@
 {
-  "extends": ["standard", "standard-react"],
+  "plugins": [
+    "prettier"
+  ],
+  "extends": [
+    "standard",
+    "standard-react",
+    "prettier"
+  ],
   "rules": {
-    "react/prop-types": [0]
+    "react/prop-types": [0],
+    "prettier/prettier": ["error"]
   },
   "globals": {
     "graphql": true
