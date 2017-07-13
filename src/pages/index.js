@@ -111,7 +111,7 @@ export default function Index() {
               <article className={styles.projectLovart}>
                 <div>
                   <h1>Loviisa Artists’ Studio</h1>
-                  <h2>Let's work in peace</h2>
+                  <h2>Let’s work in peace</h2>
                 </div>
               </article>
             </a>
