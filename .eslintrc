@@ -1,17 +1,22 @@
 {
-  "plugins": [
-    "prettier"
-  ],
   "extends": [
-    "standard",
-    "standard-react",
-    "prettier"
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react"
   ],
-  "rules": {
-    "react/prop-types": [0],
-    "prettier/prettier": "error"
+  "plugins": [
+    "react",
+    "prettier",
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2016,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
-  "globals": {
-    "graphql": true
+  "rules": {
+    "react/prop-types": 1,
+    "prettier/prettier": ["error"]
   }
 }
