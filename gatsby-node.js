@@ -2,7 +2,7 @@ exports.modifyWebpackConfig = ({ config }) => {
   config.merge({
     resolve: {
       root: `${__dirname}/src`,
-      extensions: ["", ".js", ".jsx", ".json", ".css", ".module.css"]
+      extensions: ["", ".js"]
     }
   });
   config.loader("pdf", {
