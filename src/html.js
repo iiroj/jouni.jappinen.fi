@@ -1,27 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
+import { ServerStyleSheet } from "styled-components";
 import Helmet from "react-helmet";
 
-const isProduction = process.env.NODE_ENV === "production";
-
-let stylesStr;
-if (isProduction) {
-  try {
-    stylesStr = require(`!raw-loader!../public/styles.css`);
-  } catch (e) {
-    console.log(e);
-  }
-}
-
-export default function HTML(props) {
+const HTML = props => {
   const head = Helmet.rewind();
-  const css = (
-    <style
-      id="gatsby-inlined-css"
-      dangerouslySetInnerHTML={{ __html: stylesStr }}
-    />
+
+  const sheet = new ServerStyleSheet();
+
+  const main = sheet.collectStyles(
+    <div id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
   );
+
+  const css = sheet.getStyleElement();
 
   return (
     <html lang="en">
@@ -40,18 +31,20 @@ export default function HTML(props) {
           href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i"
           as="style"
         />
-        {isProduction && css}
+        {process.env.NODE_ENV === "production" && css}
       </head>
       <body>
-        <div id="___gatsby" dangerouslySetInnerHTML={{ __html: props.body }} />
+        {main}
         {props.postBodyComponents}
       </body>
     </html>
   );
-}
+};
 
 HTML.propTypes = {
   body: PropTypes.object.isRequired,
   headComponents: PropTypes.object.isRequired,
   postBodyComponents: PropTypes.object.isRequired
 };
+
+export default HTML;
