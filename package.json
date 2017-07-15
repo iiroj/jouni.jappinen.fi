@@ -15,8 +15,7 @@
     "lint": "eslint --ext .js --ignore-pattern public .",
     "lint:fix": "eslint --fix --ext .js --ignore-pattern public .",
     "prebuild": "rm -fr ./.cache ./public",
-    "build": "NODE_ENV=production gatsby build",
-    "deploy": "./deploy.sh"
+    "build": "NODE_ENV=production gatsby build"
   },
   "dependencies": {
     "eslint": "4.2.0",
