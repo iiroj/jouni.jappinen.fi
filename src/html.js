@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -47,3 +48,9 @@ export default function HTML(props) {
     </html>
   );
 }
+
+HTML.propTypes = {
+  body: PropTypes.object.isRequired,
+  headComponents: PropTypes.object.isRequired,
+  postBodyComponents: PropTypes.object.isRequired
+};
