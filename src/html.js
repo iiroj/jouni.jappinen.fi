@@ -28,7 +28,7 @@ const HTML = props => {
         <link rel="apple-touch-icon" href="/icon.png" />
         <link
           rel="preload stylesheet"
-          href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i"
+          href="https://fonts.googleapis.com/css?family=Spectral:400,600"
           as="style"
         />
         {process.env.NODE_ENV === "production" && css}

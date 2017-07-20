@@ -13,9 +13,8 @@ ${reset}
 }
 
 body {
-    font-family: 'Noto Serif', serif;
+    font-family: 'Spectral', serif;
     font-size: 16px;
-    font-smoothing: antialiased;
     font-weight: 400;
     line-height: 1.5rem;
     margin: 0;

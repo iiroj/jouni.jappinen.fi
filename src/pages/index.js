@@ -61,6 +61,7 @@ const Heading = styled.div`
 
   h1 {
     font-size: 1.5rem;
+    font-weight: 600;
     line-height: 1.5rem;
   }
 
@@ -73,7 +74,6 @@ const Caption = styled.aside`
   bottom: 0.5rem;
   color: rgba(255, 255, 255, 0.6);
   font-size: 75%;
-  font-style: italic;
   margin-left: 0.5rem;
   position: absolute;
   right: 0.5rem;
@@ -140,13 +140,14 @@ const Project = styled.a`
   > div {
     left: 50%;
     position: absolute;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0px 4px rgba(0, 0, 0, 0.4);
     top: 50%;
     transform: translate(-50%, -50%);
     width: 90%;
 
     h1 {
       font-size: 1.5rem;
+      font-weight: 600;
     }
   }
 `;
