@@ -1,6 +1,6 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "4.1.0",
+  "version": "4.2.0",
   "description": "Static site made with Gatsby",
   "bugs": "https://gitlab.com/iiroj/jouni.jappinen.fi/issues",
   "licence": "UNLICENCED",
@@ -28,7 +28,6 @@
     "gatsby-link": "1.3.2",
     "gatsby-plugin-manifest": "1.0.1",
     "gatsby-plugin-offline": "1.0.1",
-    "gatsby-plugin-preact": "1.0.1",
     "gatsby-remark-copy-linked-files": "1.3.0",
     "gatsby-source-filesystem": "1.0.1",
     "prettier": "1.5.3",
