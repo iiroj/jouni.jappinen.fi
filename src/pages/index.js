@@ -114,20 +114,14 @@ const Projects = styled.ul`
       width: 50%;
     }
 
-    a {
-      display: block;
-      height: 100%;
-      text-decoration: none;
-
-      &:hover ${Project} {
-        transform: scale(0.95);
-        transform-origin: 50% 50%;
-      }
+    &:hover article {
+      transform: scale(0.95);
+      transform-origin: 50% 50%;
     }
   }
 `;
 
-const Project = styled.a`
+const Project = styled.article`
   background-color: rgba(0, 0, 0, 0.05);
   background-position: center;
   background-size: cover;
@@ -177,15 +171,9 @@ const Articles = styled.ul`
     padding: 1rem;
     width: 13rem;
 
-    a {
-      display: block;
-      height: 100%;
-      text-decoration: none;
-
-      &:hover ${Article} {
-        transform: scale(0.95);
-        transform-origin: 50% 50%;
-      }
+    &:hover article {
+      transform: scale(0.95);
+      transform-origin: 50% 50%;
     }
   }
 `;
@@ -196,6 +184,7 @@ const Article = styled.article`
   padding: 1rem;
   position: relative;
   transition: transform 0.2s ease-out;
+  will-change: transform;
 
   h1 {
     font-size: inherit;
