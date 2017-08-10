@@ -4,3 +4,23 @@
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
+  Link: </anttijappinen.jpg>; rel=preload; as=image
+  Link: </favicon.ico>; rel=preload; as=image
+  Link: </favicon.ico>; rel=preload; as=image
+  Link: </icon.png>; rel=preload; as=image
+  Link: </ikuisetseprat.jpg>; rel=preload; as=image
+  Link: </lovart.jpg>; rel=preload; as=image
+  Link: </pajanhamarasta.jpg>; rel=preload; as=image
+  Link: </rautakuona.jpg>; rel=preload; as=image
+  Link: </rautakymi.jpg>; rel=preload; as=image
+  Link: </sokerikko.jpg>; rel=preload; as=image
+  Link: </straka.jpg>; rel=preload; as=image
+  Link: </tammijarvi.jpg>; rel=preload; as=image
+
+/pajanhamarasta/*
+  Link: </arvostelu.jpg>; rel=preload; as=image
+  Link: </cover.jpg>; rel=preload; as=image
+
+/ikuisetseprat/*
+  Link: </arvostelu.jpg>; rel=preload; as=image
+  Link: </cover.jpg>; rel=preload; as=image
