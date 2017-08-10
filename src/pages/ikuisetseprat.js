@@ -3,13 +3,10 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
 
-import cover from "files/ikuisetseprat-cover.jpg";
-import arvostelu from "files/ikuisetseprat-arvostelu.pdf";
-
 const Container = styled.main`background-color: rgb(219, 219, 219);`;
 
 const Image = styled.div`
-  background: url(${cover});
+  background: url("/ikuisetseprat/cover.jpg");
   background-position: 50% 75%;
   background-size: cover;
   height: 25vh;
@@ -126,7 +123,7 @@ const Ikuisetseprat = () =>
     >
       Lue kirja-arvostelu (I)
     </A>
-    <A href={arvostelu}>Lue kirja-arvostelu (II)</A>
+    <A href="/ikuisetseprat/arvostelu.pdf">Lue kirja-arvostelu (II)</A>
     <A
       href="http://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310"
       rel="external crossorigin prefetch"

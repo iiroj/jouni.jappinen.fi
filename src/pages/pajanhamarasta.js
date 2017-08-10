@@ -3,16 +3,13 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
 
-import cover from "files/pajanhamarasta-cover.jpg";
-import arvostelu from "files/pajanhämärästä-arvostelu.jpg";
-
 const Container = styled.main`
   background-color: rgb(26, 25, 25);
   color: white;
 `;
 
 const Image = styled.div`
-  background: url(${cover});
+  background: url("/pajanhamarasta/cover.jpg");
   background-position: 50% 50%;
   background-size: cover;
   height: 25vh;
@@ -114,7 +111,7 @@ const Pajanhamarasta = () =>
         sepällä täytyi olla luontaisia kykyjä hallita yliluonnollisia voimia.
       </p>
     </Section>
-    <A href={arvostelu} rel="prefetch">
+    <A href="/pajanhamarasta/arvostelu.jpg" rel="prefetch">
       Lue kirja-arvostelu
     </A>
     <A

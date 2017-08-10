@@ -3,22 +3,6 @@ import styled from "styled-components";
 import Helmet from "react-helmet";
 import Link from "gatsby-link";
 
-import anttijappinen from "files/anttijappinen.jpg";
-import ikuisetseprat from "files/ikuisetseprat.jpg";
-import lovart from "files/lovart.jpg";
-import pajanhamarasta from "files/pajanhamarasta.jpg";
-import rautakuona from "files/rautakuona.jpg";
-import rautakymi from "files/rautakymi.jpg";
-import sokerikko from "files/sokerikko.jpg";
-import straka from "files/straka.jpg";
-import tammijarvi from "files/tammijarvi.jpg";
-
-import anttijappinenPDF from "files/anttijappinen.pdf";
-import kirjoituksiaPDF from "files/kirjoituksia.pdf";
-import rautakuonaPDF from "files/rautakuona.pdf";
-import stråkaPDF from "files/stråka.pdf";
-import tammijärviPDF from "files/tammijärvi.pdf";
-
 const microdata = {
   "@context": "http://schema.org",
   "@type": "Person",
@@ -36,7 +20,7 @@ const microdata = {
 };
 
 const Header = styled.header`
-  background: url(${sokerikko});
+  background: url("/sokerikko.jpg");
   background-position: 25% center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -147,17 +131,17 @@ const Project = styled.article`
 `;
 
 const PajanHamarasta = Project.extend`
-  background-image: url(${pajanhamarasta});
+  background-image: url("/pajanhamarasta.jpg");
 `;
 
 const IkuisetSeprat = Project.extend`
-  background-image: url(${ikuisetseprat});
+  background-image: url("/ikuisetseprat.jpg");
   background-position: center;
 `;
 
-const Rautakymi = Project.extend`background-image: url(${rautakymi});`;
+const Rautakymi = Project.extend`background-image: url("/rautakymi.jpg");`;
 
-const LovArt = Project.extend`background-image: url(${lovart});`;
+const LovArt = Project.extend`background-image: url("/lovart.jpg");`;
 
 const Articles = styled.ul`
   justify-content: center;
@@ -202,15 +186,15 @@ const Cover = styled.div`
   width: 75%;
 `;
 
-const Rautakuona = Cover.extend`background-image: url(${rautakuona});`;
+const Rautakuona = Cover.extend`background-image: url("/rautakuona.jpg");`;
 
-const Tammijarvi = Cover.extend`background-image: url(${tammijarvi});`;
+const Tammijarvi = Cover.extend`background-image: url("/tammijarvi.jpg");`;
 
-const Straka = Cover.extend`background-image: url(${straka});`;
+const Straka = Cover.extend`background-image: url("/straka.jpg");`;
 
 const Anttijappinen = Cover.extend`
   composes: cover;
-  background-image: url(${anttijappinen});
+  background-image: url("/anttijappinen.jpg");
 `;
 
 const Links = styled.nav`
@@ -319,7 +303,7 @@ const Index = () =>
       </Projects>
       <Articles>
         <li>
-          <a href={rautakuonaPDF}>
+          <a href="/files/rautakuona.pdf">
             <Article>
               <Rautakuona />
               <h1>Kymijokisuiston rautakuona</h1>
@@ -327,7 +311,7 @@ const Index = () =>
           </a>
         </li>
         <li>
-          <a href={tammijärviPDF}>
+          <a href="/files/tammijarvi.pdf">
             <Article>
               <Tammijarvi />
               <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
@@ -335,7 +319,7 @@ const Index = () =>
           </a>
         </li>
         <li>
-          <a href={stråkaPDF}>
+          <a href="/files/straka.pdf">
             <Article>
               <Straka />
               <h1>Stråka Järnframställning</h1>
@@ -343,7 +327,7 @@ const Index = () =>
           </a>
         </li>
         <li>
-          <a href={anttijappinenPDF}>
+          <a href="/files/anttijappinen.pdf">
             <Article>
               <Anttijappinen />
               <h1>Sotamies Antti Jäppinen</h1>
@@ -355,7 +339,7 @@ const Index = () =>
         <Links>
           <ul>
             <li>
-              <a href={kirjoituksiaPDF} rel="prefetch">
+              <a href="/files/kirjoituksia.pdf" rel="prefetch">
                 Kirjoituksia
               </a>
             </li>
