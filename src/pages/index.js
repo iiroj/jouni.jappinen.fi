@@ -1,26 +1,26 @@
-import React from "react";
-import styled from "styled-components";
-import Helmet from "react-helmet";
-import Link from "gatsby-link";
+import React from 'react';
+import styled from 'styled-components';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
 const microdata = {
-  "@context": "http://schema.org",
-  "@type": "Person",
-  name: "Jouni Jäppinen",
-  jobTitle: "taiteilija",
-  url: "https://jouni.jappinen.fi",
-  email: "jouni@jappinen.fi",
-  nationality: "Finland",
+  '@context': 'http://schema.org',
+  '@type': 'Person',
+  name: 'Jouni Jäppinen',
+  jobTitle: 'taiteilija',
+  url: 'https://jouni.jappinen.fi',
+  email: 'jouni@jappinen.fi',
+  nationality: 'Finland',
   address: {
-    "@type": "PostalAddress",
-    addressCountry: "Finland",
-    addressLocality: "Loviisa"
+    '@type': 'PostalAddress',
+    addressCountry: 'Finland',
+    addressLocality: 'Loviisa',
   },
-  alumniOf: "Turun yliopisto"
+  alumniOf: 'Turun yliopisto',
 };
 
 const Header = styled.header`
-  background: url("/sokerikko.jpg");
+  background: url('/sokerikko.jpg');
   background-position: 25% center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -130,18 +130,16 @@ const Project = styled.article`
   }
 `;
 
-const PajanHamarasta = Project.extend`
-  background-image: url("/pajanhamarasta.jpg");
-`;
+const PajanHamarasta = Project.extend`background-image: url('/pajanhamarasta.jpg');`;
 
 const IkuisetSeprat = Project.extend`
-  background-image: url("/ikuisetseprat.jpg");
+  background-image: url('/ikuisetseprat.jpg');
   background-position: center;
 `;
 
-const Rautakymi = Project.extend`background-image: url("/rautakymi.jpg");`;
+const Rautakymi = Project.extend`background-image: url('/rautakymi.jpg');`;
 
-const LovArt = Project.extend`background-image: url("/lovart.jpg");`;
+const LovArt = Project.extend`background-image: url('/lovart.jpg');`;
 
 const Articles = styled.ul`
   justify-content: center;
@@ -186,15 +184,15 @@ const Cover = styled.div`
   width: 75%;
 `;
 
-const Rautakuona = Cover.extend`background-image: url("/rautakuona.jpg");`;
+const Rautakuona = Cover.extend`background-image: url('/rautakuona.jpg');`;
 
-const Tammijarvi = Cover.extend`background-image: url("/tammijarvi.jpg");`;
+const Tammijarvi = Cover.extend`background-image: url('/tammijarvi.jpg');`;
 
-const Straka = Cover.extend`background-image: url("/straka.jpg");`;
+const Straka = Cover.extend`background-image: url('/straka.jpg');`;
 
 const Anttijappinen = Cover.extend`
   composes: cover;
-  background-image: url("/anttijappinen.jpg");
+  background-image: url('/anttijappinen.jpg');
 `;
 
 const Links = styled.nav`
@@ -211,15 +209,15 @@ const Links = styled.nav`
   }
 `;
 
-const Index = () =>
+const Index = () => (
   <div>
     <Helmet
       title="Jouni Jäppinen"
       script={[
         {
-          type: "application/ld+json",
-          innerHTML: `${JSON.stringify(microdata)}`
-        }
+          type: 'application/ld+json',
+          innerHTML: `${JSON.stringify(microdata)}`,
+        },
       ]}
     />
     <Header>
@@ -228,29 +226,24 @@ const Index = () =>
         <h2>Taiteilija ja kultaseppä</h2>
       </Heading>
       <Caption>
-        <p>
-          Image: Sugar cup, cast iron, sterling silver. Finnish Design 8
-          exhibition at Helsinki Design Museum 1991
-        </p>
+        <p>Image: Sugar cup, cast iron, sterling silver. Finnish Design 8 exhibition at Helsinki Design Museum 1991</p>
       </Caption>
     </Header>
     <Main>
       <About>
         <p>
-          <span>Jouni Jäppinen</span> on loviisalainen taiteilija ja kultaseppä,
-          joka aloitti työuransa porvoolaisessa sepänpajassa 1970-luvun alussa.
+          <span>Jouni Jäppinen</span> on loviisalainen taiteilija ja kultaseppä, joka aloitti työuransa porvoolaisessa
+          sepänpajassa 1970-luvun alussa.
         </p>
         <p>
-          Hän jatkoi metallialan perusopintojen jälkeen opintojaan Lahden
-          kultaseppäkoulussa ja myöhemmin Taideteollisessa korkeakoulussa,
-          kunnes hakeutui Tampereen ja Turun yliopistoihin opiskelemaan
+          Hän jatkoi metallialan perusopintojen jälkeen opintojaan Lahden kultaseppäkoulussa ja myöhemmin
+          Taideteollisessa korkeakoulussa, kunnes hakeutui Tampereen ja Turun yliopistoihin opiskelemaan
           ammattikasvatusta, sosiologiaa ja kulttuurihistoriaa.
         </p>
         <p>
-          Jäppinen on työskennellyt 1980-luvulta lähtien korutaiteilijana,
-          heraldikkona, lavastajana, kansainvälisen taiteilijavaihdon
-          tuottajana, ja tänään hänet tunnetaan myös rautakautisten menetelmien
-          tutkijana ja tietokirjailijana.
+          Jäppinen on työskennellyt 1980-luvulta lähtien korutaiteilijana, heraldikkona, lavastajana, kansainvälisen
+          taiteilijavaihdon tuottajana, ja tänään hänet tunnetaan myös rautakautisten menetelmien tutkijana ja
+          tietokirjailijana.
         </p>
       </About>
       <Projects>
@@ -269,10 +262,7 @@ const Index = () =>
             <IkuisetSeprat>
               <div>
                 <h1>Ikuiset seprat</h1>
-                <h2>
-                  Tytärsaarelaisten ja virolaisten suhteet ennen toista
-                  maailmansotaa
-                </h2>
+                <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
               </div>
             </IkuisetSeprat>
           </Link>
@@ -282,10 +272,7 @@ const Index = () =>
             <Rautakymi>
               <div>
                 <h1>Talonpoikia, seppiä, lohiylimyksiä</h1>
-                <h2>
-                  Arkeologian harrastajien tutkielma Kymijokilaakson
-                  rautakautisesta asutuksesta
-                </h2>
+                <h2>Arkeologian harrastajien tutkielma Kymijokilaakson rautakautisesta asutuksesta</h2>
               </div>
             </Rautakymi>
           </a>
@@ -344,23 +331,15 @@ const Index = () =>
               </a>
             </li>
             <li>
-              <a href="mailto:Jouni Jäppinen <jouni@jappinen.fi>">
-                Ota yhteyttä
-              </a>
+              <a href="mailto:Jouni Jäppinen <jouni@jappinen.fi>">Ota yhteyttä</a>
             </li>
             <li>
-              <a
-                href="http://www.finnishdesigners.fi/portfolio/jouni.jappinen"
-                rel="external crossorigin prefetch"
-              >
+              <a href="http://www.finnishdesigners.fi/portfolio/jouni.jappinen" rel="external crossorigin prefetch">
                 Ornamo
               </a>
             </li>
             <li>
-              <a
-                href="http://www.artists-o.fi"
-                rel="external crossorigin prefetch"
-              >
+              <a href="http://www.artists-o.fi" rel="external crossorigin prefetch">
                 Taiteilijat O
               </a>
             </li>
@@ -368,6 +347,7 @@ const Index = () =>
         </Links>
       </footer>
     </Main>
-  </div>;
+  </div>
+);
 
 export default Index;

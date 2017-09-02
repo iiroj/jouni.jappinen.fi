@@ -1,22 +1,29 @@
 {
-  "extends": [
-    "plugin:react/recommended",
-    "prettier",
-    "prettier/react"
+  'extends': [
+    'plugin:react/recommended',
+    'prettier',
+    'prettier/react'
   ],
-  "plugins": [
-    "react",
-    "prettier",
+  'plugins': [
+    'react',
+    'prettier',
   ],
-  "parserOptions": {
-    "ecmaVersion": 2016,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
+  'parserOptions': {
+    'ecmaVersion': 2016,
+    'sourceType': 'module',
+    'ecmaFeatures': {
+      'jsx': true
     }
   },
-  "rules": {
-    "react/prop-types": 1,
-    "prettier/prettier": ["error"]
+  'rules': {
+    'react/prop-types': 1,
+    'prettier/prettier': [
+        'error',
+        {
+          'singleQuote': true,
+          'printWidth': 120,
+          'trailingComma': 'es5',
+        }
+      ]
   }
 }

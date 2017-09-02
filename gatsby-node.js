@@ -2,11 +2,11 @@ exports.modifyWebpackConfig = ({ config }) => {
   config.merge({
     resolve: {
       root: `${__dirname}/src`,
-      extensions: ["", ".js"]
-    }
+      extensions: ['', '.js'],
+    },
   });
-  config.loader("pdf", {
+  config.loader('pdf', {
     test: /\.pdf$/,
-    loaders: ["file"]
+    loaders: ['file'],
   });
 };

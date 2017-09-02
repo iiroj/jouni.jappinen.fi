@@ -1,7 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled, { injectGlobal } from "styled-components";
-import reset from "css-wipe/js";
+import React from 'react';
+import PropTypes from 'prop-types';
+import styled, { injectGlobal } from 'styled-components';
+import reset from 'css-wipe/js';
 
 injectGlobal`
 ${reset}
@@ -29,13 +29,9 @@ a {
 export default function DefaultLayout(props) {
   const { children } = props;
 
-  return (
-    <div>
-      {children()}
-    </div>
-  );
+  return <div>{children()}</div>;
 }
 
 DefaultLayout.propTypes = {
-  children: PropTypes.func.isRequired
+  children: PropTypes.func.isRequired,
 };

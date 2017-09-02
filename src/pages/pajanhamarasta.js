@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "styled-components";
-import Helmet from "react-helmet";
-import Link from "gatsby-link";
+import React from 'react';
+import styled from 'styled-components';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
 const Container = styled.main`
   background-color: rgb(26, 25, 25);
@@ -9,7 +9,7 @@ const Container = styled.main`
 `;
 
 const Image = styled.div`
-  background: url("/pajanhamarasta/cover.jpg");
+  background: url('/pajanhamarasta/cover.jpg');
   background-position: 50% 50%;
   background-size: cover;
   height: 25vh;
@@ -63,7 +63,7 @@ const Footer = styled.footer`
   }
 `;
 
-const Pajanhamarasta = () =>
+const Pajanhamarasta = () => (
   <Container>
     <Helmet title={`Pajan hämärästä – Jouni Jäppinen`} />
     <Image />
@@ -73,51 +73,39 @@ const Pajanhamarasta = () =>
     </Header>
     <Section>
       <p>
-        Vanhan sanonnan mukaan seppä on taitava henkilö niin aineen kuin
-        hengenkin alalla. Kirja luo katsauksen sepänalan esihistoriaan sekä
-        tarinoihin kotimaamme sepistä, joita on onnekkaasti säilynyt
-        jälkipolville. Muistitiedon mukaan seppien joukkoon mahtui monenlaisia
-        persoonallisuuksia ja osa heistä toimi pajatyön ohella monenlaisissa
-        muissakin tehtävissä, kuten kylänvanhimpina, poliitikkoina, parantajina,
-        verenlaskijoina, tai -seisauttajina, näkijöinä, noitina,
-        hautausurakoitsijoina, soitinrakentajina, puoskareina ja jopa kätilöinä.
+        Vanhan sanonnan mukaan seppä on taitava henkilö niin aineen kuin hengenkin alalla. Kirja luo katsauksen
+        sepänalan esihistoriaan sekä tarinoihin kotimaamme sepistä, joita on onnekkaasti säilynyt jälkipolville.
+        Muistitiedon mukaan seppien joukkoon mahtui monenlaisia persoonallisuuksia ja osa heistä toimi pajatyön ohella
+        monenlaisissa muissakin tehtävissä, kuten kylänvanhimpina, poliitikkoina, parantajina, verenlaskijoina, tai
+        -seisauttajina, näkijöinä, noitina, hautausurakoitsijoina, soitinrakentajina, puoskareina ja jopa kätilöinä.
       </p>
       <p>
-        Osa sepistä harrasti aktiivisesti musiikkia rakentaen itse harmonnit,
-        mandoliinit, kitarat, viulut ja kanteleet, esiintyen monenmoisissa
-        kokoonpanoissa yli pitäjärajojen. Jotkut sepät saivan nimeä
-        synnynnäisinä jutunkertojina, joiden kaskut ovat periytyneet tähän
-        päivään asti. Huumoripitoiset seppäjutut toivat vaihtelua pajan rankkaan
-        arkipäivään.
+        Osa sepistä harrasti aktiivisesti musiikkia rakentaen itse harmonnit, mandoliinit, kitarat, viulut ja kanteleet,
+        esiintyen monenmoisissa kokoonpanoissa yli pitäjärajojen. Jotkut sepät saivan nimeä synnynnäisinä
+        jutunkertojina, joiden kaskut ovat periytyneet tähän päivään asti. Huumoripitoiset seppäjutut toivat vaihtelua
+        pajan rankkaan arkipäivään.
       </p>
       <p>
-        Seppien joukkoon mahtui myös originelleja, jotka halveksivat avoimesti
-        virkavaltaa, pappeja, rikasta säätyä.
+        Seppien joukkoon mahtui myös originelleja, jotka halveksivat avoimesti virkavaltaa, pappeja, rikasta säätyä.
       </p>
       <p>
-        Yhteisön arvomaailman ja normien halveksiminen tuli esille mitä
-        moninaisimimpien tempausten muodossa. Elämää väritti ennen vanhaan
-        taikausko, noituus ja magia ja sepillä oli niiden harjoittamisessa oma
-        tärkeä roolinsa, ensisijaisesti pajaelinkeinon edistäjänä, joka lienee
-        vanhaa perua rautakaudelta. Taikuuden harjoittaminen pajassa pönkitti
-        sepän asemaa kyläyhteisössä ja samalla se ylläpiti ammoisista ajoista
-        asti periytynyttä sankarimyyttiä.
+        Yhteisön arvomaailman ja normien halveksiminen tuli esille mitä moninaisimimpien tempausten muodossa. Elämää
+        väritti ennen vanhaan taikausko, noituus ja magia ja sepillä oli niiden harjoittamisessa oma tärkeä roolinsa,
+        ensisijaisesti pajaelinkeinon edistäjänä, joka lienee vanhaa perua rautakaudelta. Taikuuden harjoittaminen
+        pajassa pönkitti sepän asemaa kyläyhteisössä ja samalla se ylläpiti ammoisista ajoista asti periytynyttä
+        sankarimyyttiä.
       </p>
       <p>
-        Sepät eivät paljastaneet salaisuuksiaan muille ja se sai ihmiset
-        äärimmäisen uteliaiksi. Kun kyläläiset eivät ymmärtäneet sepän
-        käyttämien prosessien kulkua ja kun seppä tuntui alati keskustelevan
-        ahjon, alasimen tai palkeiden kanssa, alkoivat ihmiset uskoa, että
-        sepällä täytyi olla luontaisia kykyjä hallita yliluonnollisia voimia.
+        Sepät eivät paljastaneet salaisuuksiaan muille ja se sai ihmiset äärimmäisen uteliaiksi. Kun kyläläiset eivät
+        ymmärtäneet sepän käyttämien prosessien kulkua ja kun seppä tuntui alati keskustelevan ahjon, alasimen tai
+        palkeiden kanssa, alkoivat ihmiset uskoa, että sepällä täytyi olla luontaisia kykyjä hallita yliluonnollisia
+        voimia.
       </p>
     </Section>
     <A href="/pajanhamarasta/arvostelu.jpg" rel="prefetch">
       Lue kirja-arvostelu
     </A>
-    <A
-      href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501"
-      rel="external crossorigin prefetch"
-    >
+    <A href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501" rel="external crossorigin prefetch">
       Osta Adlibris-verkkokirjakaupasta
     </A>
     <Footer>
@@ -125,6 +113,7 @@ const Pajanhamarasta = () =>
       <p>ISBN-978-952-93-4250-1</p>
       <Link to="/">Takaisin</Link>
     </Footer>
-  </Container>;
+  </Container>
+);
 
 export default Pajanhamarasta;
