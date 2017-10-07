@@ -46,4 +46,4 @@ You can read more about Netlify's continuous deployment process [here](https://w
 
 ## License
 
-This project is **UNLICENSED**.
+See [LICENSE](./LICENSE)
