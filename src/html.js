@@ -33,9 +33,9 @@ const HTML = props => {
 };
 
 HTML.propTypes = {
-  body: PropTypes.object.isRequired,
-  headComponents: PropTypes.object.isRequired,
-  postBodyComponents: PropTypes.object.isRequired,
+  body: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
+  headComponents: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
+  postBodyComponents: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
 };
 
 export default HTML;
