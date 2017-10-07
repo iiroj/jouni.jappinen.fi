@@ -61,7 +61,7 @@ module.exports = {
             `Link: </pajanhamarasta/cover.jpg>; rel=preload; as=image`,
           ],
           '/ikuisetseprat/*': [
-            `Link: </ikuisetseprat/arvostelu.jpg>; rel=preload; as=image`,
+            `Link: </ikuisetseprat/arvostelu.pdf>; rel=preload; as=image`,
             `Link: </ikuisetseprat/cover.jpg>; rel=preload; as=image`,
           ],
         },
