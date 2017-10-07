@@ -1,6 +1,6 @@
 # jouni.jappinen.fi
 
-A static site made with [Gatsby](https://github.com/gatsbyjs/gatsby), available at [jouni.jappin en.fi](https://jouni.jappinen.fi).
+A static site made with [Gatsby](https://github.com/gatsbyjs/gatsby), available at [jouni.jappinen.fi](https://jouni.jappinen.fi).
 
 The canonical repository for this project is at [gitlab:iiroj/jouni.jappinen.fi](https://gitlab.com/iiroj/jouni.jappinen.fi). It is mirrored at [github:iiroj/jouni.jappinen.fi](https://github.com/iiroj/jouni.jappinen.fi) for convenience.
 
