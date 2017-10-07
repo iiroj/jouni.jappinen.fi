@@ -26,12 +26,10 @@ a {
 }
 `;
 
-export default function DefaultLayout(props) {
-  const { children } = props;
-
-  return <div>{children()}</div>;
-}
+const DefaultLayout = ({ children }) => children();
 
 DefaultLayout.propTypes = {
   children: PropTypes.func.isRequired,
 };
+
+export default DefaultLayout;
