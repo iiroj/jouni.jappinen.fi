@@ -130,16 +130,22 @@ const Project = styled.article`
   }
 `;
 
-const PajanHamarasta = Project.extend`background-image: url('/pajanhamarasta.jpg');`;
+const PajanHamarasta = Project.extend`
+  background-image: url('/pajanhamarasta.jpg');
+`;
 
 const IkuisetSeprat = Project.extend`
   background-image: url('/ikuisetseprat.jpg');
   background-position: center;
 `;
 
-const Rautakymi = Project.extend`background-image: url('/rautakymi.jpg');`;
+const Rautakymi = Project.extend`
+  background-image: url('/rautakymi.jpg');
+`;
 
-const LovArt = Project.extend`background-image: url('/lovart.jpg');`;
+const LovArt = Project.extend`
+  background-image: url('/lovart.jpg');
+`;
 
 const Articles = styled.ul`
   justify-content: center;
@@ -184,11 +190,17 @@ const Cover = styled.div`
   width: 75%;
 `;
 
-const Rautakuona = Cover.extend`background-image: url('/rautakuona.jpg');`;
+const Rautakuona = Cover.extend`
+  background-image: url('/rautakuona.jpg');
+`;
 
-const Tammijarvi = Cover.extend`background-image: url('/tammijarvi.jpg');`;
+const Tammijarvi = Cover.extend`
+  background-image: url('/tammijarvi.jpg');
+`;
 
-const Straka = Cover.extend`background-image: url('/straka.jpg');`;
+const Straka = Cover.extend`
+  background-image: url('/straka.jpg');
+`;
 
 const Anttijappinen = Cover.extend`
   composes: cover;

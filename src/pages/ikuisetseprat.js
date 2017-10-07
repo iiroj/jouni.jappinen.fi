@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
-const Container = styled.main`background-color: rgb(219, 219, 219);`;
+const Container = styled.main`
+  background-color: rgb(219, 219, 219);
+`;
 
 const Image = styled.div`
   background: url('/ikuisetseprat/cover.jpg');
