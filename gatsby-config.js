@@ -36,7 +36,7 @@ module.exports = {
       options: {
         allPageHeaders: [
           `Content-Security-Policy: default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:; connect-src 'self' https://fonts.gstatic.com; manifest-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; worker-src 'self';`,
-          `Referrer-Policy': origin-when-cross-origin`,
+          `Referrer-Policy: origin-when-cross-origin`,
           `X-Content-Type-Options: nosniff`,
           `X-Frame-Options: DENY`,
           `X-XSS-Protection: 1; mode=block`,
