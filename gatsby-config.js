@@ -41,6 +41,27 @@ module.exports = {
           `Link: </favicon.ico>; rel=preload; as=image`,
           `Link: </icon.png>; rel=preload; as=image`,
         ],
+        headers: {
+          '/': [
+            `Link: </anttijappinen.jpg>; rel=preload; as=image`,
+            `Link: </ikuisetseprat.jpg>; rel=preload; as=image`,
+            `Link: </lovart.jpg>; rel=preload; as=image`,
+            `Link: </pajanhamarasta.jpg>; rel=preload; as=image`,
+            `Link: </rautakuona.jpg>; rel=preload; as=image`,
+            `Link: </rautakymi.jpg>; rel=preload; as=image`,
+            `Link: </sokerikko.jpg>; rel=preload; as=image`,
+            `Link: </straka.jpg>; rel=preload; as=image`,
+            `Link: </tammijarvi.jpg>; rel=preload; as=image`,
+          ],
+          '/pajanhamarasta/*': [
+            `Link: </pajanhamarasta/arvostelu.jpg>; rel=preload; as=image`,
+            `Link: </pajanhamarasta/cover.jpg>; rel=preload; as=image`,
+          ],
+          '/ikuisetseprat/*': [
+            `Link: </ikuisetseprat/arvostelu.pdf>; rel=preload; as=image`,
+            `Link: </ikuisetseprat/cover.jpg>; rel=preload; as=image`,
+          ],
+        },
         mergeSecurityHeaders: true,
         mergeLinkHeaders: true,
         mergeCachingHeaders: true,
