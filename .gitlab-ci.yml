@@ -1,0 +1,49 @@
+image: node:carbon
+
+stages:
+    - install
+    - lint
+    - build
+    - deploy
+
+install:
+    stage: install
+    script:
+        - npm install
+    cache:
+        policy: push
+        paths:
+            - node_modules/
+
+lint:
+    stage: lint
+    script:
+        - npm install
+        - npm run lint
+    cache:
+        policy: pull
+        paths:
+            - node_modules/
+
+build:
+    stage: build
+    script:
+        - npm run build
+    cache:
+        policy: pull
+        paths:
+            - node_modules/
+    artifacts:
+        paths:
+            - public/
+
+deploy:
+    image: $DEPLOY_IMAGE_URL
+    stage: deploy
+    environment:
+        name: production
+        url: https://jouni.jappinen.fi
+    script:
+        - s3cmd sync public/ $S3_BUCKET_URL --delete-removed --guess-mime-type --no-mime-magic --no-preserve --server-side-encryption --cf-invalidate
+    only:
+        - master
