@@ -1,5 +1,7 @@
 # jouni.jappinen.fi
 
+[![pipeline status](https://gitlab.com/iiroj/jouni.jappinen.fi/badges/master/pipeline.svg)](https://gitlab.com/iiroj/jouni.jappinen.fi/commits/master)
+
 A static site made with [Gatsby](https://github.com/gatsbyjs/gatsby), available at [jouni.jappinen.fi](https://jouni.jappinen.fi).
 
 The canonical repository for this project is at [gitlab:iiroj/jouni.jappinen.fi](https://gitlab.com/iiroj/jouni.jappinen.fi). It is mirrored at [github:iiroj/jouni.jappinen.fi](https://github.com/iiroj/jouni.jappinen.fi) for convenience.
@@ -38,11 +40,11 @@ $ npm run build
 
 ## Deployment
 
-The live site, [jouni.jappinen.fi](https://jouni.jappinen.fi), is hosted at [Netlify](https://www.netlify.com).
+The live site, [jouni.jappinen.fi](https://jouni.jappinen.fi), is hosted in Amazon S3 with Cloudfront.
 
-Every push to the `master` branch of the [canonical repository](https://gitlab.com/iiroj/jouni.jappinen.fi) sends a webhook to Netlify instructing it to pull the latest HEAD and then deploy the site across its network. Netlify will automatically build the site with `npm run lint && npm run build`.
+Every push to the `master` branch of the [canonical repository](https://gitlab.com/iiroj/jouni.jappinen.fi) is linted and built, and finally deployed to S3, using GitLab CI. Deploying is handled with `s3cmd` running in Docker. s3cmd also creates invalidations for CloudFront.
 
-You can read more about Netlify's continuous deployment process [here](https://www.netlify.com/docs/continuous-deployment/).
+Please see the file `.gitlab-ci.yml` for build details.
 
 ## License
 
