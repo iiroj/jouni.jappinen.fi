@@ -1,5 +1,6 @@
 .cache
 .DS_store
+.gatsby-context.js
 node_modules
 public
 sketch
