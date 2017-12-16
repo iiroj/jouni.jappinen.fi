@@ -55,7 +55,7 @@ const Header = styled.header`
 const Heading = styled.div`
   left: 1rem;
   position: fixed;
-  top: 50%;
+  top: 50vh;
   transform: translateY(-100%);
 
   h1 {
