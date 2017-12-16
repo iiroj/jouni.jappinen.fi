@@ -12,6 +12,7 @@ module.exports = {
         name: 'pages',
       },
     },
+    'gatsby-plugin-react-next',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {

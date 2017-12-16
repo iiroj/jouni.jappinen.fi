@@ -1,7 +1,22 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
+
+import sokerikko from '../assets/sokerikko.jpg';
+import pajanHämärästä from '../assets/pajan-hamarasta.jpg';
+import ikuisetSeprat from '../assets/ikuiset-seprat.jpg';
+import rautakymi from '../assets/rautakymi.jpg';
+import rautakuona from '../assets/rautakuona.pdf';
+import rautakymiThumbnail from '../assets/rautakymi-thumbnail.jpg';
+import tammijärviThumbmail from '../assets/tammijarvi-thumbnail.jpg';
+import stråkaThumbnail from '../assets/stråka-thumbnail.jpg';
+import anttiJäppinenThumbnail from '../assets/antti-jappinen-thumbnail.jpg';
+import lovart from '../assets/lovart.jpg';
+import tammijärvi from '../assets/tammijärvi.pdf';
+import stråka from '../assets/stråka.pdf';
+import anttiJäppinen from '../assets/antti-jappinen.pdf';
+import kirjoituksia from '../assets/kirjoituksia.pdf';
 
 const microdata = {
   '@context': 'http://schema.org',
@@ -20,12 +35,12 @@ const microdata = {
 };
 
 const Header = styled.header`
-  background: url('/sokerikko.jpg');
+  background: url(${sokerikko});
   background-position: 25% center;
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(255, 255, 255);
-  height: 100vh;
+  height: 100%;
   overflow-y: hidden;
   position: relative;
   z-index: -1;
@@ -41,7 +56,7 @@ const Heading = styled.div`
   left: 1rem;
   position: fixed;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
 
   h1 {
     font-size: 1.5rem;
@@ -131,20 +146,20 @@ const Project = styled.article`
 `;
 
 const PajanHamarasta = Project.extend`
-  background-image: url('/pajanhamarasta.jpg');
+  background-image: url(${pajanHämärästä});
 `;
 
 const IkuisetSeprat = Project.extend`
-  background-image: url('/ikuisetseprat.jpg');
+  background-image: url(${ikuisetSeprat});
   background-position: center;
 `;
 
 const Rautakymi = Project.extend`
-  background-image: url('/rautakymi.jpg');
+  background-image: url(${rautakymi});
 `;
 
 const LovArt = Project.extend`
-  background-image: url('/lovart.jpg');
+  background-image: url(${lovart});
 `;
 
 const Articles = styled.ul`
@@ -191,20 +206,20 @@ const Cover = styled.div`
 `;
 
 const Rautakuona = Cover.extend`
-  background-image: url('/rautakuona.jpg');
+  background-image: url(${rautakymiThumbnail});
 `;
 
 const Tammijarvi = Cover.extend`
-  background-image: url('/tammijarvi.jpg');
+  background-image: url(${tammijärviThumbmail});
 `;
 
 const Straka = Cover.extend`
-  background-image: url('/straka.jpg');
+  background-image: url(${stråkaThumbnail});
 `;
 
 const Anttijappinen = Cover.extend`
   composes: cover;
-  background-image: url('/anttijappinen.jpg');
+  background-image: url(${anttiJäppinenThumbnail});
 `;
 
 const Links = styled.nav`
@@ -222,7 +237,7 @@ const Links = styled.nav`
 `;
 
 const Index = () => (
-  <div>
+  <Fragment>
     <Helmet
       title="Jouni Jäppinen"
       script={[
@@ -260,7 +275,7 @@ const Index = () => (
       </About>
       <Projects>
         <li>
-          <Link to="/pajanhamarasta">
+          <Link to="/pajan-hamarasta/">
             <PajanHamarasta>
               <div>
                 <h1>Pajan hämärästä</h1>
@@ -270,7 +285,7 @@ const Index = () => (
           </Link>
         </li>
         <li typeof="Book">
-          <Link to="/ikuisetseprat">
+          <Link to="/ikuiset-seprat/">
             <IkuisetSeprat>
               <div>
                 <h1>Ikuiset seprat</h1>
@@ -302,7 +317,7 @@ const Index = () => (
       </Projects>
       <Articles>
         <li>
-          <a href="/files/rautakuona.pdf">
+          <a href={rautakuona}>
             <Article>
               <Rautakuona />
               <h1>Kymijokisuiston rautakuona</h1>
@@ -310,7 +325,7 @@ const Index = () => (
           </a>
         </li>
         <li>
-          <a href="/files/tammijarvi.pdf">
+          <a href={tammijärvi}>
             <Article>
               <Tammijarvi />
               <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
@@ -318,7 +333,7 @@ const Index = () => (
           </a>
         </li>
         <li>
-          <a href="/files/straka.pdf">
+          <a href={stråka}>
             <Article>
               <Straka />
               <h1>Stråka Järnframställning</h1>
@@ -326,7 +341,7 @@ const Index = () => (
           </a>
         </li>
         <li>
-          <a href="/files/anttijappinen.pdf">
+          <a href={anttiJäppinen}>
             <Article>
               <Anttijappinen />
               <h1>Sotamies Antti Jäppinen</h1>
@@ -338,7 +353,7 @@ const Index = () => (
         <Links>
           <ul>
             <li>
-              <a href="/files/kirjoituksia.pdf" rel="prefetch">
+              <a href={kirjoituksia} rel="prefetch">
                 Kirjoituksia
               </a>
             </li>
@@ -346,12 +361,12 @@ const Index = () => (
               <a href="mailto:Jouni Jäppinen <jouni@jappinen.fi>">Ota yhteyttä</a>
             </li>
             <li>
-              <a href="http://www.finnishdesigners.fi/portfolio/jouni.jappinen" rel="external crossorigin prefetch">
+              <a href="https://www.finnishdesigners.fi/portfolio/jouni.jappinen" rel="external crossorigin prefetch">
                 Ornamo
               </a>
             </li>
             <li>
-              <a href="http://www.artists-o.fi" rel="external crossorigin prefetch">
+              <a href="https://www.artists-o.fi" rel="external crossorigin prefetch">
                 Taiteilijat O
               </a>
             </li>
@@ -359,7 +374,7 @@ const Index = () => (
         </Links>
       </footer>
     </Main>
-  </div>
+  </Fragment>
 );
 
 export default Index;

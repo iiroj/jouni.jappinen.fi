@@ -5,8 +5,4 @@ exports.modifyWebpackConfig = ({ config }) => {
       extensions: ['', '.js'],
     },
   });
-  config.loader('pdf', {
-    test: /\.pdf$/,
-    loaders: ['file'],
-  });
 };

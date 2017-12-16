@@ -3,13 +3,16 @@ import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
+import cover from './cover.jpg';
+import arvostelu from './arvostelu.jpg';
+
 const Container = styled.main`
   background-color: rgb(26, 25, 25);
   color: white;
 `;
 
 const Image = styled.div`
-  background: url('/pajanhamarasta/cover.jpg');
+  background: url(${cover});
   background-position: 50% 50%;
   background-size: cover;
   height: 25vh;
@@ -102,7 +105,7 @@ const Pajanhamarasta = () => (
         voimia.
       </p>
     </Section>
-    <A href="/pajanhamarasta/arvostelu.jpg" rel="prefetch">
+    <A href={arvostelu} rel="prefetch">
       Lue kirja-arvostelu
     </A>
     <A href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501" rel="external crossorigin prefetch">

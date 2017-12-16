@@ -6,10 +6,8 @@ import reset from 'css-wipe/js';
 injectGlobal`
 ${reset}
 
-:root {
-	height: 100%;
-	margin: 0;
-	padding: 0;
+html, body, #___gatsby {
+  height: 100%;
 }
 
 body {

@@ -3,12 +3,15 @@ import styled from 'styled-components';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
+import cover from './cover.jpg';
+import arvostelu from './arvostelu.pdf';
+
 const Container = styled.main`
   background-color: rgb(219, 219, 219);
 `;
 
 const Image = styled.div`
-  background: url('/ikuisetseprat/cover.jpg');
+  background: url(${cover});
   background-position: 50% 75%;
   background-size: cover;
   height: 25vh;
@@ -105,13 +108,13 @@ const Ikuisetseprat = () => (
       </p>
     </Section>
     <A
-      href="http://www.kymensanomat.fi/Online/2016/06/21/Kirja%3A%20Yst%C3%A4vyytt%C3%A4%20%20yli%20merien/2016320953078/4"
+      href="https://kymensanomat.fi/uutiset/lahella/13a4ccf6-a72c-48f1-9c8d-2eb7af624bbe"
       rel="external crossorigin prefetch"
     >
       Lue kirja-arvostelu (I)
     </A>
-    <A href="/ikuisetseprat/arvostelu.pdf">Lue kirja-arvostelu (II)</A>
-    <A href="http://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310" rel="external crossorigin prefetch">
+    <A href={arvostelu}>Lue kirja-arvostelu (II)</A>
+    <A href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310" rel="external crossorigin prefetch">
       Osta Adlibris-verkkokirjakaupasta
     </A>
     <Footer>
