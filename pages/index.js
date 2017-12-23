@@ -1,41 +1,26 @@
-import React, { Fragment } from 'react';
-import styled from 'styled-components';
-import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
-
-import sokerikko from '../assets/sokerikko.jpg';
-import pajanHämärästä from '../assets/pajan-hamarasta.jpg';
-import ikuisetSeprat from '../assets/ikuiset-seprat.jpg';
-import rautakymi from '../assets/rautakymi.jpg';
-import rautakuona from '../assets/rautakuona.pdf';
-import rautakymiThumbnail from '../assets/rautakymi-thumbnail.jpg';
-import tammijärviThumbmail from '../assets/tammijarvi-thumbnail.jpg';
-import stråkaThumbnail from '../assets/stråka-thumbnail.jpg';
-import anttiJäppinenThumbnail from '../assets/antti-jappinen-thumbnail.jpg';
-import lovart from '../assets/lovart.jpg';
-import tammijärvi from '../assets/tammijärvi.pdf';
-import stråka from '../assets/stråka.pdf';
-import anttiJäppinen from '../assets/antti-jappinen.pdf';
-import kirjoituksia from '../assets/kirjoituksia.pdf';
+import React, { Fragment } from "react";
+import styled from "styled-components";
+import Head from "next/head";
+import Link from "next/link";
 
 const microdata = {
-  '@context': 'http://schema.org',
-  '@type': 'Person',
-  name: 'Jouni Jäppinen',
-  jobTitle: 'taiteilija',
-  url: 'https://jouni.jappinen.fi',
-  email: 'jouni@jappinen.fi',
-  nationality: 'Finland',
+  "@context": "http://schema.org",
+  "@type": "Person",
+  name: "Jouni Jäppinen",
+  jobTitle: "taiteilija",
+  url: "https://jouni.jappinen.fi",
+  email: "jouni@jappinen.fi",
+  nationality: "Finland",
   address: {
-    '@type': 'PostalAddress',
-    addressCountry: 'Finland',
-    addressLocality: 'Loviisa',
+    "@type": "PostalAddress",
+    addressCountry: "Finland",
+    addressLocality: "Loviisa",
   },
-  alumniOf: 'Turun yliopisto',
+  alumniOf: "Turun yliopisto",
 };
 
 const Header = styled.header`
-  background: url(${sokerikko});
+  background: url("/static/sokerikko.jpg");
   background-position: 25% center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -146,20 +131,20 @@ const Project = styled.article`
 `;
 
 const PajanHamarasta = Project.extend`
-  background-image: url(${pajanHämärästä});
+  background-image: url("/static/pajan-hamarasta.jpg");
 `;
 
 const IkuisetSeprat = Project.extend`
-  background-image: url(${ikuisetSeprat});
+  background-image: url("/static/ikuiset-seprat.jpg");
   background-position: center;
 `;
 
 const Rautakymi = Project.extend`
-  background-image: url(${rautakymi});
+  background-image: url("/static/rautakymi.jpg");
 `;
 
 const LovArt = Project.extend`
-  background-image: url(${lovart});
+  background-image: url("/static/lovart.jpg");
 `;
 
 const Articles = styled.ul`
@@ -206,20 +191,20 @@ const Cover = styled.div`
 `;
 
 const Rautakuona = Cover.extend`
-  background-image: url(${rautakymiThumbnail});
+  background-image: url("/static/pajan-hamarasta.jpg");
 `;
 
 const Tammijarvi = Cover.extend`
-  background-image: url(${tammijärviThumbmail});
+  background-image: url("/static/tammijarvi-thumbnail.jpg");
 `;
 
 const Straka = Cover.extend`
-  background-image: url(${stråkaThumbnail});
+  background-image: url("/static/stråka-thumbnail.jpg");
 `;
 
 const Anttijappinen = Cover.extend`
   composes: cover;
-  background-image: url(${anttiJäppinenThumbnail});
+  background-image: url("/static/antti-jappinen-thumbnail.jpg");
 `;
 
 const Links = styled.nav`
@@ -238,15 +223,10 @@ const Links = styled.nav`
 
 const Index = () => (
   <Fragment>
-    <Helmet
-      title="Jouni Jäppinen"
-      script={[
-        {
-          type: 'application/ld+json',
-          innerHTML: `${JSON.stringify(microdata)}`,
-        },
-      ]}
-    />
+    <Head>
+      <title>Jouni Jäppinen</title>
+      <script type="application/ld+json">{JSON.stringify(microdata)}</script>
+    </Head>
     <Header>
       <Heading>
         <h1>Jouni Jäppinen</h1>
@@ -275,23 +255,27 @@ const Index = () => (
       </About>
       <Projects>
         <li>
-          <Link to="/pajan-hamarasta/">
-            <PajanHamarasta>
-              <div>
-                <h1>Pajan hämärästä</h1>
-                <h2>Sepän kulttuurihistoriaa</h2>
-              </div>
-            </PajanHamarasta>
+          <Link href="/pajan-hamarasta/" prefetch>
+            <a>
+              <PajanHamarasta>
+                <div>
+                  <h1>Pajan hämärästä</h1>
+                  <h2>Sepän kulttuurihistoriaa</h2>
+                </div>
+              </PajanHamarasta>
+            </a>
           </Link>
         </li>
         <li typeof="Book">
-          <Link to="/ikuiset-seprat/">
-            <IkuisetSeprat>
-              <div>
-                <h1>Ikuiset seprat</h1>
-                <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
-              </div>
-            </IkuisetSeprat>
+          <Link href="/ikuiset-seprat/" prefetch>
+            <a>
+              <IkuisetSeprat>
+                <div>
+                  <h1>Ikuiset seprat</h1>
+                  <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
+                </div>
+              </IkuisetSeprat>
+            </a>
           </Link>
         </li>
         <li>
@@ -317,7 +301,7 @@ const Index = () => (
       </Projects>
       <Articles>
         <li>
-          <a href={rautakuona}>
+          <a href="/static/rautakuona.pdf">
             <Article>
               <Rautakuona />
               <h1>Kymijokisuiston rautakuona</h1>
@@ -325,7 +309,7 @@ const Index = () => (
           </a>
         </li>
         <li>
-          <a href={tammijärvi}>
+          <a href="/static/tammijärvi.pdf">
             <Article>
               <Tammijarvi />
               <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
@@ -333,7 +317,7 @@ const Index = () => (
           </a>
         </li>
         <li>
-          <a href={stråka}>
+          <a href="/static/stråka.pdf">
             <Article>
               <Straka />
               <h1>Stråka Järnframställning</h1>
@@ -341,7 +325,7 @@ const Index = () => (
           </a>
         </li>
         <li>
-          <a href={anttiJäppinen}>
+          <a href="/static/antti-jappinen.pdf">
             <Article>
               <Anttijappinen />
               <h1>Sotamies Antti Jäppinen</h1>
@@ -353,7 +337,7 @@ const Index = () => (
         <Links>
           <ul>
             <li>
-              <a href={kirjoituksia} rel="prefetch">
+              <a href="/static/kirjoituksia.pdf" rel="prefetch">
                 Kirjoituksia
               </a>
             </li>

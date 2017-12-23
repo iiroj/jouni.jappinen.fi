@@ -1,40 +1,46 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "5.3.0",
-  "description": "Static site made with Gatsby",
-  "bugs": "https://gitlab.com/iiroj/jouni.jappinen.fi/issues",
-  "licence": "UNLICENCED",
+  "version": "6.0.0",
+  "description": "Static site built with Next.js",
+  "licence": "BSD-3-Clause",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
   "contributors": [
     "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)"
   ],
-  "repository": "github:iiroj/jouni.jappinen.fi",
+  "private": true,
+  "repository": "gitlab:iiroj/jouni.jappinen.fi",
+  "bugs": "https://gitlab.com/iiroj/jouni.jappinen.fi/issues",
   "scripts": {
-    "prestart": "rimraf .cache",
-    "start": "NODE_ENV=development gatsby develop",
-    "lint": "eslint --ignore-pattern public .",
-    "lint:fix": "eslint --fix --ignore-pattern public .",
-    "prebuild": "rimraf .cache public",
-    "build": "NODE_ENV=production gatsby build"
+    "start": "NODE_ENV=development next",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "build": "NODE_ENV=production next build && next export"
   },
   "dependencies": {
     "css-wipe": "^4.3.0",
+    "next": "^4.2.1",
+    "prettier": "^1.9.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "styled-components": "^2.3.3"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.4.0",
     "eslint": "^4.13.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.4.0",
     "eslint-plugin-react": "^7.5.1",
-    "gatsby": "^1.9.138",
-    "gatsby-link": "^1.6.32",
-    "gatsby-plugin-manifest": "^1.0.12",
-    "gatsby-plugin-offline": "^1.0.12",
-    "gatsby-plugin-react-next": "^1.0.6",
-    "gatsby-source-filesystem": "^1.5.11",
-    "prettier": "^1.9.2",
-    "prop-types": "^15.6.0",
-    "react-helmet": "^5.2.0",
-    "rimraf": "^2.6.2",
-    "styled-components": "^2.3.3"
+    "webpack": "^3.10.0"
   },
-  "private": true
+  "keywords": [
+    "aws",
+    "cloudfront",
+    "nextjs",
+    "react",
+    "s3",
+    "serverless",
+    "static-site",
+    "styled-components"
+  ]
 }

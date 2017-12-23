@@ -35,7 +35,7 @@ build:
             - node_modules/
     artifacts:
         paths:
-            - public/
+            - out/
 
 deploy:
     image: $DEPLOY_IMAGE_URL
@@ -44,6 +44,6 @@ deploy:
         name: production
         url: https://jouni.jappinen.fi
     script:
-        - s3cmd sync public/ $S3_BUCKET_URL --delete-removed --guess-mime-type --no-mime-magic --no-preserve --server-side-encryption --cf-invalidate
+        - s3cmd sync out/ $S3_BUCKET_URL --delete-removed --guess-mime-type --no-mime-magic --no-preserve --server-side-encryption --cf-invalidate
     only:
         - master

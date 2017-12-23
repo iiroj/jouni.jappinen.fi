@@ -1,17 +1,14 @@
-import React from 'react';
-import styled from 'styled-components';
-import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
-
-import cover from './cover.jpg';
-import arvostelu from './arvostelu.pdf';
+import React from "react";
+import styled from "styled-components";
+import Head from "next/head";
+import Link from "next/link";
 
 const Container = styled.main`
   background-color: rgb(219, 219, 219);
 `;
 
 const Image = styled.div`
-  background: url(${cover});
+  background: url("/static/ikuiset-seprat/cover.jpg");
   background-position: 50% 75%;
   background-size: cover;
   height: 25vh;
@@ -68,7 +65,9 @@ const Footer = styled.footer`
 
 const Ikuisetseprat = () => (
   <main>
-    <Helmet title={`Ikuiset seprat – Jouni Jäppinen`} />
+    <Head>
+      <title>Ikuiset seprat – Jouni Jäppinen</title>
+    </Head>
     <Image />
     <Header>
       <h1>Ikuiset seprat</h1>
@@ -113,14 +112,16 @@ const Ikuisetseprat = () => (
     >
       Lue kirja-arvostelu (I)
     </A>
-    <A href={arvostelu}>Lue kirja-arvostelu (II)</A>
+    <A href="/static/ikuiset-seprat/arvostelu.pdf">Lue kirja-arvostelu (II)</A>
     <A href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310" rel="external crossorigin prefetch">
       Osta Adlibris-verkkokirjakaupasta
     </A>
     <Footer>
       <p>Jouni Jäppinen</p>
       <p>ISBN 978-952-93-7131-0</p>
-      <Link to="/">Takaisin</Link>
+      <Link href="/">
+        <a>Takaisin</a>
+      </Link>
     </Footer>
   </main>
 );
