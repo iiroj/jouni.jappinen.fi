@@ -2,13 +2,13 @@
 
 [![pipeline status](https://gitlab.com/iiroj/jouni.jappinen.fi/badges/master/pipeline.svg)](https://gitlab.com/iiroj/jouni.jappinen.fi/commits/master)
 
-A static site made with [Gatsby](https://github.com/gatsbyjs/gatsby), available at [jouni.jappinen.fi](https://jouni.jappinen.fi).
+A static site built with [Next.js](https://github.com/zeit/next.js/), available at [jouni.jappinen.fi](https://jouni.jappinen.fi).
 
 The canonical repository for this project is at [gitlab:iiroj/jouni.jappinen.fi](https://gitlab.com/iiroj/jouni.jappinen.fi). It is mirrored at [github:iiroj/jouni.jappinen.fi](https://github.com/iiroj/jouni.jappinen.fi) for convenience.
 
 ## Technology used
 
-This static site is built with [Gatsby](https://github.com/gatsbyjs/gatsby), a static-site generator for [React](https://facebook.github.io/react/). It is composed of basic React pure functional components and some static images.
+This static site is built with [Next.js](https://github.com/zeit/next.js/), a framework for server-rendered or statically-exported [React](https://facebook.github.io/react/) apps. It is composed of basic React pure functional components and some static images.
 
 [Styled-components](https://styled-components.com) are used for styling, so no external CSS files are needed. [Css-wipe](https://github.com/stackcss/css-wipe) is used for resetting browser default styles.
 

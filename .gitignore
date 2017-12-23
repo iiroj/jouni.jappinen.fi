@@ -1,6 +1,6 @@
-.cache
 .DS_store
-.gatsby-context.js
+.next
 node_modules
+out
 public
 sketch

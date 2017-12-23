@@ -1,10 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
-
-import cover from './cover.jpg';
-import arvostelu from './arvostelu.jpg';
+import React from "react";
+import styled from "styled-components";
+import Head from "next/head";
+import Link from "next/link";
 
 const Container = styled.main`
   background-color: rgb(26, 25, 25);
@@ -12,7 +9,7 @@ const Container = styled.main`
 `;
 
 const Image = styled.div`
-  background: url(${cover});
+  background: url("/static/pajan-hamarasta/cover.jpg");
   background-position: 50% 50%;
   background-size: cover;
   height: 25vh;
@@ -68,7 +65,9 @@ const Footer = styled.footer`
 
 const Pajanhamarasta = () => (
   <Container>
-    <Helmet title={`Pajan hämärästä – Jouni Jäppinen`} />
+    <Head>
+      <title>Pajan hämärästä – Jouni Jäppinen</title>
+    </Head>
     <Image />
     <Header>
       <h1>Pajan hämärästä</h1>
@@ -105,7 +104,7 @@ const Pajanhamarasta = () => (
         voimia.
       </p>
     </Section>
-    <A href={arvostelu} rel="prefetch">
+    <A href="/static/pajan-hamarasta/arvostelu.jpg" rel="prefetch">
       Lue kirja-arvostelu
     </A>
     <A href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501" rel="external crossorigin prefetch">
@@ -114,7 +113,9 @@ const Pajanhamarasta = () => (
     <Footer>
       <p>Jouni Jäppinen</p>
       <p>ISBN-978-952-93-4250-1</p>
-      <Link to="/">Takaisin</Link>
+      <Link href="/">
+        <a>Takaisin</a>
+      </Link>
     </Footer>
   </Container>
 );
