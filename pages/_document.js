@@ -8,8 +8,9 @@ ${reset}
 
 html,
 body,
-body > div.
-#__next {
+body > div,
+#__next,
+#__next > div {
   height: 100%;
 }
 

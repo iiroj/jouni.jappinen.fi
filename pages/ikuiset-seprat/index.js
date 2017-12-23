@@ -119,7 +119,7 @@ const Ikuisetseprat = () => (
     <Footer>
       <p>Jouni Jäppinen</p>
       <p>ISBN 978-952-93-7131-0</p>
-      <Link href="/">
+      <Link href="/" prefetch>
         <a>Takaisin</a>
       </Link>
     </Footer>
