@@ -22,11 +22,11 @@
     "prettier": "^1.9.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "styled-components": "^2.3.3"
+    "styled-components": "^2.4.0"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.4.0",
-    "eslint": "^4.13.1",
+    "eslint": "^4.14.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.4.0",
