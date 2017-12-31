@@ -7,10 +7,7 @@ injectGlobal`
 ${reset}
 
 html,
-body,
-body > div,
-#__next,
-#__next > div:first-child {
+body {
   height: 100%;
 }
 
