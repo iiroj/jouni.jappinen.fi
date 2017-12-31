@@ -10,7 +10,7 @@ html,
 body,
 body > div,
 #__next,
-#__next > div {
+#__next > div:first-child {
   height: 100%;
 }
 
