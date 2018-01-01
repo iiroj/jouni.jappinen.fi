@@ -7,7 +7,10 @@ injectGlobal`
 ${reset}
 
 html,
-body {
+body,
+body > div:first-child,
+#__next,
+#__next > div[data-reactroot] {
   height: 100%;
 }
 
