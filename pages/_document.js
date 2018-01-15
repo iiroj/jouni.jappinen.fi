@@ -15,11 +15,11 @@ body > div:first-child,
 }
 
 body {
-    font-family: 'Spectral', serif;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.5rem;
-    margin: 0;
+  font-family: 'Spectral', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0;
 }
 
 a {
