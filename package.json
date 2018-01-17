@@ -16,7 +16,8 @@
     "lint:fix": "eslint --fix .",
     "prebuild": "npm run lint",
     "build": "NODE_ENV=production next build && next export",
-    "postbuild": "cp _headers out/"
+    "postbuild": "cp _headers out/",
+    "purge-cloudflare-cache": "./scripts/purge-cloudflare-cache.sh"
   },
   "dependencies": {
     "css-wipe": "^4.3.0",
