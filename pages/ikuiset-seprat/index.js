@@ -64,7 +64,7 @@ const Footer = styled.footer`
 `;
 
 const Ikuisetseprat = () => (
-  <main>
+  <Container>
     <Head>
       <title>Ikuiset seprat – Jouni Jäppinen</title>
     </Head>
@@ -123,7 +123,7 @@ const Ikuisetseprat = () => (
         <a>Takaisin</a>
       </Link>
     </Footer>
-  </main>
+  </Container>
 );
 
 export default Ikuisetseprat;

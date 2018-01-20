@@ -18,6 +18,12 @@
   },
   "rules": {
     "react/prop-types": 1,
+    "react/display-name": 0,
+    "no-unused-vars": [2, {
+      "args": "none",
+      "vars": "all",
+      "varsIgnorePattern": "hJSX"
+    }],
     "prettier/prettier": [
       "error",
       {

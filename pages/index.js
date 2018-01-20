@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Head from "next/head";
 import Link from "next/link";
 
-const microdata = {
+const microdata = JSON.stringify({
   "@context": "http://schema.org",
   "@type": "Person",
   name: "Jouni Jäppinen",
@@ -17,7 +17,7 @@ const microdata = {
     addressLocality: "Loviisa",
   },
   alumniOf: "Turun yliopisto",
-};
+});
 
 const Header = styled.header`
   background: url("/static/sokerikko.jpg");
@@ -225,7 +225,7 @@ const Index = () => (
   <Fragment>
     <Head>
       <title>Jouni Jäppinen</title>
-      <script type="application/ld+json">{JSON.stringify(microdata)}</script>
+      <script type="application/ld+json">{microdata}</script>
     </Head>
     <Header>
       <Heading>

@@ -4,28 +4,28 @@ import { injectGlobal, ServerStyleSheet } from "styled-components";
 import reset from "css-wipe/js";
 
 injectGlobal`
-${reset}
+  ${reset}
 
-html,
-body,
-body > div:first-child,
-#__next,
-#__next > div[data-reactroot] {
-  height: 100%;
-}
+  html,
+  body,
+  body > div:first-child,
+  #__next,
+  #__next > div[data-reactroot] {
+    height: 100%;
+  }
 
-body {
-  font-family: 'Spectral', serif;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.5rem;
-  margin: 0;
-}
+  body {
+    font-family: 'Spectral', serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
+  }
 
-a {
-	color: inherit;
-	text-decoration: inherit;
-}
+  a {
+    color: inherit;
+    text-decoration: inherit;
+  }
 `;
 
 export default class MyDocument extends Document {
