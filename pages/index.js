@@ -191,7 +191,7 @@ const Cover = styled.div`
 `;
 
 const Rautakuona = Cover.extend`
-  background-image: url("/static/pajan-hamarasta.jpg");
+  background-image: url("/static/rautakymi-thumbnail.jpg");
 `;
 
 const Tammijarvi = Cover.extend`
