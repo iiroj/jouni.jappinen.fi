@@ -24,15 +24,15 @@
     "next": "^4.2.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "styled-components": "^3.0.2"
+    "styled-components": "^3.1.5"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.5.0",
-    "eslint": "^4.16.0",
+    "eslint": "^4.17.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-prettier": "^2.5.0",
-    "eslint-plugin-react": "^7.6.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.6.1",
     "prettier": "^1.10.2",
     "webpack": "^3.10.0"
   },
