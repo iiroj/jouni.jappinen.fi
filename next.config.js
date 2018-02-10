@@ -3,12 +3,12 @@ const glob = require("glob");
 const pageFiles = glob.sync("pages/**/!(_document)@(.js)");
 
 const getPathMap = pageFiles.reduce((pathMap, file) => {
-  const page =
-    file
-      .replace(/^pages/, "")
-      .replace(/\.js$/, "")
-      .replace(/index$/, "")
-      .replace(/\/$/, "") || "/";
+  const page = file
+    .replace(/^pages\//, "")
+    .replace(/\.js$/, "")
+    .replace(/index$/, "")
+    .replace(/\/$/, "")
+    .replace(/^/, "/");
 
   pathMap[page] = { page };
   return pathMap;
