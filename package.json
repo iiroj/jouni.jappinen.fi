@@ -1,6 +1,6 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "6.4.1",
+  "version": "6.4.2",
   "description": "Static site built with Next.js",
   "licence": "BSD-3-Clause",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
@@ -33,7 +33,6 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
-    "node-glob": "^1.2.0",
     "prettier": "^1.10.2",
     "rimraf": "^2.6.2",
     "webpack": "^3.10.0"

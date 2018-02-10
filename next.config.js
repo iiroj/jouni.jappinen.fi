@@ -1,21 +1,34 @@
-const glob = require("glob");
+const { promisify } = require("util");
+const { resolve } = require("path");
+const fs = require("fs");
+const readdir = promisify(fs.readdir);
+const stat = promisify(fs.stat);
 
-const pageFiles = glob.sync("pages/**/!(_document)@(.js)");
+async function getFiles(dir) {
+  const subdirs = await readdir(dir);
+  const files = await Promise.all(
+    subdirs.map(async subdir => {
+      const res = resolve(dir, subdir);
+      return (await stat(res)).isDirectory() ? getFiles(res) : res;
+    }),
+  );
+  return files.reduce((files, file) => files.concat(file.replace(`${__dirname}/${dir}`, "")), []);
+}
 
-const getPathMap = pageFiles.reduce((pathMap, file) => {
-  const page = file
-    .replace(/^pages\//, "")
-    .replace(/\.js$/, "")
-    .replace(/index$/, "")
-    .replace(/\/$/, "")
-    .replace(/^/, "/");
+async function generatePathMap(files) {
+  return files
+    .filter(file => file.endsWith(".js"))
+    .filter(file => !file.includes("/_"))
+    .reduce((pathMap, file) => {
+      const page = file.replace(/\.js$/, "").replace(/index$/, "");
 
-  pathMap[page] = { page };
-  return pathMap;
-}, {});
+      pathMap[page] = { page };
+      return pathMap;
+    }, {});
+}
 
 module.exports = {
-  exportPathMap: () => getPathMap,
+  exportPathMap: () => getFiles("pages").then(generatePathMap),
   webpack(config, options) {
     const { dev } = options;
 
