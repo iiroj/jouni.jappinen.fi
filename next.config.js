@@ -1,11 +1,21 @@
+const glob = require("glob");
+
+const pageFiles = glob.sync("pages/**/!(_document)@(.js)");
+
+const getPathMap = pageFiles.reduce((pathMap, file) => {
+  const page =
+    file
+      .replace(/^pages/, "")
+      .replace(/\.js$/, "")
+      .replace(/index$/, "")
+      .replace(/\/$/, "") || "/";
+
+  pathMap[page] = { page };
+  return pathMap;
+}, {});
+
 module.exports = {
-  exportPathMap: function() {
-    return {
-      "/": { page: "/" },
-      "/pajan-hamarasta/": { page: "/pajan-hamarasta/" },
-      "/ikuiset-seprat/": { page: "/ikuiset-seprat/" },
-    };
-  },
+  exportPathMap: () => getPathMap,
   webpack(config, options) {
     const { dev } = options;
 

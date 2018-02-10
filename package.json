@@ -1,6 +1,6 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "6.3.0",
+  "version": "6.4.0",
   "description": "Static site built with Next.js",
   "licence": "BSD-3-Clause",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
@@ -11,11 +11,11 @@
   "repository": "gitlab:iiroj/jouni.jappinen.fi",
   "bugs": "https://gitlab.com/iiroj/jouni.jappinen.fi/issues",
   "scripts": {
-    "start": "NODE_ENV=development next",
+    "start": "next",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "prebuild": "npm run lint",
-    "build": "NODE_ENV=production next build && next export",
+    "prebuild": "rimraf out",
+    "build": "next build && next export",
     "postbuild": "cp _headers out/",
     "purge-cloudflare-cache": "./scripts/purge-cloudflare-cache.sh"
   },
@@ -33,7 +33,9 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.6.1",
+    "node-glob": "^1.2.0",
     "prettier": "^1.10.2",
+    "rimraf": "^2.6.2",
     "webpack": "^3.10.0"
   },
   "keywords": [
