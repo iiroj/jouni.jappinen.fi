@@ -1,7 +1,5 @@
 # jouni.jappinen.fi
 
-[![pipeline status](https://gitlab.com/iiroj/jouni.jappinen.fi/badges/master/pipeline.svg)](https://gitlab.com/iiroj/jouni.jappinen.fi/commits/master)
-
 A static site built with [Next.js](https://github.com/zeit/next.js/), available at [jouni.jappinen.fi](https://jouni.jappinen.fi).
 
 The canonical repository for this project is at [gitlab:iiroj/jouni.jappinen.fi](https://gitlab.com/iiroj/jouni.jappinen.fi). It is mirrored at [github:iiroj/jouni.jappinen.fi](https://github.com/iiroj/jouni.jappinen.fi) for convenience.
