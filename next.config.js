@@ -15,8 +15,8 @@ async function getFiles(dir) {
   return files.reduce((files, file) => files.concat(file.replace(`${__dirname}/${dir}`, "")), []);
 }
 
-async function generatePathMap(files) {
-  return files
+const generatePathMap = async files =>
+  files
     .filter(file => file.endsWith(".js"))
     .filter(file => !file.includes("/_"))
     .reduce((pathMap, file) => {
@@ -25,7 +25,6 @@ async function generatePathMap(files) {
       pathMap[page] = { page };
       return pathMap;
     }, {});
-}
 
 module.exports = {
   exportPathMap: () => getFiles("pages").then(generatePathMap),

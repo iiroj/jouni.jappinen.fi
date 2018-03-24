@@ -110,9 +110,11 @@ const Ikuisetseprat = () => (
       href="https://kymensanomat.fi/uutiset/lahella/13a4ccf6-a72c-48f1-9c8d-2eb7af624bbe"
       rel="external crossorigin prefetch"
     >
-      Lue kirja-arvostelu (I)
+      Lue kirja-arvostelu (Kymen Sanomat)
     </A>
-    <A href="/static/ikuiset-seprat/arvostelu.pdf">Lue kirja-arvostelu (II)</A>
+    <A href="https://www.tuglas.fi/ikuiset-seprat.-tytärsaarelaisten-ja-virolaisten-suhteet-ennen-toista-maailmansotaa">
+      Lue kirja-arvostelu (Tuglas-seura)
+    </A>
     <A href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310" rel="external crossorigin prefetch">
       Osta Adlibris-verkkokirjakaupasta
     </A>
