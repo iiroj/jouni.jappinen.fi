@@ -1,15 +1,19 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "6.4.4",
+  "version": "6.5.0",
   "description": "Static site built with Next.js",
-  "licence": "BSD-3-Clause",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
   "contributors": [
     "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)"
   ],
+  "licence": "MIT",
+  "repository": "github:iiroj/jouni.jappinen.fi",
+  "bugs": "https://github.com/iiroj/jouni.jappinen.fi/issues",
   "private": true,
-  "repository": "gitlab:iiroj/jouni.jappinen.fi",
-  "bugs": "https://gitlab.com/iiroj/jouni.jappinen.fi/issues",
+  "engines": {
+    "node": "latest",
+    "npm": "latest"
+  },
   "scripts": {
     "start": "next",
     "lint": "eslint .",
@@ -17,16 +21,17 @@
     "prebuild": "rimraf .next",
     "build": "next build",
     "preexport": "rimraf out",
-    "export": "next export",
-    "postexport": "cp static_netlify/* out/"
+    "export": "next export"
   },
   "dependencies": {
     "css-wipe": "^4.3.0",
-    "react": "^16.3.0",
-    "react-dom": "^16.3.0",
+    "fontfaceobserver": "^2.0.13",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
     "styled-components": "^3.2.5"
   },
   "devDependencies": {
+    "babel-eslint": "^8.2.2",
     "babel-plugin-styled-components": "^1.5.1",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
@@ -41,7 +46,6 @@
     "netlify",
     "nextjs",
     "react",
-    "s3",
     "serverless",
     "static-site",
     "styled-components"

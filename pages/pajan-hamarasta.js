@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Head from "next/head";
 import Link from "next/link";
 
+import withGlobalStyles from "../src/global-styles";
+
 const Container = styled.main`
   background-color: rgb(26, 25, 25);
   color: white;
@@ -120,4 +122,4 @@ const Pajanhamarasta = () => (
   </Container>
 );
 
-export default Pajanhamarasta;
+export default withGlobalStyles(Pajanhamarasta);

@@ -1,0 +1,18 @@
+[build]
+  command = "npm run build && npm run export"
+  publish = "out"
+
+[[headers]]
+  for = "/*"
+    [headers.values]
+      Content-Security-Policy = "default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data:; connect-src 'self' https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;"
+      Referrer-Policy = "origin-when-cross-origin"
+      X-Content-Type-Options = "nosniff"
+      X-Frame-Options = "DENY"
+      X-XSS-Protection = "1; mode=block"
+
+[[redirects]]
+  from = "https://jouni.xn--jppinen-5wa.fi/*"
+  to = "https://jouni.jappinen.fi/:splat"
+  status = 301
+  force = true

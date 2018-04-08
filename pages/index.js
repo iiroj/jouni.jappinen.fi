@@ -3,6 +3,8 @@ import styled from "styled-components";
 import Head from "next/head";
 import Link from "next/link";
 
+import withGlobalStyles from "../src/global-styles";
+
 const microdata = JSON.stringify({
   "@context": "http://schema.org",
   "@type": "Person",
@@ -25,12 +27,13 @@ const Header = styled.header`
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(255, 255, 255);
-  height: 100%;
+  height: 75%;
   overflow-y: hidden;
   position: relative;
   z-index: -1;
 
   @media (min-width: 100rem) {
+    height: 100%;
     position: fixed;
     top: 0;
     width: 50%;
@@ -361,4 +364,4 @@ const Index = () => (
   </Fragment>
 );
 
-export default Index;
+export default withGlobalStyles(Index);
