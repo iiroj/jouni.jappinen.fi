@@ -3,8 +3,6 @@ import styled from "styled-components";
 import Head from "next/head";
 import Link from "next/link";
 
-import withGlobalStyles from "../src/global-styles";
-
 const Container = styled.main`
   background-color: rgb(219, 219, 219);
 `;
@@ -130,4 +128,4 @@ const Ikuisetseprat = () => (
   </Container>
 );
 
-export default withGlobalStyles(Ikuisetseprat);
+export default Ikuisetseprat;

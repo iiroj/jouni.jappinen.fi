@@ -3,8 +3,6 @@ import styled from "styled-components";
 import Head from "next/head";
 import Link from "next/link";
 
-import withGlobalStyles from "../src/global-styles";
-
 const microdata = JSON.stringify({
   "@context": "http://schema.org",
   "@type": "Person",
@@ -364,4 +362,4 @@ const Index = () => (
   </Fragment>
 );
 
-export default withGlobalStyles(Index);
+export default Index;
