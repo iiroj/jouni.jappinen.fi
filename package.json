@@ -1,6 +1,6 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "6.6.1",
+  "version": "6.6.2",
   "description": "Static site built with Next.js",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
   "contributors": [
@@ -38,7 +38,7 @@
     "eslint-plugin-import": "^2.11.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
-    "next": "^6.0.0-canary.7",
+    "next": "^6.0.0",
     "prettier": "^1.12.1",
     "rimraf": "^2.6.2"
   },
