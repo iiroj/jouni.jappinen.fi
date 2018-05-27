@@ -1,21 +1,21 @@
 import React from "react";
-import styled from "styled-components";
+import { css } from "react-emotion";
 import Head from "next/head";
 import Link from "next/link";
 
-const Container = styled.main`
+const container = css`
   background-color: rgb(26, 25, 25);
   color: white;
 `;
 
-const Image = styled.div`
+const image = css`
   background: url("/static/pajan-hamarasta/cover.jpg");
   background-position: 50% 50%;
   background-size: cover;
   height: 25vh;
 `;
 
-const Header = styled.header`
+const header = css`
   background-color: rgb(61, 19, 15);
   padding: 2rem;
   text-align: center;
@@ -27,7 +27,7 @@ const Header = styled.header`
   }
 `;
 
-const Section = styled.section`
+const section = css`
   background-color: rgb(61, 19, 15);
   padding-bottom: 1rem;
 
@@ -38,7 +38,7 @@ const Section = styled.section`
   }
 `;
 
-const A = styled.a`
+const link = css`
   color: rgb(161, 42, 38);
   display: block;
   font-size: 1.5rem;
@@ -52,7 +52,7 @@ const A = styled.a`
   }
 `;
 
-const Footer = styled.footer`
+const footer = css`
   margin: 0 auto;
   max-width: 50rem;
   padding: 1rem 0 4rem 0;
@@ -64,16 +64,16 @@ const Footer = styled.footer`
 `;
 
 const Pajanhamarasta = () => (
-  <Container>
+  <main className={container}>
     <Head>
       <title>Pajan hämärästä – Jouni Jäppinen</title>
     </Head>
-    <Image />
-    <Header>
+    <div className={image} role="image" alt="Pajan hämärstä" />
+    <header className={header}>
       <h1>Pajan hämärästä</h1>
       <h2>Sepän kulttuurihistoriaa</h2>
-    </Header>
-    <Section>
+    </header>
+    <section className={section}>
       <p>
         Vanhan sanonnan mukaan seppä on taitava henkilö niin aineen kuin hengenkin alalla. Kirja luo katsauksen
         sepänalan esihistoriaan sekä tarinoihin kotimaamme sepistä, joita on onnekkaasti säilynyt jälkipolville.
@@ -103,21 +103,25 @@ const Pajanhamarasta = () => (
         palkeiden kanssa, alkoivat ihmiset uskoa, että sepällä täytyi olla luontaisia kykyjä hallita yliluonnollisia
         voimia.
       </p>
-    </Section>
-    <A href="/static/pajan-hamarasta/arvostelu.jpg" rel="prefetch">
+    </section>
+    <a className={link} href="/static/pajan-hamarasta/arvostelu.jpg" rel="prefetch">
       Lue kirja-arvostelu
-    </A>
-    <A href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501" rel="external crossorigin prefetch">
+    </a>
+    <a
+      className={link}
+      href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501"
+      rel="external crossorigin prefetch"
+    >
       Osta Adlibris-verkkokirjakaupasta
-    </A>
-    <Footer>
+    </a>
+    <footer className={footer}>
       <p>Jouni Jäppinen</p>
       <p>ISBN-978-952-93-4250-1</p>
       <Link href="/" prefetch>
         <a>Takaisin</a>
       </Link>
-    </Footer>
-  </Container>
+    </footer>
+  </main>
 );
 
 export default Pajanhamarasta;

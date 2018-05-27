@@ -1,20 +1,20 @@
 import React from "react";
-import styled from "styled-components";
+import { css } from "react-emotion";
 import Head from "next/head";
 import Link from "next/link";
 
-const Container = styled.main`
+const container = css`
   background-color: rgb(219, 219, 219);
 `;
 
-const Image = styled.div`
+const image = css`
   background: url("/static/ikuiset-seprat/cover.jpg");
   background-position: 50% 75%;
   background-size: cover;
   height: 25vh;
 `;
 
-const Header = styled.header`
+const header = css`
   background-color: rgb(0, 74, 128);
   color: white;
   margin-bottom: 2rem;
@@ -28,7 +28,7 @@ const Header = styled.header`
   }
 `;
 
-const Section = styled.section`
+const section = css`
   padding-bottom: 1rem;
 
   p {
@@ -38,7 +38,7 @@ const Section = styled.section`
   }
 `;
 
-const A = styled.a`
+const link = css`
   color: rgb(0, 74, 128);
   display: block;
   font-size: 1.5rem;
@@ -52,7 +52,7 @@ const A = styled.a`
   }
 `;
 
-const Footer = styled.footer`
+const footer = css`
   margin: 0 auto;
   max-width: 50rem;
   padding: 1rem 0 4rem 0;
@@ -64,16 +64,16 @@ const Footer = styled.footer`
 `;
 
 const Ikuisetseprat = () => (
-  <Container>
+  <div className={container}>
     <Head>
       <title>Ikuiset seprat – Jouni Jäppinen</title>
     </Head>
-    <Image />
-    <Header>
+    <div className={image} role="image" alt="Ikuiset seprat" />
+    <header className={header}>
       <h1>Ikuiset seprat</h1>
       <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
-    </Header>
-    <Section>
+    </header>
+    <section className={section}>
       <p>
         Tytärsaaren perifeerinen sijainti lähempänä Viron kuin Suomen rannikkoa tarjosi saarelaisille mahdollisuuden
         ylläpitää vilkkaita suhteita virolaisten kanssa satojen vuosien ajan. Elämä Tytärsaarella oli fyysisesti
@@ -105,27 +105,36 @@ const Ikuisetseprat = () => (
         kuluessa. Tuona päivänä Virossa oli useita tytärsaarelaisia aluksineen, joille evakuointikäsky vietiin
         moottoriveneellä ja jolloin ystävyyssuhteet katkesivat.
       </p>
-    </Section>
-    <A
+    </section>
+    <a
+      className={link}
       href="https://kymensanomat.fi/uutiset/lahella/13a4ccf6-a72c-48f1-9c8d-2eb7af624bbe"
       rel="external crossorigin prefetch"
     >
       Lue kirja-arvostelu (Kymen Sanomat)
-    </A>
-    <A href="https://www.tuglas.fi/ikuiset-seprat.-tytärsaarelaisten-ja-virolaisten-suhteet-ennen-toista-maailmansotaa">
+    </a>
+    <a
+      className={link}
+      href="https://www.tuglas.fi/ikuiset-seprat.-tytärsaarelaisten-ja-virolaisten-suhteet-ennen-toista-maailmansotaa"
+      rel="external crossorigin prefetch"
+    >
       Lue kirja-arvostelu (Tuglas-seura)
-    </A>
-    <A href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310" rel="external crossorigin prefetch">
+    </a>
+    <a
+      className={link}
+      href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310"
+      rel="external crossorigin prefetch"
+    >
       Osta Adlibris-verkkokirjakaupasta
-    </A>
-    <Footer>
+    </a>
+    <footer className={footer}>
       <p>Jouni Jäppinen</p>
       <p>ISBN 978-952-93-7131-0</p>
       <Link href="/" prefetch>
         <a>Takaisin</a>
       </Link>
-    </Footer>
-  </Container>
+    </footer>
+  </div>
 );
 
 export default Ikuisetseprat;

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import styled from "styled-components";
+import { css } from "react-emotion";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -19,7 +19,9 @@ const microdata = JSON.stringify({
   alumniOf: "Turun yliopisto",
 });
 
-const Header = styled.header`
+const BREAKPOINT = "1023px";
+
+const headerStyles = css`
   background: url("/static/sokerikko.jpg");
   background-position: 25% center;
   background-repeat: no-repeat;
@@ -30,7 +32,7 @@ const Header = styled.header`
   position: relative;
   z-index: -1;
 
-  @media (min-width: 100rem) {
+  @media (min-width: ${BREAKPOINT}) {
     height: 100%;
     position: fixed;
     top: 0;
@@ -38,7 +40,7 @@ const Header = styled.header`
   }
 `;
 
-const Heading = styled.div`
+const headingStyles = css`
   left: 1rem;
   position: fixed;
   top: 50vh;
@@ -55,7 +57,7 @@ const Heading = styled.div`
   }
 `;
 
-const Caption = styled.aside`
+const captionStyles = css`
   bottom: 0.5rem;
   color: rgba(255, 255, 255, 0.6);
   font-size: 75%;
@@ -65,16 +67,16 @@ const Caption = styled.aside`
   text-align: right;
 `;
 
-const Main = styled.main`
+const mainStyles = css`
   position: relative;
 
-  @media (min-width: 100rem) {
+  @media (min-width: ${BREAKPOINT}) {
     margin-left: 50%;
     width: 50%;
   }
 `;
 
-const About = styled.section`
+const aboutStyles = css`
   margin: 4rem auto;
   max-width: 40rem;
   padding: 0 1rem;
@@ -84,7 +86,7 @@ const About = styled.section`
   }
 `;
 
-const Projects = styled.ul`
+const projectsStyles = css`
   display: flex;
   flex-wrap: wrap;
   padding: 0.5rem;
@@ -106,7 +108,7 @@ const Projects = styled.ul`
   }
 `;
 
-const Project = styled.article`
+const projectStyles = css`
   background-color: rgba(0, 0, 0, 0.05);
   background-position: center;
   background-size: cover;
@@ -131,24 +133,28 @@ const Project = styled.article`
   }
 `;
 
-const PajanHamarasta = Project.extend`
+const pajanHamarastaStyles = css`
+  ${projectStyles};
   background-image: url("/static/pajan-hamarasta.jpg");
 `;
 
-const IkuisetSeprat = Project.extend`
+const ikuisetSepratStyles = css`
+  ${projectStyles};
   background-image: url("/static/ikuiset-seprat.jpg");
   background-position: center;
 `;
 
-const Rautakymi = Project.extend`
+const rautakymiStyles = css`
+  ${projectStyles};
   background-image: url("/static/rautakymi.jpg");
 `;
 
-const LovArt = Project.extend`
+const lovartStyles = css`
+  ${projectStyles};
   background-image: url("/static/lovart.jpg");
 `;
 
-const Articles = styled.ul`
+const articlesStyles = css`
   justify-content: center;
   display: flex;
   flex-direction: row;
@@ -167,7 +173,7 @@ const Articles = styled.ul`
   }
 `;
 
-const Article = styled.article`
+const articleStyles = css`
   box-sizing: border-box;
   height: 100%;
   padding: 1rem;
@@ -181,7 +187,7 @@ const Article = styled.article`
   }
 `;
 
-const Cover = styled.div`
+const coverStyles = css`
   background-color: rgba(255, 255, 2555, 0.05);
   background-position: center;
   background-size: cover;
@@ -191,24 +197,28 @@ const Cover = styled.div`
   width: 75%;
 `;
 
-const Rautakuona = Cover.extend`
+const Rautakuona = css`
+  ${coverStyles};
   background-image: url("/static/rautakymi-thumbnail.jpg");
 `;
 
-const Tammijarvi = Cover.extend`
+const Tammijarvi = css`
+  ${coverStyles};
   background-image: url("/static/tammijarvi-thumbnail.jpg");
 `;
 
-const Straka = Cover.extend`
+const Straka = css`
+  ${coverStyles};
   background-image: url("/static/stråka-thumbnail.jpg");
 `;
 
-const Anttijappinen = Cover.extend`
-  composes: cover;
+const Anttijappinen = css`
+  ${coverStyles};
   background-image: url("/static/antti-jappinen-thumbnail.jpg");
+  background-size: cover;
 `;
 
-const Links = styled.nav`
+const linksStyles = css`
   ul li a {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     display: block;
@@ -228,17 +238,17 @@ const Index = () => (
       <title>Jouni Jäppinen</title>
       <script type="application/ld+json">{microdata}</script>
     </Head>
-    <Header>
-      <Heading>
+    <header className={headerStyles}>
+      <div className={headingStyles}>
         <h1>Jouni Jäppinen</h1>
         <h2>Taiteilija ja kultaseppä</h2>
-      </Heading>
-      <Caption>
+      </div>
+      <aside className={captionStyles}>
         <p>Image: Sugar cup, cast iron, sterling silver. Finnish Design 8 exhibition at Helsinki Design Museum 1991</p>
-      </Caption>
-    </Header>
-    <Main>
-      <About>
+      </aside>
+    </header>
+    <main className={mainStyles}>
+      <section className={aboutStyles}>
         <p>
           <span>Jouni Jäppinen</span> on loviisalainen taiteilija ja kultaseppä, joka aloitti työuransa porvoolaisessa
           sepänpajassa 1970-luvun alussa.
@@ -253,89 +263,89 @@ const Index = () => (
           taiteilijavaihdon tuottajana, ja tänään hänet tunnetaan myös rautakautisten menetelmien tutkijana ja
           tietokirjailijana.
         </p>
-      </About>
-      <Projects>
+      </section>
+      <ul className={projectsStyles}>
         <li>
           <Link href="/pajan-hamarasta/" prefetch>
             <a>
-              <PajanHamarasta>
+              <article className={pajanHamarastaStyles}>
                 <div>
                   <h1>Pajan hämärästä</h1>
                   <h2>Sepän kulttuurihistoriaa</h2>
                 </div>
-              </PajanHamarasta>
+              </article>
             </a>
           </Link>
         </li>
         <li typeof="Book">
           <Link href="/ikuiset-seprat/" prefetch>
             <a>
-              <IkuisetSeprat>
+              <article className={ikuisetSepratStyles}>
                 <div>
                   <h1>Ikuiset seprat</h1>
                   <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
                 </div>
-              </IkuisetSeprat>
+              </article>
             </a>
           </Link>
         </li>
         <li>
           <a href="https://www.rautakymi.fi">
-            <Rautakymi>
+            <article className={rautakymiStyles}>
               <div>
                 <h1>Talonpoikia, seppiä, lohiylimyksiä</h1>
                 <h2>Arkeologian harrastajien tutkielma Kymijokilaakson rautakautisesta asutuksesta</h2>
               </div>
-            </Rautakymi>
+            </article>
           </a>
         </li>
         <li>
           <a href="https://www.lovart.fi">
-            <LovArt>
+            <article className={lovartStyles}>
               <div>
                 <h1>Loviisa Artists’ Studio</h1>
                 <h2>Let’s work in peace</h2>
               </div>
-            </LovArt>
+            </article>
           </a>
         </li>
-      </Projects>
-      <Articles>
+      </ul>
+      <ul className={articlesStyles}>
         <li>
           <a href="/static/rautakuona.pdf">
-            <Article>
-              <Rautakuona />
+            <article className={articleStyles}>
+              <figure className={Rautakuona} role="image" alt="Kymijokisuiston rautakuona" />
               <h1>Kymijokisuiston rautakuona</h1>
-            </Article>
+            </article>
           </a>
         </li>
         <li>
           <a href="/static/tammijärvi.pdf">
-            <Article>
-              <Tammijarvi />
+            <article className={articleStyles}>
+              <figure className={Tammijarvi} role="image" alt="Experimentel forskning vid Tammijärvi i Pyttis" />
               <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
-            </Article>
+            </article>
           </a>
         </li>
         <li>
           <a href="/static/stråka.pdf">
-            <Article>
-              <Straka />
+            <article className={articleStyles}>
+              <figure className={Straka} role="image" alt="Stråka Järnframställning" />
               <h1>Stråka Järnframställning</h1>
-            </Article>
+            </article>
           </a>
         </li>
         <li>
           <a href="/static/antti-jappinen.pdf">
-            <Article>
-              <Anttijappinen />
+            <article className={articleStyles}>
+              <figure className={Anttijappinen} role="image" alt="Sotamies Antti Jäppinen" />
               <h1>Sotamies Antti Jäppinen</h1>
-            </Article>
+            </article>
           </a>
         </li>
-      </Articles>
+      </ul>
       <footer>
-        <Links>
+        <nav className={linksStyles}>
           <ul>
             <li>
               <a href="/static/kirjoituksia.pdf" rel="prefetch">
@@ -356,9 +366,9 @@ const Index = () => (
               </a>
             </li>
           </ul>
-        </Links>
+        </nav>
       </footer>
-    </Main>
+    </main>
   </Fragment>
 );
 
