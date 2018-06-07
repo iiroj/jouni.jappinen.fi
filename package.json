@@ -6,7 +6,7 @@
   "contributors": [
     "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)"
   ],
-  "licence": "MIT",
+  "license": "MIT",
   "repository": "gitlab:iiroj/jouni.jappinen.fi",
   "bugs": "https://gitlab.com/iiroj/jouni.jappinen.fi/issues",
   "private": true,
