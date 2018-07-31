@@ -1,6 +1,6 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "7.0.0",
+  "version": "7.0.1",
   "description": "Static site built with Next.js",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
   "contributors": [
@@ -25,24 +25,24 @@
   },
   "dependencies": {
     "css-wipe": "^4.3.0",
-    "emotion": "^9.2.4",
-    "emotion-server": "^9.2.4",
+    "emotion": "^9.2.6",
+    "emotion-server": "^9.2.6",
     "fontfaceobserver": "^2.0.13",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-emotion": "^9.2.4"
+    "react-emotion": "^9.2.6"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.5",
-    "babel-plugin-emotion": "^9.2.4",
-    "eslint": "^5.0.1",
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-emotion": "^9.2.6",
+    "eslint": "^5.2.0",
     "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-emotion": "^9.1.0",
+    "eslint-plugin-emotion": "^9.2.6",
     "eslint-plugin-import": "^2.13.0",
-    "eslint-plugin-prettier": "^2.6.1",
+    "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
     "next": "^6.1.1",
-    "prettier": "^1.13.7",
+    "prettier": "^1.14.0",
     "rimraf": "^2.6.2"
   },
   "keywords": [
