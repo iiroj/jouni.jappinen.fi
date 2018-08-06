@@ -1,14 +1,14 @@
 import React from "react";
 import { css } from "react-emotion";
-import Head from "next/head";
-import Link from "next/link";
+import Helmet from "react-helmet";
+import Link from "gatsby-link";
 
 const container = css`
   background-color: rgb(219, 219, 219);
 `;
 
 const image = css`
-  background: url("/static/ikuiset-seprat/cover.jpg");
+  background: url("/ikuiset-seprat/cover.jpg");
   background-position: 50% 75%;
   background-size: cover;
   height: 25vh;
@@ -64,10 +64,10 @@ const footer = css`
 `;
 
 const Ikuisetseprat = () => (
-  <div className={container}>
-    <Head>
+  <main className={container}>
+    <Helmet>
       <title>Ikuiset seprat – Jouni Jäppinen</title>
-    </Head>
+    </Helmet>
     <div className={image} role="image" alt="Ikuiset seprat" />
     <header className={header}>
       <h1>Ikuiset seprat</h1>
@@ -130,11 +130,9 @@ const Ikuisetseprat = () => (
     <footer className={footer}>
       <p>Jouni Jäppinen</p>
       <p>ISBN 978-952-93-7131-0</p>
-      <Link href="/" prefetch>
-        <a>Takaisin</a>
-      </Link>
+      <Link to="/">Takaisin</Link>
     </footer>
-  </div>
+  </main>
 );
 
 export default Ikuisetseprat;

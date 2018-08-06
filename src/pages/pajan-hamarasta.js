@@ -1,15 +1,14 @@
 import React from "react";
 import { css } from "react-emotion";
-import Head from "next/head";
-import Link from "next/link";
-
+import Helmet from "react-helmet";
+import Link from "gatsby-link";
 const container = css`
   background-color: rgb(26, 25, 25);
   color: white;
 `;
 
 const image = css`
-  background: url("/static/pajan-hamarasta/cover.jpg");
+  background: url("/pajan-hamarasta/cover.jpg");
   background-position: 50% 50%;
   background-size: cover;
   height: 25vh;
@@ -65,9 +64,9 @@ const footer = css`
 
 const Pajanhamarasta = () => (
   <main className={container}>
-    <Head>
+    <Helmet>
       <title>Pajan hämärästä – Jouni Jäppinen</title>
-    </Head>
+    </Helmet>
     <div className={image} role="image" alt="Pajan hämärstä" />
     <header className={header}>
       <h1>Pajan hämärästä</h1>
@@ -104,7 +103,7 @@ const Pajanhamarasta = () => (
         voimia.
       </p>
     </section>
-    <a className={link} href="/static/pajan-hamarasta/arvostelu.jpg" rel="prefetch">
+    <a className={link} href="/pajan-hamarasta/arvostelu.jpg" rel="prefetch">
       Lue kirja-arvostelu
     </a>
     <a
@@ -117,9 +116,7 @@ const Pajanhamarasta = () => (
     <footer className={footer}>
       <p>Jouni Jäppinen</p>
       <p>ISBN-978-952-93-4250-1</p>
-      <Link href="/" prefetch>
-        <a>Takaisin</a>
-      </Link>
+      <Link to="/">Takaisin</Link>
     </footer>
   </main>
 );

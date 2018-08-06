@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { css } from "react-emotion";
-import Head from "next/head";
-import Link from "next/link";
+import Helmet from "react-helmet";
+import Link from "gatsby-link";
 
 const microdata = JSON.stringify({
   "@context": "http://schema.org",
@@ -22,7 +22,7 @@ const microdata = JSON.stringify({
 const BREAKPOINT = "1023px";
 
 const headerStyles = css`
-  background: url("/static/sokerikko.jpg");
+  background: url("/sokerikko.jpg");
   background-position: 25% center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -135,23 +135,23 @@ const projectStyles = css`
 
 const pajanHamarastaStyles = css`
   ${projectStyles};
-  background-image: url("/static/pajan-hamarasta.jpg");
+  background-image: url("/pajan-hamarasta.jpg");
 `;
 
 const ikuisetSepratStyles = css`
   ${projectStyles};
-  background-image: url("/static/ikuiset-seprat.jpg");
+  background-image: url("/ikuiset-seprat.jpg");
   background-position: center;
 `;
 
 const rautakymiStyles = css`
   ${projectStyles};
-  background-image: url("/static/rautakymi.jpg");
+  background-image: url("/rautakymi.jpg");
 `;
 
 const lovartStyles = css`
   ${projectStyles};
-  background-image: url("/static/lovart.jpg");
+  background-image: url("/lovart.jpg");
 `;
 
 const articlesStyles = css`
@@ -199,22 +199,22 @@ const coverStyles = css`
 
 const Rautakuona = css`
   ${coverStyles};
-  background-image: url("/static/rautakymi-thumbnail.jpg");
+  background-image: url("/rautakymi-thumbnail.jpg");
 `;
 
 const Tammijarvi = css`
   ${coverStyles};
-  background-image: url("/static/tammijarvi-thumbnail.jpg");
+  background-image: url("/tammijarvi-thumbnail.jpg");
 `;
 
 const Straka = css`
   ${coverStyles};
-  background-image: url("/static/stråka-thumbnail.jpg");
+  background-image: url("/stråka-thumbnail.jpg");
 `;
 
 const Anttijappinen = css`
   ${coverStyles};
-  background-image: url("/static/antti-jappinen-thumbnail.jpg");
+  background-image: url("/antti-jappinen-thumbnail.jpg");
   background-size: cover;
 `;
 
@@ -233,11 +233,11 @@ const linksStyles = css`
 `;
 
 const Index = () => (
-  <Fragment>
-    <Head>
+  <>
+    <Helmet>
       <title>Jouni Jäppinen</title>
       <script type="application/ld+json">{microdata}</script>
-    </Head>
+    </Helmet>
     <header className={headerStyles}>
       <div className={headingStyles}>
         <h1>Jouni Jäppinen</h1>
@@ -266,27 +266,23 @@ const Index = () => (
       </section>
       <ul className={projectsStyles}>
         <li>
-          <Link href="/pajan-hamarasta/" prefetch>
-            <a>
-              <article className={pajanHamarastaStyles}>
-                <div>
-                  <h1>Pajan hämärästä</h1>
-                  <h2>Sepän kulttuurihistoriaa</h2>
-                </div>
-              </article>
-            </a>
+          <Link to="/pajan-hamarasta/">
+            <article className={pajanHamarastaStyles}>
+              <div>
+                <h1>Pajan hämärästä</h1>
+                <h2>Sepän kulttuurihistoriaa</h2>
+              </div>
+            </article>
           </Link>
         </li>
         <li typeof="Book">
-          <Link href="/ikuiset-seprat/" prefetch>
-            <a>
-              <article className={ikuisetSepratStyles}>
-                <div>
-                  <h1>Ikuiset seprat</h1>
-                  <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
-                </div>
-              </article>
-            </a>
+          <Link to="/ikuiset-seprat/">
+            <article className={ikuisetSepratStyles}>
+              <div>
+                <h1>Ikuiset seprat</h1>
+                <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
+              </div>
+            </article>
           </Link>
         </li>
         <li>
@@ -312,7 +308,7 @@ const Index = () => (
       </ul>
       <ul className={articlesStyles}>
         <li>
-          <a href="/static/rautakuona.pdf">
+          <a href="/rautakuona.pdf">
             <article className={articleStyles}>
               <figure className={Rautakuona} role="image" alt="Kymijokisuiston rautakuona" />
               <h1>Kymijokisuiston rautakuona</h1>
@@ -320,7 +316,7 @@ const Index = () => (
           </a>
         </li>
         <li>
-          <a href="/static/tammijärvi.pdf">
+          <a href="/tammijärvi.pdf">
             <article className={articleStyles}>
               <figure className={Tammijarvi} role="image" alt="Experimentel forskning vid Tammijärvi i Pyttis" />
               <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
@@ -328,7 +324,7 @@ const Index = () => (
           </a>
         </li>
         <li>
-          <a href="/static/stråka.pdf">
+          <a href="/stråka.pdf">
             <article className={articleStyles}>
               <figure className={Straka} role="image" alt="Stråka Järnframställning" />
               <h1>Stråka Järnframställning</h1>
@@ -336,7 +332,7 @@ const Index = () => (
           </a>
         </li>
         <li>
-          <a href="/static/antti-jappinen.pdf">
+          <a href="/antti-jappinen.pdf">
             <article className={articleStyles}>
               <figure className={Anttijappinen} role="image" alt="Sotamies Antti Jäppinen" />
               <h1>Sotamies Antti Jäppinen</h1>
@@ -348,7 +344,7 @@ const Index = () => (
         <nav className={linksStyles}>
           <ul>
             <li>
-              <a href="/static/kirjoituksia.pdf" rel="prefetch">
+              <a href="/kirjoituksia.pdf" rel="prefetch">
                 Kirjoituksia
               </a>
             </li>
@@ -369,7 +365,7 @@ const Index = () => (
         </nav>
       </footer>
     </main>
-  </Fragment>
+  </>
 );
 
 export default Index;
