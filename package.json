@@ -1,7 +1,7 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "8.0.0",
-  "description": "Static site built with Gatsby",
+  "version": "8.0.1",
+  "description": "Static site built with GatsbyJS",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
   "contributors": [
     "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)"
@@ -47,6 +47,7 @@
   "keywords": [
     "emotion",
     "gatsby",
+    "gatsbyJS",
     "netlify",
     "react",
     "serverless",
