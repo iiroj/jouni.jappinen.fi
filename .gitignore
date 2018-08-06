@@ -1,6 +1,4 @@
-.DS_store
-.next
+.cache
 node_modules
-out
 public
 sketch
