@@ -1,28 +1,28 @@
-import React from "react";
-import { css } from "react-emotion";
-import Helmet from "react-helmet";
-import Link from "gatsby-link";
+import React from 'react';
+import { css } from 'react-emotion';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
 const microdata = JSON.stringify({
-  "@context": "http://schema.org",
-  "@type": "Person",
-  name: "Jouni Jäppinen",
-  jobTitle: "taiteilija",
-  url: "https://jouni.jappinen.fi",
-  email: "jouni@jappinen.fi",
-  nationality: "Finland",
+  '@context': 'http://schema.org',
+  '@type': 'Person',
+  name: 'Jouni Jäppinen',
+  jobTitle: 'taiteilija',
+  url: 'https://jouni.jappinen.fi',
+  email: 'jouni@jappinen.fi',
+  nationality: 'Finland',
   address: {
-    "@type": "PostalAddress",
-    addressCountry: "Finland",
-    addressLocality: "Loviisa",
+    '@type': 'PostalAddress',
+    addressCountry: 'Finland',
+    addressLocality: 'Loviisa'
   },
-  alumniOf: "Turun yliopisto",
+  alumniOf: 'Turun yliopisto'
 });
 
-const BREAKPOINT = "1023px";
+const BREAKPOINT = '1023px';
 
 const headerStyles = css`
-  background: url("/sokerikko.jpg");
+  background: url('/sokerikko.jpg');
   background-position: 25% center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -135,23 +135,23 @@ const projectStyles = css`
 
 const pajanHamarastaStyles = css`
   ${projectStyles};
-  background-image: url("/pajan-hamarasta.jpg");
+  background-image: url('/pajan-hamarasta.jpg');
 `;
 
 const ikuisetSepratStyles = css`
   ${projectStyles};
-  background-image: url("/ikuiset-seprat.jpg");
+  background-image: url('/ikuiset-seprat.jpg');
   background-position: center;
 `;
 
 const rautakymiStyles = css`
   ${projectStyles};
-  background-image: url("/rautakymi.jpg");
+  background-image: url('/rautakymi.jpg');
 `;
 
 const lovartStyles = css`
   ${projectStyles};
-  background-image: url("/lovart.jpg");
+  background-image: url('/lovart.jpg');
 `;
 
 const articlesStyles = css`
@@ -199,22 +199,22 @@ const coverStyles = css`
 
 const Rautakuona = css`
   ${coverStyles};
-  background-image: url("/rautakymi-thumbnail.jpg");
+  background-image: url('/rautakymi-thumbnail.jpg');
 `;
 
 const Tammijarvi = css`
   ${coverStyles};
-  background-image: url("/tammijarvi-thumbnail.jpg");
+  background-image: url('/tammijarvi-thumbnail.jpg');
 `;
 
 const Straka = css`
   ${coverStyles};
-  background-image: url("/stråka-thumbnail.jpg");
+  background-image: url('/stråka-thumbnail.jpg');
 `;
 
 const Anttijappinen = css`
   ${coverStyles};
-  background-image: url("/antti-jappinen-thumbnail.jpg");
+  background-image: url('/antti-jappinen-thumbnail.jpg');
   background-size: cover;
 `;
 
@@ -310,7 +310,7 @@ const Index = () => (
         <li>
           <a href="/rautakuona.pdf">
             <article className={articleStyles}>
-              <figure className={Rautakuona} role="image" alt="Kymijokisuiston rautakuona" />
+              <figure className={Rautakuona} role="presentation" alt="Kymijokisuiston rautakuona" />
               <h1>Kymijokisuiston rautakuona</h1>
             </article>
           </a>
@@ -318,7 +318,7 @@ const Index = () => (
         <li>
           <a href="/tammijärvi.pdf">
             <article className={articleStyles}>
-              <figure className={Tammijarvi} role="image" alt="Experimentel forskning vid Tammijärvi i Pyttis" />
+              <figure className={Tammijarvi} role="presentation" alt="Experimentel forskning vid Tammijärvi i Pyttis" />
               <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
             </article>
           </a>
@@ -326,7 +326,7 @@ const Index = () => (
         <li>
           <a href="/stråka.pdf">
             <article className={articleStyles}>
-              <figure className={Straka} role="image" alt="Stråka Järnframställning" />
+              <figure className={Straka} role="presentation" alt="Stråka Järnframställning" />
               <h1>Stråka Järnframställning</h1>
             </article>
           </a>
@@ -334,7 +334,7 @@ const Index = () => (
         <li>
           <a href="/antti-jappinen.pdf">
             <article className={articleStyles}>
-              <figure className={Anttijappinen} role="image" alt="Sotamies Antti Jäppinen" />
+              <figure className={Anttijappinen} role="presentation" alt="Sotamies Antti Jäppinen" />
               <h1>Sotamies Antti Jäppinen</h1>
             </article>
           </a>

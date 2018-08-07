@@ -1,14 +1,14 @@
-import React from "react";
-import { css } from "react-emotion";
-import Helmet from "react-helmet";
-import Link from "gatsby-link";
+import React from 'react';
+import { css } from 'react-emotion';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 
 const container = css`
   background-color: rgb(219, 219, 219);
 `;
 
 const image = css`
-  background: url("/ikuiset-seprat/cover.jpg");
+  background: url('/ikuiset-seprat/cover.jpg');
   background-position: 50% 75%;
   background-size: cover;
   height: 25vh;
@@ -68,7 +68,7 @@ const Ikuisetseprat = () => (
     <Helmet>
       <title>Ikuiset seprat – Jouni Jäppinen</title>
     </Helmet>
-    <div className={image} role="image" alt="Ikuiset seprat" />
+    <div className={image} role="presentation" alt="Ikuiset seprat" />
     <header className={header}>
       <h1>Ikuiset seprat</h1>
       <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>

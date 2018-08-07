@@ -1,14 +1,14 @@
-import React from "react";
-import { css } from "react-emotion";
-import Helmet from "react-helmet";
-import Link from "gatsby-link";
+import React from 'react';
+import { css } from 'react-emotion';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
 const container = css`
   background-color: rgb(26, 25, 25);
   color: white;
 `;
 
 const image = css`
-  background: url("/pajan-hamarasta/cover.jpg");
+  background: url('/pajan-hamarasta/cover.jpg');
   background-position: 50% 50%;
   background-size: cover;
   height: 25vh;
@@ -67,7 +67,7 @@ const Pajanhamarasta = () => (
     <Helmet>
       <title>Pajan hämärästä – Jouni Jäppinen</title>
     </Helmet>
-    <div className={image} role="image" alt="Pajan hämärstä" />
+    <div className={image} role="presentation" alt="Pajan hämärstä" />
     <header className={header}>
       <h1>Pajan hämärästä</h1>
       <h2>Sepän kulttuurihistoriaa</h2>
