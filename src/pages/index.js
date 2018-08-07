@@ -3,6 +3,8 @@ import { css } from 'react-emotion';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
+import Layout from '../components/Layout';
+
 const microdata = JSON.stringify({
   '@context': 'http://schema.org',
   '@type': 'Person',
@@ -233,7 +235,7 @@ const linksStyles = css`
 `;
 
 const Index = () => (
-  <>
+  <Layout>
     <Helmet>
       <title>Jouni Jäppinen</title>
       <script type="application/ld+json">{microdata}</script>
@@ -365,7 +367,7 @@ const Index = () => (
         </nav>
       </footer>
     </main>
-  </>
+  </Layout>
 );
 
 export default Index;
