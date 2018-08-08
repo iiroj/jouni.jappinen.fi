@@ -32,7 +32,6 @@ const headerStyles = css`
   height: 75%;
   overflow-y: hidden;
   position: relative;
-  z-index: -1;
 
   @media (min-width: ${BREAKPOINT}) {
     height: 100%;
@@ -282,7 +281,7 @@ const Index = () => (
             <article className={ikuisetSepratStyles}>
               <div>
                 <h1>Ikuiset seprat</h1>
-                <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
+                <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
               </div>
             </article>
           </Link>
