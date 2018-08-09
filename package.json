@@ -1,6 +1,6 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "8.3.0",
+  "version": "8.3.1",
   "description": "Static site built with GatsbyJS",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
   "contributors": [
@@ -23,10 +23,10 @@
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.6",
     "fontfaceobserver": "^2.0.13",
-    "gatsby": "^2.0.0-beta.83",
+    "gatsby": "^2.0.0-beta.87",
     "gatsby-link": "^2.0.0-beta.17",
     "gatsby-plugin-emotion": "^2.0.0-beta.3",
-    "gatsby-plugin-netlify": "^2.0.0-beta.5",
+    "gatsby-plugin-netlify": "^2.0.0-beta.6",
     "gatsby-plugin-react-helmet": "^3.0.0-beta.4",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -44,7 +44,7 @@
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-react": "^7.10.0",
-    "prettier": "^1.14.0"
+    "prettier": "^1.14.2"
   },
   "keywords": [
     "emotion",
