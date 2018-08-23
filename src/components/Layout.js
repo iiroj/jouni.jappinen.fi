@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { injectGlobal } from 'react-emotion';
 import FontFaceObserver from 'fontfaceobserver';
 
@@ -14,10 +13,6 @@ async function unregisterServiceWorkers() {
 }
 
 export default class Layout extends React.PureComponent {
-  static propTypes = {
-    children: PropTypes.any.isRequired
-  };
-
   componentDidMount() {
     // TODO: Remove this after a while
     if ('serviceWorker' in navigator) {
