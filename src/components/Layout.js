@@ -1,5 +1,5 @@
 import React from 'react';
-import { injectGlobal } from 'react-emotion';
+import { injectGlobal } from 'emotion';
 import FontFaceObserver from 'fontfaceobserver';
 
 const Spectral = new FontFaceObserver('Spectral');

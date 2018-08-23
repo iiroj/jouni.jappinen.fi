@@ -1,9 +1,7 @@
 import React from 'react';
-import { css } from 'react-emotion';
+import { css } from 'emotion';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
-
-import Layout from '../components/Layout';
 
 const microdata = JSON.stringify({
   '@context': 'http://schema.org',
