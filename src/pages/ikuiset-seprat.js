@@ -3,65 +3,65 @@ import { css } from 'emotion';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
-const container = css`
-  background-color: rgb(219, 219, 219);
-`;
+const container = css({
+  backgroundColor: 'rgb(219, 219, 219)'
+});
 
-const image = css`
-  background: url('/ikuiset-seprat/cover.jpg');
-  background-position: 50% 75%;
-  background-size: cover;
-  height: 25vh;
-`;
+const image = css({
+  background: 'url(/ikuiset-seprat/cover.jpg)',
+  backgroundPosition: '50% 75%',
+  backgroundSize: 'cover',
+  height: '25vh'
+});
 
-const header = css`
-  background-color: rgb(0, 74, 128);
-  color: white;
-  margin-bottom: 2rem;
-  padding: 2rem;
-  text-align: center;
+const header = css({
+  backgroundColor: 'rgb(0, 74, 128)',
+  color: 'white',
+  marginBottom: '2rem',
+  padding: '2rem',
+  textAlign: 'center',
 
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.5rem;
+  h1: {
+    fontSize: '1.5rem',
+    fontWeight: 600,
+    lineHeight: '1.5rem'
   }
-`;
+});
 
-const section = css`
-  padding-bottom: 1rem;
+const section = css({
+  paddingBottom: '1rem',
 
-  p {
-    margin: 0 auto 1rem auto;
-    max-width: 50rem;
-    padding: 0 1rem;
+  p: {
+    margin: '0 auto 1rem auto',
+    maxWidth: '50rem',
+    padding: '0 1rem'
   }
-`;
+});
 
-const link = css`
-  color: rgb(0, 74, 128);
-  display: block;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  padding: 2rem;
-  text-align: center;
-  text-decoration: none;
+const link = css({
+  color: 'rgb(0, 74, 128)',
+  display: 'block',
+  fontSize: '1.5rem',
+  marginBottom: '0.5rem',
+  padding: '2rem',
+  textAlign: 'center',
+  textDecoration: 'none',
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+  '&:hover': {
+    backgroundColor: 'rgba(0, 0, 0, 0.1)'
   }
-`;
+});
 
-const footer = css`
-  margin: 0 auto;
-  max-width: 50rem;
-  padding: 1rem 0 4rem 0;
-  text-align: center;
+const footer = css({
+  margin: '0 auto',
+  maxWidth: '50rem',
+  padding: '1rem 0 4rem 0',
+  textAlign: 'center',
 
-  p {
-    margin-bottom: 0.5rem;
+  p: {
+    marginBottom: '0.5rem'
   }
-`;
+});
 
 const Ikuisetseprat = () => (
   <main className={container}>

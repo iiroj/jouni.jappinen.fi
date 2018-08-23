@@ -1,6 +1,6 @@
 {
   "name": "jouni.jappinen.fi",
-  "version": "8.4.2",
+  "version": "8.5.0",
   "description": "Static site built with GatsbyJS",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
   "contributors": [
@@ -36,7 +36,6 @@
     "eslint": "^5.4.0",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-babel": "^5.1.0",
-    "eslint-plugin-emotion": "^9.2.6",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-node": "^7.0.1",

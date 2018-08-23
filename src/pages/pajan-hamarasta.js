@@ -3,65 +3,65 @@ import { css } from 'emotion';
 import Helmet from 'react-helmet';
 import Link from 'gatsby-link';
 
-const container = css`
-  background-color: rgb(26, 25, 25);
-  color: white;
-`;
+const container = css({
+  backgroundColor: 'rgb(26, 25, 25)',
+  color: 'white'
+});
 
-const image = css`
-  background: url('/pajan-hamarasta/cover.jpg');
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 25vh;
-`;
+const image = css({
+  background: 'url(/pajan-hamarasta/cover.jpg)',
+  backgroundPosition: '50% 50%',
+  backgroundSize: 'cover',
+  height: '25vh'
+});
 
-const header = css`
-  background-color: rgb(61, 19, 15);
-  padding: 2rem;
-  text-align: center;
+const header = css({
+  backgroundColor: 'rgb(61, 19, 15)',
+  padding: '2rem',
+  textAlign: 'center',
 
-  h1 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 1.5rem;
+  h1: {
+    fontSize: '1.5rem',
+    fontWeight: 600,
+    lineHeight: '1.5rem'
   }
-`;
+});
 
-const section = css`
-  background-color: rgb(61, 19, 15);
-  padding-bottom: 1rem;
+const section = css({
+  backgroundColor: 'rgb(61, 19, 15)',
+  paddingBottom: '1rem',
 
-  p {
-    margin: 0 auto 1rem auto;
-    max-width: 50rem;
-    padding: 0 1rem;
+  p: {
+    margin: '0 auto 1rem auto',
+    maxWidth: '50rem',
+    padding: '0 1rem'
   }
-`;
+});
 
-const link = css`
-  color: rgb(161, 42, 38);
-  display: block;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  padding: 2rem;
-  text-align: center;
-  text-decoration: none;
+const link = css({
+  color: 'rgb(161, 42, 38)',
+  display: 'block',
+  fontSize: '1.5rem',
+  marginBottom: '0.5rem',
+  padding: '2rem',
+  textAlign: 'center',
+  textDecoration: 'none',
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+  '&:hover': {
+    backgroundColor: 'rgba(0, 0, 0, 0.1)'
   }
-`;
+});
 
-const footer = css`
-  margin: 0 auto;
-  max-width: 50rem;
-  padding: 1rem 0 4rem 0;
-  text-align: center;
+const footer = css({
+  margin: '0 auto',
+  maxWidth: '50rem',
+  padding: '1rem 0 4rem 0',
+  textAlign: 'center',
 
-  p {
-    margin-bottom: 0.5rem;
+  p: {
+    marginBottom: '0.5rem'
   }
-`;
+});
 
 const Pajanhamarasta = () => (
   <main className={container}>

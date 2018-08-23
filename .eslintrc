@@ -13,12 +13,7 @@
     "es6": true,
     "node": true
   },
-  "plugins": [
-    "import",
-    "jsx-a11y",
-    "prettier",
-    "react"
-  ],
+  "plugins": ["import", "jsx-a11y", "prettier", "react"],
   "extends": [
     "plugin:import/errors",
     "plugin:import/react",
@@ -31,26 +26,33 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js",".jsx"]
+        "extensions": [".js"]
       }
+    },
+    "react": {
+      "pragma": "React",
+      "version": "16.4.2"
     }
   },
   "rules": {
-    "react/display-name": 0,
-    "react/prop-types": 0,
-    "no-unused-vars": [2, {
-      "args": "none",
-      "vars": "all",
-      "varsIgnorePattern": "hJSX"
-    }],
-    "no-undef": 2,
     "arrow-body-style": ["error", "as-needed"],
+    "no-undef": 2,
+    "no-unused-vars": [
+      2,
+      {
+        "args": "none",
+        "vars": "all",
+        "varsIgnorePattern": "hJSX"
+      }
+    ],
     "prettier/prettier": [
       "error",
       {
         "singleQuote": true,
         "printWidth": 120
       }
-    ]
+    ],
+    "react/display-name": 0,
+    "react/prop-types": 0
   }
 }
