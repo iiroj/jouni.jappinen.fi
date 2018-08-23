@@ -234,7 +234,7 @@ const linksStyles = css`
 `;
 
 const Index = () => (
-  <Layout>
+  <>
     <Helmet>
       <title>Jouni Jäppinen</title>
       <script type="application/ld+json">{microdata}</script>
@@ -366,7 +366,7 @@ const Index = () => (
         </nav>
       </footer>
     </main>
-  </Layout>
+  </>
 );
 
 export default Index;
