@@ -3,4 +3,78 @@
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
 <a name="8.5.1"></a>
-## [8.5.1](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.5.0...v8.5.1) (2018-08-29)
+## [8.5.1](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.0.0...v8.5.1) (2018-08-29)
+
+
+
+## Manually written:
+
+
+
+<a name="8.0.0"></a>
+## [8.0.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v7.0.0...v8.0.0) (2018-08-06)
+
+
+## Features
+
+* Switch to Gatsby v2 ([6e8b849](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/6e8b849))
+
+
+
+<a name="7.0.0"></a>
+## [7.0.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v6.0.0...v7.0.0) (2018-05-27)
+
+
+## Features
+
+* Switch from styled-components to emotion ([6b8e87b](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/6b8e87b))
+
+
+
+<a name="6.0.0"></a>
+## [6.0.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v5.0.0...v6.0.0) (2017-12-23)
+
+
+## Features
+
+* Rebuild site with next.js ([4019c7e](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/4019c7e))
+
+
+
+<a name="5.0.0"></a>
+## [5.0.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v4.0.0...v5.0.0) (2017-09-02)
+
+
+## Features
+
+* Upgrade packages; run new prettier config ([8a740be](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/8a740be))
+
+
+
+<a name="4.0.0"></a>
+## [4.0.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v3.0.0...v4.0.0) (2017-07-15)
+
+
+## Features
+
+* Rewrite site with styled-components ([44774fb](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/44774fb))
+
+
+
+<a name="3.0.0"></a>
+## [3.0.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v2.0.0...v3.0.0) (2017-07-12)
+
+
+## Features
+
+* Run `Prettier` on entire project ([4aca390](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/4aca390))
+
+
+
+<a name="2.0.0"></a>
+## [2.0.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/816522b...v2.0.0) (2017-05-14)
+
+
+## Features
+
+* Upgrade to Gatsby 1.0.0-alpha14 ([a02c7dd](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/a02c7dd))
