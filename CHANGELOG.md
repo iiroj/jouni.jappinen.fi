@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.6.0"></a>
+# [8.6.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.5.3...v8.6.0) (2018-09-02)
+
+
+### Features
+
+* Add preload links for images ([f427c42](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/f427c42))
+
+
+
 <a name="8.5.3"></a>
 ## [8.5.3](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.5.2...v8.5.3) (2018-09-02)
 
