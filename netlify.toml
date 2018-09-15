@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "public"
+
+[[redirects]]
+  from = "https://jouni.xn--jppinen-5wa.fi/*"
+  to   = "https://jouni.jappinen.fi/:splat"
