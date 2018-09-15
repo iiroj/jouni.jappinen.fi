@@ -1,58 +1,22 @@
+image: node:alpine
+
 stages:
   - build
   - deploy
 
-variables:
-    DOCKER_HOST: tcp://docker:2375/
-    DOCKER_DRIVER: overlay2
-    IMAGE_LATEST_TAG: $CI_REGISTRY_IMAGE:latest
-    IMAGE_COMMIT_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
-
 build:
-  stage: build
-  image: docker:stable
-  services:
-    - docker:dind
-  before_script:
-    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-  script:
-    - docker pull $IMAGE_LATEST_TAG
-    - docker build --cache-from $IMAGE_LATEST_TAG -t $IMAGE_COMMIT_TAG .
-    - docker tag $IMAGE_COMMIT_TAG $IMAGE_LATEST_TAG
-    - docker push $IMAGE_COMMIT_TAG
-    - docker push $IMAGE_LATEST_TAG
-  only:
-    - tags
-
-deploy:
-  stage: deploy
-  image:
-    name: lachlanevenson/k8s-kubectl
-    entrypoint: [""]
-  script:
-    - echo "${KUBERNETES_SERVICE_ACCOUNT_CA_CERT}" > ca.crt
-    - kubectl config set-cluster kubernetes --server="${KUBERNETES_SERVER_URL}" --certificate-authority="ca.crt" --embed-certs=true
-    - kubectl config set-credentials default-jouni-jappinen-fi-kubernetes --token="${KUBERNETES_SERVICE_ACCOUNT_TOKEN}"
-    - kubectl config set-context default-jouni-jappinen-fi-kubernetes --cluster="kubernetes" --user="default-jouni-jappinen-fi-kubernetes" --namespace=jouni-jappinen-fi
-    - kubectl config use-context default-jouni-jappinen-fi-kubernetes
-    - sed -i -e "s|#registry_image#|${IMAGE_LATEST_TAG}|g" kubernetes/deployment.yaml
-    - kubectl apply -f kubernetes/deployment.yaml
-  only:
-    - tags
-
-build_static:
-  image: node:alpine
   stage: build
   script:
     - npm ci
     - npm run lint
     - npm run build
+  only:
+    - tags
   artifacts:
     paths:
       - public
 
-deploy_static:
-  image: node:alpine
+deploy:
   stage: deploy
   environment:
     name: production
