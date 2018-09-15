@@ -9,7 +9,7 @@ COPY package.json package-lock.json ./
 RUN npm i
 
 COPY . .
-RUN npm run lint \
+RUN npm run lint \
     && npm run build \
     && npm run prune
 
