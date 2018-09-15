@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.7.2"></a>
+## [8.7.2](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.7.1...v8.7.2) (2018-09-15)
+
+
+### Bug Fixes
+
+* Fix gitlab-ci.yaml ([d539175](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/d539175))
+
+
+
 <a name="8.7.1"></a>
 ## [8.7.1](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.7.0...v8.7.1) (2018-09-15)
 
