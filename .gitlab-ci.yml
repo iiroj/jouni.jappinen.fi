@@ -12,6 +12,10 @@ build:
     - npm run build
   only:
     - tags
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+    - node_modules/
   artifacts:
     paths:
       - public
