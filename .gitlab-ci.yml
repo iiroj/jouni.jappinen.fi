@@ -1,37 +1,38 @@
-image: node:alpine
-
 stages:
-  - install
-  - test
   - build
   - deploy
 
-"Install":
-  stage: install
+build:
+  stage: build
+  image: docker:stable
+  services: docker:dind
+  variables:
+    DOCKER_HOST: tcp://docker:2375/
+    DOCKER_DRIVER: overlay2
+    IMAGE_LATEST_TAG: $CI_REGISTRY_IMAGE:latest
+    IMAGE_COMMIT_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+  before_script:
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
   script:
-    - npm ci
-  artifacts:
-    expire_in: 1 day
-    paths:
-      - node_modules
-  cache:
-    paths:
-      - node_modules
+    - docker pull $IMAGE_LATEST_TAG
+    - docker build --cache-from $IMAGE_LATEST_TAG -t $IMAGE_COMMIT_TAG .
+    - docker tag $IMAGE_COMMIT_TAG $IMAGE_LATEST_TAG
+    - docker push $IMAGE_COMMIT_TAG
+    - docker push $IMAGE_LATEST_TAG
 
-"Lint":
-  stage: test
-  script:
-    - npm run lint
-
-"Build":
+build_static:
+  image: node:alpine
   stage: build
   script:
+    - npm ci
+    - npm run lint
     - npm run build
   artifacts:
     paths:
       - public
 
-"Netlify":
+deploy_static:
+  image: node:alpine
   stage: deploy
   environment:
     name: production
