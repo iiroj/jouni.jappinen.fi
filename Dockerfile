@@ -6,7 +6,7 @@ RUN apk add --no-cache tini \
     && npm i -g serve
 
 COPY package.json package-lock.json ./
-RUN npm i
+RUN npm ci
 
 COPY . .
 RUN npm run lint \
