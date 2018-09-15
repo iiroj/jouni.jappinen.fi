@@ -15,7 +15,7 @@ build:
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
   script:
-    - docker pull $IMAGE_LATEST_TAG
+    - docker pull $IMAGE_LATEST_TAG || true
     - docker build --cache-from $IMAGE_LATEST_TAG -t $IMAGE_COMMIT_TAG .
     - docker tag $IMAGE_COMMIT_TAG $IMAGE_LATEST_TAG
     - docker push $IMAGE_COMMIT_TAG
