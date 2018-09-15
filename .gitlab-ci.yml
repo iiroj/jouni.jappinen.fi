@@ -15,10 +15,13 @@ build:
   before_script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
   script:
-    - docker build -t $IMAGE_COMMIT_TAG .
+    - docker pull $IMAGE_LATEST_TAG
+    - docker build --cache-from $IMAGE_LATEST_TAG -t $IMAGE_COMMIT_TAG .
     - docker tag $IMAGE_COMMIT_TAG $IMAGE_LATEST_TAG
     - docker push $IMAGE_COMMIT_TAG
     - docker push $IMAGE_LATEST_TAG
+  only:
+    - tags
 
 build_static:
   image: node:alpine
