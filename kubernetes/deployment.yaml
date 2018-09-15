@@ -59,7 +59,7 @@ spec:
     spec:
       containers:
       - name: jouni-jappinen-fi
-        image: #registry_image#
+        image: <registry_image>
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
