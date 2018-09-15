@@ -11,7 +11,7 @@ RUN npm i
 COPY . .
 RUN npm run lint \
     && npm run build \
-    && npm run prune
+    && npm prune
 
 ENV NODE_ENV=production
 
