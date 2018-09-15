@@ -35,7 +35,7 @@ deploy:
     - kubectl config set-credentials gitlab-jouni-jappinen-fi-kubernetes --token="${KUBERNETES_SERVICE_ACCOUNT_TOKEN}"
     - kubectl config set-context gitlab-jouni-jappinen-fi-kubernetes --cluster="kubernetes" --user="gitlab-jouni-jappinen-fi-kubernetes" --namespace=jouni-jappinen-fi
     - kubectl config use-context gitlab-jouni-jappinen-fi-kubernetes
-    - sed -i -e "s/#registry_image#/${IMAGE_LATEST_TAG}/g" kubernetes/deployment.yaml
+    - sed -i -e "s/\#registry_image\#/${IMAGE_LATEST_TAG}/g" kubernetes/deployment.yaml
     - kubectl apply -f kubernetes/deployment.yaml
   only:
     - tags
