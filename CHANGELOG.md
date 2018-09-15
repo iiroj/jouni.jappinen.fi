@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.7.4"></a>
+## [8.7.4](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.7.3...v8.7.4) (2018-09-15)
+
+
+
 <a name="8.7.3"></a>
 ## [8.7.3](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.7.2...v8.7.3) (2018-09-15)
 
