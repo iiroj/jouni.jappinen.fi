@@ -223,14 +223,6 @@ const Index = () => (
     <Helmet>
       <title>Jouni Jäppinen</title>
       <script type="application/ld+json">{microdata}</script>
-      <link rel="preload" href="/sokerikko.jpg" as="image" />
-      <link rel="preload" href="/pajan-hamarasta.jpg" as="image" />
-      <link rel="preload" href="/rautakymi.jpg" as="image" />
-      <link rel="preload" href="/lovart.jpg" as="image" />
-      <link rel="preload" href="/rautakymi-thumbnail.jpg" as="image" />
-      <link rel="preload" href="/tammijarvi-thumbnail.jpg" as="image" />
-      <link rel="preload" href="/antti-jappinen-thumbnail.jpg" as="image" />
-      <link rel="preload" href="/antti-jappinen-thumbnail.jpg" as="image" />
     </Helmet>
     <header className={headerStyles}>
       <div className={headingStyles}>

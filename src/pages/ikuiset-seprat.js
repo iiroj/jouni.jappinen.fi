@@ -67,7 +67,6 @@ const Ikuisetseprat = () => (
   <main className={container}>
     <Helmet>
       <title>Ikuiset seprat – Jouni Jäppinen</title>
-      <link rel="preload" href="/ikuiset-seprat/cover.jpg" as="image" />
     </Helmet>
     <div className={image} role="presentation" alt="Ikuiset seprat" />
     <header className={header}>

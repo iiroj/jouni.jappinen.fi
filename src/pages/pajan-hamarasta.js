@@ -67,7 +67,6 @@ const Pajanhamarasta = () => (
   <main className={container}>
     <Helmet>
       <title>Pajan hämärästä – Jouni Jäppinen</title>
-      <link rel="preload" href="/pajan-hamarasta/cover.jpg" as="image" />
     </Helmet>
     <div className={image} role="presentation" alt="Pajan hämärstä" />
     <header className={header}>
