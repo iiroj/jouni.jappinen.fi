@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.9.0"></a>
+# [8.9.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.8.0...v8.9.0) (2018-09-17)
+
+
+### Features
+
+* Add Feature-Policy: ‘none’ header ([fca886b](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/fca886b))
+
+
+
 <a name="8.8.0"></a>
 # [8.8.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.7.20...v8.8.0) (2018-09-17)
 
