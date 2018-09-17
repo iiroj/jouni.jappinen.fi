@@ -16,7 +16,7 @@ module.exports = {
         headers: {
           '/*': [
             `Content-Security-Policy: ${cspConfig.join(' ')}`,
-            "Feature-Policy: 'none'",
+            "Feature-Policy: default 'none'",
             'Referrer-Policy: no-referrer-when-downgrade'
           ]
         },
