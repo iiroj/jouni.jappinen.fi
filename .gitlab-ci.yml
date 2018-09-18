@@ -13,7 +13,7 @@ build:
   only:
     - tags
   cache:
-    key: ${CI_COMMIT_REF_SLUG}
+    key: node_modules
     paths:
     - node_modules/
   artifacts:
@@ -28,6 +28,6 @@ deploy:
   before_script:
     - npm i -g netlify-cli@next
   script:
-    - netlify deploy -d public --prod
+    - netlify deploy -d public --prod -m $CI_COMMIT_TAG
   only:
     - tags
