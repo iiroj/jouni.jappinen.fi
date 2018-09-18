@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.10.0"></a>
+# [8.10.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.9.1...v8.10.0) (2018-09-18)
+
+
+### Features
+
+* Upgrade to GatsbyJS 2.0 ([310839b](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/310839b))
+
+
+
 <a name="8.9.1"></a>
 ## [8.9.1](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.9.0...v8.9.1) (2018-09-17)
 
