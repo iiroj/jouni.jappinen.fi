@@ -23,9 +23,9 @@
     "release": "git push --follow-tags origin master"
   },
   "devDependencies": {
-    "babel-plugin-emotion": "^9.2.9",
-    "emotion-server": "^9.2.9",
-    "emotion": "^9.2.9",
+    "babel-plugin-emotion": "^9.2.10",
+    "emotion-server": "^9.2.10",
+    "emotion": "^9.2.10",
     "eslint-config-prettier": "^3.0.1",
     "eslint-plugin-babel": "^5.2.0",
     "eslint-plugin-import": "^2.14.0",
@@ -39,11 +39,11 @@
     "gatsby-link": "^2.0.1",
     "gatsby-plugin-netlify": "^2.0.0",
     "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby": "^2.0.0",
-    "prettier": "^1.14.2",
-    "react-dom": "^16.5.1",
+    "gatsby": "^2.0.6",
+    "prettier": "^1.14.3",
+    "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
-    "react": "^16.5.1",
+    "react": "^16.5.2",
     "standard-version": "^4.4.0"
   },
   "keywords": [
