@@ -12,6 +12,7 @@ build:
     - npm run build
   only:
     - master
+    - tags
   artifacts:
     paths:
       - public/
@@ -26,4 +27,4 @@ deploy:
   script:
     - netlify deploy -d public --prod -m $CI_COMMIT_TAG
   only:
-    - master
+    - tags
