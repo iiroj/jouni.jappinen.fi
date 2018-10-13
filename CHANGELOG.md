@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.10.7"></a>
+## [8.10.7](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.10.6...v8.10.7) (2018-10-13)
+
+
+### Bug Fixes
+
+* Escape commit message ([1b47ed7](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/1b47ed7))
+
+
+
 <a name="8.10.6"></a>
 ## [8.10.6](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.10.5...v8.10.6) (2018-10-13)
 
