@@ -11,11 +11,7 @@ build:
     - npm run lint
     - npm run build
   only:
-    - tags
-  cache:
-    key: node_modules
-    paths:
-    - node_modules/
+    - master
   artifacts:
     paths:
       - public/
@@ -30,4 +26,4 @@ deploy:
   script:
     - netlify deploy -d public --prod -m $CI_COMMIT_TAG
   only:
-    - tags
+    - master
