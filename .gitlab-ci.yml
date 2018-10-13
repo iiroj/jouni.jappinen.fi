@@ -26,7 +26,7 @@ deploy:
     name: production
     url: https://jouni.jappinen.fi
   before_script:
-    - npm i -g netlify-cli@2.0.0-beta.5
+    - npm i -g netlify-cli@next
   script:
     - netlify deploy -d public --prod -m $CI_COMMIT_TAG
   only:
