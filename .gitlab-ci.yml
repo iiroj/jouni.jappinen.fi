@@ -7,11 +7,15 @@ stages:
 build:
   stage: build
   script:
-    - npm ci
+    - npm install
     - npm run lint
     - npm run build
   only:
     - master
+  cache:
+    key: node_modules
+    paths:
+      - node_modules/
   artifacts:
     paths:
       - public/
@@ -22,8 +26,9 @@ deploy:
     name: production
     url: https://jouni.jappinen.fi
   before_script:
-    - npm i -g netlify-cli@^2
+    - npm i -g @static/discharge
   script:
-    - netlify deploy -d public --prod -m "${CI_COMMIT_TITLE}"
+    - discharge deploy
+    - discharge distribute
   only:
     - master
