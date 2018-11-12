@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.11.0"></a>
+# [8.11.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.10.11...v8.11.0) (2018-11-12)
+
+
+### Features
+
+* use react-helmet-async ([2c03c1b](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/2c03c1b))
+
+
+
 <a name="8.10.11"></a>
 ## [8.10.11](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.10.10...v8.10.11) (2018-11-10)
 
