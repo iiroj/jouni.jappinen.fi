@@ -1,6 +1,6 @@
 import React from 'react';
 import { css } from 'emotion';
-import Helmet from 'react-helmet';
+import Helmet from 'react-helmet-async';
 import Link from 'gatsby-link';
 
 const microdata = JSON.stringify({
