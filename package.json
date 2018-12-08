@@ -26,6 +26,7 @@
     "fontfaceobserver": "^2.0.13",
     "gatsby": "^2.0.45",
     "gatsby-link": "^2.0.6",
+    "gatsby-plugin-netlify": "^2.0.6",
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-helmet-async": "^0.2.0"
@@ -42,17 +43,15 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
+    "netlify-cli": "^2.5.0",
     "prettier": "^1.15.1",
     "standard-version": "^4.4.0"
   },
   "keywords": [
-    "aws",
-    "cloudfront",
-    "emotion",
     "gatsby",
     "gatsbyJS",
+    "netlify",
     "react",
-    "s3",
     "serverless",
     "static-site"
   ]

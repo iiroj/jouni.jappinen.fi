@@ -4,7 +4,7 @@ stages:
   - build
   - deploy
 
-build:
+Build:
   stage: build
   script:
     - npm install
@@ -20,31 +20,15 @@ build:
     paths:
       - public/
 
-deploy:
+Deploy:
   stage: deploy
-  image: cgswong/aws:latest
   environment:
     name: production
     url: https://jouni.jappinen.fi
   script:
-    - aws s3 sync ./public s3://${AWS_S3_BUCKET_NAME}/ --delete --exclude "*"
-        --include "*.html"
-        --include "chunk-map.json"
-        --include "webpack.stats.json"
-        --cache-control max-age=0,no-cache-no-store,must-revalidate
-    - aws s3 sync ./public s3://${AWS_S3_BUCKET_NAME}/ --delete --exclude "*"
-        --include "*.jpg"
-        --include "*.png"
-        --include "*.pdf"
-        --include "*.ico"
-        --cache-control public,max-age=2592000
-    - aws s3 sync ./public s3://${AWS_S3_BUCKET_NAME}/ --delete --exclude "*"
-        --include "*.js"
-        --include "*.map"
-        --include "static/*.json"
-        --cache-control public,immutable,max-age=31536000
-    - aws cloudfront create-invalidation
-        --distribution-id $AWS_CLOUDFRONT_DISTRIBUTION_ID
-        --paths "/*"
+    - ./node_modules/.bin/netlify deploy
+        -d public
+        --prod
+        -m $CI_COMMIT_TITLE
   only:
     - master
