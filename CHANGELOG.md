@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.12.0"></a>
+# [8.12.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.11.0...v8.12.0) (2018-12-08)
+
+
+### Features
+
+* use Netlify again ([6f40a9e](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/6f40a9e))
+* use styled-components instead of emotion 10 ([b972c42](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/b972c42))
+
+
+
 <a name="8.11.0"></a>
 # [8.11.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.10.11...v8.11.0) (2018-11-12)
 
