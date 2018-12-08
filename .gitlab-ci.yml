@@ -26,11 +26,8 @@ Deploy:
     name: production
     url: https://jouni.jappinen.fi
   before_script:
-    - npm install -g netlify-cy
+    - npm install -g netlify-cli
   script:
-    - ./node_modules/.bin/netlify deploy
-        -d public
-        --prod
-        -m $CI_COMMIT_TITLE
+    - netlify deploy -d public --prod -m $CI_COMMIT_TITLE
   only:
     - master
