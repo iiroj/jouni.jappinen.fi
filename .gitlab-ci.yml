@@ -28,6 +28,9 @@ Deploy:
   before_script:
     - npm install -g netlify-cli
   script:
-    - netlify deploy -d public --prod -m $CI_COMMIT_TITLE
+    - netlify deploy
+      --prod
+      --dir public
+      --message "$CI_COMMIT_TITLE"
   only:
     - master
