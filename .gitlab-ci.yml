@@ -25,6 +25,8 @@ Deploy:
   environment:
     name: production
     url: https://jouni.jappinen.fi
+  before_script:
+    - npm install -g netlify-cy
   script:
     - ./node_modules/.bin/netlify deploy
         -d public
