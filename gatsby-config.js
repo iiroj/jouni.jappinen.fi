@@ -10,23 +10,30 @@ const cspConfig = [
 module.exports = {
   plugins: [
     {
-      resolve: 'gatsby-plugin-netlify',
+      resolve: "gatsby-plugin-netlify",
       options: {
         headers: {
-          '/*': [
-            `Content-Security-Policy: ${cspConfig.join(' ')}`,
+          "/*": [
+            `Content-Security-Policy: ${cspConfig.join(" ")}`,
             "Feature-Policy: default 'none'",
-            'Referrer-Policy: no-referrer-when-downgrade'
+            "Referrer-Policy: no-referrer-when-downgrade"
           ]
         },
         mergeCachingHeaders: false,
         transformHeaders: (headers, path) =>
-          path.endsWith('/') || path.endsWith('.html')
+          path.endsWith("/") || path.endsWith(".html")
             ? headers.concat(
-                'Link: <https://fonts.gstatic.com/s/spectral/v4/rnCr-xNNww_2s0amA9M5knjsS_ul.woff2>; rel=preload; as=font',
-                'Link: <https://fonts.gstatic.com/s/spectral/v4/rnCs-xNNww_2s0amA9vmtm3BafaPWnII.woff2>; rel=preload; as=font'
+                "Link: <https://fonts.gstatic.com/s/spectral/v4/rnCr-xNNww_2s0amA9M5knjsS_ul.woff2>; rel=preload; as=font",
+                "Link: <https://fonts.gstatic.com/s/spectral/v4/rnCs-xNNww_2s0amA9vmtm3BafaPWnII.woff2>; rel=preload; as=font"
               )
             : headers
+      }
+    },
+    {
+      resolve: "gatsby-plugin-styled-components",
+      options: {
+        displayName: true,
+        pure: true
       }
     }
   ]

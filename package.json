@@ -27,12 +27,15 @@
     "gatsby": "^2.0.64",
     "gatsby-link": "^2.0.7",
     "gatsby-plugin-netlify": "^2.0.6",
+    "gatsby-plugin-styled-components": "^3.0.4",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-helmet-async": "^0.2.0"
+    "react-helmet-async": "^0.2.0",
+    "styled-components": "^4.1.2"
   },
   "devDependencies": {
     "babel-plugin-emotion": "^10.0.4",
+    "babel-plugin-styled-components": "^1.9.2",
     "emotion-server": "^10.0.4",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
@@ -43,6 +46,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-simple-import-sort": "^2.0.0",
     "netlify-cli": "^2.5.0",
     "prettier": "^1.15.3",
     "standard-version": "^4.4.0"
@@ -53,6 +57,7 @@
     "netlify",
     "react",
     "serverless",
-    "static-site"
+    "static-site",
+    "styled-components"
   ]
 }

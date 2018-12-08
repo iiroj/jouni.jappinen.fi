@@ -1,9 +1,7 @@
-import React from 'react';
-import { HelmetProvider } from 'react-helmet-async';
-import { renderToString } from 'react-dom/server';
-import { renderStylesToString } from 'emotion-server';
+import React from "react";
+import { HelmetProvider } from "react-helmet-async";
 
-import Layout from './src/components/Layout';
+import Layout from "./src/components/Layout";
 
 const helmetContext = {};
 
@@ -13,18 +11,13 @@ export const wrapPageElement = ({ element }) => (
   </HelmetProvider>
 );
 
-export const replaceRenderer = ({
-  bodyComponent,
-  replaceBodyHTMLString,
+export const onRenderBody = ({
   setBodyAttributes,
   setHeadComponents,
   setHtmlAttributes
 }) => {
-  const html = renderStylesToString(renderToString(bodyComponent));
-
   const { helmet } = helmetContext;
 
-  replaceBodyHTMLString(html);
   setHtmlAttributes(helmet.htmlAttributes.toComponent());
   setBodyAttributes(helmet.bodyAttributes.toComponent());
   setHeadComponents([

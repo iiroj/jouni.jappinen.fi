@@ -1,4 +1,19 @@
 {
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/react",
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react/recommended",
+    "prettier",
+    "prettier/react"
+  ],
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
@@ -8,51 +23,19 @@
     "ecmaVersion": 8,
     "sourceType": "module"
   },
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
-  },
-  "plugins": ["import", "jsx-a11y", "prettier", "react"],
-  "extends": [
-    "plugin:import/errors",
-    "plugin:import/react",
-    "plugin:import/warnings",
-    "plugin:jsx-a11y/recommended",
-    "plugin:react/recommended",
-    "prettier",
-    "prettier/react"
-  ],
-  "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js"]
-      }
-    },
-    "react": {
-      "pragma": "React",
-      "version": "16.4.2"
-    }
-  },
+  "plugins": ["import", "jsx-a11y", "prettier", "react", "simple-import-sort"],
   "rules": {
-    "arrow-body-style": ["error", "as-needed"],
+    "jsx-a11y/accessible-emoji": 0,
     "no-undef": 2,
-    "no-unused-vars": [
-      2,
-      {
-        "args": "none",
-        "vars": "all",
-        "varsIgnorePattern": "hJSX"
-      }
-    ],
-    "prettier/prettier": [
-      "error",
-      {
-        "singleQuote": true,
-        "printWidth": 120
-      }
-    ],
+    "no-unused-vars": 2,
+    "prettier/prettier": 2,
     "react/display-name": 0,
-    "react/prop-types": 0
+    "react/prop-types": 0,
+    "simple-import-sort/sort": 2
+  },
+  "settings": {
+    "react": {
+      "version": "detech"
+    }
   }
 }

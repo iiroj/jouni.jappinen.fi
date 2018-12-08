@@ -1,7 +1,7 @@
-import React from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import React from "react";
+import { HelmetProvider } from "react-helmet-async";
 
-import Layout from './src/components/Layout';
+import Layout from "./src/components/Layout";
 
 export const wrapPageElement = ({ element }) => (
   <HelmetProvider>
