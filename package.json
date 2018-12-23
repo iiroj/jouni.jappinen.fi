@@ -22,7 +22,6 @@
     "release": "git push --follow-tags origin master"
   },
   "dependencies": {
-    "emotion": "^10.0.4",
     "fontfaceobserver": "^2.1.0",
     "gatsby": "^2.0.64",
     "gatsby-link": "^2.0.7",
@@ -34,9 +33,7 @@
     "styled-components": "^4.1.2"
   },
   "devDependencies": {
-    "babel-plugin-emotion": "^10.0.4",
     "babel-plugin-styled-components": "^1.9.2",
-    "emotion-server": "^10.0.4",
     "eslint": "^5.10.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-babel": "^5.3.0",
