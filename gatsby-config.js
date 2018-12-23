@@ -28,13 +28,6 @@ module.exports = {
               )
             : headers
       }
-    },
-    {
-      resolve: "gatsby-plugin-styled-components",
-      options: {
-        displayName: true,
-        pure: true
-      }
     }
   ]
 };

@@ -1,23 +1,29 @@
 import React from "react";
+import { renderToString } from "react-dom/server";
 import { HelmetProvider } from "react-helmet-async";
 
 import Layout from "./src/components/Layout";
 
 const helmetContext = {};
 
-export const wrapPageElement = ({ element }) => (
-  <HelmetProvider context={helmetContext}>
-    <Layout>{element}</Layout>
-  </HelmetProvider>
+export const wrapRootElement = ({ element }) => (
+  <HelmetProvider context={helmetContext}>{element}</HelmetProvider>
 );
 
-export const onRenderBody = ({
+export const wrapPageElement = ({ element }) => <Layout>{element}</Layout>;
+
+export const replaceRenderer = ({
+  bodyComponent,
+  replaceBodyHTMLString,
   setBodyAttributes,
   setHeadComponents,
   setHtmlAttributes
 }) => {
+  const html = renderToString(bodyComponent);
+
   const { helmet } = helmetContext;
 
+  replaceBodyHTMLString(html);
   setHtmlAttributes(helmet.htmlAttributes.toComponent());
   setBodyAttributes(helmet.bodyAttributes.toComponent());
   setHeadComponents([

@@ -1,23 +1,20 @@
-import GatsbyLink from "gatsby-link";
+import { css } from "@emotion/core";
+import Link from "gatsby-link";
 import React from "react";
 import Helmet from "react-helmet-async";
-import styled from "styled-components";
 
-const Container = styled.main({
+const container = css({
   backgroundColor: "rgb(219, 219, 219)"
 });
 
-const Image = styled.div.attrs({
-  role: "presentation",
-  alt: "Ikuiset seprat"
-})({
+const image = css({
   background: "url(/ikuiset-seprat/cover.jpg)",
   backgroundPosition: "50% 75%",
   backgroundSize: "cover",
   height: "25vh"
 });
 
-const Header = styled.header({
+const header = css({
   backgroundColor: "rgb(0, 74, 128)",
   color: "white",
   marginBottom: "2rem",
@@ -31,7 +28,7 @@ const Header = styled.header({
   }
 });
 
-const Section = styled.section({
+const section = css({
   paddingBottom: "1rem",
 
   p: {
@@ -41,9 +38,7 @@ const Section = styled.section({
   }
 });
 
-const Link = styled.a.attrs({
-  rel: "external crossorigin prefetch"
-})({
+const link = css({
   color: "rgb(0, 74, 128)",
   display: "block",
   fontSize: "1.5rem",
@@ -57,7 +52,7 @@ const Link = styled.a.attrs({
   }
 });
 
-const Footer = styled.footer({
+const footer = css({
   margin: "0 auto",
   maxWidth: "50rem",
   padding: "1rem 0 4rem 0",
@@ -68,19 +63,19 @@ const Footer = styled.footer({
   }
 });
 
-export default () => (
-  <Container>
+const Ikuisetseprat = () => (
+  <main css={container}>
     <Helmet>
       <title>Ikuiset seprat – Jouni Jäppinen</title>
     </Helmet>
-    <Image />
-    <Header>
+    <div css={image} role="presentation" alt="Ikuiset seprat" />
+    <header css={header}>
       <h1>Ikuiset seprat</h1>
       <h2>
         Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa
       </h2>
-    </Header>
-    <Section>
+    </header>
+    <section css={section}>
       <p>
         Tytärsaaren perifeerinen sijainti lähempänä Viron kuin Suomen rannikkoa
         tarjosi saarelaisille mahdollisuuden ylläpitää vilkkaita suhteita
@@ -125,20 +120,34 @@ export default () => (
         evakuointikäsky vietiin moottoriveneellä ja jolloin ystävyyssuhteet
         katkesivat.
       </p>
-    </Section>
-    <Link href="https://kymensanomat.fi/uutiset/lahella/13a4ccf6-a72c-48f1-9c8d-2eb7af624bbe">
+    </section>
+    <a
+      css={link}
+      href="https://kymensanomat.fi/uutiset/lahella/13a4ccf6-a72c-48f1-9c8d-2eb7af624bbe"
+      rel="external crossorigin prefetch"
+    >
       Lue kirja-arvostelu (Kymen Sanomat)
-    </Link>
-    <Link href="https://www.tuglas.fi/ikuiset-seprat.-tytärsaarelaisten-ja-virolaisten-suhteet-ennen-toista-maailmansotaa">
+    </a>
+    <a
+      css={link}
+      href="https://www.tuglas.fi/ikuiset-seprat.-tytärsaarelaisten-ja-virolaisten-suhteet-ennen-toista-maailmansotaa"
+      rel="external crossorigin prefetch"
+    >
       Lue kirja-arvostelu (Tuglas-seura)
-    </Link>
-    <Link href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310">
+    </a>
+    <a
+      css={link}
+      href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310"
+      rel="external crossorigin prefetch"
+    >
       Osta Adlibris-verkkokirjakaupasta
-    </Link>
-    <Footer>
+    </a>
+    <footer css={footer}>
       <p>Jouni Jäppinen</p>
       <p>ISBN 978-952-93-7131-0</p>
-      <GatsbyLink to="/">Takaisin</GatsbyLink>
-    </Footer>
-  </Container>
+      <Link to="/">Takaisin</Link>
+    </footer>
+  </main>
 );
+
+export default Ikuisetseprat;

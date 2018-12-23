@@ -22,18 +22,17 @@
     "release": "git push --follow-tags origin master"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.5",
     "fontfaceobserver": "^2.1.0",
     "gatsby": "^2.0.75",
     "gatsby-link": "^2.0.7",
     "gatsby-plugin-netlify": "^2.0.6",
-    "gatsby-plugin-styled-components": "^3.0.4",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-helmet-async": "^0.2.0",
-    "styled-components": "^4.1.3"
+    "react-helmet-async": "^0.2.0"
   },
   "devDependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
+    "@emotion/babel-preset-css-prop": "^10.0.5",
     "eslint": "^5.11.0",
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-babel": "^5.3.0",
@@ -53,7 +52,6 @@
     "netlify",
     "react",
     "serverless",
-    "static-site",
-    "styled-components"
+    "static-site"
   ]
 }

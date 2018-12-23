@@ -1,7 +1,7 @@
-import GatsbyLink from "gatsby-link";
+import { css } from "@emotion/core";
+import Link from "gatsby-link";
 import React from "react";
 import Helmet from "react-helmet-async";
-import styled from "styled-components";
 
 const microdata = JSON.stringify({
   "@context": "http://schema.org",
@@ -25,7 +25,7 @@ const minWidth = args => styleObject => ({
 });
 const tabletSize = minWidth(BREAKPOINT);
 
-const Header = styled.header({
+const headerStyles = css({
   background: "url(/sokerikko.jpg)",
   backgroundPosition: "25% center",
   backgroundRepeat: "no-repeat",
@@ -43,7 +43,7 @@ const Header = styled.header({
   })
 });
 
-const Heading = styled.div({
+const headingStyles = css({
   left: "1rem",
   position: "fixed",
   top: "50vh",
@@ -56,7 +56,7 @@ const Heading = styled.div({
   }
 });
 
-const Caption = styled.caption({
+const captionStyles = css({
   bottom: "0.5rem",
   color: "hsl(0, 0%, 60%)",
   fontSize: "75%",
@@ -66,7 +66,7 @@ const Caption = styled.caption({
   textAlign: "right"
 });
 
-const Main = styled.main({
+const mainStyles = css({
   position: "relative",
 
   ...tabletSize({
@@ -75,7 +75,7 @@ const Main = styled.main({
   })
 });
 
-const About = styled.section({
+const aboutStyles = css({
   margin: "4rem auto",
   maxWidth: "40rem",
   padding: "0 1rem",
@@ -85,7 +85,7 @@ const About = styled.section({
   }
 });
 
-const Projects = styled.ul({
+const projectsStyles = css({
   display: "flex",
   flexWrap: "wrap",
   padding: "0.5rem",
@@ -107,7 +107,7 @@ const Projects = styled.ul({
   }
 });
 
-const Project = styled.article({
+const projectStyles = css({
   backgroundColor: "rgba(0, 0, 0, 0.05)",
   backgroundPosition: "center",
   backgroundSize: "cover",
@@ -132,24 +132,24 @@ const Project = styled.article({
   }
 });
 
-const PajanHamarasta = styled(Project)({
+const pajanHamarastaStyles = css(projectStyles, {
   backgroundImage: "url(/pajan-hamarasta.jpg)"
 });
 
-const IkuisetSeprat = styled(Project)({
+const ikuisetSepratStyles = css(projectStyles, {
   backgroundImage: "url(/ikuiset-seprat.jpg)",
   backgroundPosition: "center"
 });
 
-const Rautakymi = styled(Project)({
+const rautakymiStyles = css(projectStyles, {
   backgroundImage: "url(/rautakymi.jpg)"
 });
 
-const Lovart = styled(Project)({
+const lovartStyles = css(projectStyles, {
   backgroundImage: "url(/lovart.jpg)"
 });
 
-const Articles = styled.ul({
+const articlesStyles = css({
   justifyContent: "center",
   display: "flex",
   flexDirection: "row",
@@ -168,7 +168,7 @@ const Articles = styled.ul({
   }
 });
 
-const Article = styled.article({
+const articleStyles = css({
   boxSizing: "border-box",
   height: "100%",
   padding: "1rem",
@@ -182,9 +182,7 @@ const Article = styled.article({
   }
 });
 
-const Cover = styled.figure.attrs({
-  role: "presentational"
-})({
+const coverStyles = css({
   backgroundPosition: "center",
   backgroundSize: "cover",
   height: 0,
@@ -193,24 +191,24 @@ const Cover = styled.figure.attrs({
   width: "75%"
 });
 
-const Rautakuona = styled(Cover)({
+const Rautakuona = css(coverStyles, {
   backgroundImage: "url(/rautakymi-thumbnail.jpg)"
 });
 
-const Tammijarvi = styled(Cover)({
+const Tammijarvi = css(coverStyles, {
   backgroundImage: "url(/tammijarvi-thumbnail.jpg)"
 });
 
-const Straka = styled(Cover)({
+const Straka = css(coverStyles, {
   backgroundImage: "url(/stråka-thumbnail.jpg)"
 });
 
-const Anttijappinen = styled(Cover)({
+const Anttijappinen = css(coverStyles, {
   backgroundImage: "url(/antti-jappinen-thumbnail.jpg)",
   backgroundSize: "cover"
 });
 
-const Link = styled.a({
+const linksStyles = css({
   borderTop: "1px solid rgba(0, 0, 0, 0.1)",
   display: "block",
   padding: "1rem 0",
@@ -228,20 +226,20 @@ const Index = () => (
       <title>Jouni Jäppinen</title>
       <script type="application/ld+json">{microdata}</script>
     </Helmet>
-
-    <Header>
-      <Heading>
+    <header css={headerStyles}>
+      <div css={headingStyles}>
         <h1>Jouni Jäppinen</h1>
         <h2>Taiteilija ja kultaseppä</h2>
-      </Heading>
-      <Caption>
-        Image: Sugar cup, cast iron, sterling silver. Finnish Design 8
-        exhibition at Helsinki Design Museum 1991
-      </Caption>
-    </Header>
-
-    <Main>
-      <About>
+      </div>
+      <aside css={captionStyles}>
+        <p>
+          Image: Sugar cup, cast iron, sterling silver. Finnish Design 8
+          exhibition at Helsinki Design Museum 1991
+        </p>
+      </aside>
+    </header>
+    <main css={mainStyles}>
+      <section css={aboutStyles}>
         <p>
           <span>Jouni Jäppinen</span> on loviisalainen taiteilija ja kultaseppä,
           joka aloitti työuransa porvoolaisessa sepänpajassa 1970-luvun alussa.
@@ -258,123 +256,143 @@ const Index = () => (
           tuottajana, ja tänään hänet tunnetaan myös rautakautisten menetelmien
           tutkijana ja tietokirjailijana.
         </p>
-      </About>
-
-      <Projects>
+      </section>
+      <ul css={projectsStyles}>
         <li>
-          <GatsbyLink to="/pajan-hamarasta/">
-            <PajanHamarasta>
-              <Heading>
+          <Link to="/pajan-hamarasta/">
+            <article css={pajanHamarastaStyles}>
+              <div css={headingStyles}>
                 <h1>Pajan hämärästä</h1>
                 <h2>Sepän kulttuurihistoriaa</h2>
-              </Heading>
-            </PajanHamarasta>
-          </GatsbyLink>
+              </div>
+            </article>
+          </Link>
         </li>
         <li typeof="Book">
-          <GatsbyLink to="/ikuiset-seprat/">
-            <IkuisetSeprat>
-              <Heading>
+          <Link to="/ikuiset-seprat/">
+            <article css={ikuisetSepratStyles}>
+              <div css={headingStyles}>
                 <h1>Ikuiset seprat</h1>
                 <h2>
                   Tytärsaarelaisten ja virolaisten suhteet ennen toista
                   maailmansotaa
                 </h2>
-              </Heading>
-            </IkuisetSeprat>
-          </GatsbyLink>
+              </div>
+            </article>
+          </Link>
         </li>
         <li>
           <a href="https://www.rautakymi.fi">
-            <Rautakymi>
-              <Heading>
+            <article css={rautakymiStyles}>
+              <div css={headingStyles}>
                 <h1>Talonpoikia, seppiä, lohiylimyksiä</h1>
                 <h2>
                   Arkeologian harrastajien tutkielma Kymijokilaakson
                   rautakautisesta asutuksesta
                 </h2>
-              </Heading>
-            </Rautakymi>
+              </div>
+            </article>
           </a>
         </li>
         <li>
           <a href="https://www.lovart.fi">
-            <Lovart>
-              <Heading>
+            <article css={lovartStyles}>
+              <div css={headingStyles}>
                 <h1>Loviisa Artists’ Studio</h1>
                 <h2>Let’s work in peace</h2>
-              </Heading>
-            </Lovart>
+              </div>
+            </article>
           </a>
         </li>
-      </Projects>
-
-      <Articles>
+      </ul>
+      <ul css={articlesStyles}>
         <li>
           <a href="/rautakuona.pdf">
-            <Article>
-              <Rautakuona alt="Kymijokisuiston rautakuona" />
+            <article css={articleStyles}>
+              <figure
+                css={Rautakuona}
+                role="presentation"
+                alt="Kymijokisuiston rautakuona"
+              />
               <h1>Kymijokisuiston rautakuona</h1>
-            </Article>
+            </article>
           </a>
         </li>
         <li>
           <a href="/tammijärvi.pdf">
-            <Article>
-              <Tammijarvi alt="Experimentel forskning vid Tammijärvi i Pyttis" />
+            <article css={articleStyles}>
+              <figure
+                css={Tammijarvi}
+                role="presentation"
+                alt="Experimentel forskning vid Tammijärvi i Pyttis"
+              />
               <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
-            </Article>
+            </article>
           </a>
         </li>
         <li>
           <a href="/stråka.pdf">
-            <Article>
-              <Straka alt="Stråka Järnframställning" />
+            <article css={articleStyles}>
+              <figure
+                css={Straka}
+                role="presentation"
+                alt="Stråka Järnframställning"
+              />
               <h1>Stråka Järnframställning</h1>
-            </Article>
+            </article>
           </a>
         </li>
         <li>
           <a href="/antti-jappinen.pdf">
-            <Article>
-              <Anttijappinen alt="Sotamies Antti Jäppinen" />
+            <article css={articleStyles}>
+              <figure
+                css={Anttijappinen}
+                role="presentation"
+                alt="Sotamies Antti Jäppinen"
+              />
               <h1>Sotamies Antti Jäppinen</h1>
-            </Article>
+            </article>
           </a>
         </li>
-      </Articles>
-
+      </ul>
       <footer>
         <nav>
           <ul>
             <li>
-              <Link href="/kirjoituksia.pdf">Kirjoituksia</Link>
+              <a css={linksStyles} href="/kirjoituksia.pdf">
+                Kirjoituksia
+              </a>
             </li>
             <li>
-              <Link href="mailto:Jouni Jäppinen <jouni@jappinen.fi>">
+              <a
+                css={linksStyles}
+                href="mailto:Jouni Jäppinen <jouni@jappinen.fi>"
+              >
                 Ota yhteyttä
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
+              <a
+                css={linksStyles}
                 href="https://www.finnishdesigners.fi/portfolio/jouni.jappinen"
                 rel="external crossorigin prefetch"
               >
                 Ornamo
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
+              <a
+                css={linksStyles}
                 href="https://www.artists-o.fi"
                 rel="external crossorigin prefetch"
               >
                 Taiteilijat O
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>
       </footer>
-    </Main>
+    </main>
   </>
 );
 

@@ -1,23 +1,21 @@
-import GatsbyLink from "gatsby-link";
+import { css } from "@emotion/core";
+import Link from "gatsby-link";
 import React from "react";
 import Helmet from "react-helmet-async";
-import styled from "styled-components";
 
-const Container = styled.main({
+const container = css({
   backgroundColor: "rgb(26, 25, 25)",
   color: "white"
 });
 
-const Image = styled.figure.attrs({
-  role: "presentational"
-})({
+const image = css({
   background: "url(/pajan-hamarasta/cover.jpg)",
   backgroundPosition: "50% 50%",
   backgroundSize: "cover",
   height: "25vh"
 });
 
-const Header = styled.header({
+const header = css({
   backgroundColor: "rgb(61, 19, 15)",
   padding: "2rem",
   textAlign: "center",
@@ -29,7 +27,7 @@ const Header = styled.header({
   }
 });
 
-const Section = styled.section({
+const section = css({
   backgroundColor: "rgb(61, 19, 15)",
   paddingBottom: "1rem",
 
@@ -40,7 +38,7 @@ const Section = styled.section({
   }
 });
 
-const Link = styled.a({
+const link = css({
   color: "rgb(161, 42, 38)",
   display: "block",
   fontSize: "1.5rem",
@@ -54,7 +52,7 @@ const Link = styled.a({
   }
 });
 
-const Footer = styled.footer({
+const footer = css({
   margin: "0 auto",
   maxWidth: "50rem",
   padding: "1rem 0 4rem 0",
@@ -65,20 +63,17 @@ const Footer = styled.footer({
   }
 });
 
-export default () => (
-  <Container>
+const Pajanhamarasta = () => (
+  <main css={container}>
     <Helmet>
       <title>Pajan hämärästä – Jouni Jäppinen</title>
     </Helmet>
-
-    <Image alt="Pajan hämärstä" />
-
-    <Header>
+    <div css={image} role="presentation" alt="Pajan hämärstä" />
+    <header css={header}>
       <h1>Pajan hämärästä</h1>
       <h2>Sepän kulttuurihistoriaa</h2>
-    </Header>
-
-    <Section>
+    </header>
+    <section css={section}>
       <p>
         Vanhan sanonnan mukaan seppä on taitava henkilö niin aineen kuin
         hengenkin alalla. Kirja luo katsauksen sepänalan esihistoriaan sekä
@@ -117,23 +112,23 @@ export default () => (
         ahjon, alasimen tai palkeiden kanssa, alkoivat ihmiset uskoa, että
         sepällä täytyi olla luontaisia kykyjä hallita yliluonnollisia voimia.
       </p>
-    </Section>
-
-    <Link href="/pajan-hamarasta/arvostelu.jpg" rel="prefetch">
+    </section>
+    <a css={link} href="/pajan-hamarasta/arvostelu.jpg" rel="prefetch">
       Lue kirja-arvostelu
-    </Link>
-
-    <Link
+    </a>
+    <a
+      css={link}
       href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501"
       rel="external crossorigin prefetch"
     >
       Osta Adlibris-verkkokirjakaupasta
-    </Link>
-
-    <Footer>
+    </a>
+    <footer css={footer}>
       <p>Jouni Jäppinen</p>
       <p>ISBN-978-952-93-4250-1</p>
-      <GatsbyLink to="/">Takaisin</GatsbyLink>
-    </Footer>
-  </Container>
+      <Link to="/">Takaisin</Link>
+    </footer>
+  </main>
 );
+
+export default Pajanhamarasta;
