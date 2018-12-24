@@ -3,6 +3,7 @@ const cspConfig = [
   "default-src 'none';",
   "font-src 'self' https://fonts.gstatic.com;",
   "img-src 'self' data: https://*.cloudfront.net;",
+  "object-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval';",
   "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
 ];
