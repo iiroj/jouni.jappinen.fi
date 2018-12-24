@@ -191,19 +191,23 @@ const coverStyles = css({
   width: "75%"
 });
 
-const Rautakuona = css(coverStyles, {
+const viirankoski = css(coverStyles, {
+  backgroundImage: "url(/viirankosken-vyökoukku-thumbnail.jpg)"
+});
+
+const rautakuona = css(coverStyles, {
   backgroundImage: "url(/rautakymi-thumbnail.jpg)"
 });
 
-const Tammijarvi = css(coverStyles, {
+const tammijarvi = css(coverStyles, {
   backgroundImage: "url(/tammijarvi-thumbnail.jpg)"
 });
 
-const Straka = css(coverStyles, {
+const straka = css(coverStyles, {
   backgroundImage: "url(/stråka-thumbnail.jpg)"
 });
 
-const Anttijappinen = css(coverStyles, {
+const anttijappinen = css(coverStyles, {
   backgroundImage: "url(/antti-jappinen-thumbnail.jpg)",
   backgroundSize: "cover"
 });
@@ -315,12 +319,25 @@ const Index = () => (
 
       <ul css={articlesStyles}>
         <li>
+          <a href="/viirankosken-vyökoukku.pdf">
+            <article css={articleStyles}>
+              <figure
+                alt="Viirankosken vyökoukku"
+                css={viirankoski}
+                role="img"
+              />
+              <h1>Viirankosken vyökoukku</h1>
+            </article>
+          </a>
+        </li>
+
+        <li>
           <a href="/rautakuona.pdf">
             <article css={articleStyles}>
               <figure
-                css={Rautakuona}
-                role="presentation"
                 alt="Kymijokisuiston rautakuona"
+                css={rautakuona}
+                role="img"
               />
               <h1>Kymijokisuiston rautakuona</h1>
             </article>
@@ -331,9 +348,9 @@ const Index = () => (
           <a href="/tammijärvi.pdf">
             <article css={articleStyles}>
               <figure
-                css={Tammijarvi}
-                role="presentation"
                 alt="Experimentel forskning vid Tammijärvi i Pyttis"
+                css={tammijarvi}
+                role="img"
               />
               <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
             </article>
@@ -343,11 +360,7 @@ const Index = () => (
         <li>
           <a href="/stråka.pdf">
             <article css={articleStyles}>
-              <figure
-                css={Straka}
-                role="presentation"
-                alt="Stråka Järnframställning"
-              />
+              <figure alt="Stråka Järnframställning" css={straka} role="img" />
               <h1>Stråka Järnframställning</h1>
             </article>
           </a>
@@ -357,9 +370,9 @@ const Index = () => (
           <a href="/antti-jappinen.pdf">
             <article css={articleStyles}>
               <figure
-                css={Anttijappinen}
-                role="presentation"
                 alt="Sotamies Antti Jäppinen"
+                css={anttijappinen}
+                role="img"
               />
               <h1>Sotamies Antti Jäppinen</h1>
             </article>
