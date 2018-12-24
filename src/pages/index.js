@@ -226,11 +226,13 @@ const Index = () => (
       <title>Jouni Jäppinen</title>
       <script type="application/ld+json">{microdata}</script>
     </Helmet>
+
     <header css={headerStyles}>
       <div css={headingStyles}>
         <h1>Jouni Jäppinen</h1>
         <h2>Taiteilija ja kultaseppä</h2>
       </div>
+
       <aside css={captionStyles}>
         <p>
           Image: Sugar cup, cast iron, sterling silver. Finnish Design 8
@@ -238,6 +240,7 @@ const Index = () => (
         </p>
       </aside>
     </header>
+
     <main css={mainStyles}>
       <section css={aboutStyles}>
         <p>
@@ -257,6 +260,7 @@ const Index = () => (
           tutkijana ja tietokirjailijana.
         </p>
       </section>
+
       <ul css={projectsStyles}>
         <li>
           <Link to="/pajan-hamarasta/">
@@ -268,6 +272,7 @@ const Index = () => (
             </article>
           </Link>
         </li>
+
         <li typeof="Book">
           <Link to="/ikuiset-seprat/">
             <article css={ikuisetSepratStyles}>
@@ -281,6 +286,7 @@ const Index = () => (
             </article>
           </Link>
         </li>
+
         <li>
           <a href="https://www.rautakymi.fi">
             <article css={rautakymiStyles}>
@@ -294,6 +300,7 @@ const Index = () => (
             </article>
           </a>
         </li>
+
         <li>
           <a href="https://www.lovart.fi">
             <article css={lovartStyles}>
@@ -305,6 +312,7 @@ const Index = () => (
           </a>
         </li>
       </ul>
+
       <ul css={articlesStyles}>
         <li>
           <a href="/rautakuona.pdf">
@@ -318,6 +326,7 @@ const Index = () => (
             </article>
           </a>
         </li>
+
         <li>
           <a href="/tammijärvi.pdf">
             <article css={articleStyles}>
@@ -330,6 +339,7 @@ const Index = () => (
             </article>
           </a>
         </li>
+
         <li>
           <a href="/stråka.pdf">
             <article css={articleStyles}>
@@ -342,6 +352,7 @@ const Index = () => (
             </article>
           </a>
         </li>
+
         <li>
           <a href="/antti-jappinen.pdf">
             <article css={articleStyles}>
@@ -355,6 +366,7 @@ const Index = () => (
           </a>
         </li>
       </ul>
+
       <footer>
         <nav>
           <ul>
@@ -363,6 +375,7 @@ const Index = () => (
                 Kirjoituksia
               </a>
             </li>
+
             <li>
               <a
                 css={linksStyles}
@@ -371,6 +384,7 @@ const Index = () => (
                 Ota yhteyttä
               </a>
             </li>
+
             <li>
               <a
                 css={linksStyles}
@@ -380,6 +394,7 @@ const Index = () => (
                 Ornamo
               </a>
             </li>
+
             <li>
               <a
                 css={linksStyles}

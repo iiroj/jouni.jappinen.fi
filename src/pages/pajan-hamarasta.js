@@ -68,11 +68,14 @@ const Pajanhamarasta = () => (
     <Helmet>
       <title>Pajan hämärästä – Jouni Jäppinen</title>
     </Helmet>
+
     <div css={image} role="presentation" alt="Pajan hämärstä" />
+
     <header css={header}>
       <h1>Pajan hämärästä</h1>
       <h2>Sepän kulttuurihistoriaa</h2>
     </header>
+
     <section css={section}>
       <p>
         Vanhan sanonnan mukaan seppä on taitava henkilö niin aineen kuin
@@ -113,9 +116,11 @@ const Pajanhamarasta = () => (
         sepällä täytyi olla luontaisia kykyjä hallita yliluonnollisia voimia.
       </p>
     </section>
+
     <a css={link} href="/pajan-hamarasta/arvostelu.jpg" rel="prefetch">
       Lue kirja-arvostelu
     </a>
+
     <a
       css={link}
       href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501"
@@ -123,6 +128,7 @@ const Pajanhamarasta = () => (
     >
       Osta Adlibris-verkkokirjakaupasta
     </a>
+
     <footer css={footer}>
       <p>Jouni Jäppinen</p>
       <p>ISBN-978-952-93-4250-1</p>

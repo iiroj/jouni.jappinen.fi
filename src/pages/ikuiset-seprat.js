@@ -68,13 +68,16 @@ const Ikuisetseprat = () => (
     <Helmet>
       <title>Ikuiset seprat – Jouni Jäppinen</title>
     </Helmet>
+
     <div css={image} role="presentation" alt="Ikuiset seprat" />
+
     <header css={header}>
       <h1>Ikuiset seprat</h1>
       <h2>
         Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa
       </h2>
     </header>
+
     <section css={section}>
       <p>
         Tytärsaaren perifeerinen sijainti lähempänä Viron kuin Suomen rannikkoa
@@ -121,6 +124,7 @@ const Ikuisetseprat = () => (
         katkesivat.
       </p>
     </section>
+
     <a
       css={link}
       href="https://kymensanomat.fi/uutiset/lahella/13a4ccf6-a72c-48f1-9c8d-2eb7af624bbe"
@@ -128,6 +132,7 @@ const Ikuisetseprat = () => (
     >
       Lue kirja-arvostelu (Kymen Sanomat)
     </a>
+
     <a
       css={link}
       href="https://www.tuglas.fi/ikuiset-seprat.-tytärsaarelaisten-ja-virolaisten-suhteet-ennen-toista-maailmansotaa"
@@ -135,6 +140,7 @@ const Ikuisetseprat = () => (
     >
       Lue kirja-arvostelu (Tuglas-seura)
     </a>
+
     <a
       css={link}
       href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310"
@@ -142,6 +148,7 @@ const Ikuisetseprat = () => (
     >
       Osta Adlibris-verkkokirjakaupasta
     </a>
+
     <footer css={footer}>
       <p>Jouni Jäppinen</p>
       <p>ISBN 978-952-93-7131-0</p>
