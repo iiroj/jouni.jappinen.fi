@@ -72,21 +72,9 @@ const Reset = () => (
 
 const Spectral = new FontFaceObserver("Spectral");
 
-async function unregisterServiceWorkers() {
-  const registrations = await navigator.serviceWorker.getRegistrations();
-  if (!registrations) return;
-  for (let registration of registrations) {
-    await registration.unregister();
-  }
-}
 
 export default class Layout extends React.PureComponent {
   componentDidMount() {
-    // TODO: Remove this after a while
-    if ("serviceWorker" in navigator) {
-      unregisterServiceWorkers();
-    }
-
     Spectral.load();
   }
 
