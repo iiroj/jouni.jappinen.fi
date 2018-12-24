@@ -192,7 +192,7 @@ const coverStyles = css({
 });
 
 const viirankoski = css(coverStyles, {
-  backgroundImage: "url(/viirankosken-vyökoukku-thumbnail.jpg)"
+  backgroundImage: "url(/viirankosken-vyokoukku-thumbnail.jpg)"
 });
 
 const rautakuona = css(coverStyles, {
@@ -204,7 +204,7 @@ const tammijarvi = css(coverStyles, {
 });
 
 const straka = css(coverStyles, {
-  backgroundImage: "url(/stråka-thumbnail.jpg)"
+  backgroundImage: "url(/straka-thumbnail.jpg)"
 });
 
 const anttijappinen = css(coverStyles, {
@@ -319,7 +319,7 @@ const Index = () => (
 
       <ul css={articlesStyles}>
         <li>
-          <a href="/viirankosken-vyökoukku.pdf">
+          <a href="/viirankosken-vyokoukku.pdf">
             <article css={articleStyles}>
               <figure
                 alt="Viirankosken vyökoukku"
@@ -345,7 +345,7 @@ const Index = () => (
         </li>
 
         <li>
-          <a href="/tammijärvi.pdf">
+          <a href="/tammijarvi.pdf">
             <article css={articleStyles}>
               <figure
                 alt="Experimentel forskning vid Tammijärvi i Pyttis"
@@ -358,7 +358,7 @@ const Index = () => (
         </li>
 
         <li>
-          <a href="/stråka.pdf">
+          <a href="/straka.pdf">
             <article css={articleStyles}>
               <figure alt="Stråka Järnframställning" css={straka} role="img" />
               <h1>Stråka Järnframställning</h1>
