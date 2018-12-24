@@ -150,16 +150,16 @@ const lovartStyles = css(projectStyles, {
 });
 
 const articlesStyles = css({
-  justifyContent: "center",
   display: "flex",
   flexDirection: "row",
   flexWrap: "wrap",
+  justifyContent: "center",
   width: "100%",
 
   li: {
     boxSizing: "border-box",
+    flex: "0 1 15rem",
     padding: "1rem",
-    width: "13rem",
 
     "&:hover article": {
       transform: "scale(0.95)",
