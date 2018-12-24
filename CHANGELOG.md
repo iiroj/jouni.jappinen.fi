@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="8.13.0"></a>
+# [8.13.0](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.12.3...v8.13.0) (2018-12-24)
+
+
+### Bug Fixes
+
+* correctly load both font weights ([508490b](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/508490b))
+
+
+### Features
+
+* add new article ([bd2e657](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/bd2e657))
+* use [@emotion](https://gitlab.com/emotion)/core ([f21ea18](https://gitlab.com/iiroj/jouni.jappinen.fi/commit/f21ea18))
+
+
+
 <a name="8.12.3"></a>
 ## [8.12.3](https://gitlab.com/iiroj/jouni.jappinen.fi/compare/v8.12.2...v8.12.3) (2018-12-08)
 
