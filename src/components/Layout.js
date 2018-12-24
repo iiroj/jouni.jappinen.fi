@@ -70,12 +70,23 @@ const Reset = () => (
   />
 );
 
-const Spectral = new FontFaceObserver("Spectral");
+const Spectral400 = new FontFaceObserver("Spectral", {
+  style: "normal",
+  weight: 400
+});
 
+const Spectral600 = new FontFaceObserver("Spectral", {
+  style: "normal",
+  weight: 600
+});
 
 export default class Layout extends React.PureComponent {
   componentDidMount() {
-    Spectral.load();
+    try {
+      Promise.all([Spectral400.load(), Spectral600.load()]);
+    } catch (error) {
+      return;
+    }
   }
 
   render = () => (
