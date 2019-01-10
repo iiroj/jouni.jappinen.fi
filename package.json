@@ -7,8 +7,8 @@
     "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)"
   ],
   "license": "MIT",
-  "repository": "gitlab:iiroj/jouni.jappinen.fi",
-  "bugs": "https://gitlab.com/iiroj/jouni.jappinen.fi/issues",
+  "repository": "github:iiroj/jouni.jappinen.fi",
+  "bugs": "https://github.com/iiroj/jouni.jappinen.fi/issues",
   "private": true,
   "engines": {
     "node": "latest",
