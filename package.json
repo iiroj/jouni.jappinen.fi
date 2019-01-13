@@ -19,7 +19,8 @@
     "lint": "eslint .",
     "build": "gatsby build",
     "version": "standard-version",
-    "push": "git push --follow-tags origin master"
+    "push": "git push --follow-tags origin master",
+    "deploy": "netlify deploy --prod --dir public --message \"$CIRCLE_TAG\""
   },
   "dependencies": {
     "@emotion/core": "^10.0.6",
@@ -38,6 +39,7 @@
     "eslint-config-prettier": "^3.3.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react-app": "^4.0.1",
+    "netlify-cli": "^2.6.1",
     "prettier": "^1.15.3",
     "standard-version": "^4.4.0"
   },

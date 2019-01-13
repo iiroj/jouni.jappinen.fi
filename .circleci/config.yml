@@ -1,0 +1,82 @@
+version: 2.1
+
+references:
+  save_cache: &save_cache
+    save_cache:
+      paths:
+        - node_modules
+      key: node_modules-{{ checksum "package.json" }}
+  restore_cache: &restore_cache
+    restore_cache:
+      keys:
+      - node_modules-{{ checksum "package.json" }}
+      - node_modules-
+
+executors:
+  worker:
+    docker:
+      - image: circleci/node
+    working_directory: /tmp/ci
+
+jobs:
+  audit:
+    executor: worker
+    steps:
+      - checkout
+      - run: npm audit
+
+  install:
+    executor: worker
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm install
+      - *save_cache
+  
+  lint:
+    executor: worker
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm run lint
+
+  build:
+    executor: worker
+    steps:
+      - checkout
+      - *restore_cache
+      - run: npm run build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - public
+
+  deploy:
+    executor: worker
+    steps:
+      - checkout
+      - *restore_cache
+      - attach_workspace:
+          at: .
+      - run: npm run deploy
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - audit
+      - install
+      - lint:
+          requires:
+            - install
+      - build:
+          requires:
+            - install
+      - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
+            tags:
+              only: /^v[0-9]\.[0-9]\.[0-9]$/
