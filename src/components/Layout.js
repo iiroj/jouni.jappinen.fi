@@ -1,6 +1,6 @@
 import { Global } from "@emotion/core";
 import FontFaceObserver from "fontfaceobserver";
-import React from "react";
+import React, { useEffect } from "react";
 
 const Reset = () => (
   <Global
@@ -80,19 +80,15 @@ const Spectral600 = new FontFaceObserver("Spectral", {
   weight: 600
 });
 
-export default class Layout extends React.PureComponent {
-  componentDidMount() {
-    try {
-      Promise.all([Spectral400.load(), Spectral600.load()]);
-    } catch (error) {
-      return;
-    }
-  }
+export default ({ children }) => {
+  useEffect(() => {
+    Promise.all([Spectral400.load(), Spectral600.load()]).catch();
+  }, []);
 
-  render = () => (
+  return (
     <>
       <Reset />
-      {this.props.children}
+      {children}
     </>
   );
-}
+};
