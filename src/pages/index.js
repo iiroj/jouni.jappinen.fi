@@ -146,7 +146,7 @@ const projectStyles = css({
 const rautakymiStyles = css(projectStyles, {
   backgroundColor: rautakymi.colors.darkRed,
   backgroundImage: `url(${rautakymiCover})`,
-  backgroundPosition: "center",
+  backgroundPosition: "75% 50%",
   backgroundRepeat: "no-repeat",
   backgroundSize: "auto 300px",
 
