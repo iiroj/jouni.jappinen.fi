@@ -1,7 +1,14 @@
 import { css } from "@emotion/core";
 import Link from "gatsby-link";
 import React from "react";
+import { hiDPI } from "polished";
 import Helmet from "react-helmet-async";
+
+import rautakymiCover from "../assets/rautakymi/cover.png";
+import rautakymiCover2x from "../assets/rautakymi/cover@2x.png";
+
+import { rautakymi } from "../styles";
+import ComingSoon from "../components/ComingSoon";
 
 const microdata = JSON.stringify({
   "@context": "http://schema.org",
@@ -97,7 +104,11 @@ const projectsStyles = css({
     width: "100%",
 
     ...minWidth("50rem")({
-      width: "50%"
+      width: "50%",
+
+      "&:first-child": {
+        width: "100%"
+      }
     }),
 
     "&:hover article": {
@@ -132,6 +143,18 @@ const projectStyles = css({
   }
 });
 
+const rautakymiStyles = css(projectStyles, {
+  backgroundColor: rautakymi.colors.darkRed,
+  backgroundImage: `url(${rautakymiCover})`,
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "auto 300px",
+
+  [hiDPI(1.5)]: {
+    backgroundImage: `url(${rautakymiCover2x})`
+  }
+});
+
 const pajanHamarastaStyles = css(projectStyles, {
   backgroundImage: "url(/pajan-hamarasta.jpg)"
 });
@@ -141,7 +164,7 @@ const ikuisetSepratStyles = css(projectStyles, {
   backgroundPosition: "center"
 });
 
-const rautakymiStyles = css(projectStyles, {
+const rautakymiSiteStyles = css(projectStyles, {
   backgroundImage: "url(/rautakymi.jpg)"
 });
 
@@ -267,6 +290,18 @@ const Index = () => (
 
       <ul css={projectsStyles}>
         <li>
+          <Link to="/rautakymi/">
+            <article css={rautakymiStyles}>
+              <ComingSoon />
+              <div css={headingStyles}>
+                <h1>Rautakymi</h1>
+                <h2>Asumattoman eräalueen myytti</h2>
+              </div>
+            </article>
+          </Link>
+        </li>
+
+        <li>
           <Link to="/pajan-hamarasta/">
             <article css={pajanHamarastaStyles}>
               <div css={headingStyles}>
@@ -293,7 +328,7 @@ const Index = () => (
 
         <li>
           <a href="https://www.rautakymi.fi">
-            <article css={rautakymiStyles}>
+            <article css={rautakymiSiteStyles}>
               <div css={headingStyles}>
                 <h1>Talonpoikia, seppiä, lohiylimyksiä</h1>
                 <h2>

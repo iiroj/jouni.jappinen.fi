@@ -8,4 +8,8 @@ exports.onCreateBabelConfig = ({ actions }) => {
       sourceMap: !isProduction
     }
   });
+
+  actions.setBabelPlugin({
+    name: "babel-plugin-polished"
+  });
 };
