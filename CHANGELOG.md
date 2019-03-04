@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [8.15.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.14.7...v8.15.0) (2019-03-04)
+
+
+### Features
+
+* add upcoming new book ([cf5011c](https://github.com/iiroj/jouni.jappinen.fi/commit/cf5011c))
+
+
+
 ## [8.14.7](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.14.6...v8.14.7) (2019-03-02)
 
 
