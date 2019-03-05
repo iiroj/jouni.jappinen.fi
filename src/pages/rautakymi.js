@@ -86,36 +86,36 @@ const Rautakymi = () => (
 
     <section css={section}>
       <p>
-        Ennen vuotta 1989 itäisen Uudenmaan ja Kymenlaakson rannikolta ei
+        Ennen vuotta 1989 itäisen Uudenmaan ja Kymenlaakson rannikolta ei
         tunnettu montaakaan rautakautista asuinpaikkaa, tai hautaa ja
-        irtolöydötkin oli laskettavissa yhden käden sormin. Löydöttömyyden
-        perusteella vakiintui vähitellen yli sata vuotta elänyt uskomus, jonka
-        mukaan itäinen Uusimaa ja Kymenlaakson rannikko ei olisi koskaan
+        irtolöydötkin oli laskettavissa yhden käden sormin. Löydöttömyyden
+        perusteella vakiintui vähitellen yli sata vuotta elänyt uskomus, jonka
+        mukaan itäinen Uusimaa ja Kymenlaakson rannikko ei olisi koskaan
         kuulunut rautakautisen asutuksen piiriin. 1990-luvun lopulla tutkittiin
-        ensimmäiset rooma- laisajan röykkiöhaudat Pyhtään Strukan kalmistossa,
+        ensimmäiset roomalaisajan röykkiöhaudat Pyhtään Strukan kalmistossa,
         josta alkaen varsinkin Kymijokilaakson rautakautisten ja keskiaikaisten
-        löytöjen määrä on lisääntynyt dramaattisesti.
+        löytöjen määrä on lisääntynyt dramaattisesti.
       </p>
 
       <p>
-        Kahden arkeologian harrastajan perustama Rautakymi- työryhmä päätti
-        elokuussa 2010 tutkia Koskenky- lä-Kotka moottoritien maastokäytävän
-        uudelleen ryhmän havaittua jo vuonna 2005 tehdyssä Museoviraston
-        arkeologisesessa inventoinnissa pahoja puutteita. Päätös oli kohtalokas,
-        sillä työryhmä löysi tielinjalta kaksi laajaa rautakautista ja
+        Kahden arkeologian harrastajan perustama Rautakymityöryhmä päätti
+        elokuussa 2010 tutkia Koskenkylä-Kotka moottoritien maastokäytävän
+        uudelleen ryhmän havaittua jo vuonna 2005 tehdyssä Museoviraston
+        arkeologisesessa inventoinnissa pahoja puutteita. Päätös oli kohtalokas,
+        sillä työryhmä löysi tielinjalta kaksi laajaa rautakautista ja
         keskiaikaista asuinpaikkaa, joista vanhimmaksi on osoittautunut
-        moniperiodinen Vii- rankoski Loviisassa, kun taas Ahvenkosken
-        Haasianiemestä löytyneen lähes kilometrin pituisen muinaisen
+        moniperiodinen Viirankoski Loviisassa, kun taas Ahvenkosken
+        Haasianiemestä löytyneen lähes kilometrin pituisen muinaisen
         satama-alueen tutkimustulokset viittaavat viikinkiaikaiseen ja
-        keskiaikaiseen asutukseen ja toimintaan. Mo- lemmat kohteet tuhoutuivat
+        keskiaikaiseen asutukseen ja toimintaan. Molemmat kohteet tuhoutuivat
         osittain moottoritien alle..
       </p>
 
       <p>
-        Myöhemmin työryhmä laajensi tutkimuksiaan kaikkiin jokilaaksoihin
-        Porvoon Ilolan ja Pyhtään Huut- järven välisellä alueella. Runsaasti
-        kuvitettu tietokirja luo katsauksen alueen tutkimushistoriaan, työryhmän
-        vuosina 2004–2018 löytämään arkeologiseen aineistoon, sekä
+        Myöhemmin työryhmä laajensi tutkimuksiaan kaikkiin jokilaaksoihin
+        Porvoon Ilolan ja Pyhtään Huutjärven välisellä alueella. Runsaasti
+        kuvitettu tietokirja luo katsauksen alueen tutkimushistoriaan, työryhmän
+        vuosina 2004–2018 löytämään arkeologiseen aineistoon, sekä
         metallurgisten tutkimusten tuloksiin..
       </p>
     </section>
