@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.15.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.15.1...v8.15.2) (2019-03-05)
+
+
+### Bug Fixes
+
+* correct punctuation and umlauts ([374783a](https://github.com/iiroj/jouni.jappinen.fi/commit/374783a))
+
+
+
 ## [8.15.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.15.0...v8.15.1) (2019-03-04)
 
 
