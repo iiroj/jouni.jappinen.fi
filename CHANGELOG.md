@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.15.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.15.2...v8.15.3) (2019-03-06)
+
+
+### Bug Fixes
+
+* responsive layout issues ([564aebf](https://github.com/iiroj/jouni.jappinen.fi/commit/564aebf))
+
+
+
 ## [8.15.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.15.1...v8.15.2) (2019-03-05)
 
 
