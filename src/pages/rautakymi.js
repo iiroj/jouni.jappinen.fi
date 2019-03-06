@@ -17,6 +17,7 @@ const container = css({
 const image = css({
   display: "block",
   margin: "0 auto",
+  maxWidth: "100%",
   padding: "4rem 2rem 2rem"
 });
 
@@ -80,7 +81,7 @@ const Rautakymi = () => (
     />
 
     <header css={header}>
-      <h1>Rautakymi</h1>
+      <h1>Rauta&shy;kymi</h1>
       <h2>Asumattoman eräalueen myytti</h2>
     </header>
 
