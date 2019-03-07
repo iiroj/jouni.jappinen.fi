@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.16.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.16.0...v8.16.1) (2019-03-07)
+
+
+
 # [8.16.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.15.3...v8.16.0) (2019-03-07)
 
 
