@@ -1,11 +1,9 @@
 import { css } from "@emotion/core";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import Link from "gatsby-link";
 import React from "react";
-import { hiDPI } from "polished";
 import Helmet from "react-helmet-async";
-
-import rautakymiCover from "../assets/rautakymi/cover.png";
-import rautakymiCover2x from "../assets/rautakymi/cover@2x.png";
 
 import { rautakymi } from "../styles";
 import ComingSoon from "../components/ComingSoon";
@@ -143,16 +141,8 @@ const projectStyles = css({
   }
 });
 
-const rautakymiStyles = css(projectStyles, {
-  backgroundColor: rautakymi.colors.darkRed,
-  backgroundImage: `url(${rautakymiCover})`,
-  backgroundPosition: "75% 50%",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "auto 300px",
-
-  [hiDPI(1.5)]: {
-    backgroundImage: `url(${rautakymiCover2x})`
-  }
+const rautakymiBookStyles = css(projectStyles, {
+  backgroundColor: rautakymi.colors.darkRed
 });
 
 const pajanHamarastaStyles = css(projectStyles, {
@@ -247,7 +237,7 @@ const linksStyles = css({
   }
 });
 
-const Index = () => (
+export default ({ data }) => (
   <>
     <Helmet>
       <title>Jouni Jäppinen</title>
@@ -291,7 +281,8 @@ const Index = () => (
       <ul css={projectsStyles}>
         <li>
           <Link to="/rautakymi/">
-            <article css={rautakymiStyles}>
+            <article css={rautakymiBookStyles}>
+              <Img alt="Rautakymi" fixed={data.file.childImageSharp.fixed} />
               <ComingSoon />
               <div css={headingStyles}>
                 <h1>Rautakymi</h1>
@@ -459,4 +450,14 @@ const Index = () => (
   </>
 );
 
-export default Index;
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "rautakymi-book-cover.png" }) {
+      childImageSharp {
+        fixed(height: 300) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+  }
+`;

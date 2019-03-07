@@ -2,6 +2,8 @@ import { Global } from "@emotion/core";
 import FontFaceObserver from "fontfaceobserver";
 import React, { useEffect } from "react";
 
+import Main from "./Main";
+
 const Reset = () => (
   <Global
     styles={[
@@ -88,7 +90,7 @@ export default ({ children }) => {
   return (
     <>
       <Reset />
-      {children}
+      <Main>{children}</Main>
     </>
   );
 };

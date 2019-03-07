@@ -1,3 +1,5 @@
+const path = require("path");
+
 const cspConfig = [
   "connect-src 'self' https://fonts.gstatic.com;",
   "default-src 'none';",
@@ -10,6 +12,15 @@ const cspConfig = [
 
 module.exports = {
   plugins: [
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "images",
+        path: path.join(__dirname, "src", "images")
+      }
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-plugin-netlify",
       options: {

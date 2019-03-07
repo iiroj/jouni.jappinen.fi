@@ -1,28 +1,22 @@
 import { css } from "@emotion/core";
+import { graphql } from "gatsby";
+import Img from "gatsby-image";
 import Link from "gatsby-link";
 import React from "react";
 import Helmet from "react-helmet-async";
 
-import cover from "../assets/rautakymi/cover.png";
-import cover2x from "../assets/rautakymi/cover@2x.png";
-
 import { rautakymi } from "../styles";
 import ComingSoon from "../components/ComingSoon";
 
-const container = css({
-  backgroundColor: rautakymi.colors.darkRed,
-  color: "white"
-});
-
-const image = css({
-  display: "block",
-  margin: "0 auto",
-  maxWidth: "100%",
-  padding: "4rem 2rem 2rem"
+const imageContainer = css({
+  display: "flex",
+  justifyContent: "center",
+  padding: "4rem 0 2rem"
 });
 
 const header = css({
   backgroundColor: rautakymi.colors.darkRed,
+  color: "white",
   display: "flex",
   flexDirection: "column",
   textAlign: "center",
@@ -45,6 +39,8 @@ const header = css({
 
 const section = css({
   backgroundColor: rautakymi.colors.darkGrey,
+  color: "white",
+  flexGrow: 1,
   paddingBottom: "2rem",
 
   p: {
@@ -56,31 +52,30 @@ const section = css({
 
 const footer = css({
   backgroundColor: rautakymi.colors.darkGrey,
-  margin: "0 auto",
+  color: "white",
+  margin: "auto auto 0",
   paddingBottom: "4rem",
   textAlign: "center",
+  width: "100%",
 
   p: {
     marginBottom: "0.5rem"
   }
 });
 
-const Rautakymi = () => (
-  <main css={container}>
+export default ({ data }) => (
+  <>
     <Helmet>
       <title>Rautakymi – Jouni Jäppinen</title>
     </Helmet>
 
     <ComingSoon />
 
-    <img
-      css={image}
-      alt="Rautakymi"
-      src={cover}
-      srcSet={`${cover} 1x, ${cover2x} 2x`}
-    />
-
     <header css={header}>
+      <figure css={imageContainer}>
+        <Img alt="Rautakymi" fixed={data.file.childImageSharp.fixed} />
+      </figure>
+
       <h1>Rauta&shy;kymi</h1>
       <h2>Asumattoman eräalueen myytti</h2>
     </header>
@@ -125,7 +120,17 @@ const Rautakymi = () => (
       <p>Jouni Jäppinen</p>
       <Link to="/">Takaisin</Link>
     </footer>
-  </main>
+  </>
 );
 
-export default Rautakymi;
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "rautakymi-book-cover.png" }) {
+      childImageSharp {
+        fixed(height: 300) {
+          ...GatsbyImageSharpFixed_withWebp
+        }
+      }
+    }
+  }
+`;

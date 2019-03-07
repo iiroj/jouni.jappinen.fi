@@ -6,6 +6,7 @@ import { rautakymi } from "../styles";
 
 const comingSoon = css({
   backgroundColor: mix(0.2, "white", rautakymi.colors.darkRed),
+  color: "white",
   fontSize: "0.8em",
   fontWeight: "600",
   left: 0,
