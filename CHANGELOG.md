@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [8.16.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.15.3...v8.16.0) (2019-03-07)
+
+
+### Features
+
+* use gatsby-image on rautakymi page ([1393137](https://github.com/iiroj/jouni.jappinen.fi/commit/1393137))
+
+
+
 ## [8.15.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.15.2...v8.15.3) (2019-03-06)
 
 
