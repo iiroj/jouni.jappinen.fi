@@ -31,12 +31,7 @@ const minWidth = args => styleObject => ({
 const tabletSize = minWidth(BREAKPOINT);
 
 const headerStyles = css({
-  background: "url(/sokerikko.jpg)",
-  backgroundPosition: "25% center",
-  backgroundRepeat: "no-repeat",
-  backgroundSize: "cover",
   color: "white",
-  height: "75%",
   overflowY: "hidden",
   position: "relative",
 
@@ -49,26 +44,39 @@ const headerStyles = css({
 });
 
 const headingStyles = css({
-  left: "1rem",
-  position: "fixed",
-  top: "50vh",
-  transform: "translateY(-100%)",
+  marginLeft: "1rem",
+  padding: "10rem 0",
+  top: "50%",
 
   h1: {
     fontSize: "1.5rem",
     fontWeight: 600,
     lineHeight: "1.5rem"
-  }
+  },
+
+  ...tabletSize({
+    padding: 0,
+    position: "fixed",
+    transform: "translateY(-100%)"
+  })
+});
+
+const sokerikkoStyles = css({
+  height: "100%",
+  width: "100%",
+  zIndex: -1
 });
 
 const captionStyles = css({
   bottom: "0.5rem",
   color: "hsl(0, 0%, 60%)",
-  fontSize: "75%",
-  marginLeft: "0.5rem",
-  position: "absolute",
-  right: "0.5rem",
-  textAlign: "right"
+  fontSize: "0.75em",
+  lineHeight: "1rem",
+  margin: "0.5rem",
+
+  ...tabletSize({
+    position: "absolute"
+  })
 });
 
 const mainStyles = css({
@@ -139,6 +147,10 @@ const projectStyles = css({
       fontWeight: 600
     }
   }
+});
+
+const rautakymiBookImageStyles = css({
+  maxHeight: "100%"
 });
 
 const rautakymiBookStyles = css(projectStyles, {
@@ -245,6 +257,14 @@ export default ({ data }) => (
     </Helmet>
 
     <header css={headerStyles}>
+      <Img
+        alt="Sokerikko"
+        backgroundColor="black"
+        css={sokerikkoStyles}
+        fluid={data.sokerikko.childImageSharp.fluid}
+        style={{ position: "absolute" }}
+      />
+
       <div css={headingStyles}>
         <h1>Jouni Jäppinen</h1>
         <h2>Taiteilija ja kultaseppä</h2>
@@ -258,7 +278,7 @@ export default ({ data }) => (
       </aside>
     </header>
 
-    <main css={mainStyles}>
+    <div css={mainStyles}>
       <section css={aboutStyles}>
         <p>
           <span>Jouni Jäppinen</span> on loviisalainen taiteilija ja kultaseppä,
@@ -282,7 +302,12 @@ export default ({ data }) => (
         <li>
           <Link to="/rautakymi/">
             <article css={rautakymiBookStyles}>
-              <Img alt="Rautakymi" fixed={data.file.childImageSharp.fixed} />
+              <Img
+                alt="Rautakymi"
+                css={rautakymiBookImageStyles}
+                fixed={data.rautakymiBook.childImageSharp.fixed}
+              />
+
               <ComingSoon />
               <div css={headingStyles}>
                 <h1>Rautakymi</h1>
@@ -446,13 +471,21 @@ export default ({ data }) => (
           </ul>
         </nav>
       </footer>
-    </main>
+    </div>
   </>
 );
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "rautakymi-book-cover.png" }) {
+    sokerikko: file(relativePath: { eq: "sokerikko.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+
+    rautakymiBook: file(relativePath: { eq: "rautakymi-book-cover.png" }) {
       childImageSharp {
         fixed(height: 300) {
           ...GatsbyImageSharpFixed_withWebp
