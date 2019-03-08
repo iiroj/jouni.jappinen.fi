@@ -1,13 +1,13 @@
 const path = require("path");
 
 const cspConfig = [
-  "connect-src 'self' https://fonts.gstatic.com;",
-  "default-src 'none';",
-  "font-src 'self' https://fonts.gstatic.com;",
-  "img-src 'self' data: https://*.cloudfront.net;",
+  "default-src 'none'",
+  "connect-src 'self' https://fonts.gstatic.com",
+  "font-src 'self' https://fonts.gstatic.com",
+  "img-src 'self' data: https://*.cloudfront.net",
   "object-src 'self'",
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval';",
-  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;"
+  "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+  "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com"
 ];
 
 module.exports = {
@@ -26,7 +26,7 @@ module.exports = {
       options: {
         headers: {
           "/*": [
-            `Content-Security-Policy: ${cspConfig.join(" ")}`,
+            `Content-Security-Policy: ${cspConfig.join("; ")}`,
             "Feature-Policy: default 'none'",
             "Referrer-Policy: no-referrer-when-downgrade"
           ]
