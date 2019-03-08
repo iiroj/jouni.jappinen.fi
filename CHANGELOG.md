@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.16.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.16.2...v8.16.3) (2019-03-08)
+
+
+### Bug Fixes
+
+* add semicolons to all csp header parts ([1a2c960](https://github.com/iiroj/jouni.jappinen.fi/commit/1a2c960))
+
+
+
 ## [8.16.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.16.1...v8.16.2) (2019-03-08)
 
 
