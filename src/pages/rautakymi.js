@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import Link from "gatsby-link";
 import React from "react";
-import Helmet from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 import { rautakymi } from "../styles";
 import ComingSoon from "../components/ComingSoon";

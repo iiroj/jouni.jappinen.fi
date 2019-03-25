@@ -1,7 +1,7 @@
 import { css } from "@emotion/core";
 import Link from "gatsby-link";
 import React from "react";
-import Helmet from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 const container = css({
   backgroundColor: "rgb(26, 25, 25)",
