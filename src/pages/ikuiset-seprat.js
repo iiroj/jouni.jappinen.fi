@@ -133,11 +133,7 @@ const Ikuisetseprat = () => (
       Lue kirja-arvostelu (Kymen Sanomat)
     </a>
 
-    <a
-      css={link}
-      href="https://www.tuglas.fi/ikuiset-seprat.-tytärsaarelaisten-ja-virolaisten-suhteet-ennen-toista-maailmansotaa"
-      rel="external crossorigin prefetch"
-    >
+    <a css={link} href="/ikuiset_seprat_arvostelu.pdf">
       Lue kirja-arvostelu (Tuglas-seura)
     </a>
 
