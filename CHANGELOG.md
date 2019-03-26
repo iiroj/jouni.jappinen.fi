@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [8.17.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.16.4...v8.17.0) (2019-03-26)
+
+
+### Features
+
+* add .browserslistrc ([6ef626a](https://github.com/iiroj/jouni.jappinen.fi/commit/6ef626a))
+
+
+
 ## [8.16.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.16.3...v8.16.4) (2019-03-25)
 
 
