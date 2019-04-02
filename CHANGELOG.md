@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [8.18.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.17.0...v8.18.0) (2019-04-02)
+
+
+### Features
+
+* add husky and commitlint ([d091bc4](https://github.com/iiroj/jouni.jappinen.fi/commit/d091bc4))
+
+
+
 # [8.17.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.16.4...v8.17.0) (2019-03-26)
 
 
