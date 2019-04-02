@@ -1,6 +1,6 @@
 # jouni.jappinen.fi
 
-[![CircleCI](https://circleci.com/gh/iiroj/jouni.jappinen.fi.svg?style=shield)](https://circleci.com/gh/iiroj/jouni.jappinen.fi)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/08b2ef48-d7f6-40ea-bc70-ef04270e199d/deploy-status)](https://app.netlify.com/sites/jouni/deploys)
 [![version](https://img.shields.io/github/tag/iiroj/jouni.jappinen.fi.svg)](https://github.com/iiroj/jouni.jappinen.fi/releases)
 [![dependencies](https://img.shields.io/david/iiroj/jouni.jappinen.fi.svg)](https://github.com/iiroj/jouni.jappinen.fi/blob/master/package.json)
 [![devDependencies](https://img.shields.io/david/dev/iiroj/jouni.jappinen.fi.svg)](https://github.com/iiroj/jouni.jappinen.fi/blob/master/package.json)
