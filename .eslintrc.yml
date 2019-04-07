@@ -2,7 +2,9 @@ extends:
   - plugin:react-app/recommended
   - plugin:prettier/recommended
   - prettier/react
+
 plugins:
   - prettier
+
 rules:
   react-app/jsx-a11y/accessible-emoji: off
