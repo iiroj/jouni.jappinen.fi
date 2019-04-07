@@ -14,7 +14,8 @@
     "start": "gatsby develop",
     "lint": "eslint --ext .js,.ts,.tsx .",
     "prebuild": "rimraf public",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "deploy": "./scripts/deploy.sh"
   },
   "husky": {
     "hooks": {
