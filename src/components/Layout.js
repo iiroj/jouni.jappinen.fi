@@ -1,5 +1,6 @@
 import { Global } from "@emotion/core";
 import FontFaceObserver from "fontfaceobserver";
+import { Helmet } from "react-helmet-async";
 import React, { useEffect } from "react";
 
 import Main from "./Main";
@@ -89,7 +90,18 @@ export default ({ children }) => {
 
   return (
     <>
+      <Helmet>
+        <html lang="fi" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/icon.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+      </Helmet>
+
       <Reset />
+
       <Main>{children}</Main>
     </>
   );
