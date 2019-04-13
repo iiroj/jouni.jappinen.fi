@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [8.19.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.18.3...v8.19.0) (2019-04-13)
+
+
+### Features
+
+* add Fathom analytics ([0103c8d](https://github.com/iiroj/jouni.jappinen.fi/commit/0103c8d))
+* add security headers via Lamda@Edge ([538961c](https://github.com/iiroj/jouni.jappinen.fi/commit/538961c))
+
+
+
 ## [8.18.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.18.2...v8.18.3) (2019-04-08)
 
 
