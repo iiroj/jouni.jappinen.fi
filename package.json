@@ -44,6 +44,7 @@
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react-app": "^4.0.1",
+    "gatsby-plugin-fathom": "^1.0.4",
     "gatsby-plugin-sharp": "^2.0.32",
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-sharp": "^2.1.17",
