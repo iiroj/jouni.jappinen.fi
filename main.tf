@@ -54,6 +54,46 @@ data "aws_acm_certificate" "certificate" {
   most_recent = true
 }
 
+data "archive_file" "cloudfront_headers" {
+    type        = "zip"
+    source_dir  = "lambda/cloudfront_headers"
+    output_path = "lambda/cloudfront_headers.zip"
+}
+
+resource "aws_iam_role" "lambda_iam" {
+  name = "lambda_iam_jouni-jappinen-fi"
+  assume_role_policy = <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": [
+          "lambda.amazonaws.com",
+          "edgelambda.amazonaws.com"
+        ]
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+EOF
+}
+
+resource "aws_lambda_function" "cloudfront_lambda" {
+  provider    = "aws.useast1"
+  filename         = "lambda/cloudfront_headers.zip"
+  function_name    = "cloudfront_headers_jouni-jappinen-fi"
+  role             = "${aws_iam_role.lambda_iam.arn}"
+  handler          = "index.handler"
+  runtime          = "nodejs8.10"
+  source_code_hash = "${data.archive_file.cloudfront_headers.output_base64sha256}"
+  publish          = "true"
+}
+
+
 resource "aws_cloudfront_distribution" "cdn" {
   enabled             = true
   is_ipv6_enabled     = true
@@ -96,6 +136,11 @@ resource "aws_cloudfront_distribution" "cdn" {
     min_ttl                = 31536000
     default_ttl            = 31536000
     max_ttl                = 31536000
+
+    lambda_function_association {
+      event_type = "viewer-response"
+      lambda_arn = "${aws_lambda_function.cloudfront_lambda.arn}:${aws_lambda_function.cloudfront_lambda.version}"
+    }
   }
 
   viewer_certificate {
