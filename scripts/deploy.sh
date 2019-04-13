@@ -26,6 +26,10 @@ if ${AWS_CLOUDFRONT_ID+false}; then
   exit 1
 fi
 
+# Build site
+npx rimraf public
+npx gatsby build
+
 # Upload immutable assets
 npx s3-redeploy --cwd $DEPLOY_DIR --bucket $AWS_S3_BUCKET \
   --pattern '!(render-page).{js,js.map}'                  \
