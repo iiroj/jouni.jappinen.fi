@@ -54,11 +54,6 @@ data "aws_acm_certificate" "certificate" {
   most_recent = true
 }
 
-data "archive_file" "cloudfront_headers" {
-    type        = "zip"
-    source_dir  = "lambda/cloudfront_headers"
-    output_path = "lambda/cloudfront_headers.zip"
-}
 
 resource "aws_iam_role" "lambda_iam" {
   name = "lambda_iam_jouni-jappinen-fi"
@@ -82,7 +77,13 @@ resource "aws_iam_role" "lambda_iam" {
 EOF
 }
 
-resource "aws_lambda_function" "cloudfront_lambda" {
+data "archive_file" "cloudfront_headers" {
+    type        = "zip"
+    source_dir  = "lambda/cloudfront_headers"
+    output_path = "lambda/cloudfront_headers.zip"
+}
+
+resource "aws_lambda_function" "lambda_cloudfront_headers" {
   provider    = "aws.useast1"
   filename         = "lambda/cloudfront_headers.zip"
   function_name    = "cloudfront_headers_jouni-jappinen-fi"
@@ -93,6 +94,22 @@ resource "aws_lambda_function" "cloudfront_lambda" {
   publish          = "true"
 }
 
+data "archive_file" "cloudfront_urls" {
+    type        = "zip"
+    source_dir  = "lambda/cloudfront_urls"
+    output_path = "lambda/cloudfront_urls.zip"
+}
+
+resource "aws_lambda_function" "lambda_cloudfront_urls" {
+  provider    = "aws.useast1"
+  filename         = "lambda/cloudfront_urls.zip"
+  function_name    = "cloudfront_urls_jouni-jappinen-fi"
+  role             = "${aws_iam_role.lambda_iam.arn}"
+  handler          = "index.handler"
+  runtime          = "nodejs8.10"
+  source_code_hash = "${data.archive_file.cloudfront_urls.output_base64sha256}"
+  publish          = "true"
+}
 
 resource "aws_cloudfront_distribution" "cdn" {
   enabled             = true
@@ -138,8 +155,13 @@ resource "aws_cloudfront_distribution" "cdn" {
     max_ttl                = 31536000
 
     lambda_function_association {
+      event_type = "origin-request"
+      lambda_arn = "${aws_lambda_function.lambda_cloudfront_urls.arn}:${aws_lambda_function.lambda_cloudfront_urls.version}"
+    }
+
+    lambda_function_association {
       event_type = "viewer-response"
-      lambda_arn = "${aws_lambda_function.cloudfront_lambda.arn}:${aws_lambda_function.cloudfront_lambda.version}"
+      lambda_arn = "${aws_lambda_function.lambda_cloudfront_headers.arn}:${aws_lambda_function.lambda_cloudfront_headers.version}"
     }
   }
 

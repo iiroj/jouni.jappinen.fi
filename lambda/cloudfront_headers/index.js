@@ -1,5 +1,5 @@
 exports.handler = (event, context, callback) => {
-  const response = event.Records[0].cf.response;
+  const { response } = event.Records[0].cf;
   const headers = response.headers;
 
   headers["strict-transport-security"] = [
