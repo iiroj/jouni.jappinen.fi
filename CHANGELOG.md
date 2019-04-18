@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [8.20.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.19.0...v8.20.0) (2019-04-18)
+
+
+### Features
+
+* handle index.html files form S3 with Lambda@Edge ([a06d706](https://github.com/iiroj/jouni.jappinen.fi/commit/a06d706))
+
+
+
 # [8.19.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.18.3...v8.19.0) (2019-04-13)
 
 
