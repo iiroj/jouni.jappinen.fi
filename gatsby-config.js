@@ -10,13 +10,6 @@ module.exports = {
       }
     },
     "gatsby-plugin-sharp",
-    "gatsby-transformer-sharp",
-    {
-      resolve: "gatsby-plugin-fathom",
-      options: {
-        trackingUrl: "ping.iiro.fi",
-        siteId: "BJRXK"
-      }
-    }
+    "gatsby-transformer-sharp"
   ]
 };

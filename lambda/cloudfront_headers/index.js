@@ -12,7 +12,7 @@ exports.handler = (event, context, callback) => {
     {
       key: "Content-Security-Policy",
       value:
-        "default-src 'none'; connect-src 'self' https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://ping.iiro.fi; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://ping.iiro.fi; style-src 'self' 'unsafe-inline'"
+        "default-src 'none'; connect-src 'self' https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'"
     }
   ];
   headers["x-content-type-options"] = [
