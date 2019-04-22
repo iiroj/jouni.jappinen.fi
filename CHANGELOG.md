@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [8.21.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.20.2...v8.21.0) (2019-04-22)
+
+
+### Features
+
+* properly lazy-load Google Fonts ([37add72](https://github.com/iiroj/jouni.jappinen.fi/commit/37add72))
+
+
+
 ## [8.20.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.20.1...v8.20.2) (2019-04-20)
 
 
