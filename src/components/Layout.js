@@ -9,30 +9,13 @@ const Reset = () => (
   <Global
     styles={[
       {
-        "@font-face": {
-          fontFamily: "Spectral",
-          fontStyle: "normal",
-          fontWeight: "400",
-          src:
-            'local("Spectral Regular"), local("Spectral-Regular"), url("https://fonts.gstatic.com/s/spectral/v4/rnCr-xNNww_2s0amA9M5knjsS_ul.woff2") format("woff2"), url("https://fonts.gstatic.com/s/spectral/v4/rnCr-xNNww_2s0amA9M5kn0.ttf") format("truetype")',
-          unicodeRange:
-            "U0000-00ff, U0131, U0152-0153, U02bb-02bc, U02c6, U02da, U02dc, U2000-206f, U2074, U20ac, U2122, U2191, U2193, U2212, U2215, UFEFF, UFFFD"
-        }
-      },
-      {
-        "@font-face": {
-          fontFamily: "Spectral",
-          fontStyle: "normal",
-          fontWeight: "600",
-          src:
-            'local("Spectral SemiBold"), local("Spectral-SemiBold"), url("https://fonts.gstatic.com/s/spectral/v4/rnCs-xNNww_2s0amA9vmtm3BafaPWnII.woff2") format("woff2"), url("https://fonts.gstatic.com/s/spectral/v4/rnCs-xNNww_2s0amA9vmtm3BafM.ttf") format("truetype")',
-          unicodeRange:
-            "U0000-00ff, U0131, U0152-0153, U02bb-02bc, U02c6, U02da, U02dc, U2000-206f, U2074, U20ac, U2122, U2191, U2193, U2212, U2215, UFEFF, UFFFD"
-        }
-      },
-      {
         html: {
-          height: "100%"
+          height: "100%",
+          fontFamily: "serif",
+
+          "&.fonts-loaded": {
+            fontFamily: "Spectral"
+          }
         },
 
         "#___gatsby": {
@@ -44,7 +27,6 @@ const Reset = () => (
         },
 
         body: {
-          fontFamily: '"Spectral", serif',
           fontSize: 16,
           fontWeight: "400",
           height: "100%",
@@ -83,16 +65,27 @@ const Spectral600 = new FontFaceObserver("Spectral", {
   weight: 600
 });
 
+const fontUrl = "https://fonts.googleapis.com/css?family=Spectral:400,600";
+
 export default ({ children }) => {
   useEffect(() => {
-    Promise.all([Spectral400.load(), Spectral600.load()]).catch();
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = fontUrl;
+    document.head.appendChild(link);
+
+    Promise.all([Spectral400.load(), Spectral600.load()])
+      .then(() => {
+        document.documentElement.classList.add("fonts-loaded");
+      })
+      .catch();
   }, []);
 
   return (
     <>
       <Helmet>
         <html lang="fi" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href={fontUrl} rel="preload" as="style" crossorigin="anonymous" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/icon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
