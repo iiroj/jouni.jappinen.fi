@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.21.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.21.0...v8.21.1) (2019-04-22)
+
+
+### Bug Fixes
+
+* add Google Fonts to style-src ([eb54189](https://github.com/iiroj/jouni.jappinen.fi/commit/eb54189))
+
+
+
 # [8.21.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.20.2...v8.21.0) (2019-04-22)
 
 
