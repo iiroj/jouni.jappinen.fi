@@ -1,8 +1,5 @@
 .cache
 .env
-.terraform
 node_modules
 public
 sketch
-terraform*
-*.zip
