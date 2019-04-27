@@ -15,23 +15,6 @@ resource "aws_lambda_function" "headers" {
   publish          = "true"
 }
 
-data "archive_file" "cloudfront_urls" {
-    type        = "zip"
-    source_dir  = "../lambda/cloudfront_urls"
-    output_path = "../lambda/cloudfront_urls.zip"
-}
-
-resource "aws_lambda_function" "urls" {
-  provider    = "aws.useast1"
-  filename         = "../lambda/cloudfront_urls.zip"
-  function_name    = "cloudfront_urls_jouni-jappinen-fi"
-  role             = "${aws_iam_role.main.arn}"
-  handler          = "index.handler"
-  runtime          = "nodejs8.10"
-  source_code_hash = "${data.archive_file.cloudfront_urls.output_base64sha256}"
-  publish          = "true"
-}
-
 data "aws_iam_policy_document" "lambda-edge-role" {
   version = "2012-10-17"
 

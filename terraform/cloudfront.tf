@@ -52,11 +52,6 @@ resource "aws_cloudfront_distribution" "main" {
     max_ttl                = 31536000
 
     lambda_function_association {
-      event_type = "origin-request"
-      lambda_arn = "${aws_lambda_function.urls.arn}:${aws_lambda_function.urls.version}"
-    }
-
-    lambda_function_association {
       event_type = "viewer-response"
       lambda_arn = "${aws_lambda_function.headers.arn}:${aws_lambda_function.headers.version}"
     }
