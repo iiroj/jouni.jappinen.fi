@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [8.22.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.21.3...v8.22.0) (2019-05-01)
+
+
+### Features
+
+* deploy to Netlify ([bf5c9e4](https://github.com/iiroj/jouni.jappinen.fi/commit/bf5c9e4))
+
+
+
 ## [8.21.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.21.2...v8.21.3) (2019-04-28)
 
 
