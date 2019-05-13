@@ -1,6 +1,10 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+### [8.22.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.22.0...v8.22.1) (2019-05-13)
+
+
 
 # [8.22.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.21.3...v8.22.0) (2019-05-01)
 
