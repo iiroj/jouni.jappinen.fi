@@ -85,7 +85,7 @@ export default ({ children }) => {
     <>
       <Helmet>
         <html lang="fi" />
-        <link href={fontUrl} rel="preload" as="style" crossorigin="anonymous" />
+        <link href={fontUrl} rel="preload" as="style" crossOrigin="anonymous" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="apple-touch-icon" href="/icon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
