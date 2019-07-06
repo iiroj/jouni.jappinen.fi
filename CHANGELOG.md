@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.22.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.22.2...v8.22.3) (2019-07-06)
+
+
+### Bug Fixes
+
+* upgrade packages and replace eslint plugins ([3831739](https://github.com/iiroj/jouni.jappinen.fi/commit/3831739))
+* use correct camel-cased property ([b8474e4](https://github.com/iiroj/jouni.jappinen.fi/commit/b8474e4))
+
+
+
 ### [8.22.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.22.1...v8.22.2) (2019-06-02)
 
 
