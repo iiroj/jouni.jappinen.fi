@@ -1,10 +1,25 @@
+parserOptions:
+  ecmaVersion: 6
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    jsx: true
+  sourceType: module
+
 extends:
-  - plugin:react-app/recommended
   - plugin:prettier/recommended
+  - plugin:react/recommended
   - prettier/react
 
 plugins:
+  - react-hooks
   - prettier
 
 rules:
-  react-app/jsx-a11y/accessible-emoji: off
+  react/display-name: off
+  react/prop-types: off
+  react-hooks/rules-of-hooks: "error"
+  react-hooks/exhaustive-deps: "warn"
+
+settings:
+  react:
+    version: "detect"
