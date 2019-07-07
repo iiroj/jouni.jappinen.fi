@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.22.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.22.3...v8.22.4) (2019-07-07)
+
+
+### Build System
+
+* add husky, commitlint and lint-staged ([54653a7](https://github.com/iiroj/jouni.jappinen.fi/commit/54653a7))
+* add missing parser to eslint config ([6e019df](https://github.com/iiroj/jouni.jappinen.fi/commit/6e019df))
+
+
+
 ### [8.22.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.22.2...v8.22.3) (2019-07-06)
 
 
