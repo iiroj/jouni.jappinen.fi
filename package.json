@@ -12,7 +12,7 @@
   "private": true,
   "scripts": {
     "start": "gatsby develop",
-    "lint": "eslint --ext .js,.ts,.tsx .",
+    "lint": "eslint .",
     "prebuild": "rimraf public",
     "build": "gatsby build",
     "version": "standard-version --no-verify"
