@@ -39,7 +39,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "fontfaceobserver": "^2.1.0",
-    "gatsby": "^2.13.4",
+    "gatsby": "^2.13.13",
     "gatsby-image": "^2.2.4",
     "gatsby-link": "^2.2.0",
     "polished": "^3.4.1",
@@ -60,15 +60,15 @@
     "eslint-plugin-react": "^7.14.2",
     "eslint-plugin-react-hooks": "^1.6.1",
     "gatsby-plugin-netlify": "^2.1.0",
-    "gatsby-plugin-sharp": "^2.2.2",
-    "gatsby-source-filesystem": "^2.1.2",
+    "gatsby-plugin-sharp": "^2.2.3",
+    "gatsby-source-filesystem": "^2.1.3",
     "gatsby-transformer-sharp": "^2.2.1",
     "husky": "^3.0.0",
-    "lint-staged": "^9.1.0",
+    "lint-staged": "^9.2.0",
     "prettier": "^1.18.2",
     "rimraf": "^2.6.3",
     "standard-version": "^6.0.1",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.3"
   },
   "keywords": [
     "gatsby",
