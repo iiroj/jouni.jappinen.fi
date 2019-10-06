@@ -1,4 +1,5 @@
 module.exports = {
+  target: "server",
   exportPathMap: async () => ({
     "/": { page: "/" },
     "/ikuiset-seprat": { page: "/ikuiset-seprat" },

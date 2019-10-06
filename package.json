@@ -13,9 +13,8 @@
   "scripts": {
     "dev": "next",
     "lint": "eslint .",
-    "prebuild": "rimraf public",
-    "build": "next build",
-    "postbuild": "next export",
+    "prebuild": "rimraf out",
+    "build": "next build && next export -o public",
     "version": "standard-version --no-verify"
   },
   "lint-staged": {
