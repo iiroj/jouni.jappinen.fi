@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.23.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.23.0...v8.23.1) (2019-10-06)
+
+
+### Bug Fixes
+
+* proper cache-control headers ([b3ef193](https://github.com/iiroj/jouni.jappinen.fi/commit/b3ef193))
+
 ## [8.23.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.22.7...v8.23.0) (2019-10-06)
 
 
