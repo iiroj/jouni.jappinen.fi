@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.23.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.22.7...v8.23.0) (2019-10-06)
+
+
+### Features
+
+* convert to next.js and now.sh ([cd2531d](https://github.com/iiroj/jouni.jappinen.fi/commit/cd2531d))
+
 ### [8.22.7](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.22.6...v8.22.7) (2019-08-27)
 
 ### [8.22.6](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.22.5...v8.22.6) (2019-08-08)
