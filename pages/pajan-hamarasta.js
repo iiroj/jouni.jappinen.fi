@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import Link from "gatsby-link";
+import Link from "next/link";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -9,7 +9,7 @@ const container = css({
 });
 
 const image = css({
-  background: "url(/pajan-hamarasta/cover.jpg)",
+  background: "url(/static/pajan-hamarasta/cover.jpg)",
   backgroundPosition: "50% 50%",
   backgroundSize: "cover",
   height: "25vh"
@@ -132,7 +132,9 @@ const Pajanhamarasta = () => (
     <footer css={footer}>
       <p>Jouni Jäppinen</p>
       <p>ISBN-978-952-93-4250-1</p>
-      <Link to="/">Takaisin</Link>
+      <Link href="/">
+        <a>Takaisin</a>
+      </Link>
     </footer>
   </main>
 );

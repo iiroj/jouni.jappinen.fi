@@ -1,7 +1,5 @@
 import { css } from "@emotion/core";
-import { graphql } from "gatsby";
-import Img from "gatsby-image";
-import Link from "gatsby-link";
+import Link from "next/link";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -11,7 +9,11 @@ import ComingSoon from "../components/ComingSoon";
 const imageContainer = css({
   display: "flex",
   justifyContent: "center",
-  padding: "4rem 0 2rem"
+  padding: "4rem 0 2rem",
+
+  img: {
+    height: 300
+  }
 });
 
 const header = css({
@@ -73,7 +75,7 @@ export default ({ data }) => (
 
     <header css={header}>
       <figure css={imageContainer}>
-        <Img alt="Rautakymi" fixed={data.file.childImageSharp.fixed} />
+        <img alt="Rautakymi" src="/static/rautakymi-book-cover.png" />
       </figure>
 
       <h1>Rauta&shy;kymi</h1>
@@ -118,19 +120,9 @@ export default ({ data }) => (
 
     <footer css={footer}>
       <p>Jouni Jäppinen</p>
-      <Link to="/">Takaisin</Link>
+      <Link href="/">
+        <a>Takaisin</a>
+      </Link>
     </footer>
   </>
 );
-
-export const query = graphql`
-  query {
-    file(relativePath: { eq: "rautakymi-book-cover.png" }) {
-      childImageSharp {
-        fixed(height: 300) {
-          ...GatsbyImageSharpFixed_withWebp
-        }
-      }
-    }
-  }
-`;

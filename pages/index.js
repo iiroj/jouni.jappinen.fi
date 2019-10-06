@@ -1,7 +1,5 @@
 import { css } from "@emotion/core";
-import { graphql } from "gatsby";
-import Img from "gatsby-image";
-import Link from "gatsby-link";
+import Link from "next/link";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -31,6 +29,8 @@ const minWidth = args => styleObject => ({
 const tabletSize = minWidth(BREAKPOINT);
 
 const headerStyles = css({
+  backgroundImage: "url(/static/sokerikko.jpg)",
+  backgroundSize: "cover",
   color: "white",
   overflowY: "hidden",
   position: "relative",
@@ -59,12 +59,6 @@ const headingStyles = css({
     position: "fixed",
     transform: "translateY(-100%)"
   })
-});
-
-const sokerikkoStyles = css({
-  height: "100%",
-  width: "100%",
-  zIndex: -1
 });
 
 const captionStyles = css({
@@ -149,29 +143,27 @@ const projectStyles = css({
   }
 });
 
-const rautakymiBookImageStyles = css({
-  maxHeight: "100%"
-});
-
 const rautakymiBookStyles = css(projectStyles, {
-  backgroundColor: rautakymi.colors.darkRed
+  backgroundColor: rautakymi.colors.darkRed,
+  backgroundImage: "url(/static/rautakymi-book-cover.png)",
+  backgroundSize: "cover"
 });
 
 const pajanHamarastaStyles = css(projectStyles, {
-  backgroundImage: "url(/pajan-hamarasta.jpg)"
+  backgroundImage: "url(/static/pajan-hamarasta.jpg)"
 });
 
 const ikuisetSepratStyles = css(projectStyles, {
-  backgroundImage: "url(/ikuiset-seprat.jpg)",
+  backgroundImage: "url(/static/ikuiset-seprat.jpg)",
   backgroundPosition: "center"
 });
 
 const rautakymiSiteStyles = css(projectStyles, {
-  backgroundImage: "url(/rautakymi.jpg)"
+  backgroundImage: "url(/static/rautakymi.jpg)"
 });
 
 const lovartStyles = css(projectStyles, {
-  backgroundImage: "url(/lovart.jpg)"
+  backgroundImage: "url(/static/lovart.jpg)"
 });
 
 const articlesStyles = css({
@@ -217,23 +209,23 @@ const coverStyles = css({
 });
 
 const viirankoski = css(coverStyles, {
-  backgroundImage: "url(/viirankosken-vyokoukku-thumbnail.jpg)"
+  backgroundImage: "url(/static/viirankosken-vyokoukku-thumbnail.jpg)"
 });
 
 const rautakuona = css(coverStyles, {
-  backgroundImage: "url(/rautakymi-thumbnail.jpg)"
+  backgroundImage: "url(/static/rautakymi-thumbnail.jpg)"
 });
 
 const tammijarvi = css(coverStyles, {
-  backgroundImage: "url(/tammijarvi-thumbnail.jpg)"
+  backgroundImage: "url(/static/tammijarvi-thumbnail.jpg)"
 });
 
 const straka = css(coverStyles, {
-  backgroundImage: "url(/straka-thumbnail.jpg)"
+  backgroundImage: "url(/static/straka-thumbnail.jpg)"
 });
 
 const anttijappinen = css(coverStyles, {
-  backgroundImage: "url(/antti-jappinen-thumbnail.jpg)",
+  backgroundImage: "url(/static/antti-jappinen-thumbnail.jpg)",
   backgroundSize: "cover"
 });
 
@@ -257,14 +249,6 @@ export default ({ data }) => (
     </Helmet>
 
     <header css={headerStyles}>
-      <Img
-        alt="Sokerikko"
-        backgroundColor="black"
-        css={sokerikkoStyles}
-        fluid={data.sokerikko.childImageSharp.fluid}
-        style={{ position: "absolute" }}
-      />
-
       <div css={headingStyles}>
         <h1>Jouni Jäppinen</h1>
         <h2>Taiteilija ja kultaseppä</h2>
@@ -300,45 +284,45 @@ export default ({ data }) => (
 
       <ul css={projectsStyles}>
         <li>
-          <Link to="/rautakymi/">
-            <article css={rautakymiBookStyles}>
-              <Img
-                alt="Rautakymi"
-                css={rautakymiBookImageStyles}
-                fixed={data.rautakymiBook.childImageSharp.fixed}
-              />
-
-              <ComingSoon />
-              <div css={headingStyles}>
-                <h1>Rautakymi</h1>
-                <h2>Asumattoman eräalueen myytti</h2>
-              </div>
-            </article>
+          <Link href="/rautakymi">
+            <a>
+              <article css={rautakymiBookStyles}>
+                <ComingSoon />
+                <div css={headingStyles}>
+                  <h1>Rautakymi</h1>
+                  <h2>Asumattoman eräalueen myytti</h2>
+                </div>
+              </article>
+            </a>
           </Link>
         </li>
 
         <li>
-          <Link to="/pajan-hamarasta/">
-            <article css={pajanHamarastaStyles}>
-              <div css={headingStyles}>
-                <h1>Pajan hämärästä</h1>
-                <h2>Sepän kulttuurihistoriaa</h2>
-              </div>
-            </article>
+          <Link href="/pajan-hamarasta">
+            <a>
+              <article css={pajanHamarastaStyles}>
+                <div css={headingStyles}>
+                  <h1>Pajan hämärästä</h1>
+                  <h2>Sepän kulttuurihistoriaa</h2>
+                </div>
+              </article>
+            </a>
           </Link>
         </li>
 
         <li typeof="Book">
-          <Link to="/ikuiset-seprat/">
-            <article css={ikuisetSepratStyles}>
-              <div css={headingStyles}>
-                <h1>Ikuiset seprat</h1>
-                <h2>
-                  Tytärsaarelaisten ja virolaisten suhteet ennen toista
-                  maailmansotaa
-                </h2>
-              </div>
-            </article>
+          <Link href="/ikuiset-seprat">
+            <a>
+              <article css={ikuisetSepratStyles}>
+                <div css={headingStyles}>
+                  <h1>Ikuiset seprat</h1>
+                  <h2>
+                    Tytärsaarelaisten ja virolaisten suhteet ennen toista
+                    maailmansotaa
+                  </h2>
+                </div>
+              </article>
+            </a>
           </Link>
         </li>
 
@@ -474,23 +458,3 @@ export default ({ data }) => (
     </div>
   </>
 );
-
-export const query = graphql`
-  query {
-    sokerikko: file(relativePath: { eq: "sokerikko.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1920) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-
-    rautakymiBook: file(relativePath: { eq: "rautakymi-book-cover.png" }) {
-      childImageSharp {
-        fixed(height: 300) {
-          ...GatsbyImageSharpFixed_withWebp
-        }
-      }
-    }
-  }
-`;

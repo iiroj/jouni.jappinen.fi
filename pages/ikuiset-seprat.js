@@ -1,5 +1,5 @@
 import { css } from "@emotion/core";
-import Link from "gatsby-link";
+import Link from "next/link";
 import React from "react";
 import { Helmet } from "react-helmet-async";
 
@@ -8,7 +8,7 @@ const container = css({
 });
 
 const image = css({
-  background: "url(/ikuiset-seprat/cover.jpg)",
+  background: "url(/static/ikuiset-seprat/cover.jpg)",
   backgroundPosition: "50% 75%",
   backgroundSize: "cover",
   height: "25vh"
@@ -133,7 +133,7 @@ const Ikuisetseprat = () => (
       Lue kirja-arvostelu (Kymen Sanomat)
     </a>
 
-    <a css={link} href="/ikuiset_seprat_arvostelu.pdf">
+    <a css={link} href="/static/ikuiset_seprat_arvostelu.pdf">
       Lue kirja-arvostelu (Tuglas-seura)
     </a>
 
@@ -148,7 +148,9 @@ const Ikuisetseprat = () => (
     <footer css={footer}>
       <p>Jouni Jäppinen</p>
       <p>ISBN 978-952-93-7131-0</p>
-      <Link to="/">Takaisin</Link>
+      <Link href="/">
+        <a>Takaisin</a>
+      </Link>
     </footer>
   </main>
 );
