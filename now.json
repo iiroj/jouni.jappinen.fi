@@ -19,19 +19,11 @@
       "continue": true
     },
     {
-      "src": "/static/(.*)",
-      "headers": {
-        "Cache-Control": "public,immutable,max-age=31536000"
-      },
-      "dest": "/static/$1",
-      "continue": true
-    },
-    {
-      "src": "/*.(jpg|png|svg|site.webmanifest)$",
+      "src": "/(static|next)/(.*)",
       "headers": {
         "Cache-Control": "public,max-age=2592000"
       },
-      "dest": "/$1"
+      "dest": "/static/$1"
     }
   ]
 }
