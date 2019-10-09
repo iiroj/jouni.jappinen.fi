@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.24.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.23.1...v8.24.0) (2019-10-09)
+
+
+### Features
+
+* **deps:** update to Next.js 9.1 ([e968b68](https://github.com/iiroj/jouni.jappinen.fi/commit/e968b68))
+
 ### [8.23.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.23.0...v8.23.1) (2019-10-06)
 
 
