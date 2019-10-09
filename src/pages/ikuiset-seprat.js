@@ -8,7 +8,7 @@ const container = css({
 });
 
 const image = css({
-  background: "url(/static/ikuiset-seprat/cover.jpg)",
+  background: "url(/ikuiset-seprat/cover.jpg)",
   backgroundPosition: "50% 75%",
   backgroundSize: "cover",
   height: "25vh"
@@ -133,7 +133,7 @@ const Ikuisetseprat = () => (
       Lue kirja-arvostelu (Kymen Sanomat)
     </a>
 
-    <a css={link} href="/static/ikuiset_seprat_arvostelu.pdf">
+    <a css={link} href="/ikuiset_seprat_arvostelu.pdf">
       Lue kirja-arvostelu (Tuglas-seura)
     </a>
 

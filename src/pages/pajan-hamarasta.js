@@ -9,7 +9,7 @@ const container = css({
 });
 
 const image = css({
-  background: "url(/static/pajan-hamarasta/cover.jpg)",
+  background: "url(/pajan-hamarasta/cover.jpg)",
   backgroundPosition: "50% 50%",
   backgroundSize: "cover",
   height: "25vh"

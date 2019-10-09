@@ -14,7 +14,7 @@
     "dev": "next",
     "lint": "eslint .",
     "prebuild": "rimraf out",
-    "build": "next build && next export -o public",
+    "build": "next build && next export",
     "version": "standard-version --no-verify"
   },
   "lint-staged": {
@@ -39,7 +39,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.21",
     "fontfaceobserver": "^2.1.0",
-    "next": "9.0.8",
+    "next": "9.1.1",
     "polished": "^3.4.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
@@ -58,7 +58,7 @@
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.1.2",
     "husky": "^3.0.8",
-    "lint-staged": "^9.4.1",
+    "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
     "rimraf": "^3.0.0",
     "standard-version": "^7.0.0"

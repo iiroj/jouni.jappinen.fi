@@ -75,7 +75,7 @@ export default ({ data }) => (
 
     <header css={header}>
       <figure css={imageContainer}>
-        <img alt="Rautakymi" src="/static/rautakymi-book-cover.png" />
+        <img alt="Rautakymi" src="/rautakymi-book-cover.png" />
       </figure>
 
       <h1>Rauta&shy;kymi</h1>
