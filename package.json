@@ -62,8 +62,6 @@
     "standard-version": "^7.0.0"
   },
   "keywords": [
-    "gatsby",
-    "gatsbyJS",
     "react",
     "serverless",
     "static-site"
