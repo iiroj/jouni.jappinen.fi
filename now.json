@@ -23,6 +23,14 @@
       "dest": "/$1"
     },
     {
+      "src": "/_next/static/(.*)",
+      "headers": {
+        "Cache-Control": "public,immutable,max-age=31536000,stale-while-revalidate"
+      },
+      "dest": "/_next/static/$1",
+      "continue": true
+    },
+    {
       "src": "/*.(jpg|png|svg|site.webmanifest)$",
       "headers": {
         "Cache-Control": "public,max-age=2592000,stale-while-revalidate"
