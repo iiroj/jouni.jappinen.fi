@@ -29,7 +29,7 @@ const minWidth = args => styleObject => ({
 const tabletSize = minWidth(BREAKPOINT);
 
 const headerStyles = css({
-  backgroundImage: "url(/static/sokerikko.jpg)",
+  backgroundImage: "url(/sokerikko.jpg)",
   backgroundSize: "cover",
   color: "white",
   overflowY: "hidden",
@@ -145,25 +145,25 @@ const projectStyles = css({
 
 const rautakymiBookStyles = css(projectStyles, {
   backgroundColor: rautakymi.colors.darkRed,
-  backgroundImage: "url(/static/rautakymi-book-cover.png)",
+  backgroundImage: "url(/rautakymi-book-cover.png)",
   backgroundSize: "cover"
 });
 
 const pajanHamarastaStyles = css(projectStyles, {
-  backgroundImage: "url(/static/pajan-hamarasta.jpg)"
+  backgroundImage: "url(/pajan-hamarasta.jpg)"
 });
 
 const ikuisetSepratStyles = css(projectStyles, {
-  backgroundImage: "url(/static/ikuiset-seprat.jpg)",
+  backgroundImage: "url(/ikuiset-seprat.jpg)",
   backgroundPosition: "center"
 });
 
 const rautakymiSiteStyles = css(projectStyles, {
-  backgroundImage: "url(/static/rautakymi.jpg)"
+  backgroundImage: "url(/rautakymi.jpg)"
 });
 
 const lovartStyles = css(projectStyles, {
-  backgroundImage: "url(/static/lovart.jpg)"
+  backgroundImage: "url(/lovart.jpg)"
 });
 
 const articlesStyles = css({
@@ -209,23 +209,23 @@ const coverStyles = css({
 });
 
 const viirankoski = css(coverStyles, {
-  backgroundImage: "url(/static/viirankosken-vyokoukku-thumbnail.jpg)"
+  backgroundImage: "url(/viirankosken-vyokoukku-thumbnail.jpg)"
 });
 
 const rautakuona = css(coverStyles, {
-  backgroundImage: "url(/static/rautakymi-thumbnail.jpg)"
+  backgroundImage: "url(/rautakymi-thumbnail.jpg)"
 });
 
 const tammijarvi = css(coverStyles, {
-  backgroundImage: "url(/static/tammijarvi-thumbnail.jpg)"
+  backgroundImage: "url(/tammijarvi-thumbnail.jpg)"
 });
 
 const straka = css(coverStyles, {
-  backgroundImage: "url(/static/straka-thumbnail.jpg)"
+  backgroundImage: "url(/straka-thumbnail.jpg)"
 });
 
 const anttijappinen = css(coverStyles, {
-  backgroundImage: "url(/static/antti-jappinen-thumbnail.jpg)",
+  backgroundImage: "url(/antti-jappinen-thumbnail.jpg)",
   backgroundSize: "cover"
 });
 
