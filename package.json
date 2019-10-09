@@ -13,8 +13,7 @@
   "scripts": {
     "dev": "next",
     "lint": "eslint .",
-    "prebuild": "rimraf out",
-    "build": "next build && next export",
+    "build": "next build",
     "version": "standard-version --no-verify"
   },
   "lint-staged": {
@@ -60,7 +59,6 @@
     "husky": "^3.0.8",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
-    "rimraf": "^3.0.0",
     "standard-version": "^7.0.0"
   },
   "keywords": [
