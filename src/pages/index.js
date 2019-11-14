@@ -28,14 +28,22 @@ const minWidth = args => styleObject => ({
 });
 const tabletSize = minWidth(BREAKPOINT);
 
+const sormusBase64 =
+  "url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAYGBgYHBgcICAcKCwoLCg8ODAwODxYQERAREBYiFRkVFRkVIh4kHhweJB42KiYmKjY+NDI0PkxERExfWl98fKcBBgYGBgcGBwgIBwoLCgsKDw4MDA4PFhAREBEQFiIVGRUVGRUiHiQeHB4kHjYqJiYqNj40MjQ+TERETF9aX3x8p//CABEIADcATwMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcEBQECAwj/2gAIAQEAAAAA+VAAM/BOAXlBd3i1sC5KekM8p8G1lOwgWuA9+vkAA//EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAgBAhAAAAADOpSUD//EABUBAQEAAAAAAAAAAAAAAAAAAAAD/9oACAEDEAAAAAEqgA//xAAqEAACAgIBAgQFBQAAAAAAAAABAgMEBREGACESEzAxBxQgQVEiMmWBs//aAAgBAQABPwD1auPlsxTSiSJEjRmJdwNlRvQHvs+w9Lg2MgfgWSywcx2sfYvSwsuu7pBE6b6i5tIbbWrmKpWpXZWd5U8wsyjWyJfGOsFlOL5nNYyjbwEa/MW44e2tMZn8Oz5Pk6118UKEtDOU67+HwimTEFjSMCMzy60sYUfXwfPVq/DsrQsQbi+e3K5cIjrZjCmH87KxN06FHZDrakjsQR2/BHXDjrl3HD/K1P8AUdfGx4jyyqiSKTHjYlcA90Jd20frxOQWlPKJYw9eePyrC67mPxB9qfsylQR1d4JlnQWsXE+TqSd4rFNDMCPxIqbMbjfdW6xvHRxSbH57OzqhgMNmrj0Ypank/fGCHX9Ef3Z+srlLuXyNm/dl8yed/E7ehXs2asyzV55IpF3p42KsN9jojqWaaZzJLIzufdmJJP8AZ9f/xAAaEQEAAgMBAAAAAAAAAAAAAAABABECIDAx/9oACAECAQE/ANslCyXDw6f/xAAdEQABAgcAAAAAAAAAAAAAAAABAAISEyAhMGGB/9oACAEDAQE/AKoQ6xUlmx05f//Z')";
+const sormus = "url(sormus.jpg)";
+const sormus2x = "url(sormus@2x.jpg)";
+
 const headerStyles = css({
-  backgroundImage: "url(/sokerikko.jpg)",
+  backgroundImage: `${sormus}, ${sormusBase64}`,
   backgroundSize: "cover",
+  backgroundPosition: "0% 50%",
   color: "white",
   overflowY: "hidden",
   position: "relative",
 
   ...tabletSize({
+    backgroundImage: `${sormus2x},${sormus}, ${sormusBase64}`,
+    backgroundPosition: "33% 50%",
     height: "100%",
     position: "fixed",
     top: 0,
@@ -254,12 +262,18 @@ export default ({ data }) => (
         <h2>Taiteilija ja kultaseppä</h2>
       </div>
 
-      <aside css={captionStyles}>
-        <p>
-          Image: Sugar cup, cast iron, sterling silver. Finnish Design 8
-          exhibition at Helsinki Design Museum 1991
-        </p>
-      </aside>
+      <figure css={captionStyles}>
+        <figcaption>
+          <p>
+            Image: Ring, sterling silver & colored titanium. Made in single
+            pieces at the Strömfors atelier from 1986 to1991.
+          </p>
+          <p>
+            The Alice and Louis Koch Collection exhibition in Swiss National
+            Museum Zurich, Switzerland
+          </p>
+        </figcaption>
+      </figure>
     </header>
 
     <div css={mainStyles}>
