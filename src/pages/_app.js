@@ -1,26 +1,18 @@
-import NextApp, { Container } from "next/app";
 import { HelmetProvider } from "react-helmet-async";
 import React from "react";
 
 import Layout from "../components/Layout";
 
-export default class App extends NextApp {
-  constructor(props) {
-    super(props);
-    this.helmetContext = {};
-  }
+const App = ({ Component, pageProps }) => {
+  const helmet = React.useRef({});
 
-  render() {
-    const { Component } = this.props;
+  return (
+    <HelmetProvider context={helmet.current}>
+      <Layout>
+        <Component {...pageProps} helmetContext={helmet.current} />
+      </Layout>
+    </HelmetProvider>
+  );
+};
 
-    return (
-      <Container>
-        <HelmetProvider context={this.helmetContext}>
-          <Layout>
-            <Component helmetContext={this.helmetContext} />
-          </Layout>
-        </HelmetProvider>
-      </Container>
-    );
-  }
-}
+export default App;

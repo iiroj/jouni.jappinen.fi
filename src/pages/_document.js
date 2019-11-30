@@ -6,8 +6,8 @@ export default class Document extends NextDocument {
     let helmetContext;
 
     const page = ctx.renderPage({
-      enhanceApp: App => props => {
-        const app = new App(props);
+      enhanceApp: component => props => {
+        const app = component(props);
         helmetContext = app.helmetContext;
         return app;
       },
