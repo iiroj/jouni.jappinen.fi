@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.26.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.25.1...v8.26.0) (2019-11-30)
+
+
+### Features
+
+* remove FontFaceObserver and use font-display: swap ([44189e1](https://github.com/iiroj/jouni.jappinen.fi/commit/44189e1b4f45a28eaefae8a26debecedf4451f59))
+
 ### [8.25.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.25.0...v8.25.1) (2019-11-30)
 
 ## [8.25.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.24.2...v8.25.0) (2019-11-14)
