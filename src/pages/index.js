@@ -341,7 +341,10 @@ export default ({ data }) => (
         </li>
 
         <li>
-          <a href="https://www.rautakymi.fi">
+          <a
+            href="https://www.academia.edu/11170585/Talonpoikia_seppiä_lohiylimyksiä"
+            rel="external crossorigin prefetch"
+          >
             <article css={rautakymiSiteStyles}>
               <div css={headingStyles}>
                 <h1>Talonpoikia, seppiä, lohiylimyksiä</h1>
