@@ -5,4 +5,4 @@
 [![devDependencies](https://img.shields.io/david/dev/iiroj/jouni.jappinen.fi.svg)](https://github.com/iiroj/jouni.jappinen.fi/blob/master/package.json)
 [![license](https://img.shields.io/github/license/iiroj/jouni.jappinen.fi.svg)](https://github.com/iiroj/jouni.jappinen.fi/blob/master/LICENSE)
 
-A static site built with [GatsbyJS](https://www.gatsbyjs.org), available at [jouni.jappinen.fi](https://jouni.jappinen.fi).
+A static site available at [jouni.jappinen.fi](https://jouni.jappinen.fi).
