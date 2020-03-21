@@ -18,7 +18,7 @@
     "check": "npm run lint && npm run build"
   },
   "lint-staged": {
-    "*.js": "npm run lint"
+    "*.js": "eslint"
   },
   "commitlint": {
     "extends": [
