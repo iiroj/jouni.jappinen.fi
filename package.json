@@ -14,7 +14,8 @@
     "dev": "next",
     "lint": "eslint .",
     "build": "next build",
-    "version": "standard-version --no-verify"
+    "version": "standard-version --no-verify",
+    "check": "npm run lint && npm run build"
   },
   "lint-staged": {
     "*.js": "npm run lint"
@@ -27,12 +28,13 @@
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run check"
     }
   },
   "standard-version": {
     "scripts": {
-      "prerelease": "npm run lint && npm run build"
+      "prerelease": "npm run check"
     }
   },
   "dependencies": {
