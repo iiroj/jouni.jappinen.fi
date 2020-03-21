@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.27.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.26.5...v8.27.0) (2020-03-21)
+
+
+### Features
+
+* no longer bumb version for dependencies, add pre-push hook ([781497e](https://github.com/iiroj/jouni.jappinen.fi/commit/781497e5b8cbbff2d866a218bc9a118d0c26792c))
+
 ### [8.26.5](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.26.4...v8.26.5) (2020-03-21)
 
 ### [8.26.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.26.3...v8.26.4) (2020-03-10)
