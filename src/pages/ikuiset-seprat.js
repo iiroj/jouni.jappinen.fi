@@ -4,14 +4,14 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 
 const container = css({
-  backgroundColor: "rgb(219, 219, 219)"
+  backgroundColor: "rgb(219, 219, 219)",
 });
 
 const image = css({
   background: "url(/ikuiset-seprat/cover.jpg)",
   backgroundPosition: "50% 75%",
   backgroundSize: "cover",
-  height: "25vh"
+  height: "25vh",
 });
 
 const header = css({
@@ -24,8 +24,8 @@ const header = css({
   h1: {
     fontSize: "1.5rem",
     fontWeight: 600,
-    lineHeight: "1.5rem"
-  }
+    lineHeight: "1.5rem",
+  },
 });
 
 const section = css({
@@ -34,8 +34,8 @@ const section = css({
   p: {
     margin: "0 auto 1rem auto",
     maxWidth: "50rem",
-    padding: "0 1rem"
-  }
+    padding: "0 1rem",
+  },
 });
 
 const link = css({
@@ -48,8 +48,8 @@ const link = css({
   textDecoration: "none",
 
   "&:hover": {
-    backgroundColor: "rgba(0, 0, 0, 0.1)"
-  }
+    backgroundColor: "rgba(0, 0, 0, 0.1)",
+  },
 });
 
 const footer = css({
@@ -59,8 +59,8 @@ const footer = css({
   textAlign: "center",
 
   p: {
-    marginBottom: "0.5rem"
-  }
+    marginBottom: "0.5rem",
+  },
 });
 
 const Ikuisetseprat = () => (

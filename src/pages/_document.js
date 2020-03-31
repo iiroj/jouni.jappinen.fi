@@ -2,16 +2,16 @@ import React from "react";
 import NextDocument, { Head, Main, NextScript } from "next/document";
 
 export default class Document extends NextDocument {
-  static getInitialProps = async ctx => {
+  static getInitialProps = async (ctx) => {
     let helmetContext;
 
     const page = ctx.renderPage({
-      enhanceApp: component => props => {
+      enhanceApp: (component) => (props) => {
         const app = component(props);
         helmetContext = app.helmetContext;
         return app;
       },
-      enhancePage: Page => page
+      enhancePage: (Page) => page,
     });
 
     return { ...page, helmetContext };

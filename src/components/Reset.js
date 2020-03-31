@@ -7,15 +7,15 @@ const Reset = () => (
       {
         html: {
           height: "100%",
-          fontFamily: "Spectral"
+          fontFamily: "Spectral",
         },
 
         "#___gatsby": {
           height: "100%",
 
           "> div": {
-            height: "100%"
-          }
+            height: "100%",
+          },
         },
 
         body: {
@@ -23,12 +23,12 @@ const Reset = () => (
           fontWeight: "400",
           height: "100%",
           lineHeight: "1.5rem",
-          margin: 0
+          margin: 0,
         },
 
         a: {
           color: "inherit",
-          textDecoration: "inherit"
+          textDecoration: "inherit",
         },
 
         "*": {
@@ -36,13 +36,13 @@ const Reset = () => (
           fontSize: "inherit",
           fontWeight: "inherit",
           margin: 0,
-          padding: 0
+          padding: 0,
         },
 
         ul: {
-          listStyle: "none"
-        }
-      }
+          listStyle: "none",
+        },
+      },
     ]}
   />
 );

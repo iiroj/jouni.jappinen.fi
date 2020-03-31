@@ -17,14 +17,14 @@ const microdata = JSON.stringify({
   address: {
     "@type": "PostalAddress",
     addressCountry: "Finland",
-    addressLocality: "Loviisa"
+    addressLocality: "Loviisa",
   },
-  alumniOf: "Turun yliopisto"
+  alumniOf: "Turun yliopisto",
 });
 
 const BREAKPOINT = "1023px";
-const minWidth = args => styleObject => ({
-  [`@media (min-width: ${args})`]: styleObject
+const minWidth = (args) => (styleObject) => ({
+  [`@media (min-width: ${args})`]: styleObject,
 });
 const tabletSize = minWidth(BREAKPOINT);
 
@@ -47,8 +47,8 @@ const headerStyles = css({
     height: "100%",
     position: "fixed",
     top: 0,
-    width: "50%"
-  })
+    width: "50%",
+  }),
 });
 
 const headingStyles = css({
@@ -59,14 +59,14 @@ const headingStyles = css({
   h1: {
     fontSize: "1.5rem",
     fontWeight: 600,
-    lineHeight: "1.5rem"
+    lineHeight: "1.5rem",
   },
 
   ...tabletSize({
     padding: 0,
     position: "fixed",
-    transform: "translateY(-100%)"
-  })
+    transform: "translateY(-100%)",
+  }),
 });
 
 const captionStyles = css({
@@ -77,8 +77,8 @@ const captionStyles = css({
   margin: "0.5rem",
 
   ...tabletSize({
-    position: "absolute"
-  })
+    position: "absolute",
+  }),
 });
 
 const mainStyles = css({
@@ -86,8 +86,8 @@ const mainStyles = css({
 
   ...tabletSize({
     marginLeft: "50%",
-    width: "50%"
-  })
+    width: "50%",
+  }),
 });
 
 const aboutStyles = css({
@@ -96,8 +96,8 @@ const aboutStyles = css({
   padding: "0 1rem",
 
   "p + p": {
-    marginTop: "0.5rem"
-  }
+    marginTop: "0.5rem",
+  },
 });
 
 const projectsStyles = css({
@@ -115,15 +115,15 @@ const projectsStyles = css({
       width: "50%",
 
       "&:first-child": {
-        width: "100%"
-      }
+        width: "100%",
+      },
     }),
 
     "&:hover article": {
       transform: "scale(0.95)",
-      transformOrigin: "50% 50%"
-    }
-  }
+      transformOrigin: "50% 50%",
+    },
+  },
 });
 
 const projectStyles = css({
@@ -146,32 +146,32 @@ const projectStyles = css({
 
     h1: {
       fontSize: "1.5rem",
-      fontWeight: 600
-    }
-  }
+      fontWeight: 600,
+    },
+  },
 });
 
 const rautakymiBookStyles = css(projectStyles, {
   backgroundColor: rautakymi.colors.darkRed,
   backgroundImage: "url(/rautakymi-book-cover.png)",
-  backgroundSize: "cover"
+  backgroundSize: "cover",
 });
 
 const pajanHamarastaStyles = css(projectStyles, {
-  backgroundImage: "url(/pajan-hamarasta.jpg)"
+  backgroundImage: "url(/pajan-hamarasta.jpg)",
 });
 
 const ikuisetSepratStyles = css(projectStyles, {
   backgroundImage: "url(/ikuiset-seprat.jpg)",
-  backgroundPosition: "center"
+  backgroundPosition: "center",
 });
 
 const rautakymiSiteStyles = css(projectStyles, {
-  backgroundImage: "url(/rautakymi.jpg)"
+  backgroundImage: "url(/rautakymi.jpg)",
 });
 
 const lovartStyles = css(projectStyles, {
-  backgroundImage: "url(/lovart.jpg)"
+  backgroundImage: "url(/lovart.jpg)",
 });
 
 const articlesStyles = css({
@@ -188,9 +188,9 @@ const articlesStyles = css({
 
     "&:hover article": {
       transform: "scale(0.95)",
-      transformOrigin: "50% 50%"
-    }
-  }
+      transformOrigin: "50% 50%",
+    },
+  },
 });
 
 const articleStyles = css({
@@ -203,8 +203,8 @@ const articleStyles = css({
 
   h1: {
     fontSize: "inherit",
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 });
 
 const coverStyles = css({
@@ -213,28 +213,28 @@ const coverStyles = css({
   height: 0,
   margin: "0 auto 1rem auto",
   paddingBottom: "106.67%",
-  width: "75%"
+  width: "75%",
 });
 
 const viirankoski = css(coverStyles, {
-  backgroundImage: "url(/viirankosken-vyokoukku-thumbnail.jpg)"
+  backgroundImage: "url(/viirankosken-vyokoukku-thumbnail.jpg)",
 });
 
 const rautakuona = css(coverStyles, {
-  backgroundImage: "url(/rautakymi-thumbnail.jpg)"
+  backgroundImage: "url(/rautakymi-thumbnail.jpg)",
 });
 
 const tammijarvi = css(coverStyles, {
-  backgroundImage: "url(/tammijarvi-thumbnail.jpg)"
+  backgroundImage: "url(/tammijarvi-thumbnail.jpg)",
 });
 
 const straka = css(coverStyles, {
-  backgroundImage: "url(/straka-thumbnail.jpg)"
+  backgroundImage: "url(/straka-thumbnail.jpg)",
 });
 
 const anttijappinen = css(coverStyles, {
   backgroundImage: "url(/antti-jappinen-thumbnail.jpg)",
-  backgroundSize: "cover"
+  backgroundSize: "cover",
 });
 
 const linksStyles = css({
@@ -245,8 +245,8 @@ const linksStyles = css({
   textDecoration: "none",
 
   "&:hover": {
-    backgroundColor: "rgba(0, 0, 0, 0.05)"
-  }
+    backgroundColor: "rgba(0, 0, 0, 0.05)",
+  },
 });
 
 export default ({ data }) => (

@@ -14,7 +14,7 @@ const comingSoon = css({
   position: "absolute",
   textTransform: "uppercase",
   top: 0,
-  transform: "translate(-0.5rem, 0.5rem)"
+  transform: "translate(-0.5rem, 0.5rem)",
 });
 
 export default () => (

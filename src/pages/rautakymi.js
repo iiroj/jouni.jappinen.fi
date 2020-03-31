@@ -12,8 +12,8 @@ const imageContainer = css({
   padding: "4rem 0 2rem",
 
   img: {
-    height: 300
-  }
+    height: 300,
+  },
 });
 
 const header = css({
@@ -27,7 +27,7 @@ const header = css({
   h1: {
     fontSize: "3rem",
     lineHeight: "3rem",
-    padding: "2rem"
+    padding: "2rem",
   },
 
   h2: {
@@ -35,8 +35,8 @@ const header = css({
     color: rautakymi.colors.brightRed,
     fontSize: "2rem",
     lineHeight: "2rem",
-    padding: "2rem"
-  }
+    padding: "2rem",
+  },
 });
 
 const section = css({
@@ -48,8 +48,8 @@ const section = css({
   p: {
     margin: "0 auto 1rem auto",
     maxWidth: "50rem",
-    padding: "0 1rem"
-  }
+    padding: "0 1rem",
+  },
 });
 
 const footer = css({
@@ -61,8 +61,8 @@ const footer = css({
   width: "100%",
 
   p: {
-    marginBottom: "0.5rem"
-  }
+    marginBottom: "0.5rem",
+  },
 });
 
 export default ({ data }) => (
