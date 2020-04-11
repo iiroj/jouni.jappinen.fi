@@ -11,7 +11,7 @@
   "bugs": "https://github.com/iiroj/jouni.jappinen.fi/issues",
   "private": true,
   "scripts": {
-    "dev": "next",
+    "start": "next",
     "lint": "eslint .",
     "build": "next build",
     "version": "standard-version --no-verify",
