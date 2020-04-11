@@ -43,12 +43,20 @@ const section = css({
   backgroundColor: rautakymi.colors.darkGrey,
   color: "white",
   flexGrow: 1,
+  lineHeight: 2.2,
   paddingBottom: "2rem",
+  textAlign: "justify",
 
   p: {
-    margin: "0 auto 1rem auto",
-    maxWidth: "50rem",
+    margin: "0 auto",
+    maxWidth: "44rem",
     padding: "0 1rem",
+
+    "&:not(:first-of-type)::before": {
+      content: "''",
+      display: "inline-block",
+      width: "4ch",
+    },
   },
 });
 
@@ -79,7 +87,7 @@ export default ({ data }) => (
       </figure>
 
       <h1>Rauta&shy;kymi</h1>
-      <h2>Asumattoman eräalueen myytti</h2>
+      <h2>Talonpoikia, Seppiä, Lohiylimyksiä</h2>
     </header>
 
     <section css={section}>
@@ -87,34 +95,28 @@ export default ({ data }) => (
         Ennen vuotta 1989 itäisen Uudenmaan ja Kymenlaakson rannikolta ei
         tunnettu montaakaan rautakautista asuinpaikkaa, tai hautaa ja
         irtolöydötkin oli laskettavissa yhden käden sormin. Löydöttömyyden
-        perusteella vakiintui vähitellen yli sata vuotta elänyt uskomus, jonka
-        mukaan itäinen Uusimaa ja Kymenlaakson rannikko ei olisi koskaan
-        kuulunut rautakautisen asutuksen piiriin. 1990-luvun lopulla tutkittiin
-        ensimmäiset roomalaisajan röykkiöhaudat Pyhtään Strukan kalmistossa,
-        josta alkaen varsinkin Kymijokilaakson rautakautisten ja keskiaikaisten
-        löytöjen määrä on lisääntynyt dramaattisesti.
+        perusteella alue ei ole kuulunut rannikon maanviljelysalueiden piiriin,
+        mutta tosin kuin on joskus väitetty, pysyvää asutusta jokilaaksoissa
+        näyttäisi olleen kivikaudelta lähtien kaikkina aikakausina. 1990-luvun
+        lopulla tutkittiin ensimmäiset roomalaisajan röykkiöhaudat Pyhtään
+        Strukan kalmistossa, josta alkaen varsinkin Kymijokilaakson
+        rautakautisten ja keskiaikaisten löytöjen määrä on lisääntynyt
+        dramaattisesti.
       </p>
-
       <p>
-        Kahden arkeologian harrastajan perustama Rautakymityöryhmä päätti
-        elokuussa 2010 tutkia Koskenkylä-Kotka moottoritien maastokäytävän
-        uudelleen ryhmän havaittua jo vuonna 2005 tehdyssä Museoviraston
-        arkeologisesessa inventoinnissa pahoja puutteita. Päätös oli kohtalokas,
-        sillä työryhmä löysi tielinjalta kaksi laajaa rautakautista ja
-        keskiaikaista asuinpaikkaa, joista vanhimmaksi on osoittautunut
-        moniperiodinen Viirankoski Loviisassa, kun taas Ahvenkosken
-        Haasianiemestä löytyneen lähes kilometrin pituisen muinaisen
-        satama-alueen tutkimustulokset viittaavat viikinkiaikaiseen ja
-        keskiaikaiseen asutukseen ja toimintaan. Molemmat kohteet tuhoutuivat
-        osittain moottoritien alle..
-      </p>
-
-      <p>
-        Myöhemmin työryhmä laajensi tutkimuksiaan kaikkiin jokilaaksoihin
-        Porvoon Ilolan ja Pyhtään Huutjärven välisellä alueella. Runsaasti
-        kuvitettu tietokirja luo katsauksen alueen tutkimushistoriaan, työryhmän
-        vuosina 2004–2018 löytämään arkeologiseen aineistoon, sekä
-        metallurgisten tutkimusten tuloksiin..
+        Kahden arkeologian harrastajan Rautakymityöryhmä päätti vuonna 2010
+        tutkia tulevan Koskenkylä-Kotka valtatien maastokäytävän uudelleen,
+        vaikka tielinjalle oli tehty virallinen arkeologinen inventointi jo
+        vuonna 2005. Päätös oli kohtalokas, sillä tielinjalta löytyi kaksi
+        laajaa arkeologista kohdetta. Loviisan Tesjoella sijaitseva Viirankoski
+        on osoittatunut rautakautiseksi asuinpaikaksi, kun taas Kymijoen suulta
+        Ahvenkosken Haasianiemestä löytyneen sataman ajoitustulokset viittaavat
+        viikinkiaikaiseen ja keskiaikaiseen toimintaan. Kumpikin kohde tuhoutui
+        osittain syksyllä 2014 valmistuneen valtatien alle. Työryhmä inventoi
+        Porvoon Ilolan ja Pyhtään Huutjärven välisiä jokilaaksoja kahdeksan
+        vuoden ajan. Runsaasti kuvitettu tietokirja luo katsauksen alueen
+        tutkimushistoriaan, ryhmän paikantamaan arkeologiseen aineistoon ja
+        muinaisjäännöksiin, sekä työryhmän tutkimusten tuloksiin.
       </p>
     </section>
 
