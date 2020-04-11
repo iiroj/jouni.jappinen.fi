@@ -304,7 +304,7 @@ export default ({ data }) => (
                 <ComingSoon />
                 <div css={headingStyles}>
                   <h1>Rautakymi</h1>
-                  <h2>Asumattoman eräalueen myytti</h2>
+                  <h2>Talonpoikia, Seppiä, Lohiylimyksiä</h2>
                 </div>
               </article>
             </a>
