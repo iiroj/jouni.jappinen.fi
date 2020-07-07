@@ -13,7 +13,7 @@
   "scripts": {
     "start": "next",
     "lint": "eslint .",
-    "build": "next build",
+    "build": "next build && next export -o dist",
     "version": "standard-version --no-verify",
     "check": "npm run lint && npm run build"
   },

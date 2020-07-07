@@ -1,0 +1,14 @@
+{
+  "short_name": "jouni.jappinen.fi",
+  "name": "jouni.jappinen.fi",
+  "icons": [
+    {
+      "src": "icon.png",
+      "type": "image/png",
+      "sizes": "600x600"
+    }
+  ],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#ffffff",
+  "theme_color": "#000000"
+}
