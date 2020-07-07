@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.28.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.27.1...v8.28.0) (2020-07-07)
+
+
+### Features
+
+* deploy to S3 instead of Vercel Now ([0c1b44a](https://github.com/iiroj/jouni.jappinen.fi/commit/0c1b44a47f48cdbb88fbf103ef72156ad69e5e2c))
+
+
+### Bug Fixes
+
+* update subtitle ([8d175a5](https://github.com/iiroj/jouni.jappinen.fi/commit/8d175a516e8cf317a67a3068e2e11b9f08a8aaef))
+* update text ([678e1f1](https://github.com/iiroj/jouni.jappinen.fi/commit/678e1f11fb5cc06788e7f4486d81f59fb372be09))
+
 ### [8.27.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.27.0...v8.27.1) (2020-03-21)
 
 ## [8.27.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.26.5...v8.27.0) (2020-03-21)
