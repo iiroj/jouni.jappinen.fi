@@ -9,7 +9,7 @@ const container = css({
 });
 
 const image = css({
-  background: "url(/pajan-hamarasta/cover.jpg)",
+  background: "url(/pajan-hamarasta.jpg)",
   backgroundPosition: "50% 50%",
   backgroundSize: "cover",
   height: "25vh",
@@ -119,7 +119,7 @@ const Pajanhamarasta = () => (
 
     <a
       css={link}
-      href="/pajan-hamarasta/arvostelu.jpg"
+      href="/pajan-hamarasta-arvostelu.jpg"
       rel="prefetch"
       target="_blank"
     >

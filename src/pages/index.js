@@ -4,6 +4,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 
 import { rautakymi } from "../styles";
+import { transparentize } from "polished";
 
 const microdata = JSON.stringify({
   "@context": "http://schema.org",
@@ -147,6 +148,17 @@ const projectStyles = css({
       fontSize: "1.5rem",
       fontWeight: 600,
     },
+  },
+
+  "&::before": {
+    background: "rgba(0, 0, 0, 0.4)",
+    bottom: 0,
+    content: '""',
+    display: "block",
+    left: 0,
+    position: "absolute",
+    right: 0,
+    top: 0,
   },
 });
 
