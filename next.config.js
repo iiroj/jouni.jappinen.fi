@@ -1,1 +1,4 @@
-module.exports = { target: "serverless" };
+module.exports = {
+  exportTrailingSlash: true,
+  target: "serverless",
+};

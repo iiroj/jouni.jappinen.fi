@@ -4,7 +4,6 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 
 import { rautakymi } from "../styles";
-import ComingSoon from "../components/ComingSoon";
 
 const microdata = JSON.stringify({
   "@context": "http://schema.org",
@@ -298,10 +297,9 @@ export default ({ data }) => (
 
       <ul css={projectsStyles}>
         <li>
-          <Link href="/rautakymi">
+          <Link href="/rautakymi/">
             <a>
               <article css={rautakymiBookStyles}>
-                <ComingSoon />
                 <div css={headingStyles}>
                   <h1>Rautakymi</h1>
                   <h2>Talonpoikia, Seppiä, Lohiylimyksiä</h2>
@@ -312,7 +310,7 @@ export default ({ data }) => (
         </li>
 
         <li>
-          <Link href="/pajan-hamarasta">
+          <Link href="/pajan-hamarasta/">
             <a>
               <article css={pajanHamarastaStyles}>
                 <div css={headingStyles}>
@@ -325,7 +323,7 @@ export default ({ data }) => (
         </li>
 
         <li typeof="Book">
-          <Link href="/ikuiset-seprat">
+          <Link href="/ikuiset-seprat/">
             <a>
               <article css={ikuisetSepratStyles}>
                 <div css={headingStyles}>

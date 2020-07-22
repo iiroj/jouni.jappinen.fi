@@ -64,7 +64,7 @@ const footer = css({
 });
 
 const Pajanhamarasta = () => (
-  <main css={container}>
+  <div css={container}>
     <Helmet>
       <title>Pajan hämärästä – Jouni Jäppinen</title>
     </Helmet>
@@ -117,14 +117,20 @@ const Pajanhamarasta = () => (
       </p>
     </section>
 
-    <a css={link} href="/pajan-hamarasta/arvostelu.jpg" rel="prefetch">
+    <a
+      css={link}
+      href="/pajan-hamarasta/arvostelu.jpg"
+      rel="prefetch"
+      target="_blank"
+    >
       Lue kirja-arvostelu
     </a>
 
     <a
       css={link}
       href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501"
-      rel="external crossorigin prefetch"
+      rel="crossorigin external noreferrer prefetch"
+      target="_blank"
     >
       Osta Adlibris-verkkokirjakaupasta
     </a>
@@ -136,7 +142,7 @@ const Pajanhamarasta = () => (
         <a>Takaisin</a>
       </Link>
     </footer>
-  </main>
+  </div>
 );
 
 export default Pajanhamarasta;
