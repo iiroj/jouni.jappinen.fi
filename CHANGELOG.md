@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.28.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.28.0...v8.28.1) (2020-07-22)
+
+
+### Bug Fixes
+
+* use trailing slashes and update rautakymi page ([8d2f951](https://github.com/iiroj/jouni.jappinen.fi/commit/8d2f9512cb7a532948ed179afacab3bbeab4cee8))
+
 ## [8.28.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.27.1...v8.28.0) (2020-07-07)
 
 
