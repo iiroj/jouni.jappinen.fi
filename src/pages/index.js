@@ -165,14 +165,6 @@ const ikuisetSepratStyles = css(projectStyles, {
   backgroundPosition: "center",
 });
 
-const rautakymiSiteStyles = css(projectStyles, {
-  backgroundImage: "url(/rautakymi.jpg)",
-});
-
-const lovartStyles = css(projectStyles, {
-  backgroundImage: "url(/lovart.jpg)",
-});
-
 const articlesStyles = css({
   display: "flex",
   flexDirection: "row",
@@ -336,34 +328,6 @@ export default ({ data }) => (
               </article>
             </a>
           </Link>
-        </li>
-
-        <li>
-          <a
-            href="https://www.academia.edu/11170585/Talonpoikia_seppiä_lohiylimyksiä"
-            rel="external crossorigin prefetch"
-          >
-            <article css={rautakymiSiteStyles}>
-              <div css={headingStyles}>
-                <h1>Talonpoikia, seppiä, lohiylimyksiä</h1>
-                <h2>
-                  Arkeologian harrastajien tutkielma Kymijokilaakson
-                  rautakautisesta asutuksesta
-                </h2>
-              </div>
-            </article>
-          </a>
-        </li>
-
-        <li>
-          <a href="https://www.lovart.fi">
-            <article css={lovartStyles}>
-              <div css={headingStyles}>
-                <h1>Loviisa Artists’ Studio</h1>
-                <h2>Let’s work in peace</h2>
-              </div>
-            </article>
-          </a>
         </li>
       </ul>
 
