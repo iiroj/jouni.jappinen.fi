@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.29.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.28.1...v8.29.0) (2020-07-22)
+
+
+### Features
+
+* remove deprecated links ([e1b15b4](https://github.com/iiroj/jouni.jappinen.fi/commit/e1b15b44ec6664731ad504b512c83fa8cd0d9d59))
+* update front page images ([077e273](https://github.com/iiroj/jouni.jappinen.fi/commit/077e27332fa7a5e47df51b5dbf82218618a7a7c5))
+
 ### [8.28.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.28.0...v8.28.1) (2020-07-22)
 
 
