@@ -134,11 +134,11 @@ export default ({ data }) => (
 
     <a
       css={link}
-      href="https://www.bod.fi/kirjakauppa/rautakymi-jouni-jaeppinen-9789529431717"
+      href="https://www.booky.fi/tuote/jouni_jappinen/rautakymi_talonpoikia_seppia_lohiylimyksia/9789529431717"
       rel="crossorigin external noreferrer prefetch"
       target="_blank"
     >
-      Osta BoD-verkkokirjakaupasta
+      Osta Booky.fi -verkkokaupasta
     </a>
 
     <footer css={footer}>
