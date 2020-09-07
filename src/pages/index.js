@@ -282,8 +282,9 @@ export default ({ data }) => (
     <div css={mainStyles}>
       <section css={aboutStyles}>
         <p>
-          <span>Jouni Jäppinen</span> on loviisalainen taiteilija ja kultaseppä,
-          joka aloitti työuransa porvoolaisessa sepänpajassa 1970-luvun alussa.
+          <span>Jouni Jäppinen</span> on loviisalainen taiteilija (HuK,
+          kultaseppä), joka aloitti työuransa porvoolaisessa sepänpajassa
+          1970-luvun alussa.
         </p>
         <p>
           Hän jatkoi metallialan perusopintojen jälkeen opintojaan Lahden
