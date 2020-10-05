@@ -134,6 +134,15 @@ export default ({ data }) => (
 
     <a
       css={link}
+      href="/rautakymi-arvostelu.jpg"
+      rel="prefetch"
+      target="_blank"
+    >
+      Lue kirja-arvostelu
+    </a>
+
+    <a
+      css={link}
       href="https://www.booky.fi/tuote/jouni_jappinen/rautakymi_talonpoikia_seppia_lohiylimyksia/9789529431717"
       rel="crossorigin external noreferrer prefetch"
       target="_blank"
