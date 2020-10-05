@@ -47,3 +47,7 @@ jobs:
       - name: Sync files
         run: |
           aws s3 sync dist s3://jouni.jappinen.fi --delete --sse
+      - name: Create invalidation
+        run: aws cloudfront create-invalidation --distribution-id "$AWS_CLOUDFRONT_DISTRIBUTION_ID" --paths "/*"
+        env:
+          AWS_CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }}
