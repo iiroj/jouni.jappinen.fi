@@ -1,5 +1,5 @@
 import React from "react";
-import NextDocument, { Head, Main, NextScript } from "next/document";
+import NextDocument, { Head, Html, Main, NextScript } from "next/document";
 
 class Document extends NextDocument {
   static getInitialProps = async (ctx) => {
@@ -21,7 +21,7 @@ class Document extends NextDocument {
     const { helmetContext } = this.props;
 
     return (
-      <html lang="fi">
+      <Html lang="fi">
         <Head>
           {helmetContext && helmetContext.helmet && (
             <>
@@ -46,7 +46,7 @@ class Document extends NextDocument {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
