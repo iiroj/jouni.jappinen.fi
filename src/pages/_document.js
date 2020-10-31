@@ -1,7 +1,7 @@
 import React from "react";
 import NextDocument, { Head, Main, NextScript } from "next/document";
 
-export default class Document extends NextDocument {
+class Document extends NextDocument {
   static getInitialProps = async (ctx) => {
     let helmetContext;
 
@@ -50,3 +50,5 @@ export default class Document extends NextDocument {
     );
   }
 }
+
+export default Document;

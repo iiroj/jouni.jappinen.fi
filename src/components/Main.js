@@ -7,4 +7,6 @@ const main = css({
   minHeight: "100%",
 });
 
-export default ({ children }) => <main css={main}>{children}</main>;
+const Main = ({ children }) => <main css={main}>{children}</main>;
+
+export default Main;

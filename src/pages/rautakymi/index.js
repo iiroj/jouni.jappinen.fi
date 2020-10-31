@@ -89,7 +89,7 @@ const footer = css({
   },
 });
 
-export default ({ data }) => (
+const Rautakymi = () => (
   <div css={container}>
     <Helmet>
       <title>Rautakymi – Jouni Jäppinen</title>
@@ -158,3 +158,5 @@ export default ({ data }) => (
     </footer>
   </div>
 );
+
+export default Rautakymi;

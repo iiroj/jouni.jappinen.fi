@@ -1,10 +1,9 @@
 import { css } from "@emotion/core";
 import Link from "next/link";
-import React from "react";
 import { Helmet } from "react-helmet-async";
+import React from "react";
 
 import { rautakymi } from "../styles";
-import { transparentize } from "polished";
 
 const microdata = JSON.stringify({
   "@context": "http://schema.org",
@@ -252,7 +251,7 @@ const linksStyles = css({
   },
 });
 
-export default ({ data }) => (
+const Root = () => (
   <>
     <Helmet>
       <title>Jouni Jäppinen</title>
@@ -450,3 +449,5 @@ export default ({ data }) => (
     </div>
   </>
 );
+
+export default Root;
