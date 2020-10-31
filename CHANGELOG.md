@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.30.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.29.0...v8.30.0) (2020-10-31)
+
+
+### Features
+
+* add book review jpg ([c71b5d4](https://github.com/iiroj/jouni.jappinen.fi/commit/c71b5d40ae4983b7f4d48f78c76643642ba635be))
+* add new title ([782dd9a](https://github.com/iiroj/jouni.jappinen.fi/commit/782dd9a842fff94eed3242f9995f7ec408d3665b))
+
+
+### Bug Fixes
+
+* render Next.js Html component in _document ([53e6f2b](https://github.com/iiroj/jouni.jappinen.fi/commit/53e6f2b7e50ed5453ce202ea1dd20a1daa126d60))
+* update bookstore link ([da0c85e](https://github.com/iiroj/jouni.jappinen.fi/commit/da0c85e6b86b9a5e4c76a8c2ae1e5e29177bea93))
+* update file ([1090ed1](https://github.com/iiroj/jouni.jappinen.fi/commit/1090ed16840fe07efdb1b3dd0d2c9bc9957dc99c))
+
 ## [8.29.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.28.1...v8.29.0) (2020-07-22)
 
 
