@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.32.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.31.0...v8.32.0) (2020-12-23)
+
+
+### Features
+
+* publish to Cloudflare Workers Site ([4030e2e](https://github.com/iiroj/jouni.jappinen.fi/commit/4030e2ecd9468895b547b9239c2ee2afe24d4cc7))
+
 ## [8.31.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.30.0...v8.31.0) (2020-12-23)
 
 
