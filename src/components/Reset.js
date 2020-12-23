@@ -1,4 +1,4 @@
-import { Global } from "@emotion/core";
+import { Global } from "@emotion/react";
 import React from "react";
 
 const Reset = () => (

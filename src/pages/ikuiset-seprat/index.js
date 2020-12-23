@@ -1,4 +1,4 @@
-import { css } from "@emotion/core";
+import { css } from "@emotion/react";
 import Link from "next/link";
 import React from "react";
 import { Helmet } from "react-helmet-async";
