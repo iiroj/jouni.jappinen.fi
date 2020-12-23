@@ -407,7 +407,11 @@ const Root = () => (
                         </li>
 
                         <li>
-                            <a css={linksStyles} href="https://www.artists-o.fi" rel="external crossorigin prefetch">
+                            <a
+                                css={linksStyles}
+                                href="https://artists-o.fi/fi/kuukauden-taiteilija/arkisto/2019-jouni-jappinen"
+                                rel="external crossorigin prefetch"
+                            >
                                 Taiteilijat O
                             </a>
                         </li>
