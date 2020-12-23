@@ -1,6 +1,6 @@
 # jouni.jappinen.fi
 
-[![Main](https://github.com/iiroj/jouni.jappinen.fi/workflows/Main/badge.svg)](https://github.com/iiroj/iiro.fi/actions)
+[![Master](https://github.com/iiroj/jouni.jappinen.fi/workflows/Master/badge.svg)](https://github.com/iiroj/jouni.jappinen.fi/actions)
 [![version](https://img.shields.io/github/tag/iiroj/jouni.jappinen.fi.svg)](https://github.com/iiroj/jouni.jappinen.fi/releases)
 [![dependencies](https://img.shields.io/david/iiroj/jouni.jappinen.fi.svg)](https://github.com/iiroj/jouni.jappinen.fi/blob/master/package.json)
 [![devDependencies](https://img.shields.io/david/dev/iiroj/jouni.jappinen.fi.svg)](https://github.com/iiroj/jouni.jappinen.fi/blob/master/package.json)
