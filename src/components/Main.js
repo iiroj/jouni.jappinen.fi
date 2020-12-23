@@ -1,12 +1,12 @@
-import React from "react";
-import { css } from "@emotion/react";
+import React from 'react'
+import { css } from '@emotion/react'
 
 const main = css({
-  display: "flex",
-  flexDirection: "column",
-  minHeight: "100%",
-});
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100%',
+})
 
-const Main = ({ children }) => <main css={main}>{children}</main>;
+const Main = ({ children }) => <main css={main}>{children}</main>
 
-export default Main;
+export default Main
