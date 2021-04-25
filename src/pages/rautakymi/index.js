@@ -131,7 +131,7 @@ const Rautakymi = () => (
         </a>
 
         <a css={link} href="/rautakymi-historiallinen-aikakauskirja.pdf" rel="prefetch" target="_blank">
-            Lue kirja-arvostelu (Historiallinen aikakauskirja)
+            Lue kirja-arvostelu (Historiallinen Aikakauskirja)
         </a>
 
         <a
