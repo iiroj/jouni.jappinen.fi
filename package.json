@@ -10,12 +10,14 @@
   "repository": "github:iiroj/jouni.jappinen.fi",
   "bugs": "https://github.com/iiroj/jouni.jappinen.fi/issues",
   "private": true,
+  "workspaces": [
+    "workers-site"
+  ],
   "scripts": {
     "start": "next",
     "lint": "eslint .",
     "build": "next build && next export -o dist",
-    "version": "standard-version --no-verify",
-    "check": "npm run lint && npm run build"
+    "version": "standard-version --no-verify"
   },
   "dependencies": {
     "@emotion/react": "11.1.5",
