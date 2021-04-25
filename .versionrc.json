@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "prerelease": "npm run check"
+    "prerelease": "npm run lint && npm run build"
   }
 }
