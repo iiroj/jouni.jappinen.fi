@@ -1,34 +1,139 @@
-name: Master
+name: Main
 
 on:
+  pull_request:
   push:
     branches:
-    - "master"
+      - "*"
     tags-ignore:
-    - "*"
+      - "*"
 
 jobs:
+  install:
+    name: Install
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Install Node.js modules
+        if: steps.cache-node_modules.outputs.cache-hit != 'true'
+        run: npm ci
+
+  lint:
+    needs: install
+    name: ESLint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: ESLint
+        run: npm run lint
+
+  build-site:
+    needs: install
+    name: Build Site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Build
+        run: npm run build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: site
+          path: dist
+          retention-days: 1
+
+  build-worker:
+    needs: install
+    name: Build Worker
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - name: Build
+        run: npm --prefix workers-site run build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: worker
+          path: workers-site/dist
+          retention-days: 1
+
   publish:
+    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+    needs: [lint, build-site, build-worker]
     name: Publish
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Setup Node.js 16
+        uses: actions/setup-node@v1
         with:
           node-version: 16
-      - name: Install dependencies
-        run: npm ci
-      - name: Build
-        run: npm run build
-        env:
-          CF_WEB_ANALYTICS_TOKEN: ${{ secrets.CF_WEB_ANALYTICS_TOKEN }}
-          NEXT_TELEMETRY_DISABLED: "1"
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      - uses: actions/download-artifact@v2
+        with:
+          name: site
+          path: dist
+      - uses: actions/download-artifact@v2
+        with:
+          name: worker
+          path: workers-site/dist
       - name: Publish
         uses: cloudflare/wrangler-action@1.3.0
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
-          wranglerVersion: "1.15.1"
         env:
           CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CF_ZONE_ID: ${{ secrets.CF_ZONE_ID }}
