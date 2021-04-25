@@ -8,3 +8,7 @@ route = "jouni.jappinen.fi/*"
 [site]
 bucket = "./dist"
 entry-point = "workers-site"
+
+[build]
+upload.format = "service-worker"
+command = "npm run build"
