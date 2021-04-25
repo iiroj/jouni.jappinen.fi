@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.33.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.33.0...v8.33.1) (2021-04-25)
+
+
+### Bug Fixes
+
+* capitalisation ([1a599e6](https://github.com/iiroj/jouni.jappinen.fi/commit/1a599e647c1c3a21a5a438acb339674e9694d42c))
+* do not use weird characters in PDF filename ([eba6380](https://github.com/iiroj/jouni.jappinen.fi/commit/eba6380dea8b3d9074d2a9903ddf480808375d5d))
+
 ## [8.33.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.32.0...v8.33.0) (2021-04-25)
 
 
