@@ -130,7 +130,7 @@ const Rautakymi = () => (
             Lue kirja-arvostelu (Östnyland)
         </a>
 
-        <a css={link} href="/Haik 1:2021_arvio_TS.pdf" rel="prefetch" target="_blank">
+        <a css={link} href="/rautakymi-historiallinen-aikakauskirja.pdf" rel="prefetch" target="_blank">
             Lue kirja-arvostelu (Historiallinen aikakauskirja)
         </a>
 
