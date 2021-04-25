@@ -8,6 +8,6 @@
     "build": "echo 'No build step specified...'"
   },
   "dependencies": {
-    "@cloudflare/kv-asset-handler": "^0.1.0"
+    "@cloudflare/kv-asset-handler": "^0.1.1"
   }
 }
