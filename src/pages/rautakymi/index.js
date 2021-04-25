@@ -127,7 +127,11 @@ const Rautakymi = () => (
         </section>
 
         <a css={link} href="/rautakymi-arvostelu.jpg" rel="prefetch" target="_blank">
-            Lue kirja-arvostelu
+            Lue kirja-arvostelu (Östnyland)
+        </a>
+
+        <a css={link} href="/Haik 1:2021_arvio_TS.pdf" rel="prefetch" target="_blank">
+            Lue kirja-arvostelu (Historiallinen aikakauskirja)
         </a>
 
         <a
