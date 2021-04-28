@@ -3,7 +3,7 @@ import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
 const STATIC_HEADERS = [
     [
         'Content-Security-Policy',
-        "default-src 'none'; connect-src 'self' https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.cloudfront.net; object-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
+        "default-src 'none'; connect-src 'self' https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; object-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     ],
     ['Link', '<https://fonts.googleapis.com/css?family=Spectral:400,600> crossorigin=anonymous rel=preload as=style'],
     /** Disable Google's FLoC */
