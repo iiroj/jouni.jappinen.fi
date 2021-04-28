@@ -6,6 +6,8 @@ const STATIC_HEADERS = [
         "default-src 'none'; connect-src 'self' https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://*.cloudfront.net; object-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
     ],
     ['Link', '<https://fonts.googleapis.com/css?family=Spectral:400,600> crossorigin=anonymous rel=preload as=style'],
+    /** Disable Google's FLoC */
+    ['Permissions-Policy', 'interest-cohort=()'],
     ['Referrer-Policy', 'strict-origin-when-cross-origin'],
     ['Strict-Transport-Security', 'max-age=63072000; includeSubdomains; preload'],
     ['X-Content-Type-Options', 'nosniff'],
