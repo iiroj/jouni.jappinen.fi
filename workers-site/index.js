@@ -1,4 +1,11 @@
-import { getAssetFromKV } from '@cloudflare/kv-asset-handler'
+import { getAssetFromKV, NotFoundError } from '@cloudflare/kv-asset-handler'
+
+const KV_OPTIONS = {
+    cacheControl: {
+        browserTTL: 60 * 60 /** One hour */,
+        edgeTTL: 2 * 60 * 60 * 24 /** Two days */,
+    },
+}
 
 const STATIC_HEADERS = [
     [
@@ -30,7 +37,7 @@ const getResponse = async (event) => {
         const response = await getAssetFromKV(event)
         return withResponseHeaders(response)
     } catch (error) {
-        try {
+        if (error instanceof NotFoundError) {
             const notFoundResponse = await getAssetFromKV(event, {
                 mapRequestToAsset: (req) => new Request(`${new URL(req.url).origin}/404.html`, req),
             })
@@ -39,19 +46,20 @@ const getResponse = async (event) => {
                 new Response(notFoundResponse.body, {
                     ...notFoundResponse,
                     status: 404,
+                    statusText: 'not found',
                 })
             )
-        } catch {}
+        }
 
-        return new Response(error.message || error.toString(), { status: 500 })
+        return new Response('500 — Internal Error', {
+            headers: { 'Content-Type': 'text/plain' },
+            status: 500,
+            statusText: 'intrernal error',
+        })
     }
 }
 
 addEventListener('fetch', async (event) => {
-    try {
-        const response = getResponse(event)
-        return event.respondWith(response)
-    } catch {
-        event.respondWith(new Response('Internal Error', { status: 500 }))
-    }
+    const response = getResponse(event)
+    return event.respondWith(response)
 })
