@@ -39,7 +39,7 @@ const getResponse = async (event) => {
     } catch (error) {
         if (error instanceof NotFoundError) {
             const notFoundResponse = await getAssetFromKV(event, {
-                mapRequestToAsset: (req) => new Request(`${new URL(req.url).origin}/404.html`, req),
+                mapRequestToAsset: (req) => new Request(`${new URL(req.url).origin}/404/index.html`, req),
             })
 
             return withResponseHeaders(
