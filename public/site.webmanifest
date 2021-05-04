@@ -6,6 +6,11 @@
       "src": "icon.png",
       "type": "image/png",
       "sizes": "600x600"
+    },
+    {
+      "src": "icon.webp",
+      "type": "image/webp",
+      "sizes": "600x600"
     }
   ],
   "start_url": "/?utm_source=homescreen",

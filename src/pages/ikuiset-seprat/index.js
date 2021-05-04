@@ -8,10 +8,11 @@ const container = css({
 })
 
 const image = css({
-    background: 'url(/ikuiset-seprat.jpg)',
-    backgroundPosition: '50% 75%',
-    backgroundSize: 'cover',
+    display: 'block',
     height: '25vh',
+    objectPosition: '0 75%',
+    objectFit: 'cover',
+    width: '100%',
 })
 
 const header = css({
@@ -69,7 +70,10 @@ const Ikuisetseprat = () => (
             <title>Ikuiset seprat – Jouni Jäppinen</title>
         </Helmet>
 
-        <div css={image} role="presentation" alt="Ikuiset seprat" />
+        <picture>
+            <source srcSet="/ikuiset-seprat.webp" type="image/webp" />
+            <img css={image} alt="Ikuiset seprat" src="/ikuiset-seprat.png" />
+        </picture>
 
         <header css={header}>
             <h1>Ikuiset seprat</h1>

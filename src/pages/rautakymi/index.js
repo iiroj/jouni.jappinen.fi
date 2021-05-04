@@ -97,7 +97,10 @@ const Rautakymi = () => (
 
         <header css={header}>
             <figure css={imageContainer}>
-                <img alt="Rautakymi" src="/rautakymi-book-cover.png" />
+                <picture>
+                    <source srcSet="/rautakymi-book-cover.webp" type="image/webp" />
+                    <img alt="Rautakymi" src="/rautakymi-book-cover.png" />
+                </picture>
             </figure>
 
             <h1>Rauta&shy;kymi</h1>

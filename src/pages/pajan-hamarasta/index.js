@@ -9,10 +9,10 @@ const container = css({
 })
 
 const image = css({
-    background: 'url(/pajan-hamarasta.jpg)',
-    backgroundPosition: '50% 50%',
-    backgroundSize: 'cover',
+    display: 'block',
     height: '25vh',
+    objectFit: 'cover',
+    width: '100%',
 })
 
 const header = css({
@@ -69,7 +69,10 @@ const Pajanhamarasta = () => (
             <title>Pajan hämärästä – Jouni Jäppinen</title>
         </Helmet>
 
-        <div css={image} role="presentation" alt="Pajan hämärstä" />
+        <picture>
+            <source srcSet="/pajan-hamarasta.webp" type="image/webp" />
+            <img css={image} alt="Pajan hämärstä" src="/pajan-hamarasta.png" />
+        </picture>
 
         <header css={header}>
             <h1>Pajan hämärästä</h1>
