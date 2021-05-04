@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.34.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.34.0...v8.34.1) (2021-05-04)
+
+
+### Bug Fixes
+
+* return correct 404 file ([d342145](https://github.com/iiroj/jouni.jappinen.fi/commit/d3421453f10c725728a43d427582d2e5eadb8b7a))
+
 ## [8.34.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.33.1...v8.34.0) (2021-05-04)
 
 
