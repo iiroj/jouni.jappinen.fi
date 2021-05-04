@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.34.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.33.1...v8.34.0) (2021-05-04)
+
+
+### Features
+
+* optimize worker ([94263f5](https://github.com/iiroj/jouni.jappinen.fi/commit/94263f5e2d66c3ecf1b48284719a800e50a18953))
+* use optimized webp images ([59d0230](https://github.com/iiroj/jouni.jappinen.fi/commit/59d023024ab96b1c5e09ce8158c81b4e4c0317c1))
+
+
+### Bug Fixes
+
+* disable Google's FLoC ([d247359](https://github.com/iiroj/jouni.jappinen.fi/commit/d247359a922fd148a320e0dffc01187260d6567e))
+* remove Cloudfront from img-src CSP header ([cfad2f0](https://github.com/iiroj/jouni.jappinen.fi/commit/cfad2f0332d15855a6c75e6ec0b35c061f25ca2e))
+
 ### [8.33.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.33.0...v8.33.1) (2021-04-25)
 
 
