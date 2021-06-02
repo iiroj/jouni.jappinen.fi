@@ -277,7 +277,7 @@ const Root = () => (
         <div css={mainStyles}>
             <section css={aboutStyles}>
                 <p>
-                    <span>Jouni Jäppinen</span> on loviisalainen taiteilija (HuK, kultaseppä), joka aloitti työuransa
+                    <span>Jouni Jäppinen</span> on loviisalainen taiteilija (FM, kultaseppä), joka aloitti työuransa
                     porvoolaisessa sepänpajassa 1970-luvun alussa.
                 </p>
                 <p>
