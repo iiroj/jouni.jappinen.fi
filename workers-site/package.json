@@ -8,10 +8,10 @@
     "build": "NODE_ENV=production webpack"
   },
   "dependencies": {
-    "@cloudflare/kv-asset-handler": "^0.1.1"
+    "@cloudflare/kv-asset-handler": "^0.1.2"
   },
   "devDependencies": {
-    "webpack": "^5.35.1",
-    "webpack-cli": "^4.6.0"
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0"
   }
 }
