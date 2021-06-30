@@ -116,15 +116,11 @@ const Ikuisetseprat = () => (
             </p>
         </section>
 
-        <a
-            css={link}
-            href="https://kymensanomat.fi/uutiset/lahella/13a4ccf6-a72c-48f1-9c8d-2eb7af624bbe"
-            rel="external crossorigin prefetch"
-        >
+        <a css={link} href="/Päiviö_arvostelu_22.6.16.jpg" rel="prefetch">
             Lue kirja-arvostelu (Kymen Sanomat)
         </a>
 
-        <a css={link} href="/ikuiset-seprat-arvostelu.pdf">
+        <a css={link} href="/ikuiset-seprat-arvostelu.pdf" rel="prefetch">
             Lue kirja-arvostelu (Tuglas-seura)
         </a>
 
