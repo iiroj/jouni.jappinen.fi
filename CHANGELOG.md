@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.35.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.34.4...v8.35.0) (2021-07-05)
+
+
+### Features
+
+* add Cloudflare Web Analytics script ([46456da](https://github.com/iiroj/jouni.jappinen.fi/commit/46456da468f17506133f881bcb2a26d92d43d2d8))
+
 ### [8.34.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.34.3...v8.34.4) (2021-07-05)
 
 ### [8.34.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.34.2...v8.34.3) (2021-06-29)
