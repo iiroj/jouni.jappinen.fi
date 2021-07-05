@@ -9,7 +9,7 @@ const microdata = JSON.stringify({
     '@context': 'http://schema.org',
     '@type': 'Person',
     name: 'Jouni Jäppinen',
-    jobTitle: 'taiteilija',
+    jobTitle: 'FM, kultaseppä',
     url: 'https://jouni.jappinen.fi',
     email: 'jouni@jappinen.fi',
     nationality: 'Finland',
