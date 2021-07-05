@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.35.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.35.0...v8.35.1) (2021-07-05)
+
+
+### Bug Fixes
+
+* remove html tag from inside next/head ([4b1a2f9](https://github.com/iiroj/jouni.jappinen.fi/commit/4b1a2f97919bb86d4b548a60e3a0b6a5d9b5b40d))
+
 ## [8.35.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.34.4...v8.35.0) (2021-07-05)
 
 
