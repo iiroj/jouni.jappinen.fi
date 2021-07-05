@@ -71,6 +71,8 @@ jobs:
             ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Build
         run: npm run build
+        env:
+          CF_WEB_ANALYTICS_TOKEN:  ${{ secrets.CF_WEB_ANALYTICS_TOKEN }}
       - uses: actions/upload-artifact@v2
         with:
           name: site
