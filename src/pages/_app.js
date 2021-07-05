@@ -8,7 +8,6 @@ const App = ({ Component, pageProps }) => (
     <>
         <Reset />
         <Head>
-            <html lang="fi" />
             <link
                 crossOrigin="anonymous"
                 href="https://fonts.googleapis.com/css?family=Spectral:400,600&display=swap"

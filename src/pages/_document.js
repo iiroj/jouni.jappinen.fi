@@ -1,17 +1,17 @@
-import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 import React from 'react'
 
 import CloudflareWebAnalytics from '../components/CloudflareWebAnalytics'
 
-class Document extends NextDocument {
+class MyDocument extends Document {
     static async getInitialProps(ctx) {
-        const initialProps = await NextDocument.getInitialProps(ctx)
-        return { ...initialProps }
+        const initialProps = await Document.getInitialProps(ctx)
+        return initialProps
     }
 
     render() {
         return (
-            <Html>
+            <Html lang="fi">
                 <Head />
                 <body>
                     <Main />
@@ -23,4 +23,4 @@ class Document extends NextDocument {
     }
 }
 
-export default Document
+export default MyDocument
