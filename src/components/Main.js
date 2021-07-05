@@ -1,12 +1,10 @@
 import React from 'react'
-import { css } from '@emotion/react'
+import styled from 'styled-components'
 
-const main = css({
+const Main = styled.main({
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100%',
 })
-
-const Main = ({ children }) => <main css={main}>{children}</main>
 
 export default Main

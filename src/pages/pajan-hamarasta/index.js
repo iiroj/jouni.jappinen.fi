@@ -1,21 +1,21 @@
-import { css } from '@emotion/react'
-import Link from 'next/link'
+import styled from 'styled-components'
+import NextLink from 'next/link'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
-const container = css({
+const Container = styled.div({
     backgroundColor: 'rgb(26, 25, 25)',
     color: 'white',
 })
 
-const image = css({
+const Image = styled.img({
     display: 'block',
     height: '25vh',
     objectFit: 'cover',
     width: '100%',
 })
 
-const header = css({
+const Header = styled.header({
     backgroundColor: 'rgb(61, 19, 15)',
     padding: '2rem',
     textAlign: 'center',
@@ -27,7 +27,7 @@ const header = css({
     },
 })
 
-const section = css({
+const Section = styled.section({
     backgroundColor: 'rgb(61, 19, 15)',
     paddingBottom: '1rem',
 
@@ -38,7 +38,7 @@ const section = css({
     },
 })
 
-const link = css({
+const Link = styled.a({
     color: 'rgb(161, 42, 38)',
     display: 'block',
     fontSize: '1.5rem',
@@ -52,7 +52,7 @@ const link = css({
     },
 })
 
-const footer = css({
+const Footer = styled.footer({
     margin: '0 auto',
     maxWidth: '50rem',
     padding: '1rem 0 4rem 0',
@@ -64,22 +64,22 @@ const footer = css({
 })
 
 const Pajanhamarasta = () => (
-    <div css={container}>
+    <Container>
         <Helmet>
             <title>Pajan hämärästä – Jouni Jäppinen</title>
         </Helmet>
 
         <picture>
             <source srcSet="/pajan-hamarasta.webp" type="image/webp" />
-            <img css={image} alt="Pajan hämärstä" src="/pajan-hamarasta.png" />
+            <Image alt="Pajan hämärstä" src="/pajan-hamarasta.png" />
         </picture>
 
-        <header css={header}>
+        <Header>
             <h1>Pajan hämärästä</h1>
             <h2>Sepän kulttuurihistoriaa</h2>
-        </header>
+        </Header>
 
-        <section css={section}>
+        <Section>
             <p>
                 Vanhan sanonnan mukaan seppä on taitava henkilö niin aineen kuin hengenkin alalla. Kirja luo katsauksen
                 sepänalan esihistoriaan sekä tarinoihin kotimaamme sepistä, joita on onnekkaasti säilynyt jälkipolville.
@@ -111,29 +111,26 @@ const Pajanhamarasta = () => (
                 alasimen tai palkeiden kanssa, alkoivat ihmiset uskoa, että sepällä täytyi olla luontaisia kykyjä
                 hallita yliluonnollisia voimia.
             </p>
-        </section>
+        </Section>
 
-        <a css={link} href="/pajan-hamarasta-arvostelu.jpg" rel="prefetch" target="_blank">
+        <Link href="/pajan-hamarasta-arvostelu.jpg" rel="prefetch" target="_blank">
             Lue kirja-arvostelu
-        </a>
+        </Link>
 
-        <a
-            css={link}
+        <Link
             href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501"
             rel="crossorigin external noreferrer prefetch"
             target="_blank"
         >
             Osta Adlibris-verkkokirjakaupasta
-        </a>
+        </Link>
 
-        <footer css={footer}>
+        <Footer>
             <p>Jouni Jäppinen</p>
             <p>ISBN-978-952-93-4250-1</p>
-            <Link href="/">
-                <a>Takaisin</a>
-            </Link>
-        </footer>
-    </div>
+            <NextLink href="/">Takaisin</NextLink>
+        </Footer>
+    </Container>
 )
 
 export default Pajanhamarasta

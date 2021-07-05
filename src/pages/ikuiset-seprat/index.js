@@ -1,13 +1,13 @@
-import { css } from '@emotion/react'
-import Link from 'next/link'
+import NextLink from 'next/link'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import styled from 'styled-components'
 
-const container = css({
+const Container = styled.main({
     backgroundColor: 'rgb(219, 219, 219)',
 })
 
-const image = css({
+const Image = styled.img({
     display: 'block',
     height: '25vh',
     objectPosition: '0 75%',
@@ -15,7 +15,7 @@ const image = css({
     width: '100%',
 })
 
-const header = css({
+const Header = styled.header({
     backgroundColor: 'rgb(0, 74, 128)',
     color: 'white',
     marginBottom: '2rem',
@@ -29,7 +29,7 @@ const header = css({
     },
 })
 
-const section = css({
+const Section = styled.section({
     paddingBottom: '1rem',
 
     p: {
@@ -39,7 +39,7 @@ const section = css({
     },
 })
 
-const link = css({
+const Link = styled.a({
     color: 'rgb(0, 74, 128)',
     display: 'block',
     fontSize: '1.5rem',
@@ -53,7 +53,7 @@ const link = css({
     },
 })
 
-const footer = css({
+const Footer = styled.footer({
     margin: '0 auto',
     maxWidth: '50rem',
     padding: '1rem 0 4rem 0',
@@ -65,22 +65,22 @@ const footer = css({
 })
 
 const Ikuisetseprat = () => (
-    <main css={container}>
+    <Container>
         <Helmet>
             <title>Ikuiset seprat – Jouni Jäppinen</title>
         </Helmet>
 
         <picture>
             <source srcSet="/ikuiset-seprat.webp" type="image/webp" />
-            <img css={image} alt="Ikuiset seprat" src="/ikuiset-seprat.png" />
+            <Image alt="Ikuiset seprat" src="/ikuiset-seprat.png" />
         </picture>
 
-        <header css={header}>
+        <Header>
             <h1>Ikuiset seprat</h1>
             <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
-        </header>
+        </Header>
 
-        <section css={section}>
+        <Section>
             <p>
                 Tytärsaaren perifeerinen sijainti lähempänä Viron kuin Suomen rannikkoa tarjosi saarelaisille
                 mahdollisuuden ylläpitää vilkkaita suhteita virolaisten kanssa satojen vuosien ajan. Elämä Tytärsaarella
@@ -114,32 +114,26 @@ const Ikuisetseprat = () => (
                 Tytärsaari evakuoitiin muutaman tunnin kuluessa. Tuona päivänä Virossa oli useita tytärsaarelaisia
                 aluksineen, joille evakuointikäsky vietiin moottoriveneellä ja jolloin ystävyyssuhteet katkesivat.
             </p>
-        </section>
+        </Section>
 
-        <a css={link} href="/Päiviö_arvostelu_22.6.16.jpg" rel="prefetch">
+        <Link href="/Päiviö_arvostelu_22.6.16.jpg" rel="prefetch">
             Lue kirja-arvostelu (Kymen Sanomat)
-        </a>
+        </Link>
 
-        <a css={link} href="/ikuiset-seprat-arvostelu.pdf" rel="prefetch">
+        <Link href="/ikuiset-seprat-arvostelu.pdf" rel="prefetch">
             Lue kirja-arvostelu (Tuglas-seura)
-        </a>
+        </Link>
 
-        <a
-            css={link}
-            href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310"
-            rel="external crossorigin prefetch"
-        >
+        <Link href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310" rel="external crossorigin prefetch">
             Osta Adlibris-verkkokirjakaupasta
-        </a>
+        </Link>
 
-        <footer css={footer}>
+        <Footer>
             <p>Jouni Jäppinen</p>
             <p>ISBN 978-952-93-7131-0</p>
-            <Link href="/">
-                <a>Takaisin</a>
-            </Link>
-        </footer>
-    </main>
+            <NextLink href="/">Takaisin</NextLink>
+        </Footer>
+    </Container>
 )
 
 export default Ikuisetseprat

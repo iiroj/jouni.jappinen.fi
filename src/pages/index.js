@@ -1,5 +1,5 @@
-import { css } from '@emotion/react'
-import Link from 'next/link'
+import styled from 'styled-components'
+import NextLink from 'next/link'
 import { Helmet } from 'react-helmet-async'
 import React from 'react'
 
@@ -27,7 +27,7 @@ const minWidth = (args) => (styleObject) => ({
 })
 const tabletSize = minWidth(BREAKPOINT)
 
-const headerStyles = css({
+const Header = styled.header({
     color: 'white',
     overflowY: 'hidden',
     position: 'relative',
@@ -40,7 +40,7 @@ const headerStyles = css({
     }),
 })
 
-const headingStyles = css({
+const Heading = styled.div({
     marginLeft: '1rem',
     position: 'absolute',
     top: '50%',
@@ -58,7 +58,7 @@ const headingStyles = css({
     }),
 })
 
-const figureStyles = css({
+const Figure = styled.figure({
     position: 'relative',
 
     '&, img': {
@@ -75,7 +75,7 @@ const figureStyles = css({
     },
 })
 
-const captionStyles = css({
+const Caption = styled.figcaption({
     bottom: '0.5rem',
     color: 'hsl(0, 0%, 60%)',
     fontSize: '0.75em',
@@ -84,7 +84,7 @@ const captionStyles = css({
     position: 'absolute',
 })
 
-const mainStyles = css({
+const Main = styled.main({
     position: 'relative',
 
     ...tabletSize({
@@ -93,7 +93,7 @@ const mainStyles = css({
     }),
 })
 
-const aboutStyles = css({
+const About = styled.section({
     margin: '4rem auto',
     maxWidth: '40rem',
     padding: '0 1rem',
@@ -103,7 +103,7 @@ const aboutStyles = css({
     },
 })
 
-const projectsStyles = css({
+const Projects = styled.ul({
     display: 'flex',
     flexWrap: 'wrap',
     padding: '0.5rem',
@@ -129,7 +129,7 @@ const projectsStyles = css({
     },
 })
 
-const projectStyles = css({
+const Project = styled.article({
     boxSizing: 'border-box',
     color: 'white !important',
     height: '100%',
@@ -173,11 +173,11 @@ const projectStyles = css({
     },
 })
 
-const rautakymiBookStyles = css(projectStyles, {
+const RautakymiBook = styled(Project)({
     backgroundColor: rautakymi.colors.darkRed,
 })
 
-const articlesStyles = css({
+const Articles = styled.ul({
     display: 'flex',
     flexDirection: 'row',
     flexWrap: 'wrap',
@@ -196,7 +196,7 @@ const articlesStyles = css({
     },
 })
 
-const articleStyles = css({
+const Article = styled.article({
     boxSizing: 'border-box',
     display: 'flex',
     flexDirection: 'column',
@@ -226,13 +226,13 @@ const articleStyles = css({
     },
 })
 
-const tammijarviStyles = css(articleStyles, {
+const Tammijarvi = styled(Article)({
     img: {
         objectPosition: 'bottom center',
     },
 })
 
-const linksStyles = css({
+const Link = styled.a({
     borderTop: '1px solid rgba(0, 0, 0, 0.1)',
     display: 'block',
     padding: '1rem 0',
@@ -251,31 +251,31 @@ const Root = () => (
             <script type="application/ld+json">{microdata}</script>
         </Helmet>
 
-        <header css={headerStyles}>
-            <figure css={figureStyles}>
+        <Header>
+            <Figure>
                 <picture>
                     <source srcSet="sormus.webp 1x, sormus@2x.webp 2x" type="image/webp" />
                     <source srcSet="sormus.jpg 1x, sormus@2x.jpg 2x" type="image/jpeg" />
                     <img alt="Rautakymi" src="/sormus@2x.jpg" />
                 </picture>
 
-                <figcaption css={captionStyles}>
+                <Caption>
                     <p>
                         Image: Ring, sterling silver & colored titanium. Made in single pieces at the Strömfors atelier
                         from 1986 to1991.
                     </p>
                     <p>The Alice and Louis Koch Collection exhibition in Swiss National Museum Zurich, Switzerland</p>
-                </figcaption>
-            </figure>
+                </Caption>
+            </Figure>
 
-            <div css={headingStyles}>
+            <Heading>
                 <h1>Jouni Jäppinen</h1>
                 <h2>Taiteilija ja kultaseppä</h2>
-            </div>
-        </header>
+            </Heading>
+        </Header>
 
-        <div css={mainStyles}>
-            <section css={aboutStyles}>
+        <Main>
+            <About>
                 <p>
                     <span>Jouni Jäppinen</span> on loviisalainen taiteilija (FM, kultaseppä), joka aloitti työuransa
                     porvoolaisessa sepänpajassa 1970-luvun alussa.
@@ -290,89 +290,89 @@ const Root = () => (
                     kansainvälisen taiteilijavaihdon tuottajana, ja tänään hänet tunnetaan myös rautakautisten
                     menetelmien tutkijana ja tietokirjailijana.
                 </p>
-            </section>
+            </About>
 
-            <ul css={projectsStyles}>
+            <Projects>
                 <li>
-                    <Link href="/rautakymi/">
+                    <NextLink href="/rautakymi/">
                         <a>
-                            <article css={rautakymiBookStyles}>
+                            <RautakymiBook>
                                 <picture>
                                     <source srcSet="/rautakymi-book-cover.webp" type="image/webp" />
                                     <img alt="Rautakymi" src="/rautakymi-book-cover.png" />
                                 </picture>
-                                <div css={headingStyles}>
+                                <Heading>
                                     <h1>Rautakymi</h1>
                                     <h2>Talonpoikia, Seppiä, Lohiylimyksiä</h2>
-                                </div>
-                            </article>
+                                </Heading>
+                            </RautakymiBook>
                         </a>
-                    </Link>
+                    </NextLink>
                 </li>
 
                 <li>
-                    <Link href="/pajan-hamarasta/">
+                    <NextLink href="/pajan-hamarasta/">
                         <a>
-                            <article css={projectStyles}>
+                            <Project>
                                 <picture>
                                     <source srcSet="/pajan-hamarasta.webp" type="image/webp" />
                                     <img alt="Pajan hämärästä" src="/pajan-hamarasta.jpg" />
                                 </picture>
-                                <div css={headingStyles}>
+                                <Heading>
                                     <h1>Pajan hämärästä</h1>
                                     <h2>Sepän kulttuurihistoriaa</h2>
-                                </div>
-                            </article>
+                                </Heading>
+                            </Project>
                         </a>
-                    </Link>
+                    </NextLink>
                 </li>
 
                 <li typeof="Book">
-                    <Link href="/ikuiset-seprat/">
+                    <NextLink href="/ikuiset-seprat/">
                         <a>
-                            <article css={projectStyles}>
+                            <Project>
                                 <picture>
                                     <source srcSet="/ikuiset-seprat.webp" type="image/webp" />
                                     <img alt="Ikuiset seprat" src="/ikuiset-seprat.jpg" />
                                 </picture>
-                                <div css={headingStyles}>
+                                <Heading>
                                     <h1>Ikuiset seprat</h1>
                                     <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
-                                </div>
-                            </article>
+                                </Heading>
+                            </Project>
                         </a>
-                    </Link>
+                    </NextLink>
                 </li>
-            </ul>
+            </Projects>
 
-            <ul css={articlesStyles}>
+            <Articles>
                 <li>
                     <a href="/viirankosken-vyokoukku.pdf">
-                        <article css={articleStyles}>
+                        <Article>
                             <picture>
                                 <source srcSet="/viirankosken-vyokoukku-thumbnail.webp" type="image/webp" />
                                 <img alt="Viirankosken vyökoukku" src="/viirankosken-vyokoukku-thumbnail.jpg" />
                             </picture>
                             <h1>Viirankosken vyökoukku</h1>
-                        </article>
+                        </Article>
                     </a>
                 </li>
 
                 <li>
                     <a href="/rautakuona.pdf">
-                        <article css={articleStyles}>
+                        <Article>
                             <picture>
                                 <source srcSet="/rautakymi-thumbnail.webp" type="image/webp" />
                                 <img alt="Viirankosken vyökoukku" src="/rautakymi-thumbnail.jpg" />
                             </picture>
                             <h1>Kymijokisuiston rautakuona</h1>
-                        </article>
+                        </Article>
                     </a>
                 </li>
 
                 <li>
                     <a href="/tammijarvi.pdf">
-                        <article css={tammijarviStyles}>
+                        <Tammijarvi>
                             <picture>
                                 <source srcSet="/tammijarvi-thumbnail.webp" type="image/webp" />
                                 <img
@@ -381,73 +381,67 @@ const Root = () => (
                                 />
                             </picture>
                             <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
-                        </article>
+                        </Tammijarvi>
                     </a>
                 </li>
 
                 <li>
                     <a href="/straka.pdf">
-                        <article css={articleStyles}>
+                        <Article>
                             <picture>
                                 <source srcSet="/straka-thumbnail.webp" type="image/webp" />
                                 <img alt="Stråka Järnframställning" src="/straka-thumbnail.jpg" />
                             </picture>
                             <h1>Stråka Järnframställning</h1>
-                        </article>
+                        </Article>
                     </a>
                 </li>
 
                 <li>
                     <a href="/antti-jappinen.pdf">
-                        <article css={articleStyles}>
+                        <Article>
                             <picture>
                                 <source srcSet="/antti-jappinen-thumbnail.webp" type="image/webp" />
                                 <img alt="Sotamies Antti Jäppinen" src="/antti-jappinen-thumbnail.jpg" />
                             </picture>
                             <h1>Sotamies Antti Jäppinen</h1>
-                        </article>
+                        </Article>
                     </a>
                 </li>
-            </ul>
+            </Articles>
 
             <footer>
                 <nav>
                     <ul>
                         <li>
-                            <a css={linksStyles} href="/kirjoituksia.pdf">
-                                Kirjoituksia
-                            </a>
+                            <Link href="/kirjoituksia.pdf">Kirjoituksia</Link>
                         </li>
 
                         <li>
-                            <a css={linksStyles} href="mailto:Jouni Jäppinen <jouni@jappinen.fi>">
-                                Ota yhteyttä
-                            </a>
+                            <Link href="mailto:Jouni Jäppinen <jouni@jappinen.fi>">Ota yhteyttä</Link>
                         </li>
 
                         <li>
-                            <a
-                                css={linksStyles}
+                            <Link
                                 href="https://www.finnishdesigners.fi/portfolio/jouni.jappinen"
                                 rel="external crossorigin prefetch"
                             >
                                 Ornamo
-                            </a>
+                            </Link>
                         </li>
 
                         <li>
-                            <a
-                                css={linksStyles}
+                            <Link
                                 href="https://artists-o.fi/fi/kuukauden-taiteilija/arkisto/2019-jouni-jappinen"
                                 rel="external crossorigin prefetch"
                             >
                                 Taiteilijat O
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
             </footer>
-        </div>
+        </Main>
     </>
 )
 

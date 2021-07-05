@@ -1,16 +1,16 @@
-import { css } from '@emotion/react'
-import Link from 'next/link'
+import NextLink from 'next/link'
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import styled from 'styled-components'
 
 import { rautakymi } from '../../styles'
 
-const container = css({
+const Container = styled.div({
     backgroundColor: 'rgb(26, 25, 25)',
     color: 'white',
 })
 
-const imageContainer = css({
+const ImageContainer = styled.figure({
     display: 'flex',
     justifyContent: 'center',
     padding: '4rem 0 2rem',
@@ -20,7 +20,7 @@ const imageContainer = css({
     },
 })
 
-const header = css({
+const Header = styled.header({
     backgroundColor: rautakymi.colors.darkRed,
 
     display: 'flex',
@@ -43,7 +43,7 @@ const header = css({
     },
 })
 
-const section = css({
+const Section = styled.section({
     backgroundColor: rautakymi.colors.darkGrey,
 
     flexGrow: 1,
@@ -64,7 +64,7 @@ const section = css({
     },
 })
 
-const link = css({
+const Link = styled.a({
     color: 'rgb(161, 42, 38)',
     display: 'block',
     fontSize: '1.5rem',
@@ -78,7 +78,7 @@ const link = css({
     },
 })
 
-const footer = css({
+const Footer = styled.footer({
     margin: 'auto auto 0',
     paddingBottom: '4rem',
     textAlign: 'center',
@@ -90,24 +90,24 @@ const footer = css({
 })
 
 const Rautakymi = () => (
-    <div css={container}>
+    <Container>
         <Helmet>
             <title>Rautakymi – Jouni Jäppinen</title>
         </Helmet>
 
-        <header css={header}>
-            <figure css={imageContainer}>
+        <Header>
+            <ImageContainer>
                 <picture>
                     <source srcSet="/rautakymi-book-cover.webp" type="image/webp" />
                     <img alt="Rautakymi" src="/rautakymi-book-cover.png" />
                 </picture>
-            </figure>
+            </ImageContainer>
 
             <h1>Rauta&shy;kymi</h1>
             <h2>Talonpoikia, Seppiä, Lohiylimyksiä</h2>
-        </header>
+        </Header>
 
-        <section css={section}>
+        <Section>
             <p>
                 Ennen vuotta 1989 itäisen Uudenmaan ja Kymenlaakson rannikolta ei tunnettu montaakaan rautakautista
                 asuinpaikkaa tai hautaa ja irtolöydötkin oli laskettavissa yhden käden sormin. Löydöttömyyden
@@ -127,32 +127,31 @@ const Rautakymi = () => (
                 alueen tutkimushistoriaan, ryhmän kokoamaan arkeologiseen aineistoon, uusiin muinaisjäännöksiin, sekä
                 materiaalitutkimusten tuloksiin.
             </p>
-        </section>
+        </Section>
 
-        <a css={link} href="/rautakymi-arvostelu.jpg" rel="prefetch" target="_blank">
+        <Link href="/rautakymi-arvostelu.jpg" rel="prefetch" target="_blank">
             Lue kirja-arvostelu (Östnyland)
-        </a>
+        </Link>
 
-        <a css={link} href="/rautakymi-historiallinen-aikakauskirja.pdf" rel="prefetch" target="_blank">
+        <Link href="/rautakymi-historiallinen-aikakauskirja.pdf" rel="prefetch" target="_blank">
             Lue kirja-arvostelu (Historiallinen Aikakauskirja)
-        </a>
+        </Link>
 
-        <a
-            css={link}
+        <Link
             href="https://www.booky.fi/tuote/jouni_jappinen/rautakymi_talonpoikia_seppia_lohiylimyksia/9789529431717"
             rel="crossorigin external noreferrer prefetch"
             target="_blank"
         >
             Osta Booky.fi -verkkokaupasta
-        </a>
+        </Link>
 
-        <footer css={footer}>
+        <Footer>
             <p>Jouni Jäppinen</p>
-            <Link href="/">
+            <NextLink href="/">
                 <a>Takaisin</a>
-            </Link>
-        </footer>
-    </div>
+            </NextLink>
+        </Footer>
+    </Container>
 )
 
 export default Rautakymi

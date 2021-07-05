@@ -1,9 +1,8 @@
 {
   "presets": [
-    "next/babel",
-    "@emotion/babel-preset-css-prop"
+    "next/babel"
   ],
   "plugins": [
-    "babel-plugin-polished"
+    "babel-plugin-styled-components"
   ]
 }
