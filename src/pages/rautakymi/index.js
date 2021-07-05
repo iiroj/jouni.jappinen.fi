@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 import styled from 'styled-components'
 
 import { rautakymi } from '../../styles'
@@ -91,9 +91,9 @@ const Footer = styled.footer({
 
 const Rautakymi = () => (
     <Container>
-        <Helmet>
+        <Head>
             <title>Rautakymi – Jouni Jäppinen</title>
-        </Helmet>
+        </Head>
 
         <Header>
             <ImageContainer>

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import NextLink from 'next/link'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 
 const Container = styled.div({
     backgroundColor: 'rgb(26, 25, 25)',
@@ -65,9 +65,9 @@ const Footer = styled.footer({
 
 const Pajanhamarasta = () => (
     <Container>
-        <Helmet>
+        <Head>
             <title>Pajan hämärästä – Jouni Jäppinen</title>
-        </Helmet>
+        </Head>
 
         <picture>
             <source srcSet="/pajan-hamarasta.webp" type="image/webp" />

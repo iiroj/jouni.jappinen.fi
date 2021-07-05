@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 import styled from 'styled-components'
 
 const Container = styled.main({
@@ -66,9 +66,9 @@ const Footer = styled.footer({
 
 const Ikuisetseprat = () => (
     <Container>
-        <Helmet>
+        <Head>
             <title>Ikuiset seprat – Jouni Jäppinen</title>
-        </Helmet>
+        </Head>
 
         <picture>
             <source srcSet="/ikuiset-seprat.webp" type="image/webp" />

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import NextLink from 'next/link'
-import { Helmet } from 'react-helmet-async'
+import Head from 'next/head'
 import React from 'react'
 
 import { rautakymi } from '../styles'
@@ -246,10 +246,10 @@ const Link = styled.a({
 
 const Root = () => (
     <>
-        <Helmet>
+        <Head>
             <title>Jouni Jäppinen</title>
             <script type="application/ld+json">{microdata}</script>
-        </Helmet>
+        </Head>
 
         <Header>
             <Figure>
