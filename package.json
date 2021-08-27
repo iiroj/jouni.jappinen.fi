@@ -20,27 +20,27 @@
     "version": "standard-version --no-verify"
   },
   "dependencies": {
-    "next": "11.0.1",
+    "next": "11.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "styled-components": "5.3.0"
+    "styled-components": "5.3.1"
   },
   "devDependencies": {
-    "@babel/core": "7.14.6",
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
+    "@babel/core": "7.15.0",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "babel-eslint": "^10.1.0",
-    "babel-plugin-styled-components": "1.13.1",
-    "commitlint": "12.1.4",
-    "eslint": "^7.30.0",
+    "babel-plugin-styled-components": "1.13.2",
+    "commitlint": "13.1.0",
+    "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^7.0.0",
-    "lint-staged": "11.0.0",
+    "husky": "^7.0.2",
+    "lint-staged": "11.1.2",
     "prettier": "^2.3.2",
-    "standard-version": "^9.3.0"
+    "standard-version": "^9.3.1"
   },
   "keywords": [
     "react",
