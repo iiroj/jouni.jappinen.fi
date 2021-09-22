@@ -11,7 +11,7 @@
   "bugs": "https://github.com/iiroj/jouni.jappinen.fi/issues",
   "private": true,
   "workspaces": [
-    "workers-site"
+    "worker"
   ],
   "scripts": {
     "start": "next",
