@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.36.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.35.3...v8.36.0) (2021-09-22)
+
+
+### Features
+
+* update worker script ([a679b56](https://github.com/iiroj/jouni.jappinen.fi/commit/a679b562ea348e162ce0865f69003f246702e254))
+
 ### [8.35.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.35.2...v8.35.3) (2021-09-10)
 
 ### [8.35.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.35.1...v8.35.2) (2021-08-27)
