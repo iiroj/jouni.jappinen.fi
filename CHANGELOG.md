@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.37.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.36.0...v8.37.0) (2021-09-22)
+
+
+### Features
+
+* use self-hosted webfonts instead of connecting to Google services ([4b7d1dc](https://github.com/iiroj/jouni.jappinen.fi/commit/4b7d1dc1877adfb3fcbdf0f93d196e0e94c8bd85))
+
 ## [8.36.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.35.3...v8.36.0) (2021-09-22)
 
 
