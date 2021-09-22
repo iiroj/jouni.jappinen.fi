@@ -11,26 +11,20 @@
   "bugs": "https://github.com/iiroj/jouni.jappinen.fi/issues",
   "private": true,
   "workspaces": [
+    "site",
     "worker"
   ],
   "scripts": {
-    "start": "next",
+    "start": "npm run --workspace=site start",
     "lint": "eslint .",
-    "build": "next build && next export -o dist",
+    "build": "npm run --workspaces build",
     "version": "standard-version --no-verify"
-  },
-  "dependencies": {
-    "next": "11.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "styled-components": "5.3.1"
   },
   "devDependencies": {
     "@babel/core": "7.15.5",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
     "babel-eslint": "^10.1.0",
-    "babel-plugin-styled-components": "1.13.2",
     "commitlint": "13.1.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",

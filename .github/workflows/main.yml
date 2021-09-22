@@ -70,11 +70,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Build
-        run: npm run build
+        run: npm run --workspace=site build
       - uses: actions/upload-artifact@v2
         with:
           name: site
-          path: dist
+          path: site/dist
           retention-days: 1
 
   build-worker:
@@ -125,7 +125,7 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: site
-          path: dist
+          path: site/dist
       - uses: actions/download-artifact@v2
         with:
           name: worker

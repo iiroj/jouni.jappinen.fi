@@ -6,7 +6,7 @@ workers_dev = false
 route = "jouni.jappinen.fi/*"
 
 [site]
-bucket = "./dist"
+bucket = "./site/dist"
 entry-point = "worker"
 
 [build]
