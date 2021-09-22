@@ -12,12 +12,12 @@ const KV_OPTIONS = {
 const staticHeaders = new Headers({
     'Content-Security-Policy': [
         `default-src 'none'`,
-        `connect-src 'self' https://fonts.gstatic.com`,
-        `font-src 'self' https://fonts.gstatic.com`,
+        `connect-src 'self'`,
+        `font-src 'self`,
         `img-src 'self' data:`,
         `object-src 'self'`,
         `script-src 'self' 'unsafe-inline' 'unsafe-eval'`,
-        `style-src 'self' 'unsafe-inline' https://fonts.googleapis.com`,
+        `style-src 'self' 'unsafe-inline'`,
     ].join(';'),
     'Permissions-Policy': 'interest-cohort=()' /** Disable Google's FLoC */,
     'Referrer-Policy': 'strict-origin-when-cross-origin',
