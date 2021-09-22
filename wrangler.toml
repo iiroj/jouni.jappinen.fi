@@ -1,3 +1,5 @@
+compatibility_date = "2021-09-22"
+
 name = "jouni_jappinen_fi"
 type = "javascript"
 workers_dev = false
