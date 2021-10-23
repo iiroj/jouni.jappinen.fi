@@ -8,9 +8,9 @@
     "build": "esbuild src/index.js --bundle --minify --sourcemap --format=esm --outfile=dist/index.js"
   },
   "dependencies": {
-    "@cloudflare/kv-asset-handler": "^0.1.3"
+    "@cloudflare/kv-asset-handler": "0.1.3"
   },
   "devDependencies": {
-    "esbuild": "^0.13.8"
+    "esbuild": "0.13.8"
   }
 }

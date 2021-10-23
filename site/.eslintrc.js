@@ -3,13 +3,7 @@ module.exports = {
         browser: true,
     },
     extends: ['plugin:react/recommended', 'plugin:react-hooks/recommended'],
-    parser: '@babel/eslint-parser',
-    parserOptions: {
-        babelOptions: {
-            // Make sure babel finds config file from this directory
-            cwd: __dirname,
-        },
-    },
+    parser: '@typescript-eslint/parser',
     plugins: ['react-hooks'],
     rules: {
         'react/prop-types': 'off',
