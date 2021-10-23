@@ -71,7 +71,7 @@ const Pajanhamarasta = () => (
 
         <picture>
             <source srcSet="/pajan-hamarasta.webp" type="image/webp" />
-            <Image alt="Pajan hämärstä" src="/pajan-hamarasta.png" />
+            <Image alt="Pajan hämärstä" src="/pajan-hamarasta.jpg" />
         </picture>
 
         <Header>

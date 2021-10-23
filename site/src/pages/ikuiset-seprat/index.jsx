@@ -72,7 +72,7 @@ const Ikuisetseprat = () => (
 
         <picture>
             <source srcSet="/ikuiset-seprat.webp" type="image/webp" />
-            <Image alt="Ikuiset seprat" src="/ikuiset-seprat.png" />
+            <Image alt="Ikuiset seprat" src="/ikuiset-seprat.jpg" />
         </picture>
 
         <Header>
