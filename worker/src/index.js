@@ -13,7 +13,7 @@ const staticHeaders = new Headers({
     'Content-Security-Policy': [
         `default-src 'none'`,
         `connect-src 'self'`,
-        `font-src 'self`,
+        `font-src 'self'`,
         `img-src 'self' data:`,
         `object-src 'self'`,
         `script-src 'self' 'unsafe-inline' 'unsafe-eval'`,
