@@ -11,7 +11,7 @@ module.exports = {
     headers,
     poweredByHeader: false,
     reactStrictMode: true,
-    target: 'server',
+    target: 'serverless',
     trailingSlash: true,
     webpack5: true,
 }
