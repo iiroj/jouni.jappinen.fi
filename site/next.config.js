@@ -1,3 +1,5 @@
+const headers = require('./next/headers')
+
 module.exports = {
     eslint: { ignoreDuringBuilds: true },
     experimental: {
@@ -6,6 +8,8 @@ module.exports = {
         swcMinify: true,
     },
     exportPathMap: async (defaultPaths) => defaultPaths,
+    headers,
+    poweredByHeader: false,
     reactStrictMode: true,
     target: 'server',
     trailingSlash: true,
