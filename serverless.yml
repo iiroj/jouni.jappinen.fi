@@ -26,3 +26,4 @@ jouni.jappinen.fi:
             imageLambda: jouni-jappinen-fi-next-image-lambda
         memory: 128
         runtime: nodejs14.x
+        removeOldLambdaVersions: true
