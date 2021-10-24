@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.39.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.38.2...v8.39.0) (2021-10-24)
+
+
+### Features
+
+* redirect www ([8b3046c](https://github.com/iiroj/jouni.jappinen.fi/commit/8b3046ce8cc15ce1792cac6b7b1004fad1b5c7af))
+
 ### [8.38.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.38.1...v8.38.2) (2021-10-24)
 
 ### [8.38.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.38.0...v8.38.1) (2021-10-24)
