@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.38.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.37.6...v8.38.0) (2021-10-24)
+
+
+### Features
+
+* add static headers to Next.js server ([a6eeebc](https://github.com/iiroj/jouni.jappinen.fi/commit/a6eeebc00530877575ce93decf9cf41665bfa286))
+* deploy using `@sls-next/serverless-component` ([002212c](https://github.com/iiroj/jouni.jappinen.fi/commit/002212ce4c377c462376fe50309c313d0e811a16))
+
 ### [8.37.6](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.37.5...v8.37.6) (2021-10-24)
 
 
