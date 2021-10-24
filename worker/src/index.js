@@ -39,7 +39,7 @@ const withHeaders = (response) => {
 }
 
 /** Map a request to the 404 page URL */
-const mapRequestToNotFound = (req) => new Request(`${new URL(req.url).origin}/404.html`, req)
+const mapRequestToNotFound = (req) => new Request(`${new URL(req.url).origin}/404/index.html`, req)
 
 /**
  * Get the static response to a fetch event:
