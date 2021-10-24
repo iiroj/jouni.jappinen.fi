@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.37.6](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.37.5...v8.37.6) (2021-10-24)
+
+
+### Bug Fixes
+
+* correctly map 404 asset ([e7855ae](https://github.com/iiroj/jouni.jappinen.fi/commit/e7855ae2da98fac68dd668fa2b1b07df3a6e4739))
+* fix typo in font-src CSP ([09d6f04](https://github.com/iiroj/jouni.jappinen.fi/commit/09d6f04fcb4b0d6016a84d4d5560023e39e401b2))
+* use correct extension of JPG instead of PNG ([17ea93c](https://github.com/iiroj/jouni.jappinen.fi/commit/17ea93c6aaf9b8c20c8a96c7fa354472db2ac4a2))
+
 ### [8.37.5](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.37.4...v8.37.5) (2021-10-23)
 
 ### [8.37.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.37.3...v8.37.4) (2021-10-23)
