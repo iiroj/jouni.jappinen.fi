@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.39.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.39.0...v8.39.1) (2021-10-24)
+
 ## [8.39.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.38.2...v8.39.0) (2021-10-24)
 
 
