@@ -1,0 +1,22 @@
+name: 'jouni.jappinen.fi'
+
+'jouni.jappinen.fi':
+    component: './node_modules/@sls-next/serverless-component'
+    inputs:
+        build:
+            cmd: 'next'
+            cwd: './site'
+        nextConfigDir: './site'
+        bucketName: 'jouni.jappinen.fi'
+        bucketRegion: 'eu-north-1'
+        description: 'Lambda@Edge for jouni.jappinen.fi'
+        enableS3Acceleration: false # Not supported in eu-north-1
+        cloudfront:
+            distributionId: 'E1R5ZRI83QD5F1'
+            priceClass: 'PriceClass_100'
+        name:
+            defaultLambda: 'jouni-jappinen-fi-next-default-lambda'
+            apiLambda: 'jouni-jappinen-fi-next-api-lambda'
+            imageLambda: 'jouni-jappinen-fi-next-image-lambda'
+        memory: 128
+        runtime: 'nodejs14.x'

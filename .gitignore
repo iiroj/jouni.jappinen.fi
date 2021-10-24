@@ -1,4 +1,8 @@
 .next
+.serverless
+.serverless_nextjs
 dist
 node_modules
 sketch
+
+.env

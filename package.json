@@ -1,7 +1,7 @@
 {
   "name": "jouni.jappinen.fi",
   "version": "8.37.6",
-  "description": "Static site built with GatsbyJS",
+  "description": "Static site built with Next.js",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
   "contributors": [
     "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)"
@@ -11,18 +11,21 @@
   "bugs": "https://github.com/iiroj/jouni.jappinen.fi/issues",
   "private": true,
   "workspaces": [
-    "site",
-    "worker"
+    "site"
   ],
   "scripts": {
     "start": "npm run --workspace=site start",
     "lint": "eslint --ext js,jsx .",
     "build": "npm run --workspaces build",
+    "serverless:state:download": "aws s3 sync s3://jouni.jappinen.fi-serverless-state .serverless --delete",
+    "serverless:deploy": "serverless --debug",
+    "serverless:state:upload": "aws s3 sync .serverless s3://jouni.jappinen.fi-serverless-state --delete",
     "version": "standard-version --no-verify"
   },
   "dependencies": {
     "@commitlint/cli": "13.2.1",
     "@commitlint/config-conventional": "13.2.0",
+    "@sls-next/serverless-component": "3.5.0-alpha.8",
     "commitlint": "13.2.1",
     "eslint": "8.1.0",
     "eslint-config-prettier": "8.3.0",
@@ -32,11 +35,7 @@
     "husky": "7.0.4",
     "lint-staged": "11.2.3",
     "prettier": "2.4.1",
+    "serverless": "1.83.3",
     "standard-version": "9.3.2"
-  },
-  "keywords": [
-    "react",
-    "serverless",
-    "static-site"
-  ]
+  }
 }
