@@ -33,9 +33,9 @@
     "eslint-plugin-react": "7.26.1",
     "eslint-plugin-react-hooks": "4.2.0",
     "husky": "7.0.4",
-    "lint-staged": "11.2.3",
+    "lint-staged": "11.2.5",
     "prettier": "2.4.1",
-    "serverless": "1.83.3",
+    "serverless": "2.64.1",
     "standard-version": "9.3.2"
   }
 }
