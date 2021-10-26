@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.40.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.39.1...v8.40.0) (2021-10-26)
+
+
+### Features
+
+* enable experimental concurrent features ([4923c2d](https://github.com/iiroj/jouni.jappinen.fi/commit/4923c2df6ac44a3ef30de78905159679576b5cee))
+* remove trailing slash from URL ([11a249b](https://github.com/iiroj/jouni.jappinen.fi/commit/11a249bfc0725899b72c1572844689ad594425a5))
+
 ### [8.39.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.39.0...v8.39.1) (2021-10-24)
 
 ## [8.39.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.38.2...v8.39.0) (2021-10-24)
