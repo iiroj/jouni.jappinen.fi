@@ -3,7 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
 
-import { rautakymi } from '../../styles'
+import { rautakymi } from '../styles'
 
 const Container = styled.div({
     backgroundColor: 'rgb(26, 25, 25)',

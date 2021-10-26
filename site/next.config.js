@@ -11,6 +11,6 @@ module.exports = {
     reactStrictMode: true,
     swcMinify: true,
     target: 'serverless',
-    trailingSlash: true,
+    trailingSlash: false,
     webpack5: true,
 }
