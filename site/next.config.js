@@ -3,7 +3,6 @@ const headers = require('./next/headers')
 module.exports = {
     eslint: { ignoreDuringBuilds: true },
     experimental: {
-        concurrentFeatures: true,
         esmExternals: true,
     },
     exportPathMap: async (defaultPaths) => defaultPaths,
