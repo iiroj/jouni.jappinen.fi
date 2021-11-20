@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.41.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.40.3...v8.41.0) (2021-11-20)
+
+
+### Features
+
+* use experimental styled-components SWC feature ([9692c69](https://github.com/iiroj/jouni.jappinen.fi/commit/9692c69d8769752b39b5d249b7e882cafe2dba9f))
+
 ### [8.40.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.40.2...v8.40.3) (2021-11-20)
 
 ### [8.40.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.40.1...v8.40.2) (2021-11-13)
