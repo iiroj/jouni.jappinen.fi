@@ -2,11 +2,28 @@
     "env": {
         "node": true
     },
-    "extends": ["eslint:recommended", "plugin:prettier/recommended"],
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "next",
+        "next/core-web-vitals",
+        "plugin:prettier/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:react/recommended"
+    ],
     "parserOptions": {
         "ecmaVersion": 2020,
         "sourceType": "module"
     },
-    "plugins": ["prettier"],
-    "root": true
+    "plugins": ["prettier", "react-hooks"],
+    "root": true,
+    "rules": {
+        "@next/next/no-html-link-for-pages": ["error", "site/src/pages/"],
+        "react/prop-types": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    }
 }
