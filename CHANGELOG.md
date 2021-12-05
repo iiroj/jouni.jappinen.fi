@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [8.42.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.41.0...v8.42.0) (2021-12-05)
+
+
+### Features
+
+* add PDF ([f1191fb](https://github.com/iiroj/jouni.jappinen.fi/commit/f1191fb47d3550a6f1c098f77e487e1e9bbc7eb6))
+
 ## [8.41.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.40.3...v8.41.0) (2021-11-20)
 
 
