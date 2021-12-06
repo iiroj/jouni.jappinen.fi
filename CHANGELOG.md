@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [8.42.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.42.0...v8.42.1) (2021-12-06)
+
+
+### Bug Fixes
+
+* rename PDF ([ab12a83](https://github.com/iiroj/jouni.jappinen.fi/commit/ab12a839922dc49b60362bd2f5b2c23aca0ecfe5))
+
 ## [8.42.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.41.0...v8.42.0) (2021-12-05)
 
 
