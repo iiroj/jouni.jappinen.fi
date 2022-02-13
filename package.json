@@ -23,21 +23,21 @@
     "version": "standard-version --no-verify"
   },
   "dependencies": {
-    "@commitlint/cli": "16.1.0",
-    "@commitlint/config-conventional": "16.0.0",
+    "@commitlint/cli": "16.2.1",
+    "@commitlint/config-conventional": "16.2.1",
     "@sls-next/serverless-component": "3.6.0",
-    "@typescript-eslint/parser": "5.10.0",
-    "commitlint": "16.1.0",
-    "eslint": "8.7.0",
-    "eslint-config-next": "12.0.8",
+    "@typescript-eslint/parser": "5.11.0",
+    "commitlint": "16.2.1",
+    "eslint": "8.9.0",
+    "eslint-config-next": "12.0.10",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.28.0",
     "eslint-plugin-react-hooks": "4.3.0",
     "husky": "7.0.4",
-    "lint-staged": "12.2.2",
+    "lint-staged": "12.3.4",
     "prettier": "2.5.1",
-    "serverless": "2.72.0",
+    "serverless": "3.2.0",
     "standard-version": "9.3.2"
   }
 }
