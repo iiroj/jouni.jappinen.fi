@@ -182,17 +182,23 @@ const Articles = styled.ul({
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
+    margin: '0 auto',
+    maxWidth: '42rem',
     width: '100%',
 
     li: {
         boxSizing: 'border-box',
-        flex: '0 1 15rem',
+        flex: '0 1 12rem',
         padding: '1rem',
 
         '&:hover article': {
             transform: 'scale(0.95)',
             transformOrigin: '50% 50%',
         },
+
+        ...tabletSize({
+            flexBasis: '14rem',
+        }),
     },
 })
 
@@ -382,6 +388,18 @@ const Root = () => (
                             </picture>
                             <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
                         </Tammijarvi>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/Loviisa-Artists-Studio-1995-2021.pdf">
+                        <Article>
+                            <picture>
+                                <source srcSet="/essinveistos.webp" type="image/webp" />
+                                <img alt="Loviisa Artists’ Studio 1995–2021" src="/essinveistos.jpg" />
+                            </picture>
+                            <h1>Loviisa Artists’ Studio 1995–2021</h1>
+                        </Article>
                     </a>
                 </li>
 
