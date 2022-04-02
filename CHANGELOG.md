@@ -1,3 +1,15 @@
+## [8.44.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.43.4...v8.44.0) (2022-04-02)
+
+
+### Features
+
+* update PDF file ([3c52bfd](https://github.com/iiroj/jouni.jappinen.fi/commit/3c52bfddcb2861cc079ff01cf99172d120705c20))
+
+
+### Bug Fixes
+
+* add connect-src ([6a2364e](https://github.com/iiroj/jouni.jappinen.fi/commit/6a2364e9c5213a261ad3da20ee8ed080d1300670))
+
 ### [8.43.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.43.3...v8.43.4) (2022-04-02)
 
 
