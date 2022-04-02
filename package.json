@@ -14,9 +14,9 @@
     "site"
   ],
   "scripts": {
-    "start": "npm run --workspace=site start",
+    "start": "next dev",
     "lint": "eslint --ext js,jsx .",
-    "build": "npm run --workspaces build",
+    "build": "next build",
     "version": "standard-version --no-verify"
   },
   "dependencies": {
@@ -24,14 +24,18 @@
     "@commitlint/config-conventional": "16.2.1",
     "@typescript-eslint/parser": "5.17.0",
     "commitlint": "16.2.3",
-    "eslint": "8.12.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-react": "7.29.4",
     "eslint-plugin-react-hooks": "4.4.0",
+    "eslint-plugin-react": "7.29.4",
+    "eslint": "8.12.0",
     "husky": "7.0.4",
     "lint-staged": "12.3.7",
+    "next": "12.1.4",
     "prettier": "2.6.1",
-    "standard-version": "9.3.2"
+    "react-dom": "18.0.0",
+    "react": "18.0.0",
+    "standard-version": "9.3.2",
+    "styled-components": "5.3.5"
   }
 }
