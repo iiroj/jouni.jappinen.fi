@@ -31,7 +31,7 @@ class Document extends NextDocument {
 
     render() {
         return (
-            <Html>
+            <Html lang="fi">
                 <Head />
                 <body>
                     <Main />
