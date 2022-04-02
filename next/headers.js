@@ -6,6 +6,7 @@ const staticHeaders = [
               key: 'Content-Security-Policy',
               value: [
                   `default-src 'self'`,
+                  `connect-src 'sef' https://vitals.vercel-insights.com`,
                   `img-src 'self' data:`,
                   `script-src 'self' 'unsafe-inline' 'unsafe-eval'`,
                   `style-src 'self' 'unsafe-inline'`,
