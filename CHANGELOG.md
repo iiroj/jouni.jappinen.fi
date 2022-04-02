@@ -1,3 +1,10 @@
+### [8.44.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.44.0...v8.44.1) (2022-04-02)
+
+
+### Reverts
+
+* Revert "refactor: move html lang to _app" ([3afd036](https://github.com/iiroj/jouni.jappinen.fi/commit/3afd03678ce025553b8721fc42b49adb53c212aa))
+
 ## [8.44.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.43.4...v8.44.0) (2022-04-02)
 
 
