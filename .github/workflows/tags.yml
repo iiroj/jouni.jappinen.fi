@@ -1,0 +1,59 @@
+name: Tags
+
+on:
+  push:
+    tags:
+      # Semver-like tags "v1.0.0"
+      - "v[0-9]+.[0-9]+.[0-9]+"
+
+jobs:
+  Install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - if: steps.cache-node_modules.outputs.cache-hit != 'true'
+        run: npm ci
+
+  Deploy:
+    needs:
+      - Install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - uses: actions/cache@v2
+        id: cache-next-build
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-next-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-next-${{ github.sha }}
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: '1'
+      - name: Deploy to Vercel
+        run: npx vercel --token ${VERCEL_TOKEN} --prod
+        env:
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}

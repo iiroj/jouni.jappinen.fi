@@ -1,0 +1,93 @@
+name: Pushes
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  Install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - if: steps.cache-node_modules.outputs.cache-hit != 'true'
+        run: npm ci
+
+  Lint:
+    needs:
+      - Install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - run: npm run lint
+
+  Build:
+    needs:
+      - Install
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - uses: actions/cache@v2
+        id: cache-next-build
+        with:
+          path: .next/cache
+          key: ${{ runner.os }}-next-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-next-${{ github.sha }}
+      - run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: '1'
+
+  Release:
+    # Prevent infinite release loop
+    if: ${{ !startsWith(github.event.head_commit.message, 'chore(release)') }}
+    needs:
+      - Lint
+      - Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: actions/cache@v2
+        id: cache-node_modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+      - run: npx semantic-release
+        env:
+          GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}

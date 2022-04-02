@@ -1,8 +1,5 @@
 .next
-.serverless
-.serverless_nextjs
+.vercel
 dist
 node_modules
 sketch
-
-.env
