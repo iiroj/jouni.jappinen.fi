@@ -1,3 +1,10 @@
+### [8.43.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.43.3...v8.43.4) (2022-04-02)
+
+
+### Bug Fixes
+
+* setup semantic-release ([930bdd9](https://github.com/iiroj/jouni.jappinen.fi/commit/930bdd9c806a7eadacc58993b36a82b311367c58))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
