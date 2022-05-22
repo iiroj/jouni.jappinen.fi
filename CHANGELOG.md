@@ -1,3 +1,11 @@
+### [8.44.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.44.3...v8.44.4) (2022-05-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies ([c5d366c](https://github.com/iiroj/jouni.jappinen.fi/commit/c5d366cd8d6a2407825ba2171b1222f8152a1cab))
+* update caption text ([f910f9c](https://github.com/iiroj/jouni.jappinen.fi/commit/f910f9c2a052e1547d1781e8d9bd59fe04729a12))
+
 ### [8.44.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.44.2...v8.44.3) (2022-05-10)
 
 
