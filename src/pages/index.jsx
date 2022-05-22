@@ -266,11 +266,9 @@ const Root = () => (
                 </picture>
 
                 <Caption>
-                    <p>
-                        Image: Ring, sterling silver & colored titanium. Made in single pieces at the Strömfors atelier
-                        from 1986 to1991.
-                    </p>
-                    <p>The Alice and Louis Koch Collection exhibition in Swiss National Museum Zurich, Switzerland</p>
+                    Image: Ring, sterling silver & colored titanium. Made in single pieces at the Strömfors atelier from
+                    1986 to 1991. The Alice and Louis Koch Collection in the Swiss National Museum, Zurich (part of the
+                    museum collection on permanent display).
                 </Caption>
             </Figure>
 
