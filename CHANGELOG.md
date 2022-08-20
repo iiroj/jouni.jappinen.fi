@@ -1,3 +1,11 @@
+## [8.44.5](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.44.4...v8.44.5) (2022-08-20)
+
+
+### Bug Fixes
+
+* **deps:** update dependencies ([ecbb15e](https://github.com/iiroj/jouni.jappinen.fi/commit/ecbb15e53f6131c9df7417cc25c529f0c7241a6e))
+* update Next.js config ([05ce691](https://github.com/iiroj/jouni.jappinen.fi/commit/05ce6918e84d4c46ba9cf683acbb7d8eaeebcde9))
+
 ### [8.44.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.44.3...v8.44.4) (2022-05-22)
 
 
