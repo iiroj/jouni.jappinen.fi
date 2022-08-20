@@ -28,14 +28,14 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         id: cache-node_modules
         with:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         id: cache-next-build
         with:
           path: .next/cache
