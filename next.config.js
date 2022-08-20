@@ -4,11 +4,15 @@ const config = {
     eslint: {
         ignoreDuringBuilds: true,
     },
+
     experimental: {
-        runtime: 'edge',
+        runtime: 'experimental-edge',
     },
+
     headers,
+
     swcMinify: true,
+
     typescript: {
         ignoreBuildErrors: true,
     },
