@@ -331,7 +331,7 @@ const Root = () => (
                     </NextLink>
                 </li>
 
-                <li typeof="Book">
+                <li>
                     <NextLink href="/ikuiset-seprat/">
                         <a>
                             <Project>
