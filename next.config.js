@@ -13,7 +13,6 @@ const config = {
 
     experimental: {
         browsersListForSwc: true,
-        runtime: 'experimental-edge',
     },
 
     headers: () => [
