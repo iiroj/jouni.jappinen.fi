@@ -1,3 +1,12 @@
+## [8.44.6](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.44.5...v8.44.6) (2022-09-24)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([b9455e2](https://github.com/iiroj/jouni.jappinen.fi/commit/b9455e2c6e443adff00e37c0c7d26831a074a567))
+* **deps:** update all dependencies ([7327c0c](https://github.com/iiroj/jouni.jappinen.fi/commit/7327c0ce1f7b25254541895edf8fba58a1a12bd2))
+* remove unknown typeof property ([25fe3b8](https://github.com/iiroj/jouni.jappinen.fi/commit/25fe3b8ae0862caf191d682660ca6c0792ee02fc))
+
 ## [8.44.5](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.44.4...v8.44.5) (2022-08-20)
 
 
