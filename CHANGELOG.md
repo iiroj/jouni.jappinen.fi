@@ -1,3 +1,10 @@
+## [8.45.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.44.7...v8.45.0) (2022-10-30)
+
+
+### Features
+
+* **deps:** update Next.js 13 and other dependencies ([9a581ae](https://github.com/iiroj/jouni.jappinen.fi/commit/9a581ae41ed0b595b70151c294a21399dea6294e))
+
 ## [8.44.7](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.44.6...v8.44.7) (2022-10-12)
 
 
