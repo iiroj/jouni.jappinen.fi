@@ -11,10 +11,6 @@ const config = {
         ignoreDuringBuilds: true,
     },
 
-    experimental: {
-        browsersListForSwc: true,
-    },
-
     headers: () => [
         {
             source: '/:path*',
@@ -40,8 +36,6 @@ const config = {
             ],
         },
     ],
-
-    swcMinify: true,
 
     typescript: {
         ignoreBuildErrors: true,
