@@ -30,6 +30,8 @@ const Reset = createGlobalStyle(
         },
 
         body: {
+            display: 'flex',
+            flexDirection: 'column',
             fontSize: 16,
             fontWeight: '400',
             height: '100%',

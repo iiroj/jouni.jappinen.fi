@@ -1,10 +1,15 @@
-import NextLink from 'next/link'
+import { Link as RemixLink } from '@remix-run/react'
 import React from 'react'
-import Head from 'next/head'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
-const Container = styled.main({
-    backgroundColor: 'rgb(219, 219, 219)',
+export const meta = () => ({
+    title: 'Ikuiset seprat – Jouni Jäppinen',
+})
+
+const GlobalStyles = createGlobalStyle({
+    body: {
+        backgroundColor: 'rgb(219, 219, 219)',
+    },
 })
 
 const Image = styled.img({
@@ -39,7 +44,7 @@ const Section = styled.section({
     },
 })
 
-const Link = styled.a({
+const StyledLink = styled.a({
     color: 'rgb(0, 74, 128)',
     display: 'block',
     fontSize: '1.5rem',
@@ -65,10 +70,8 @@ const Footer = styled.footer({
 })
 
 const Ikuisetseprat = () => (
-    <Container>
-        <Head>
-            <title>Ikuiset seprat – Jouni Jäppinen</title>
-        </Head>
+    <>
+        <GlobalStyles />
 
         <picture>
             <source srcSet="/ikuiset-seprat.webp" type="image/webp" />
@@ -116,24 +119,30 @@ const Ikuisetseprat = () => (
             </p>
         </Section>
 
-        <Link href="/Päiviö_arvostelu_22.6.16.jpg" rel="prefetch">
+        <StyledLink href="/Päiviö_arvostelu_22.6.16.jpg" target="_blank">
             Lue kirja-arvostelu (Kymen Sanomat)
-        </Link>
+        </StyledLink>
 
-        <Link href="/ikuiset-seprat-arvostelu.pdf" rel="prefetch">
+        <StyledLink href="/ikuiset-seprat-arvostelu.pdf" target="_blank">
             Lue kirja-arvostelu (Tuglas-seura)
-        </Link>
+        </StyledLink>
 
-        <Link href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310" rel="external crossorigin prefetch">
+        <StyledLink
+            href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310"
+            rel="crossorigin external"
+            target="_blank"
+        >
             Osta Adlibris-verkkokirjakaupasta
-        </Link>
+        </StyledLink>
 
         <Footer>
             <p>Jouni Jäppinen</p>
             <p>ISBN 978-952-93-7131-0</p>
-            <NextLink href="/">Takaisin</NextLink>
+            <RemixLink to="/" prefetch="intent">
+                Takaisin
+            </RemixLink>
         </Footer>
-    </Container>
+    </>
 )
 
 export default Ikuisetseprat

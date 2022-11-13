@@ -1,11 +1,16 @@
-import styled from 'styled-components'
-import NextLink from 'next/link'
+import { Link as RemixLink } from '@remix-run/react'
 import React from 'react'
-import Head from 'next/head'
+import styled, { createGlobalStyle } from 'styled-components'
 
-const Container = styled.div({
-    backgroundColor: 'rgb(26, 25, 25)',
-    color: 'white',
+export const meta = () => ({
+    title: 'Pajan hämärästä – Jouni Jäppinen',
+})
+
+const GlobalStyles = createGlobalStyle({
+    body: {
+        backgroundColor: 'rgb(26, 25, 25)',
+        color: 'white',
+    },
 })
 
 const Image = styled.img({
@@ -38,7 +43,7 @@ const Section = styled.section({
     },
 })
 
-const Link = styled.a({
+const StyledLink = styled.a({
     color: 'rgb(161, 42, 38)',
     display: 'block',
     fontSize: '1.5rem',
@@ -64,10 +69,8 @@ const Footer = styled.footer({
 })
 
 const Pajanhamarasta = () => (
-    <Container>
-        <Head>
-            <title>Pajan hämärästä – Jouni Jäppinen</title>
-        </Head>
+    <>
+        <GlobalStyles />
 
         <picture>
             <source srcSet="/pajan-hamarasta.webp" type="image/webp" />
@@ -113,24 +116,26 @@ const Pajanhamarasta = () => (
             </p>
         </Section>
 
-        <Link href="/pajan-hamarasta-arvostelu.jpg" rel="prefetch" target="_blank">
+        <StyledLink href="/pajan-hamarasta-arvostelu.jpg" target="_blank">
             Lue kirja-arvostelu
-        </Link>
+        </StyledLink>
 
-        <Link
+        <StyledLink
             href="https://www.adlibris.com/fi/kirja/pajan-hamarasta-9789529342501"
-            rel="crossorigin external noreferrer prefetch"
+            rel="crossorigin external"
             target="_blank"
         >
             Osta Adlibris-verkkokirjakaupasta
-        </Link>
+        </StyledLink>
 
         <Footer>
             <p>Jouni Jäppinen</p>
             <p>ISBN-978-952-93-4250-1</p>
-            <NextLink href="/">Takaisin</NextLink>
+            <RemixLink to="/" prefetch="intent">
+                Takaisin
+            </RemixLink>
         </Footer>
-    </Container>
+    </>
 )
 
 export default Pajanhamarasta

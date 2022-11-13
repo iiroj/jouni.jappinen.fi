@@ -1,24 +1,27 @@
-import styled from 'styled-components'
-import NextLink from 'next/link'
-import Head from 'next/head'
+import { Link as RemixLink } from '@remix-run/react'
 import React from 'react'
+import styled from 'styled-components'
 
 import { rautakymi } from '../styles'
 
-const microdata = JSON.stringify({
-    '@context': 'http://schema.org',
-    '@type': 'Person',
-    name: 'Jouni Jäppinen',
-    jobTitle: 'FM, kultaseppä',
-    url: 'https://jouni.jappinen.fi',
-    email: 'jouni@jappinen.fi',
-    nationality: 'Finland',
-    address: {
-        '@type': 'PostalAddress',
-        addressCountry: 'Finland',
-        addressLocality: 'Loviisa',
-    },
-    alumniOf: 'Turun yliopisto',
+// const microdata = JSON.stringify({
+//     '@context': 'http://schema.org',
+//     '@type': 'Person',
+//     name: 'Jouni Jäppinen',
+//     jobTitle: 'FM, kultaseppä',
+//     url: 'https://jouni.jappinen.fi',
+//     email: 'jouni@jappinen.fi',
+//     nationality: 'Finland',
+//     address: {
+//         '@type': 'PostalAddress',
+//         addressCountry: 'Finland',
+//         addressLocality: 'Loviisa',
+//     },
+//     alumniOf: 'Turun yliopisto',
+// })
+
+export const meta = () => ({
+    title: 'Jouni Jäppinen',
 })
 
 const BREAKPOINT = '1023px'
@@ -238,7 +241,7 @@ const Tammijarvi = styled(Article)({
     },
 })
 
-const Link = styled.a({
+const Link = styled(RemixLink)({
     borderTop: '1px solid rgba(0, 0, 0, 0.1)',
     display: 'block',
     padding: '1rem 0',
@@ -252,11 +255,6 @@ const Link = styled.a({
 
 const Root = () => (
     <>
-        <Head>
-            <title>Jouni Jäppinen</title>
-            <script type="application/ld+json">{microdata}</script>
-        </Head>
-
         <Header>
             <Figure>
                 <picture>
@@ -298,54 +296,48 @@ const Root = () => (
 
             <Projects>
                 <li>
-                    <NextLink href="/rautakymi/">
-                        <a>
-                            <RautakymiBook>
-                                <picture>
-                                    <source srcSet="/rautakymi-book-cover.webp" type="image/webp" />
-                                    <img alt="Rautakymi" src="/rautakymi-book-cover.png" />
-                                </picture>
-                                <Heading>
-                                    <h1>Rautakymi</h1>
-                                    <h2>Talonpoikia, Seppiä, Lohiylimyksiä</h2>
-                                </Heading>
-                            </RautakymiBook>
-                        </a>
-                    </NextLink>
+                    <RemixLink to="/rautakymi">
+                        <RautakymiBook>
+                            <picture>
+                                <source srcSet="/rautakymi-book-cover.webp" type="image/webp" />
+                                <img alt="Rautakymi" src="/rautakymi-book-cover.png" />
+                            </picture>
+                            <Heading>
+                                <h1>Rautakymi</h1>
+                                <h2>Talonpoikia, Seppiä, Lohiylimyksiä</h2>
+                            </Heading>
+                        </RautakymiBook>
+                    </RemixLink>
                 </li>
 
                 <li>
-                    <NextLink href="/pajan-hamarasta/">
-                        <a>
-                            <Project>
-                                <picture>
-                                    <source srcSet="/pajan-hamarasta.webp" type="image/webp" />
-                                    <img alt="Pajan hämärästä" src="/pajan-hamarasta.jpg" />
-                                </picture>
-                                <Heading>
-                                    <h1>Pajan hämärästä</h1>
-                                    <h2>Sepän kulttuurihistoriaa</h2>
-                                </Heading>
-                            </Project>
-                        </a>
-                    </NextLink>
+                    <RemixLink to="/pajan-hamarasta">
+                        <Project>
+                            <picture>
+                                <source srcSet="/pajan-hamarasta.webp" type="image/webp" />
+                                <img alt="Pajan hämärästä" src="/pajan-hamarasta.jpg" />
+                            </picture>
+                            <Heading>
+                                <h1>Pajan hämärästä</h1>
+                                <h2>Sepän kulttuurihistoriaa</h2>
+                            </Heading>
+                        </Project>
+                    </RemixLink>
                 </li>
 
                 <li>
-                    <NextLink href="/ikuiset-seprat/">
-                        <a>
-                            <Project>
-                                <picture>
-                                    <source srcSet="/ikuiset-seprat.webp" type="image/webp" />
-                                    <img alt="Ikuiset seprat" src="/ikuiset-seprat.jpg" />
-                                </picture>
-                                <Heading>
-                                    <h1>Ikuiset seprat</h1>
-                                    <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
-                                </Heading>
-                            </Project>
-                        </a>
-                    </NextLink>
+                    <RemixLink to="/ikuiset-seprat">
+                        <Project>
+                            <picture>
+                                <source srcSet="/ikuiset-seprat.webp" type="image/webp" />
+                                <img alt="Ikuiset seprat" src="/ikuiset-seprat.jpg" />
+                            </picture>
+                            <Heading>
+                                <h1>Ikuiset seprat</h1>
+                                <h2>Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa</h2>
+                            </Heading>
+                        </Project>
+                    </RemixLink>
                 </li>
             </Projects>
 
@@ -430,16 +422,16 @@ const Root = () => (
                 <nav>
                     <ul>
                         <li>
-                            <Link href="/kirjoituksia.pdf">Kirjoituksia</Link>
+                            <Link to="/kirjoituksia.pdf">Kirjoituksia</Link>
                         </li>
 
                         <li>
-                            <Link href="mailto:Jouni Jäppinen <jouni@jappinen.fi>">Ota yhteyttä</Link>
+                            <Link to="mailto:Jouni Jäppinen <jouni@jappinen.fi>">Ota yhteyttä</Link>
                         </li>
 
                         <li>
                             <Link
-                                href="https://www.finnishdesigners.fi/portfolio/jouni.jappinen"
+                                to="https://www.finnishdesigners.fi/portfolio/jouni.jappinen"
                                 rel="external crossorigin prefetch"
                             >
                                 Ornamo
@@ -448,7 +440,7 @@ const Root = () => (
 
                         <li>
                             <Link
-                                href="https://artists-o.fi/fi/kuukauden-taiteilija/arkisto/2019-jouni-jappinen"
+                                to="https://artists-o.fi/fi/kuukauden-taiteilija/arkisto/2019-jouni-jappinen"
                                 rel="external crossorigin prefetch"
                             >
                                 Taiteilijat O

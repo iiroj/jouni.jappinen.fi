@@ -1,13 +1,18 @@
-import NextLink from 'next/link'
+import { Link as RemixLink } from '@remix-run/react'
 import React from 'react'
-import Head from 'next/head'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 import { rautakymi } from '../styles'
 
-const Container = styled.div({
-    backgroundColor: 'rgb(26, 25, 25)',
-    color: 'white',
+export const meta = () => ({
+    title: 'Rautakymi – Jouni Jäppinen',
+})
+
+const GlobalStyles = createGlobalStyle({
+    body: {
+        backgroundColor: 'rgb(26, 25, 25)',
+        color: 'white',
+    },
 })
 
 const ImageContainer = styled.figure({
@@ -90,10 +95,8 @@ const Footer = styled.footer({
 })
 
 const Rautakymi = () => (
-    <Container>
-        <Head>
-            <title>Rautakymi – Jouni Jäppinen</title>
-        </Head>
+    <>
+        <GlobalStyles />
 
         <Header>
             <ImageContainer>
@@ -129,17 +132,17 @@ const Rautakymi = () => (
             </p>
         </Section>
 
-        <Link href="/rautakymi-arvostelu.jpg" rel="prefetch" target="_blank">
+        <Link href="/rautakymi-arvostelu.jpg" target="_blank">
             Lue kirja-arvostelu (Östnyland)
         </Link>
 
-        <Link href="/rautakymi-historiallinen-aikakauskirja.pdf" rel="prefetch" target="_blank">
+        <Link href="/rautakymi-historiallinen-aikakauskirja.pdf" target="_blank">
             Lue kirja-arvostelu (Historiallinen Aikakauskirja)
         </Link>
 
         <Link
             href="https://www.booky.fi/tuote/jouni_jappinen/rautakymi_talonpoikia_seppia_lohiylimyksia/9789529431717"
-            rel="crossorigin external noreferrer prefetch"
+            rel="crossorigin external"
             target="_blank"
         >
             Osta Booky.fi -verkkokaupasta
@@ -147,11 +150,11 @@ const Rautakymi = () => (
 
         <Footer>
             <p>Jouni Jäppinen</p>
-            <NextLink href="/">
-                <a>Takaisin</a>
-            </NextLink>
+            <RemixLink to="/" prefetch="intent">
+                Takaisin
+            </RemixLink>
         </Footer>
-    </Container>
+    </>
 )
 
 export default Rautakymi

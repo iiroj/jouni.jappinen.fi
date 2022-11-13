@@ -1,0 +1,12 @@
+name = "jouni"
+
+workers_dev = true
+compatibility_date = "2022-11-13"
+
+main = "./build/index.js"
+
+[site]
+bucket = "./public"
+
+[build]
+command = "npm run build"

@@ -1,7 +1,7 @@
 {
   "name": "jouni.jappinen.fi",
   "version": "8.45.0",
-  "description": "Static site built with Next.js",
+  "description": "A Serverless site",
   "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
   "contributors": [
     "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)"
@@ -13,21 +13,28 @@
   },
   "bugs": "https://github.com/iiroj/jouni.jappinen.fi/issues",
   "private": true,
+  "main": "./build/index.js",
   "scripts": {
-    "start": "next dev",
-    "lint": "eslint --ext js,jsx .",
-    "build": "next build"
+    "clean": "rimraf .cache build",
+    "build": "npm run clean && remix build",
+    "dev:remix": "NODE_ENV=development remix watch",
+    "dev:worker": "NODE_ENV=development miniflare -w -d",
+    "start": "npm run build && concurrently npm:dev:*",
+    "lint": "eslint --ext js,jsx ."
   },
   "dependencies": {
-    "next": "13.0.0",
-    "react-dom": "18.2.0",
+    "@remix-run/cloudflare": "1.7.5",
+    "@remix-run/cloudflare-workers": "1.7.5",
+    "@remix-run/react": "1.7.5",
     "react": "18.2.0",
-    "react-is": "18.2.0",
+    "react-dom": "18.2.0",
     "styled-components": "5.3.6"
   },
   "devDependencies": {
+    "@cloudflare/wrangler": "1.20.0",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
+    "@remix-run/dev": "1.7.5",
     "@semantic-release/changelog": "6.0.1",
     "@semantic-release/commit-analyzer": "9.0.2",
     "@semantic-release/git": "10.0.1",
@@ -35,16 +42,17 @@
     "@semantic-release/npm": "9.0.1",
     "@semantic-release/release-notes-generator": "10.0.3",
     "@typescript-eslint/parser": "5.41.0",
-    "commitlint": "17.1.2",
+    "concurrently": "7.5.0",
+    "eslint": "8.26.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-react": "7.31.10",
-    "eslint": "8.26.0",
+    "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.1",
     "lint-staged": "13.0.3",
+    "miniflare": "2.11.0",
     "prettier": "2.7.1",
-    "semantic-release": "19.0.5",
-    "vercel": "28.4.12"
+    "rimraf": "3.0.2",
+    "semantic-release": "19.0.5"
   }
 }
