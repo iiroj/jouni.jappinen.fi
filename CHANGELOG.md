@@ -1,3 +1,14 @@
+## [9.0.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.45.0...v9.0.0) (2022-11-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate to Remix + Cloudflare Pages
+
+### Features
+
+* migrate to Remix + Cloudflare Pages ([69fe376](https://github.com/iiroj/jouni.jappinen.fi/commit/69fe376e03421060ce1155af55fdd92b02d1e058))
+
 ## [8.45.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.44.7...v8.45.0) (2022-10-30)
 
 
