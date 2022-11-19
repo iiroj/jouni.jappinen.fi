@@ -1,3 +1,16 @@
+## [9.0.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.0.0...v9.0.1) (2022-11-19)
+
+
+### Bug Fixes
+
+* do not shrink index Header to 0px in mobile ([aba1513](https://github.com/iiroj/jouni.jappinen.fi/commit/aba1513310fd3510d4697a64db84983e500bdf8e))
+* set explicit LiveReload port ([62d8814](https://github.com/iiroj/jouni.jappinen.fi/commit/62d8814beec68c77d22f30b25f1907e73278ae21))
+
+
+### Performance Improvements
+
+* use renderToReadableStream ([46ddd21](https://github.com/iiroj/jouni.jappinen.fi/commit/46ddd211666d29671b625592481929663472f1c2))
+
 ## [9.0.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v8.45.0...v9.0.0) (2022-11-13)
 
 
