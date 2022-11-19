@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const Reset = createGlobalStyle(
     {
@@ -55,7 +55,7 @@ const Reset = createGlobalStyle(
         ul: {
             listStyle: 'none',
         },
-    }
-)
+    },
+);
 
-export default Reset
+export default Reset;

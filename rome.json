@@ -1,0 +1,29 @@
+{
+  "formatter": {
+    "enabled": true,
+    "indentStyle": "space",
+    "indentSize": 4,
+    "lineWidth": 120,
+    "ignore": [
+      ".cache",
+      "build",
+      "node_modules"
+    ]
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true
+    },
+    "ignore": [
+      ".cache",
+      "build",
+      "node_modules"
+    ]
+  }
+}

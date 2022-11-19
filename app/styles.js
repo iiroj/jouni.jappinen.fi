@@ -4,4 +4,4 @@ export const rautakymi = {
         darkRed: '#3D130F',
         darkGrey: '#1A1919',
     },
-}
+};

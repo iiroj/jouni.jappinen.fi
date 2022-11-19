@@ -1,8 +1,8 @@
-import { Link as RemixLink } from '@remix-run/react'
-import React from 'react'
-import styled from 'styled-components'
+import { Link as RemixLink } from '@remix-run/react';
+import React from 'react';
+import styled from 'styled-components';
 
-import { rautakymi } from '../styles'
+import { rautakymi } from '../styles';
 
 // const microdata = JSON.stringify({
 //     '@context': 'http://schema.org',
@@ -22,13 +22,13 @@ import { rautakymi } from '../styles'
 
 export const meta = () => ({
     title: 'Jouni Jäppinen',
-})
+});
 
-const BREAKPOINT = '1023px'
+const BREAKPOINT = '1023px';
 const minWidth = (args) => (styleObject) => ({
     [`@media (min-width: ${args})`]: styleObject,
-})
-const tabletSize = minWidth(BREAKPOINT)
+});
+const tabletSize = minWidth(BREAKPOINT);
 
 const Header = styled.header({
     color: 'white',
@@ -42,7 +42,7 @@ const Header = styled.header({
         top: 0,
         width: '50%',
     }),
-})
+});
 
 const Heading = styled.div({
     marginLeft: '1rem',
@@ -60,7 +60,7 @@ const Heading = styled.div({
         padding: 0,
         position: 'fixed',
     }),
-})
+});
 
 const Figure = styled.figure({
     position: 'relative',
@@ -77,7 +77,7 @@ const Figure = styled.figure({
             objectPosition: '33% 50%',
         }),
     },
-})
+});
 
 const Caption = styled.figcaption({
     bottom: '0.5rem',
@@ -86,7 +86,7 @@ const Caption = styled.figcaption({
     lineHeight: '1rem',
     margin: '0.5rem',
     position: 'absolute',
-})
+});
 
 const Main = styled.main({
     position: 'relative',
@@ -95,7 +95,7 @@ const Main = styled.main({
         marginLeft: '50%',
         width: '50%',
     }),
-})
+});
 
 const About = styled.section({
     margin: '4rem auto',
@@ -105,7 +105,7 @@ const About = styled.section({
     'p + p': {
         marginTop: '0.5rem',
     },
-})
+});
 
 const Projects = styled.ul({
     display: 'flex',
@@ -131,7 +131,7 @@ const Projects = styled.ul({
             transformOrigin: '50% 50%',
         },
     },
-})
+});
 
 const Project = styled.article({
     boxSizing: 'border-box',
@@ -175,11 +175,11 @@ const Project = styled.article({
         top: 0,
         zIndex: 1,
     },
-})
+});
 
 const RautakymiBook = styled(Project)({
     backgroundColor: rautakymi.colors.darkRed,
-})
+});
 
 const Articles = styled.ul({
     display: 'flex',
@@ -204,7 +204,7 @@ const Articles = styled.ul({
             flexBasis: '14rem',
         }),
     },
-})
+});
 
 const Article = styled.article({
     boxSizing: 'border-box',
@@ -234,13 +234,13 @@ const Article = styled.article({
         fontSize: 'inherit',
         textAlign: 'center',
     },
-})
+});
 
 const Tammijarvi = styled(Article)({
     img: {
         objectPosition: 'bottom center',
     },
-})
+});
 
 const Link = styled(RemixLink)({
     borderTop: '1px solid rgba(0, 0, 0, 0.1)',
@@ -252,7 +252,7 @@ const Link = styled(RemixLink)({
     '&:hover': {
         backgroundColor: 'rgba(0, 0, 0, 0.05)',
     },
-})
+});
 
 const Root = () => (
     <>
@@ -452,6 +452,6 @@ const Root = () => (
             </footer>
         </Main>
     </>
-)
+);
 
-export default Root
+export default Root;

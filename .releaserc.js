@@ -24,4 +24,4 @@ module.exports = {
     repositoryUrl: process.env.GITHUB_ACTIONS
         ? 'https://github.com/iiroj/jouni.jappinen.fi'
         : 'git@github.com:iiroj/jouni.jappinen.fi.git',
-}
+};

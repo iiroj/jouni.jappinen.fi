@@ -1,16 +1,16 @@
-import { Link as RemixLink } from '@remix-run/react'
-import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import { Link as RemixLink } from '@remix-run/react';
+import React from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const meta = () => ({
     title: 'Ikuiset seprat – Jouni Jäppinen',
-})
+});
 
 const GlobalStyles = createGlobalStyle({
     body: {
         backgroundColor: 'rgb(219, 219, 219)',
     },
-})
+});
 
 const Image = styled.img({
     display: 'block',
@@ -18,7 +18,7 @@ const Image = styled.img({
     objectPosition: '0 75%',
     objectFit: 'cover',
     width: '100%',
-})
+});
 
 const Header = styled.header({
     backgroundColor: 'rgb(0, 74, 128)',
@@ -32,7 +32,7 @@ const Header = styled.header({
         fontWeight: 600,
         lineHeight: '1.5rem',
     },
-})
+});
 
 const Section = styled.section({
     paddingBottom: '1rem',
@@ -42,7 +42,7 @@ const Section = styled.section({
         maxWidth: '50rem',
         padding: '0 1rem',
     },
-})
+});
 
 const StyledLink = styled.a({
     color: 'rgb(0, 74, 128)',
@@ -56,7 +56,7 @@ const StyledLink = styled.a({
     '&:hover': {
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
     },
-})
+});
 
 const Footer = styled.footer({
     margin: '0 auto',
@@ -67,7 +67,7 @@ const Footer = styled.footer({
     p: {
         marginBottom: '0.5rem',
     },
-})
+});
 
 const Ikuisetseprat = () => (
     <>
@@ -143,6 +143,6 @@ const Ikuisetseprat = () => (
             </RemixLink>
         </Footer>
     </>
-)
+);
 
-export default Ikuisetseprat
+export default Ikuisetseprat;

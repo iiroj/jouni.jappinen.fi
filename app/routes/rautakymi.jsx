@@ -1,19 +1,19 @@
-import { Link as RemixLink } from '@remix-run/react'
-import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import { Link as RemixLink } from '@remix-run/react';
+import React from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 
-import { rautakymi } from '../styles'
+import { rautakymi } from '../styles';
 
 export const meta = () => ({
     title: 'Rautakymi – Jouni Jäppinen',
-})
+});
 
 const GlobalStyles = createGlobalStyle({
     body: {
         backgroundColor: 'rgb(26, 25, 25)',
         color: 'white',
     },
-})
+});
 
 const ImageContainer = styled.figure({
     display: 'flex',
@@ -23,7 +23,7 @@ const ImageContainer = styled.figure({
     img: {
         height: 300,
     },
-})
+});
 
 const Header = styled.header({
     backgroundColor: rautakymi.colors.darkRed,
@@ -46,7 +46,7 @@ const Header = styled.header({
         lineHeight: '2rem',
         padding: '2rem',
     },
-})
+});
 
 const Section = styled.section({
     backgroundColor: rautakymi.colors.darkGrey,
@@ -67,7 +67,7 @@ const Section = styled.section({
             width: '4ch',
         },
     },
-})
+});
 
 const Link = styled.a({
     color: 'rgb(161, 42, 38)',
@@ -81,7 +81,7 @@ const Link = styled.a({
     '&:hover': {
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
     },
-})
+});
 
 const Footer = styled.footer({
     margin: 'auto auto 0',
@@ -92,7 +92,7 @@ const Footer = styled.footer({
     p: {
         marginBottom: '0.5rem',
     },
-})
+});
 
 const Rautakymi = () => (
     <>
@@ -155,6 +155,6 @@ const Rautakymi = () => (
             </RemixLink>
         </Footer>
     </>
-)
+);
 
-export default Rautakymi
+export default Rautakymi;

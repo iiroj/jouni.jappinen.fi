@@ -4,4 +4,4 @@ module.exports = {
     devServerPort: 8002,
     server: './server/index.js',
     serverBuildTarget: 'cloudflare-workers',
-}
+};

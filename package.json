@@ -20,7 +20,9 @@
     "dev:remix": "NODE_ENV=development remix watch",
     "dev:worker": "NODE_ENV=development miniflare -w -d",
     "start": "npm run build && concurrently npm:dev:*",
-    "lint": "eslint --ext js,jsx ."
+    "rome:check": "rome check .",
+    "rome:format": "rome format .",
+    "lint": "concurrently npm:rome:*"
   },
   "dependencies": {
     "@remix-run/cloudflare": "1.7.6",
@@ -43,16 +45,11 @@
     "@semantic-release/release-notes-generator": "10.0.3",
     "@typescript-eslint/parser": "5.43.0",
     "concurrently": "7.5.0",
-    "eslint": "8.28.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-react": "7.31.11",
-    "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.2",
     "lint-staged": "13.0.3",
     "miniflare": "2.11.0",
-    "prettier": "2.7.1",
     "rimraf": "3.0.2",
+    "rome": "10.0.1",
     "semantic-release": "19.0.5"
   }
 }

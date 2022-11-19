@@ -1,24 +1,24 @@
-import { Link as RemixLink } from '@remix-run/react'
-import React from 'react'
-import styled, { createGlobalStyle } from 'styled-components'
+import { Link as RemixLink } from '@remix-run/react';
+import React from 'react';
+import styled, { createGlobalStyle } from 'styled-components';
 
 export const meta = () => ({
     title: 'Pajan hämärästä – Jouni Jäppinen',
-})
+});
 
 const GlobalStyles = createGlobalStyle({
     body: {
         backgroundColor: 'rgb(26, 25, 25)',
         color: 'white',
     },
-})
+});
 
 const Image = styled.img({
     display: 'block',
     height: '25vh',
     objectFit: 'cover',
     width: '100%',
-})
+});
 
 const Header = styled.header({
     backgroundColor: 'rgb(61, 19, 15)',
@@ -30,7 +30,7 @@ const Header = styled.header({
         fontWeight: 600,
         lineHeight: '1.5rem',
     },
-})
+});
 
 const Section = styled.section({
     backgroundColor: 'rgb(61, 19, 15)',
@@ -41,7 +41,7 @@ const Section = styled.section({
         maxWidth: '50rem',
         padding: '0 1rem',
     },
-})
+});
 
 const StyledLink = styled.a({
     color: 'rgb(161, 42, 38)',
@@ -55,7 +55,7 @@ const StyledLink = styled.a({
     '&:hover': {
         backgroundColor: 'rgba(0, 0, 0, 0.1)',
     },
-})
+});
 
 const Footer = styled.footer({
     margin: '0 auto',
@@ -66,7 +66,7 @@ const Footer = styled.footer({
     p: {
         marginBottom: '0.5rem',
     },
-})
+});
 
 const Pajanhamarasta = () => (
     <>
@@ -136,6 +136,6 @@ const Pajanhamarasta = () => (
             </RemixLink>
         </Footer>
     </>
-)
+);
 
-export default Pajanhamarasta
+export default Pajanhamarasta;
