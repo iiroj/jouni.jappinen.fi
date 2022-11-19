@@ -2,6 +2,10 @@ name = "jouni"
 
 workers_dev = true
 compatibility_date = "2022-11-13"
+compatibility_flags = [
+  "streams_enable_constructors",
+  "transformstream_enable_standard_constructor"
+]
 
 main = "./build/index.js"
 
