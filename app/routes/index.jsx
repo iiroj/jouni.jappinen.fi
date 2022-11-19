@@ -32,6 +32,7 @@ const tabletSize = minWidth(BREAKPOINT)
 
 const Header = styled.header({
     color: 'white',
+    flexShrink: 0,
     overflowY: 'hidden',
     position: 'relative',
 
