@@ -3,9 +3,6 @@ import { renderToReadableStream } from 'react-dom/server';
 import React from 'react';
 import { ServerStyleSheet } from 'styled-components';
 
-const textDecorer = new TextDecoderStream();
-const textEncoder = new TextEncoderStream();
-
 class StyleSheetInjector extends TransformStream {
     constructor({ sheet }) {
         const styles = sheet.getStyleTags();
@@ -27,9 +24,9 @@ const handleRequest = async (request, responseStatusCode, responseHeaders, remix
     );
 
     const transformed = stream
-        .pipeThrough(textDecorer)
+        .pipeThrough(new TextDecoderStream())
         .pipeThrough(new StyleSheetInjector({ sheet }))
-        .pipeThrough(textEncoder);
+        .pipeThrough(new TextEncoderStream());
 
     return new Response(transformed, {
         status: responseStatusCode,
