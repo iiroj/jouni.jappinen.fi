@@ -1,3 +1,10 @@
+## [9.0.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.0.1...v9.0.2) (2022-11-19)
+
+
+### Bug Fixes
+
+* do not assign global instances ([e6f0828](https://github.com/iiroj/jouni.jappinen.fi/commit/e6f0828d58fee7c29ea2c84758abf60834eb2113))
+
 ## [9.0.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.0.0...v9.0.1) (2022-11-19)
 
 
