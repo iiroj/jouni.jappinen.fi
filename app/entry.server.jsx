@@ -19,9 +19,8 @@ const handleRequest = async (request, responseStatusCode, responseHeaders, remix
 
     const sheet = new ServerStyleSheet();
 
-    const stream = await renderToReadableStream(
-        sheet.collectStyles(<RemixServer context={remixContext} url={request.url} />),
-    );
+    const element = sheet.collectStyles(<RemixServer context={remixContext} url={request.url} />);
+    const stream = await renderToReadableStream(element);
 
     const transformed = stream
         .pipeThrough(new TextDecoderStream())
