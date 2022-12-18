@@ -1,3 +1,10 @@
+## [9.0.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.0.2...v9.0.3) (2022-12-18)
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([4922d60](https://github.com/iiroj/jouni.jappinen.fi/commit/4922d600ec390fb3a537ca294fa8b5eb3e87cf5c))
+
 ## [9.0.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.0.1...v9.0.2) (2022-11-19)
 
 
