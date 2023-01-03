@@ -429,24 +429,6 @@ const Root = () => (
                         <li>
                             <Link to="mailto:Jouni Jäppinen <jouni@jappinen.fi>">Ota yhteyttä</Link>
                         </li>
-
-                        <li>
-                            <Link
-                                to="https://www.finnishdesigners.fi/portfolio/jouni.jappinen"
-                                rel="external crossorigin prefetch"
-                            >
-                                Ornamo
-                            </Link>
-                        </li>
-
-                        <li>
-                            <Link
-                                to="https://artists-o.fi/fi/kuukauden-taiteilija/arkisto/2019-jouni-jappinen"
-                                rel="external crossorigin prefetch"
-                            >
-                                Taiteilijat O
-                            </Link>
-                        </li>
                     </ul>
                 </nav>
             </footer>
