@@ -1,3 +1,10 @@
+## [9.1.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.0.3...v9.1.0) (2023-01-03)
+
+
+### Features
+
+* remove outdated links ([99691d5](https://github.com/iiroj/jouni.jappinen.fi/commit/99691d5dc443d49188bef446c6648c3604f54f86))
+
 ## [9.0.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.0.2...v9.0.3) (2022-12-18)
 
 
