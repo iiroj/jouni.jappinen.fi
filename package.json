@@ -44,7 +44,6 @@
     "@semantic-release/github": "8.0.7",
     "@semantic-release/npm": "9.0.1",
     "@semantic-release/release-notes-generator": "10.0.3",
-    "@typescript-eslint/parser": "5.46.1",
     "concurrently": "7.6.0",
     "husky": "8.0.2",
     "lint-staged": "13.1.0",
