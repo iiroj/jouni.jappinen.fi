@@ -1,3 +1,10 @@
+## [9.2.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.2.0...v9.2.1) (2023-01-08)
+
+
+### Bug Fixes
+
+* definitely fix loading Cloudflare analytics script ([64fdc9a](https://github.com/iiroj/jouni.jappinen.fi/commit/64fdc9adb7ad4e6b54fd0e968df2929994fcb976))
+
 ## [9.2.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.1.0...v9.2.0) (2023-01-08)
 
 
