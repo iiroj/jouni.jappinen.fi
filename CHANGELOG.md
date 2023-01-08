@@ -1,3 +1,16 @@
+## [9.2.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.1.0...v9.2.0) (2023-01-08)
+
+
+### Features
+
+* add Cloudflare analytics script ([714ad9e](https://github.com/iiroj/jouni.jappinen.fi/commit/714ad9eccc87e0cdda91b9ecc2d507288cea7989))
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([9f93aed](https://github.com/iiroj/jouni.jappinen.fi/commit/9f93aedd50fc5e8bba704d53c338681b2c7b5e0a))
+* set explicit production env name to match previous ([044c8e6](https://github.com/iiroj/jouni.jappinen.fi/commit/044c8e6cf10c27e5de609eda512486df66e02aa8))
+
 ## [9.1.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.0.3...v9.1.0) (2023-01-03)
 
 
