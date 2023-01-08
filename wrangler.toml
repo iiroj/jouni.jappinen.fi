@@ -14,3 +14,9 @@ bucket = "./public"
 
 [build]
 command = "npm run build"
+
+[vars]
+CF_BEACON_TOKEN = ""
+
+[env.production.vars]
+CF_BEACON_TOKEN = "4870e83b9f124192a6e7edb40b569e8f"

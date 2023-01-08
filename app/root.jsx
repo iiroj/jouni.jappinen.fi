@@ -16,21 +16,37 @@ export const links = () => [
     { rel: 'apple-touch-icon', href: '/icon.png' },
 ];
 
-const App = () => (
-    <html lang="fi">
-        <head>
-            <Meta />
-            <Links />
-            {typeof document === 'undefined' ? '__STYLES__' : null}
-        </head>
-        <body>
-            <Reset />
-            <Outlet />
-            <ScrollRestoration />
-            <Scripts />
-            <LiveReload port={8002} />
-        </body>
-    </html>
-);
+export const loader = () => ({
+    cfBeaconToken: CF_BEACON_TOKEN || null,
+});
+
+const App = () => {
+    const { cfBeaconToken } = useLoaderData();
+
+    return (
+        <html lang="fi">
+            <head>
+                <Meta />
+                <Links />
+                {typeof document === 'undefined' ? '__STYLES__' : null}
+            </head>
+            <body>
+                <Reset />
+                <Outlet />
+                <ScrollRestoration />
+                <Scripts />
+                <LiveReload port={8002} />
+
+                {cfBeaconToken ? (
+                    <script
+                        data-cf-beacon={`{"token": "${cfBeaconToken}"}`}
+                        defer
+                        src="https://static.cloudflareinsights.com/beacon.min.js"
+                    />
+                ) : null}
+            </body>
+        </html>
+    );
+};
 
 export default App;
