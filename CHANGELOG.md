@@ -1,3 +1,22 @@
+## [9.3.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.2.1...v9.3.0) (2023-01-21)
+
+
+### Features
+
+* use V2 syntax for meta and routes ([732f9c7](https://github.com/iiroj/jouni.jappinen.fi/commit/732f9c76744b37b2647c4fcee6166ecf872e6b97))
+
+
+### Bug Fixes
+
+* **deps:** update all dependencies ([2fb4506](https://github.com/iiroj/jouni.jappinen.fi/commit/2fb4506249dfdd1c1861f096ede534ed4e5e68b2))
+* enable LD+JSON microdata on index page ([d23043e](https://github.com/iiroj/jouni.jappinen.fi/commit/d23043e670c4cf0f780c226a34f438068cf029db))
+* set CSP header only in production mode ([3e32736](https://github.com/iiroj/jouni.jappinen.fi/commit/3e3273627b7d978d1d6f2dcbb636c8e0437ded51))
+
+
+### Performance Improvements
+
+* do not include scripts in production mode ([1cb70d9](https://github.com/iiroj/jouni.jappinen.fi/commit/1cb70d99b6dc51d2f5d861a835efd8cfee13d1e5))
+
 ## [9.2.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.2.0...v9.2.1) (2023-01-08)
 
 
