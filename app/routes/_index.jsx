@@ -4,6 +4,12 @@ import styled from 'styled-components';
 
 import { rautakymi } from '../styles';
 
+export const meta = () => [
+    {
+        title: 'Jouni Jäppinen',
+    },
+];
+
 // const microdata = JSON.stringify({
 //     '@context': 'http://schema.org',
 //     '@type': 'Person',
@@ -19,10 +25,6 @@ import { rautakymi } from '../styles';
 //     },
 //     alumniOf: 'Turun yliopisto',
 // })
-
-export const meta = () => ({
-    title: 'Jouni Jäppinen',
-});
 
 const BREAKPOINT = '1023px';
 const minWidth = (args) => (styleObject) => ({

@@ -2,9 +2,11 @@ import { Link as RemixLink } from '@remix-run/react';
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
-export const meta = () => ({
-    title: 'Ikuiset seprat – Jouni Jäppinen',
-});
+export const meta = () => [
+    {
+        title: 'Ikuiset seprat – Jouni Jäppinen',
+    },
+];
 
 const GlobalStyles = createGlobalStyle({
     body: {

@@ -4,4 +4,9 @@ module.exports = {
     devServerPort: 8002,
     server: './server/index.js',
     serverBuildTarget: 'cloudflare-workers',
+
+    future: {
+        v2_meta: true,
+        v2_routeConvention: true,
+    },
 };

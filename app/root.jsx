@@ -3,14 +3,6 @@ import React from 'react';
 
 import Reset from './components/Reset';
 
-export const meta = () => ({
-    charset: 'utf-8',
-    title: 'Jouni Jäppinen',
-    viewport: 'width=device-width,initial-scale=1',
-    'theme-color': '#00000',
-    'X-UA-Compatible': 'IE=edge',
-});
-
 export const links = () => [
     { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
     { rel: 'apple-touch-icon', href: '/icon.png' },
@@ -26,6 +18,9 @@ const App = () => {
     return (
         <html lang="fi">
             <head>
+                <meta charSet="utf-8" />
+                <meta name="viewport" content="width=device-width,initial-scale=1" />
+                <meta name="theme-color" content="#000000" />
                 <Meta />
                 <Links />
                 {typeof document === 'undefined' ? '__STYLES__' : null}

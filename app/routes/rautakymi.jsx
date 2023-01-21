@@ -4,9 +4,11 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 import { rautakymi } from '../styles';
 
-export const meta = () => ({
-    title: 'Rautakymi – Jouni Jäppinen',
-});
+export const meta = () => [
+    {
+        title: 'Rautakymi – Jouni Jäppinen',
+    },
+];
 
 const GlobalStyles = createGlobalStyle({
     body: {
