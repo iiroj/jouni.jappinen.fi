@@ -10,21 +10,21 @@ export const meta = () => [
     },
 ];
 
-// const microdata = JSON.stringify({
-//     '@context': 'http://schema.org',
-//     '@type': 'Person',
-//     name: 'Jouni Jäppinen',
-//     jobTitle: 'FM, kultaseppä',
-//     url: 'https://jouni.jappinen.fi',
-//     email: 'jouni@jappinen.fi',
-//     nationality: 'Finland',
-//     address: {
-//         '@type': 'PostalAddress',
-//         addressCountry: 'Finland',
-//         addressLocality: 'Loviisa',
-//     },
-//     alumniOf: 'Turun yliopisto',
-// })
+const microdata = JSON.stringify({
+    '@context': 'http://schema.org',
+    '@type': 'Person',
+    name: 'Jouni Jäppinen',
+    jobTitle: 'FM, kultaseppä',
+    url: 'https://jouni.jappinen.fi',
+    email: 'jouni@jappinen.fi',
+    nationality: 'Finland',
+    address: {
+        '@type': 'PostalAddress',
+        addressCountry: 'Finland',
+        addressLocality: 'Loviisa',
+    },
+    alumniOf: 'Turun yliopisto',
+});
 
 const BREAKPOINT = '1023px';
 const minWidth = (args) => (styleObject) => ({
@@ -435,6 +435,12 @@ const Root = () => (
                 </nav>
             </footer>
         </Main>
+
+        <script
+            /** rome-ignore lint/security/noDangerouslySetInnerHtml: static JSON  */
+            dangerouslySetInnerHTML={{ __html: microdata }}
+            type="application/ld+json"
+        />
     </>
 );
 
