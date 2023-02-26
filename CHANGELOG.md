@@ -1,3 +1,10 @@
+## [9.3.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.1...v9.3.2) (2023-02-26)
+
+
+### Bug Fixes
+
+* **cloudflare:** remove compatibility flags ([5e2d93f](https://github.com/iiroj/jouni.jappinen.fi/commit/5e2d93f5ab16ae06e1703a0605f6e5deead87fbc))
+
 ## [9.3.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.0...v9.3.1) (2023-02-26)
 
 
