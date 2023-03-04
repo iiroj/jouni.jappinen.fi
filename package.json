@@ -15,8 +15,8 @@
   "private": true,
   "main": "./build/index.js",
   "scripts": {
-    "clean": "rimraf .cache build",
-    "build": "npm run clean && remix build",
+    "prebuild": "rimraf .cache build",
+    "build": "remix build",
     "dev:remix": "NODE_ENV=development remix watch",
     "dev:worker": "NODE_ENV=development wrangler dev --experimental-local",
     "start": "npm run build && concurrently npm:dev:*",
