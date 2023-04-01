@@ -1,4 +1,0 @@
-{
-  "*.js": ["rome check", "rome format --write"],
-  "*.jsx": ["rome check", "rome format --write"]
-}
