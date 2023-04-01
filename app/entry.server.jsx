@@ -1,6 +1,6 @@
 import { RemixServer } from '@remix-run/react';
-import { renderToReadableStream } from 'react-dom/server';
 import React from 'react';
+import { renderToReadableStream } from 'react-dom/server';
 import { ServerStyleSheet } from 'styled-components';
 
 class StyleSheetInjector extends TransformStream {
