@@ -1,3 +1,10 @@
+## [9.3.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.3...v9.3.4) (2023-04-01)
+
+
+### Bug Fixes
+
+* **remix:** migrate to upcoming Remix v2 conventions ([8664c4c](https://github.com/iiroj/jouni.jappinen.fi/commit/8664c4c37b2a0b461b8e48c6a61d40c6edd9093e))
+
 ## [9.3.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.2...v9.3.3) (2023-04-01)
 
 
