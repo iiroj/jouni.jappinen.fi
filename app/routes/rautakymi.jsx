@@ -2,7 +2,13 @@ import { Link as RemixLink } from '@remix-run/react';
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
+import { HTML_CACHE_CONTROL_HEADER, SECURITY_HEADERS } from '../headers';
 import { rautakymi } from '../styles';
+
+export const headers = () => ({
+    ...SECURITY_HEADERS,
+    ...HTML_CACHE_CONTROL_HEADER,
+});
 
 export const meta = () => [
     {

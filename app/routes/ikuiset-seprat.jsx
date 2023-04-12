@@ -2,6 +2,13 @@ import { Link as RemixLink } from '@remix-run/react';
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
 
+import { HTML_CACHE_CONTROL_HEADER, SECURITY_HEADERS } from '../headers';
+
+export const headers = () => ({
+    ...SECURITY_HEADERS,
+    ...HTML_CACHE_CONTROL_HEADER,
+});
+
 export const meta = () => [
     {
         title: 'Ikuiset seprat – Jouni Jäppinen',
