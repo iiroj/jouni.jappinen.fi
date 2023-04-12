@@ -1,9 +1,11 @@
 {
     "name": "jouni.jappinen.fi",
-    "version": "9.3.4",
+    "version": "9.3.5",
     "description": "A Serverless site",
     "author": "Jouni Jäppinen <jouni@jappinen.fi> (https://jouni.jappinen.fi)",
-    "contributors": ["Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)"],
+    "contributors": [
+        "Iiro Jäppinen <iiro@jappinen.fi> (https://iiro.fi)"
+    ],
     "license": "MIT",
     "repository": {
         "type": "git",

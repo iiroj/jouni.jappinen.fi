@@ -1,3 +1,11 @@
+## [9.3.5](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.4...v9.3.5) (2023-04-12)
+
+
+### Bug Fixes
+
+* **cloudflare:** update Cloudflare Analytics beacon integrity ([e24b88a](https://github.com/iiroj/jouni.jappinen.fi/commit/e24b88a22a1567b327c7dea917e13a9078466ae2))
+* **dependencies:** update all dependencies ([4b06e17](https://github.com/iiroj/jouni.jappinen.fi/commit/4b06e1725ee135e5aef98facf9acf0d7829c1623))
+
 ## [9.3.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.3...v9.3.4) (2023-04-01)
 
 
