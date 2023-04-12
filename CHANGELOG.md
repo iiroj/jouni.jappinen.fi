@@ -1,3 +1,11 @@
+## [9.3.6](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.5...v9.3.6) (2023-04-12)
+
+
+### Performance Improvements
+
+* hydrate React after idle ([92f20e6](https://github.com/iiroj/jouni.jappinen.fi/commit/92f20e602533ed0ef84d22fa017a548f168e26e2))
+* set headers in Remix instead of worker handler ([b578a01](https://github.com/iiroj/jouni.jappinen.fi/commit/b578a01e40e49e84a6b7f56ba225bfae16672204))
+
 ## [9.3.5](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.4...v9.3.5) (2023-04-12)
 
 
