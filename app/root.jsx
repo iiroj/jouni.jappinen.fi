@@ -3,7 +3,6 @@ import React from 'react';
 
 import Reset from './components/Reset';
 
-const isProduction = process.env.NODE_ENV === 'production';
 export const links = () => [
     { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
     { rel: 'apple-touch-icon', href: '/icon.png' },
@@ -30,11 +29,11 @@ const App = () => {
                 <Reset />
                 <Outlet />
 
-                {isProduction ? null : <ScrollRestoration />}
+                <ScrollRestoration />
 
-                {isProduction ? null : <Scripts />}
+                <Scripts />
 
-                {isProduction ? null : <LiveReload port={8002} />}
+                <LiveReload port={8002} />
 
                 {cfBeaconToken ? (
                     <script
