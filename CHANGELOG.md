@@ -1,3 +1,10 @@
+## [9.3.7](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.6...v9.3.7) (2023-05-01)
+
+
+### Bug Fixes
+
+* **cloudflare:** update Beacon SRI hash ([50879d9](https://github.com/iiroj/jouni.jappinen.fi/commit/50879d9b42ce4df1f7953242bdf101fbf83fb34d))
+
 ## [9.3.6](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.5...v9.3.6) (2023-04-12)
 
 
