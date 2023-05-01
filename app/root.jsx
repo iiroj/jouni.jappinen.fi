@@ -40,7 +40,7 @@ const App = () => {
                         crossOrigin="anonymous"
                         data-cf-beacon={`{"token": "${cfBeaconToken}"}`}
                         defer
-                        integrity="sha384-yCCdqiSxoo5P8pYwq7U3o1/ZPYBikCToo3CW6LkxbiF/newkWV8X5ipDj9jOb2gi"
+                        integrity="sha384-30Fw2DRzkMuSxoj2OhfgdDE589rsGh8QIF6uq5D/EinLHxzEa7uBoFrTc3HRauSj"
                         src="https://static.cloudflareinsights.com/beacon.min.js"
                     />
                 ) : null}
