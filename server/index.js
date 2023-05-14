@@ -1,4 +1,4 @@
-import { createEventHandler } from '@remix-run/cloudflare-workers';
-import * as build from '@remix-run/dev/server-build';
+import { createEventHandler } from "@remix-run/cloudflare-workers";
+import * as build from "@remix-run/dev/server-build";
 
-addEventListener('fetch', createEventHandler({ build }));
+addEventListener("fetch", createEventHandler({ build }));

@@ -1,4 +1,4 @@
-const linters = ['rome check --apply-unsafe', 'rome format --write'];
+const linters = ['eslint --fix'];
 
 export default {
     '*.{js,mjs}': linters,
