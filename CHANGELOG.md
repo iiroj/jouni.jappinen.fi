@@ -1,3 +1,19 @@
+## [10.0.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.7...v10.0.0) (2023-05-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate from Cloudflare Workers to Pages
+
+### Features
+
+* migrate from Cloudflare Workers to Pages ([47f333a](https://github.com/iiroj/jouni.jappinen.fi/commit/47f333aa54fa955eacfe623878f85d64e93bf1e4))
+
+
+### Bug Fixes
+
+* **dependencies:** update dependencies ([330502a](https://github.com/iiroj/jouni.jappinen.fi/commit/330502acfdb9e8bc852a43a5d8f1c1091b34fc46))
+
 ## [9.3.7](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.6...v9.3.7) (2023-05-01)
 
 
