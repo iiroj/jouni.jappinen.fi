@@ -362,7 +362,7 @@ const Root = () => (
 
       <Articles>
         <li>
-          <a href="/viirankosken-vyokoukku.pdf">
+          <a href="/documents/viirankosken-vyokoukku.pdf">
             <Article>
               <picture>
                 <source
@@ -380,7 +380,7 @@ const Root = () => (
         </li>
 
         <li>
-          <a href="/rautakuona.pdf">
+          <a href="/documents/rautakuona.pdf">
             <Article>
               <picture>
                 <source srcSet="/rautakymi-thumbnail.webp" type="image/webp" />
@@ -395,7 +395,7 @@ const Root = () => (
         </li>
 
         <li>
-          <a href="/tammijarvi.pdf">
+          <a href="/documents/tammijarvi.pdf">
             <Tammijarvi>
               <picture>
                 <source srcSet="/tammijarvi-thumbnail.webp" type="image/webp" />
@@ -410,7 +410,7 @@ const Root = () => (
         </li>
 
         <li>
-          <a href="/Loviisa-Artists-Studio-1995-2021.pdf">
+          <a href="/documents/Loviisa-Artists-Studio-1995-2021.pdf">
             <Article>
               <picture>
                 <source srcSet="/essinveistos.webp" type="image/webp" />
@@ -425,7 +425,7 @@ const Root = () => (
         </li>
 
         <li>
-          <a href="/straka.pdf">
+          <a href="/documents/straka.pdf">
             <Article>
               <picture>
                 <source srcSet="/straka-thumbnail.webp" type="image/webp" />
@@ -440,7 +440,7 @@ const Root = () => (
         </li>
 
         <li>
-          <a href="/antti-jappinen.pdf">
+          <a href="/documents/antti-jappinen.pdf">
             <Article>
               <picture>
                 <source
@@ -462,7 +462,7 @@ const Root = () => (
         <nav>
           <ul>
             <li>
-              <Link to="/kirjoituksia.pdf">Kirjoituksia</Link>
+              <Link to="/documents/kirjoituksia.pdf">Kirjoituksia</Link>
             </li>
 
             <li>

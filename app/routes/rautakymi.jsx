@@ -150,7 +150,10 @@ const Rautakymi = () => (
       Lue kirja-arvostelu (Östnyland)
     </Link>
 
-    <Link href="/rautakymi-historiallinen-aikakauskirja.pdf" target="_blank">
+    <Link
+      href="/documents/rautakymi-historiallinen-aikakauskirja.pdf"
+      target="_blank"
+    >
       Lue kirja-arvostelu (Historiallinen Aikakauskirja)
     </Link>
 

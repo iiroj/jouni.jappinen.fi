@@ -145,7 +145,7 @@ const Ikuisetseprat = () => (
       Lue kirja-arvostelu (Kymen Sanomat)
     </StyledLink>
 
-    <StyledLink href="/ikuiset-seprat-arvostelu.pdf" target="_blank">
+    <StyledLink href="/documents/ikuiset-seprat-arvostelu.pdf" target="_blank">
       Lue kirja-arvostelu (Tuglas-seura)
     </StyledLink>
 
