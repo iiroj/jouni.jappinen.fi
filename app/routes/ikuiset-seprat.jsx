@@ -83,8 +83,8 @@ const Ikuisetseprat = () => (
     <GlobalStyles />
 
     <picture>
-      <source srcSet="/ikuiset-seprat.webp" type="image/webp" />
-      <Image alt="Ikuiset seprat" src="/ikuiset-seprat.jpg" />
+      <source srcSet="/images/ikuiset-seprat.webp" type="image/webp" />
+      <Image alt="Ikuiset seprat" src="/images/ikuiset-seprat.jpg" />
     </picture>
 
     <Header>
@@ -141,7 +141,7 @@ const Ikuisetseprat = () => (
       </p>
     </Section>
 
-    <StyledLink href="/Päiviö_arvostelu_22.6.16.jpg" target="_blank">
+    <StyledLink href="/images/Päiviö_arvostelu_22.6.16.jpg" target="_blank">
       Lue kirja-arvostelu (Kymen Sanomat)
     </StyledLink>
 

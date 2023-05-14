@@ -82,8 +82,8 @@ const Pajanhamarasta = () => (
     <GlobalStyles />
 
     <picture>
-      <source srcSet="/pajan-hamarasta.webp" type="image/webp" />
-      <Image alt="Pajan hämärstä" src="/pajan-hamarasta.jpg" />
+      <source srcSet="/images/pajan-hamarasta.webp" type="image/webp" />
+      <Image alt="Pajan hämärstä" src="/images/pajan-hamarasta.jpg" />
     </picture>
 
     <Header>
@@ -132,7 +132,7 @@ const Pajanhamarasta = () => (
       </p>
     </Section>
 
-    <StyledLink href="/pajan-hamarasta-arvostelu.jpg" target="_blank">
+    <StyledLink href="/images/pajan-hamarasta-arvostelu.jpg" target="_blank">
       Lue kirja-arvostelu
     </StyledLink>
 

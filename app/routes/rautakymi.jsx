@@ -109,8 +109,11 @@ const Rautakymi = () => (
     <Header>
       <ImageContainer>
         <picture>
-          <source srcSet="/rautakymi-book-cover.webp" type="image/webp" />
-          <img alt="Rautakymi" src="/rautakymi-book-cover.png" />
+          <source
+            srcSet="/images/rautakymi-book-cover.webp"
+            type="image/webp"
+          />
+          <img alt="Rautakymi" src="/images/rautakymi-book-cover.png" />
         </picture>
       </ImageContainer>
 
@@ -146,7 +149,7 @@ const Rautakymi = () => (
       </p>
     </Section>
 
-    <Link href="/rautakymi-arvostelu.jpg" target="_blank">
+    <Link href="/images/rautakymi-arvostelu.jpg" target="_blank">
       Lue kirja-arvostelu (Östnyland)
     </Link>
 

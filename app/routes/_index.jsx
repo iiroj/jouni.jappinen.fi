@@ -268,11 +268,14 @@ const Root = () => (
       <Figure>
         <picture>
           <source
-            srcSet="sormus.webp 1x, sormus@2x.webp 2x"
+            srcSet="/images/sormus.webp 1x, /images/sormus@2x.webp 2x"
             type="image/webp"
           />
-          <source srcSet="sormus.jpg 1x, sormus@2x.jpg 2x" type="image/jpeg" />
-          <img alt="Rautakymi" src="/sormus@2x.jpg" />
+          <source
+            srcSet="/images/sormus.jpg 1x, /images/sormus@2x.jpg 2x"
+            type="image/jpeg"
+          />
+          <img alt="Rautakymi" src="/images/sormus@2x.jpg" />
         </picture>
 
         <Caption>
@@ -315,8 +318,11 @@ const Root = () => (
           <RemixLink to="/rautakymi">
             <RautakymiBook>
               <picture>
-                <source srcSet="/rautakymi-book-cover.webp" type="image/webp" />
-                <img alt="Rautakymi" src="/rautakymi-book-cover.png" />
+                <source
+                  srcSet="/images/rautakymi-book-cover.webp"
+                  type="image/webp"
+                />
+                <img alt="Rautakymi" src="/images/rautakymi-book-cover.png" />
               </picture>
               <Heading>
                 <h1>Rautakymi</h1>
@@ -330,8 +336,11 @@ const Root = () => (
           <RemixLink to="/pajan-hamarasta">
             <Project>
               <picture>
-                <source srcSet="/pajan-hamarasta.webp" type="image/webp" />
-                <img alt="Pajan hämärästä" src="/pajan-hamarasta.jpg" />
+                <source
+                  srcSet="/images/pajan-hamarasta.webp"
+                  type="image/webp"
+                />
+                <img alt="Pajan hämärästä" src="/images/pajan-hamarasta.jpg" />
               </picture>
               <Heading>
                 <h1>Pajan hämärästä</h1>
@@ -345,8 +354,11 @@ const Root = () => (
           <RemixLink to="/ikuiset-seprat">
             <Project>
               <picture>
-                <source srcSet="/ikuiset-seprat.webp" type="image/webp" />
-                <img alt="Ikuiset seprat" src="/ikuiset-seprat.jpg" />
+                <source
+                  srcSet="/images/ikuiset-seprat.webp"
+                  type="image/webp"
+                />
+                <img alt="Ikuiset seprat" src="/images/ikuiset-seprat.jpg" />
               </picture>
               <Heading>
                 <h1>Ikuiset seprat</h1>
@@ -366,12 +378,12 @@ const Root = () => (
             <Article>
               <picture>
                 <source
-                  srcSet="/viirankosken-vyokoukku-thumbnail.webp"
+                  srcSet="/images/viirankosken-vyokoukku-thumbnail.webp"
                   type="image/webp"
                 />
                 <img
                   alt="Viirankosken vyökoukku"
-                  src="/viirankosken-vyokoukku-thumbnail.jpg"
+                  src="/images/viirankosken-vyokoukku-thumbnail.jpg"
                 />
               </picture>
               <h1>Viirankosken vyökoukku</h1>
@@ -383,10 +395,13 @@ const Root = () => (
           <a href="/documents/rautakuona.pdf">
             <Article>
               <picture>
-                <source srcSet="/rautakymi-thumbnail.webp" type="image/webp" />
+                <source
+                  srcSet="/images/rautakymi-thumbnail.webp"
+                  type="image/webp"
+                />
                 <img
                   alt="Viirankosken vyökoukku"
-                  src="/rautakymi-thumbnail.jpg"
+                  src="/images/rautakymi-thumbnail.jpg"
                 />
               </picture>
               <h1>Kymijokisuiston rautakuona</h1>
@@ -398,10 +413,13 @@ const Root = () => (
           <a href="/documents/tammijarvi.pdf">
             <Tammijarvi>
               <picture>
-                <source srcSet="/tammijarvi-thumbnail.webp" type="image/webp" />
+                <source
+                  srcSet="/images/tammijarvi-thumbnail.webp"
+                  type="image/webp"
+                />
                 <img
                   alt="Experimentel forskning vid Tammijärvi i Pyttis"
-                  src="/tammijarvi-thumbnail.jpg"
+                  src="/images/tammijarvi-thumbnail.jpg"
                 />
               </picture>
               <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
@@ -413,10 +431,10 @@ const Root = () => (
           <a href="/documents/Loviisa-Artists-Studio-1995-2021.pdf">
             <Article>
               <picture>
-                <source srcSet="/essinveistos.webp" type="image/webp" />
+                <source srcSet="/images/essinveistos.webp" type="image/webp" />
                 <img
                   alt="Loviisa Artists’ Studio 1995–2021"
-                  src="/essinveistos.jpg"
+                  src="/images/essinveistos.jpg"
                 />
               </picture>
               <h1>Loviisa Artists’ Studio 1995–2021</h1>
@@ -428,10 +446,13 @@ const Root = () => (
           <a href="/documents/straka.pdf">
             <Article>
               <picture>
-                <source srcSet="/straka-thumbnail.webp" type="image/webp" />
+                <source
+                  srcSet="/images/straka-thumbnail.webp"
+                  type="image/webp"
+                />
                 <img
                   alt="Stråka Järnframställning"
-                  src="/straka-thumbnail.jpg"
+                  src="/images/straka-thumbnail.jpg"
                 />
               </picture>
               <h1>Stråka Järnframställning</h1>
@@ -444,12 +465,12 @@ const Root = () => (
             <Article>
               <picture>
                 <source
-                  srcSet="/antti-jappinen-thumbnail.webp"
+                  srcSet="/images/antti-jappinen-thumbnail.webp"
                   type="image/webp"
                 />
                 <img
                   alt="Sotamies Antti Jäppinen"
-                  src="/antti-jappinen-thumbnail.jpg"
+                  src="/images/antti-jappinen-thumbnail.jpg"
                 />
               </picture>
               <h1>Sotamies Antti Jäppinen</h1>
