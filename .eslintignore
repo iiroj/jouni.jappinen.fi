@@ -1,3 +1,4 @@
 .cache
-build
+functions
 node_modules
+public/build

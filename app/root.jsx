@@ -16,9 +16,8 @@ export const links = () => [
   { rel: "apple-touch-icon", href: "/icon.png" },
 ];
 
-export const loader = () => ({
-  // eslint-disable-next-line no-undef
-  cfBeaconToken: CF_BEACON_TOKEN || null,
+export const loader = ({ context }) => ({
+  cfBeaconToken: context.env.CF_BEACON_TOKEN || null,
 });
 
 const App = () => {

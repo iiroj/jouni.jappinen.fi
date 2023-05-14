@@ -1,10 +1,9 @@
 /** @type {import('@remix-run/dev').AppConfig} */
 module.exports = {
-  /** @see LiveReload in `app/root.jsx` */
-  devServerPort: 8002,
-  publicPath: "/build/",
-  server: "./server/index.js",
-  serverBuildPath: "build/index.js",
+  devServerBroadcastDelay: 1000,
+  ignoredRouteFiles: ["**/.*"],
+  server: "./server.ts",
+  serverBuildPath: "functions/[[path]].js",
   serverConditions: ["worker"],
   serverDependenciesToBundle: "all",
   serverMainFields: ["browser", "module", "main"],
@@ -13,6 +12,7 @@ module.exports = {
   serverPlatform: "neutral",
 
   future: {
+    unstable_dev: true,
     v2_errorBoundary: true,
     v2_meta: true,
     v2_normalizeFormMethod: true,

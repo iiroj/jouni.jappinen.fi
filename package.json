@@ -15,17 +15,14 @@
   "private": true,
   "main": "./build/index.js",
   "scripts": {
-    "prebuild": "rimraf .cache build",
     "build": "remix build",
-    "dev:remix": "NODE_ENV=development remix watch",
-    "dev:worker": "NODE_ENV=development wrangler dev --experimental-local",
-    "start": "npm run build && concurrently npm:dev:*",
+    "start": "remix dev --no-restart -c \"wrangler pages dev ./public --compatibility-date=2023-05-14 --port 3000\"",
     "lint:eslint": "eslint --ext js,jsx,mjs .",
     "lint:prettier": "prettier --list-different **/*.json",
     "lint": "concurrently npm:lint:*"
   },
   "dependencies": {
-    "@remix-run/cloudflare-workers": "1.16.0",
+    "@remix-run/cloudflare-pages": "1.16.0",
     "@remix-run/react": "1.16.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -53,7 +50,6 @@
     "husky": "8.0.3",
     "lint-staged": "13.2.2",
     "prettier": "2.8.8",
-    "rimraf": "5.0.0",
     "semantic-release": "21.0.2",
     "wrangler": "2.20.0"
   }

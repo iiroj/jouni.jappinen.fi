@@ -5,18 +5,18 @@ on:
     branches: [main]
 
 jobs:
-  Install:
+  Shared:
     uses: ./.github/workflows/install.yml
 
   Lint:
     needs:
-      - Install
+      - Shared
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
       - uses: actions/cache@v3
         id: cache-node_modules
         with:
@@ -28,13 +28,13 @@ jobs:
 
   Build:
     needs:
-      - Install
+      - Shared
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
       - uses: actions/cache@v3
         id: cache-node_modules
         with:
@@ -57,7 +57,7 @@ jobs:
           token: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
       - uses: actions/cache@v3
         id: cache-node_modules
         with:
