@@ -1,20 +1,17 @@
-import { Link as RemixLink } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import React from "react";
-import styled from "styled-components";
 
 import { HTML_CACHE_CONTROL_HEADER, SECURITY_HEADERS } from "../headers";
-import { rautakymi } from "../styles";
+import styles from "../styles/index.css";
 
 export const headers = () => ({
   ...SECURITY_HEADERS,
   ...HTML_CACHE_CONTROL_HEADER,
 });
 
-export const meta = () => [
-  {
-    title: "Jouni Jäppinen",
-  },
-];
+export const links = () => [{ rel: "stylesheet", href: styles }];
+
+export const meta = () => [{ title: "Jouni Jäppinen" }];
 
 const microdata = JSON.stringify({
   "@context": "http://schema.org",
@@ -32,240 +29,10 @@ const microdata = JSON.stringify({
   alumniOf: "Turun yliopisto",
 });
 
-const BREAKPOINT = "1023px";
-const minWidth = (args) => (styleObject) => ({
-  [`@media (min-width: ${args})`]: styleObject,
-});
-const tabletSize = minWidth(BREAKPOINT);
-
-const Header = styled.header({
-  color: "white",
-  flexShrink: 0,
-  overflowY: "hidden",
-  position: "relative",
-
-  ...tabletSize({
-    height: "100%",
-    position: "fixed",
-    top: 0,
-    width: "50%",
-  }),
-});
-
-const Heading = styled.div({
-  marginLeft: "1rem",
-  position: "absolute",
-  top: "50%",
-  transform: "translateY(-100%)",
-
-  h1: {
-    fontSize: "1.5rem",
-    fontWeight: 600,
-    lineHeight: "1.5rem",
-  },
-
-  ...tabletSize({
-    padding: 0,
-    position: "fixed",
-  }),
-});
-
-const Figure = styled.figure({
-  position: "relative",
-
-  "&, img": {
-    height: "100%",
-    objectFit: "cover",
-    objectPosition: "0% 50%",
-    width: "100%",
-    top: 0,
-    left: 0,
-
-    ...tabletSize({
-      objectPosition: "33% 50%",
-    }),
-  },
-});
-
-const Caption = styled.figcaption({
-  bottom: "0.5rem",
-  color: "hsl(0, 0%, 60%)",
-  fontSize: "0.75em",
-  lineHeight: "1rem",
-  margin: "0.5rem",
-  position: "absolute",
-});
-
-const Main = styled.main({
-  position: "relative",
-
-  ...tabletSize({
-    marginLeft: "50%",
-    width: "50%",
-  }),
-});
-
-const About = styled.section({
-  margin: "4rem auto",
-  maxWidth: "40rem",
-  padding: "0 1rem",
-
-  "p + p": {
-    marginTop: "0.5rem",
-  },
-});
-
-const Projects = styled.ul({
-  display: "flex",
-  flexWrap: "wrap",
-  padding: "0.5rem",
-
-  li: {
-    boxSizing: "border-box",
-    height: "40vh",
-    padding: "0.5rem",
-    width: "100%",
-
-    ...minWidth("50rem")({
-      width: "50%",
-
-      "&:first-child": {
-        width: "100%",
-      },
-    }),
-
-    "&:hover article": {
-      transform: "scale(0.95)",
-      transformOrigin: "50% 50%",
-    },
-  },
-});
-
-const Project = styled.article({
-  boxSizing: "border-box",
-  color: "white !important",
-  height: "100%",
-  position: "relative",
-  transition: "transform 0.2s ease-out",
-
-  "> div": {
-    left: "50%",
-    position: "absolute",
-    textShadow: "0 1px 0 rgba(0, 0, 0, 0.2), 0 0px 4px rgba(0, 0, 0, 0.4)",
-    top: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "90%",
-    zIndex: 2,
-
-    h1: {
-      fontSize: "1.5rem",
-      fontWeight: 600,
-    },
-  },
-
-  img: {
-    height: "100%",
-    left: 0,
-    objectFit: "cover",
-    position: "absolute",
-    top: 0,
-    width: "100%",
-  },
-
-  "&::before": {
-    background: "rgba(0, 0, 0, 0.4)",
-    bottom: 0,
-    content: '""',
-    display: "block",
-    left: 0,
-    position: "absolute",
-    right: 0,
-    top: 0,
-    zIndex: 1,
-  },
-});
-
-const RautakymiBook = styled(Project)({
-  backgroundColor: rautakymi.colors.darkRed,
-});
-
-const Articles = styled.ul({
-  display: "flex",
-  flexDirection: "row",
-  flexWrap: "wrap",
-  justifyContent: "center",
-  margin: "0 auto",
-  maxWidth: "42rem",
-  width: "100%",
-
-  li: {
-    boxSizing: "border-box",
-    flex: "0 1 12rem",
-    padding: "1rem",
-
-    "&:hover article": {
-      transform: "scale(0.95)",
-      transformOrigin: "50% 50%",
-    },
-
-    ...tabletSize({
-      flexBasis: "14rem",
-    }),
-  },
-});
-
-const Article = styled.article({
-  boxSizing: "border-box",
-  display: "flex",
-  flexDirection: "column",
-  height: "100%",
-  padding: "1rem",
-  position: "relative",
-  transition: "transform 0.2s ease-out",
-  willChange: "transform",
-
-  picture: {
-    display: "flex",
-    flexGrow: 1,
-    justifyContent: "center",
-  },
-
-  img: {
-    marginBottom: "1rem",
-    objectFit: "contain",
-    objectPosition: "top center",
-    position: "relative",
-    width: "75%",
-  },
-
-  h1: {
-    fontSize: "inherit",
-    textAlign: "center",
-  },
-});
-
-const Tammijarvi = styled(Article)({
-  img: {
-    objectPosition: "bottom center",
-  },
-});
-
-const Link = styled(RemixLink)({
-  borderTop: "1px solid rgba(0, 0, 0, 0.1)",
-  display: "block",
-  padding: "1rem 0",
-  textAlign: "center",
-  textDecoration: "none",
-
-  "&:hover": {
-    backgroundColor: "rgba(0, 0, 0, 0.05)",
-  },
-});
-
 const Root = () => (
   <>
-    <Header>
-      <Figure>
+    <header id="cover">
+      <figure>
         <picture>
           <source
             srcSet="/images/sormus.webp 1x, /images/sormus@2x.webp 2x"
@@ -278,22 +45,22 @@ const Root = () => (
           <img alt="Rautakymi" src="/images/sormus@2x.jpg" />
         </picture>
 
-        <Caption>
+        <figcaption>
           Image: Ring, sterling silver & colored titanium. Made in single pieces
           at the Strömfors atelier from 1986 to 1991. The Alice and Louis Koch
           Collection in the Swiss National Museum, Zurich (part of the museum
           collection on permanent display).
-        </Caption>
-      </Figure>
+        </figcaption>
+      </figure>
 
-      <Heading>
+      <div className="heading">
         <h1>Jouni Jäppinen</h1>
         <h2>Taiteilija ja kultaseppä</h2>
-      </Heading>
-    </Header>
+      </div>
+    </header>
 
-    <Main>
-      <About>
+    <main id="main">
+      <section>
         <p>
           <span>Jouni Jäppinen</span> on loviisalainen taiteilija (FM,
           kultaseppä), joka aloitti työuransa porvoolaisessa sepänpajassa
@@ -311,12 +78,12 @@ const Root = () => (
           tuottajana, ja tänään hänet tunnetaan myös rautakautisten menetelmien
           tutkijana ja tietokirjailijana.
         </p>
-      </About>
+      </section>
 
-      <Projects>
+      <ul id="projects">
         <li>
-          <RemixLink to="/rautakymi">
-            <RautakymiBook>
+          <Link to="/rautakymi">
+            <article className="rautakymi">
               <picture>
                 <source
                   srcSet="/images/rautakymi-book-cover.webp"
@@ -324,17 +91,17 @@ const Root = () => (
                 />
                 <img alt="Rautakymi" src="/images/rautakymi-book-cover.png" />
               </picture>
-              <Heading>
+              <div className="heading">
                 <h1>Rautakymi</h1>
                 <h2>Talonpoikia, Seppiä, Lohiylimyksiä</h2>
-              </Heading>
-            </RautakymiBook>
-          </RemixLink>
+              </div>
+            </article>
+          </Link>
         </li>
 
         <li>
-          <RemixLink to="/pajan-hamarasta">
-            <Project>
+          <Link to="/pajan-hamarasta">
+            <article>
               <picture>
                 <source
                   srcSet="/images/pajan-hamarasta.webp"
@@ -342,17 +109,17 @@ const Root = () => (
                 />
                 <img alt="Pajan hämärästä" src="/images/pajan-hamarasta.jpg" />
               </picture>
-              <Heading>
+              <div className="heading">
                 <h1>Pajan hämärästä</h1>
                 <h2>Sepän kulttuurihistoriaa</h2>
-              </Heading>
-            </Project>
-          </RemixLink>
+              </div>
+            </article>
+          </Link>
         </li>
 
         <li>
-          <RemixLink to="/ikuiset-seprat">
-            <Project>
+          <Link to="/ikuiset-seprat">
+            <article>
               <picture>
                 <source
                   srcSet="/images/ikuiset-seprat.webp"
@@ -360,22 +127,22 @@ const Root = () => (
                 />
                 <img alt="Ikuiset seprat" src="/images/ikuiset-seprat.jpg" />
               </picture>
-              <Heading>
+              <div className="heading">
                 <h1>Ikuiset seprat</h1>
                 <h2>
                   Tytärsaarelaisten ja virolaisten suhteet ennen toista
                   maailmansotaa
                 </h2>
-              </Heading>
-            </Project>
-          </RemixLink>
+              </div>
+            </article>
+          </Link>
         </li>
-      </Projects>
+      </ul>
 
-      <Articles>
+      <ul id="articles">
         <li>
           <a href="/documents/viirankosken-vyokoukku.pdf">
-            <Article>
+            <article>
               <picture>
                 <source
                   srcSet="/images/viirankosken-vyokoukku-thumbnail.webp"
@@ -387,13 +154,13 @@ const Root = () => (
                 />
               </picture>
               <h1>Viirankosken vyökoukku</h1>
-            </Article>
+            </article>
           </a>
         </li>
 
         <li>
           <a href="/documents/rautakuona.pdf">
-            <Article>
+            <article>
               <picture>
                 <source
                   srcSet="/images/rautakymi-thumbnail.webp"
@@ -405,13 +172,13 @@ const Root = () => (
                 />
               </picture>
               <h1>Kymijokisuiston rautakuona</h1>
-            </Article>
+            </article>
           </a>
         </li>
 
         <li>
           <a href="/documents/tammijarvi.pdf">
-            <Tammijarvi>
+            <article className="tammijarvi">
               <picture>
                 <source
                   srcSet="/images/tammijarvi-thumbnail.webp"
@@ -423,13 +190,13 @@ const Root = () => (
                 />
               </picture>
               <h1>Experimentel forskning vid Tammijärvi i Pyttis</h1>
-            </Tammijarvi>
+            </article>
           </a>
         </li>
 
         <li>
           <a href="/documents/Loviisa-Artists-Studio-1995-2021.pdf">
-            <Article>
+            <article>
               <picture>
                 <source srcSet="/images/essinveistos.webp" type="image/webp" />
                 <img
@@ -438,13 +205,13 @@ const Root = () => (
                 />
               </picture>
               <h1>Loviisa Artists’ Studio 1995–2021</h1>
-            </Article>
+            </article>
           </a>
         </li>
 
         <li>
           <a href="/documents/straka.pdf">
-            <Article>
+            <article>
               <picture>
                 <source
                   srcSet="/images/straka-thumbnail.webp"
@@ -456,13 +223,13 @@ const Root = () => (
                 />
               </picture>
               <h1>Stråka Järnframställning</h1>
-            </Article>
+            </article>
           </a>
         </li>
 
         <li>
           <a href="/documents/antti-jappinen.pdf">
-            <Article>
+            <article>
               <picture>
                 <source
                   srcSet="/images/antti-jappinen-thumbnail.webp"
@@ -474,30 +241,34 @@ const Root = () => (
                 />
               </picture>
               <h1>Sotamies Antti Jäppinen</h1>
-            </Article>
+            </article>
           </a>
         </li>
-      </Articles>
+      </ul>
 
       <footer>
         <nav>
           <ul>
             <li>
-              <Link to="/documents/kirjoituksia.pdf">Kirjoituksia</Link>
+              <Link className="link" to="/documents/kirjoituksia.pdf">
+                Kirjoituksia
+              </Link>
             </li>
 
             <li>
-              <Link to="mailto:Jouni Jäppinen <jouni@jappinen.fi>">
+              <Link
+                className="link"
+                to="mailto:Jouni Jäppinen <jouni@jappinen.fi>"
+              >
                 Ota yhteyttä
               </Link>
             </li>
           </ul>
         </nav>
       </footer>
-    </Main>
+    </main>
 
     <script
-      /** rome-ignore lint/security/noDangerouslySetInnerHtml: static JSON  */
       dangerouslySetInnerHTML={{ __html: microdata }}
       type="application/ld+json"
     />

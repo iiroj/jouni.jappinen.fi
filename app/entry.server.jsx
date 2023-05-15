@@ -1,18 +1,6 @@
 import { RemixServer } from "@remix-run/react";
 import React from "react";
 import { renderToReadableStream } from "react-dom/server";
-import { ServerStyleSheet } from "styled-components";
-
-class StyleSheetInjector extends TransformStream {
-  constructor({ sheet }) {
-    const styles = sheet.getStyleTags();
-    super({
-      transform: (chunk, controller) => {
-        controller.enqueue(chunk.replace("__STYLES__", styles));
-      },
-    });
-  }
-}
 
 const handleRequest = async (
   request,
@@ -22,21 +10,11 @@ const handleRequest = async (
 ) => {
   responseHeaders.set("Content-Type", "text/html");
 
-  const sheet = new ServerStyleSheet();
-
-  const element = sheet.collectStyles(
+  const stream = await renderToReadableStream(
     <RemixServer context={remixContext} url={request.url} />
   );
-  const stream = await renderToReadableStream(element);
 
-  const transformed = stream
-    // eslint-disable-next-line no-undef
-    .pipeThrough(new TextDecoderStream())
-    .pipeThrough(new StyleSheetInjector({ sheet }))
-    // eslint-disable-next-line no-undef
-    .pipeThrough(new TextEncoderStream());
-
-  return new Response(transformed, {
+  return new Response(stream, {
     status: responseStatusCode,
     headers: responseHeaders,
   });

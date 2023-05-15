@@ -1,0 +1,68 @@
+body {
+  background: var(--bg-1);
+  color: var(--text);
+}
+
+picture img {
+  display: block;
+  height: 25vh;
+  object-position: 0 75%;
+  object-fit: cover;
+  width: 100%;
+}
+
+header {
+  background: var(--bg-2);
+  color: var(--header-text);
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+section {
+  background: var(--bg-3);
+  padding-bottom: 1rem;
+  padding-top: 2rem;
+}
+
+section p {
+  margin: 0 auto 1rem auto;
+  max-width: 50rem;
+  padding: 0 1rem;
+}
+
+section p:not(:first-of-type)::before {
+  content: "";
+  display: inline-block;
+  width: 4ch;
+}
+
+body > a {
+  color: var(--link);
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+body > a:hover {
+  background: var(--link-hover);
+}
+
+footer {
+  margin: 0 auto;
+  max-width: 50rem;
+  padding: 1rem 0 4rem 0;
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 0.5rem;
+}

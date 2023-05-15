@@ -1,14 +1,19 @@
-import { Link as RemixLink } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
 
 import { HTML_CACHE_CONTROL_HEADER, SECURITY_HEADERS } from "../headers";
-import { rautakymi } from "../styles";
+import vars from "../styles/rautakymi.css";
+import styles from "../styles/project.css";
 
 export const headers = () => ({
   ...SECURITY_HEADERS,
   ...HTML_CACHE_CONTROL_HEADER,
 });
+
+export const links = () => [
+  { rel: "stylesheet", href: vars },
+  { rel: "stylesheet", href: styles },
+];
 
 export const meta = () => [
   {
@@ -16,98 +21,10 @@ export const meta = () => [
   },
 ];
 
-const GlobalStyles = createGlobalStyle({
-  body: {
-    backgroundColor: "rgb(26, 25, 25)",
-    color: "white",
-  },
-});
-
-const ImageContainer = styled.figure({
-  display: "flex",
-  justifyContent: "center",
-  padding: "4rem 0 2rem",
-
-  img: {
-    height: 300,
-  },
-});
-
-const Header = styled.header({
-  backgroundColor: rautakymi.colors.darkRed,
-
-  display: "flex",
-  flexDirection: "column",
-  textAlign: "center",
-  textTransform: "uppercase",
-
-  h1: {
-    fontSize: "3rem",
-    lineHeight: "3rem",
-    padding: "2rem",
-  },
-
-  h2: {
-    backgroundColor: rautakymi.colors.darkGrey,
-    color: rautakymi.colors.brightRed,
-    fontSize: "2rem",
-    lineHeight: "2rem",
-    padding: "2rem",
-  },
-});
-
-const Section = styled.section({
-  backgroundColor: rautakymi.colors.darkGrey,
-
-  flexGrow: 1,
-  lineHeight: 2.2,
-  paddingBottom: "2rem",
-  textAlign: "justify",
-
-  p: {
-    margin: "0 auto",
-    maxWidth: "44rem",
-    padding: "0 1rem",
-
-    "&:not(:first-of-type)::before": {
-      content: "''",
-      display: "inline-block",
-      width: "4ch",
-    },
-  },
-});
-
-const Link = styled.a({
-  color: "rgb(161, 42, 38)",
-  display: "block",
-  fontSize: "1.5rem",
-  marginBottom: "0.5rem",
-  padding: "2rem",
-  textAlign: "center",
-  textDecoration: "none",
-
-  "&:hover": {
-    backgroundColor: "rgba(0, 0, 0, 0.1)",
-  },
-});
-
-const Footer = styled.footer({
-  margin: "auto auto 0",
-  paddingBottom: "4rem",
-  textAlign: "center",
-  width: "100%",
-
-  p: {
-    marginBottom: "0.5rem",
-  },
-});
-
 const Rautakymi = () => (
   <>
-    <GlobalStyles />
-
-    <Header>
-      <ImageContainer>
+    <header id="header">
+      <div>
         <picture>
           <source
             srcSet="/images/rautakymi-book-cover.webp"
@@ -115,13 +32,13 @@ const Rautakymi = () => (
           />
           <img alt="Rautakymi" src="/images/rautakymi-book-cover.png" />
         </picture>
-      </ImageContainer>
+      </div>
 
       <h1>Rauta&shy;kymi</h1>
       <h2>Talonpoikia, Seppiä, Lohiylimyksiä</h2>
-    </Header>
+    </header>
 
-    <Section>
+    <section>
       <p>
         Ennen vuotta 1989 itäisen Uudenmaan ja Kymenlaakson rannikolta ei
         tunnettu montaakaan rautakautista asuinpaikkaa tai hautaa ja
@@ -147,7 +64,7 @@ const Rautakymi = () => (
         aineistoon, uusiin muinaisjäännöksiin, sekä materiaalitutkimusten
         tuloksiin.
       </p>
-    </Section>
+    </section>
 
     <Link href="/images/rautakymi-arvostelu.jpg" target="_blank">
       Lue kirja-arvostelu (Östnyland)
@@ -168,12 +85,12 @@ const Rautakymi = () => (
       Osta Booky.fi -verkkokaupasta
     </Link>
 
-    <Footer>
+    <footer>
       <p>Jouni Jäppinen</p>
-      <RemixLink to="/" prefetch="intent">
+      <Link to="/" prefetch="intent">
         Takaisin
-      </RemixLink>
-    </Footer>
+      </Link>
+    </footer>
   </>
 );
 

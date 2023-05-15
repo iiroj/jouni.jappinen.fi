@@ -1,13 +1,19 @@
-import { Link as RemixLink } from "@remix-run/react";
+import { Link } from "@remix-run/react";
 import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
 
 import { HTML_CACHE_CONTROL_HEADER, SECURITY_HEADERS } from "../headers";
+import vars from "../styles/ikuiset-seprat.css";
+import styles from "../styles/project.css";
 
 export const headers = () => ({
   ...SECURITY_HEADERS,
   ...HTML_CACHE_CONTROL_HEADER,
 });
+
+export const links = () => [
+  { rel: "stylesheet", href: vars },
+  { rel: "stylesheet", href: styles },
+];
 
 export const meta = () => [
   {
@@ -15,86 +21,21 @@ export const meta = () => [
   },
 ];
 
-const GlobalStyles = createGlobalStyle({
-  body: {
-    backgroundColor: "rgb(219, 219, 219)",
-  },
-});
-
-const Image = styled.img({
-  display: "block",
-  height: "25vh",
-  objectPosition: "0 75%",
-  objectFit: "cover",
-  width: "100%",
-});
-
-const Header = styled.header({
-  backgroundColor: "rgb(0, 74, 128)",
-  color: "white",
-  marginBottom: "2rem",
-  padding: "2rem",
-  textAlign: "center",
-
-  h1: {
-    fontSize: "1.5rem",
-    fontWeight: 600,
-    lineHeight: "1.5rem",
-  },
-});
-
-const Section = styled.section({
-  paddingBottom: "1rem",
-
-  p: {
-    margin: "0 auto 1rem auto",
-    maxWidth: "50rem",
-    padding: "0 1rem",
-  },
-});
-
-const StyledLink = styled.a({
-  color: "rgb(0, 74, 128)",
-  display: "block",
-  fontSize: "1.5rem",
-  marginBottom: "0.5rem",
-  padding: "2rem",
-  textAlign: "center",
-  textDecoration: "none",
-
-  "&:hover": {
-    backgroundColor: "rgba(0, 0, 0, 0.1)",
-  },
-});
-
-const Footer = styled.footer({
-  margin: "0 auto",
-  maxWidth: "50rem",
-  padding: "1rem 0 4rem 0",
-  textAlign: "center",
-
-  p: {
-    marginBottom: "0.5rem",
-  },
-});
-
 const Ikuisetseprat = () => (
   <>
-    <GlobalStyles />
-
     <picture>
       <source srcSet="/images/ikuiset-seprat.webp" type="image/webp" />
-      <Image alt="Ikuiset seprat" src="/images/ikuiset-seprat.jpg" />
+      <img alt="Ikuiset seprat" src="/images/ikuiset-seprat.jpg" />
     </picture>
 
-    <Header>
+    <header>
       <h1>Ikuiset seprat</h1>
       <h2>
         Tytärsaarelaisten ja virolaisten suhteet ennen toista maailmansotaa
       </h2>
-    </Header>
+    </header>
 
-    <Section>
+    <section>
       <p>
         Tytärsaaren perifeerinen sijainti lähempänä Viron kuin Suomen rannikkoa
         tarjosi saarelaisille mahdollisuuden ylläpitää vilkkaita suhteita
@@ -139,31 +80,31 @@ const Ikuisetseprat = () => (
         evakuointikäsky vietiin moottoriveneellä ja jolloin ystävyyssuhteet
         katkesivat.
       </p>
-    </Section>
+    </section>
 
-    <StyledLink href="/images/paivio_arvostelu_22.6.16.jpg" target="_blank">
+    <Link href="/images/paivio_arvostelu_22.6.16.jpg" target="_blank">
       Lue kirja-arvostelu (Kymen Sanomat)
-    </StyledLink>
+    </Link>
 
-    <StyledLink href="/documents/ikuiset-seprat-arvostelu.pdf" target="_blank">
+    <Link href="/documents/ikuiset-seprat-arvostelu.pdf" target="_blank">
       Lue kirja-arvostelu (Tuglas-seura)
-    </StyledLink>
+    </Link>
 
-    <StyledLink
+    <Link
       href="https://www.adlibris.com/fi/kirja/ikuiset-seprat-9789529371310"
       rel="crossorigin external"
       target="_blank"
     >
       Osta Adlibris-verkkokirjakaupasta
-    </StyledLink>
+    </Link>
 
-    <Footer>
+    <footer>
       <p>Jouni Jäppinen</p>
       <p>ISBN 978-952-93-7131-0</p>
-      <RemixLink to="/" prefetch="intent">
+      <Link to="/" prefetch="intent">
         Takaisin
-      </RemixLink>
-    </Footer>
+      </Link>
+    </footer>
   </>
 );
 

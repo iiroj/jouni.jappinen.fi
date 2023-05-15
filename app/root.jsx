@@ -9,11 +9,12 @@ import {
 } from "@remix-run/react";
 import React from "react";
 
-import Reset from "./components/Reset";
+import styles from "./styles/global.css";
 
 export const links = () => [
   { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
   { rel: "apple-touch-icon", href: "/icon.png" },
+  { rel: "stylesheet", href: styles },
 ];
 
 export const loader = ({ context }) => ({
@@ -34,7 +35,6 @@ const App = () => {
         {typeof document === "undefined" ? "__STYLES__" : null}
       </head>
       <body>
-        <Reset />
         <Outlet />
 
         <ScrollRestoration />

@@ -1,0 +1,210 @@
+#cover {
+  color: hsl(0, 0%, 100%);
+  position: relative;
+}
+
+#cover figure {
+  position: "relative";
+}
+
+#cover figure,
+#cover figure img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 50%;
+  width: 100%;
+  top: 0;
+}
+
+#cover figcaption {
+  bottom: 0.5rem;
+  color: hsl(0, 0%, 60%);
+  font-size: 0.75em;
+  line-height: 1rem;
+  margin: 0.5rem;
+  position: absolute;
+}
+
+.heading {
+  margin-left: 1rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-100%);
+}
+
+.heading h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+#main {
+  position: relative;
+}
+
+#main section {
+  margin: 4rem auto;
+  max-width: 40rem;
+  padding: 0 1rem;
+}
+
+#main section p + p {
+  margin-top: 0.5rem;
+}
+
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+}
+
+#projects li {
+  box-sizing: border-box;
+  height: 40vh;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+#projects li:hover article {
+  transform: scale(0.95);
+  transform-origin: 50% 50%;
+}
+
+#projects article {
+  box-sizing: border-box;
+  color: white !important;
+  height: 100%;
+  position: relative;
+  transition: transform 0.2s ease-out;
+}
+
+#projects article::before {
+  background: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+#projects article > div {
+  left: 50%;
+  position: absolute;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 0px 4px rgba(0, 0, 0, 0.4);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  z-index: 2;
+}
+
+#projects article img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+#projects article.rautakymi {
+  background-color: #3d130f;
+}
+
+#articles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 42rem;
+  width: 100%;
+}
+
+#articles li {
+  box-sizing: border-box;
+  flex: 0 1 12rem;
+  padding: 1rem;
+}
+
+#articles li:hover article {
+  transform: scale(0.95);
+  transform-origin: 50% 50%;
+}
+
+#articles article {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+  position: relative;
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
+
+#articles article picture {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+#articles article img {
+  margin-bottom: 1rem;
+  object-fit: contain;
+  object-position: top center;
+  position: relative;
+  width: 75%;
+}
+
+#articles article h1 {
+  font-size: inherit;
+  text-align: center;
+}
+
+#articles article.tammijarvi img {
+  object-position: bottom center;
+}
+
+footer a {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: block;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 1024px) {
+  #cover {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 50%;
+  }
+
+  #cover figure {
+    object-position: 33% 50%;
+  }
+
+  #main {
+    margin-left: 50%;
+    width: 50%;
+  }
+
+  #projects li {
+    width: 50%;
+  }
+
+  #projects li:first-child {
+    width: 100%;
+  }
+
+  #articles li {
+    flex-basis: 14rem;
+  }
+}

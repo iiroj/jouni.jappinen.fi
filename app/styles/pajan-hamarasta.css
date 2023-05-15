@@ -1,0 +1,9 @@
+:root {
+  --bg-1: rgb(26, 25, 25);
+  --bg-2: rgb(61, 19, 15);
+  --bg-3: rgb(61, 19, 15);
+  --text: white;
+  --header-text: inherit;
+  --link: rgb(161, 42, 38);
+  --link-hover: rgba(0, 0, 0, 0.1);
+}

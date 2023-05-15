@@ -1,0 +1,49 @@
+:root {
+  --bg-1: #1a1919;
+  --bg-2: #3d130f;
+  --bg-3: #1a1919;
+  --text: white;
+  --header-text: white;
+  --link: rgb(161, 42, 38);
+  --link-hover: rgba(0, 0, 0, 0.1);
+}
+
+#header {
+  padding: 0;
+  text-transform: uppercase;
+}
+
+#header picture {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 0 2rem;
+}
+
+#header picture img {
+  height: 300px;
+  width: auto;
+  object-fit: initial;
+  object-position: initial;
+}
+
+#header h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3rem;
+  padding: 2rem;
+}
+
+#header h2 {
+  background: var(--bg-1);
+  color: var(--link);
+  font-size: 2rem;
+  line-height: 2rem;
+  padding: 2rem;
+}
+
+#header + section {
+  line-height: 2.2;
+  margin: 0 auto;
+  max-width: 44rem;
+  padding-top: 0;
+}
