@@ -1,3 +1,10 @@
+## [10.0.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v10.0.2...v10.0.3) (2023-05-15)
+
+
+### Bug Fixes
+
+* remove unused code causing hydration error ([aeef7e1](https://github.com/iiroj/jouni.jappinen.fi/commit/aeef7e17f42a90e5c98a8815b8d4f8be9d374ab8))
+
 ## [10.0.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v10.0.1...v10.0.2) (2023-05-15)
 
 
