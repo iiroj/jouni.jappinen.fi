@@ -141,7 +141,7 @@ const Ikuisetseprat = () => (
       </p>
     </Section>
 
-    <StyledLink href="/images/Päiviö_arvostelu_22.6.16.jpg" target="_blank">
+    <StyledLink href="/images/paivio_arvostelu_22.6.16.jpg" target="_blank">
       Lue kirja-arvostelu (Kymen Sanomat)
     </StyledLink>
 
