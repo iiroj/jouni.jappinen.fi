@@ -1,3 +1,10 @@
+## [10.0.2](https://github.com/iiroj/jouni.jappinen.fi/compare/v10.0.1...v10.0.2) (2023-05-15)
+
+
+### Performance Improvements
+
+* replace styled-components with vanilla CSS ([a40b8f3](https://github.com/iiroj/jouni.jappinen.fi/commit/a40b8f36d0fa603f4da9fe61fcca6de5110e9467))
+
 ## [10.0.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v10.0.0...v10.0.1) (2023-05-15)
 
 
