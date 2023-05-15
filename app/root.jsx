@@ -32,7 +32,6 @@ const App = () => {
         <meta name="theme-color" content="#000000" />
         <Meta />
         <Links />
-        {typeof document === "undefined" ? "__STYLES__" : null}
       </head>
       <body>
         <Outlet />
