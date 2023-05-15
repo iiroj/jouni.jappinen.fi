@@ -1,3 +1,10 @@
+## [10.0.1](https://github.com/iiroj/jouni.jappinen.fi/compare/v10.0.0...v10.0.1) (2023-05-15)
+
+
+### Bug Fixes
+
+* remove special characters from file name ([f111829](https://github.com/iiroj/jouni.jappinen.fi/commit/f111829c88bc57268a02fd2c7f75a820b1497ac7))
+
 ## [10.0.0](https://github.com/iiroj/jouni.jappinen.fi/compare/v9.3.7...v10.0.0) (2023-05-14)
 
 
