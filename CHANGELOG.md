@@ -1,3 +1,10 @@
+## [10.0.4](https://github.com/iiroj/jouni.jappinen.fi/compare/v10.0.3...v10.0.4) (2023-06-04)
+
+
+### Bug Fixes
+
+* **dependencies:** update dependencies ([82d1c3c](https://github.com/iiroj/jouni.jappinen.fi/commit/82d1c3c5c37e3fbbc0fc6b9fc960d034bf6c55f4))
+
 ## [10.0.3](https://github.com/iiroj/jouni.jappinen.fi/compare/v10.0.2...v10.0.3) (2023-05-15)
 
 
